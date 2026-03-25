@@ -395,6 +395,9 @@ function showModal(productKey, variantIndex) {
   const lang = currentLang;
 
   currentVariantData = variant;
+  console.log("🔍 variant data:", JSON.stringify(variant, null, 2));
+  console.log("🔍 variant.info:", variant?.info);
+  console.log("🔍 currentLang:", lang);
 
   const weightLabel = lang === "en" ? "Weight" : "ទម្ងន់";
   const viewsLabel = lang === "en" ? "Views" : "ចំនួនមើល";
@@ -456,7 +459,7 @@ function showModal(productKey, variantIndex) {
         <div class="modal-section">
           <h3>${descLabel}</h3>
           ${(() => {
-            const info = variant.info && variant.info[lang] ? variant.info[lang] : [];
+            const info = variant?.info?.[lang] ?? [];
             if (Array.isArray(info)) {
               return (
                 '<ul style="padding-left:18px; margin:0; line-height:1.6;">' +
