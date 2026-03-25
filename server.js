@@ -97,20 +97,20 @@ const plantingInfoSchema = new mongoose.Schema({
   density: { en: String, km: String },
 });
 
-const productVariantSchema = new mongoose.Schema({
-  src: String,
-  title: { en: String, km: String },
-  info: { en: String, km: String },
-  weight: String,
-  views: { type: Number, default: 0 },
-  pdfUrl: String,
-  gallery: [galleryItemSchema],
-  features: { en: [String], km: [String] },
-  planting: plantingInfoSchema,
-  landPreparation: { en: [String], km: [String] },
-  cultivation: { en: [String], km: [String] },
-  irrigation: { en: [String], km: [String] },
-});
+// const productVariantSchema = new mongoose.Schema({
+//   src: String,
+//   title: { en: String, km: String },
+//   info: { en: String, km: String },
+//   weight: String,
+//   views: { type: Number, default: 0 },
+//   pdfUrl: String,
+//   gallery: [galleryItemSchema],
+//   features: { en: [String], km: [String] },
+//   planting: plantingInfoSchema,
+//   landPreparation: { en: [String], km: [String] },
+//   cultivation: { en: [String], km: [String] },
+//   irrigation: { en: [String], km: [String] },
+// });
 
 const ProductSchema = new mongoose.Schema(
   {
