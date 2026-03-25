@@ -456,8 +456,7 @@ function showModal(productKey, variantIndex) {
         <div class="modal-section">
           <h3>${descLabel}</h3>
           ${(() => {
-            const info =
-              variant.info && variant.info[lang] ? variant.info[lang] : [];
+            const info = variant.info && variant.info[lang] ? variant.info[lang] : [];
             if (Array.isArray(info)) {
               return (
                 '<ul style="padding-left:18px; margin:0; line-height:1.6;">' +
