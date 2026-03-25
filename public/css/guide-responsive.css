@@ -1,0 +1,498 @@
+/* =============================================================
+   GROWING GUIDE MODAL — guide.css
+   Fully responsive, no inline styles needed in JS
+   ============================================================= */
+
+/* ── MODAL OVERLAY ── */
+#guide-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.55);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 16px;
+    box-sizing: border-box;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#guide-modal.active {
+    display: flex;
+}
+
+/* ── MAIN CONTAINER ── */
+.guide-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 24px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-family: 'Hanuman', 'Poppins', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #222;
+}
+
+/* ── ALL IMAGES ── */
+.guide-container img {
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    display: block;
+}
+
+/* ── DIVIDERS ── */
+.guide-divider {
+    border: none;
+    border-top: 1px dashed #43b048;
+    margin: 20px 0;
+}
+
+/* ── SECTION TITLES ── */
+.guide-section-title {
+    color: #2d8c3e;
+    border-left: 5px solid #43b048;
+    padding-left: 10px;
+    margin: 0 0 14px 0;
+    font-size: 19px;
+    line-height: 1.4;
+    word-break: break-word;
+}
+
+.guide-subtitle {
+    color: #2d6e3b;
+    margin: 16px 0 8px 0;
+    font-size: 17px;
+}
+
+.guide-subsubtitle {
+    color: #388e3c;
+    margin: 10px 0 6px 0;
+    font-size: 17px;
+}
+
+/* ── PARAGRAPH HELPERS ── */
+.guide-indent {
+    text-indent: 2.3em;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+.guide-note {
+    background: #e3f2fd;
+    padding: 8px 12px;
+    border-left: 4px solid #1976d2;
+    margin-top: 12px;
+    text-align: justify;
+    border-radius: 0 4px 4px 0;
+}
+
+/* ── BULLET LIST ── */
+.guide-bullets {
+    padding-left: 22px;
+    margin: 8px 0 12px 0;
+}
+
+.guide-bullets li {
+    margin-bottom: 6px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* ── CHECKMARK LIST ── */
+.guide-checkmarks {
+    margin: 12px 0;
+    padding-left: 8px;
+}
+
+.guide-checkmark-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 8px 0;
+}
+
+.guide-checkmark-item .check-icon {
+    color: #43b048;
+    font-weight: bold;
+    font-size: 1.2rem;
+    min-width: 20px;
+    flex-shrink: 0;
+}
+
+.guide-checkmark-item .check-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* ── FEATURES SECTION (image + bullets side by side) ── */
+.guide-features-layout {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.guide-features-image {
+    flex: 0 0 140px;
+    max-width: 140px;
+}
+
+.guide-features-image img {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.guide-features-image-caption {
+    margin-top: 6px;
+    font-size: 12px;
+    color: #718096;
+}
+
+.guide-features-bullets {
+    flex: 1;
+    min-width: 0;
+    font-size: 15px;
+}
+
+/* ── 2-COLUMN IMAGE GRID ── */
+.guide-img-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 16px 0 6px 0;
+}
+
+.guide-img-grid-2 img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Variant: contain (for bed images) */
+.guide-img-grid-2.contain img {
+    object-fit: contain;
+    background: #f9f9f9;
+    height: 200px;
+    aspect-ratio: unset;
+}
+
+/* ── 4-COLUMN IMAGE GRID (pests, water top) ── */
+.guide-img-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 12px 0;
+}
+
+.guide-img-grid-4 .img-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.guide-img-grid-4 img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.guide-img-grid-4 .img-caption {
+    margin: 4px 0 0 0;
+    font-size: 0.78rem;
+    color: #333;
+    text-align: center;
+    word-break: break-word;
+    line-height: 1.3;
+    width: 100%;
+}
+
+/* ── 5-COLUMN IMAGE GRID (diseases) ── */
+.guide-img-grid-5 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 6px;
+    margin: 10px 0;
+}
+
+.guide-img-grid-5 .img-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.guide-img-grid-5 img {
+    width: 100%;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.guide-img-grid-5 .img-caption {
+    margin: 4px 0 0 0;
+    font-size: 0.75rem;
+    color: #333;
+    text-align: center;
+    word-break: break-word;
+    line-height: 1.3;
+    width: 100%;
+}
+
+/* ── SHARED IMAGE CAPTION (centered, below grid) ── */
+.guide-img-caption-shared {
+    text-align: center;
+    margin-top: 8px;
+    font-size: 0.85rem;
+    color: #718096;
+    font-style: italic;
+}
+
+.guide-img-caption-left {
+    text-align: center;
+    margin-top: 6px;
+    font-size: 0.85rem;
+    color: #718096;
+    font-style: italic;
+}
+
+/* ── TABLE SCROLL WRAPPER ── */
+.table-scroll-outer {
+    position: relative;
+}
+
+.table-scroll-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 10px 0;
+    border-radius: 4px;
+    background:
+        linear-gradient(to right, white 20%, rgba(255, 255, 255, 0)),
+        linear-gradient(to right, rgba(255, 255, 255, 0), white 80%) 0 100%,
+        radial-gradient(farthest-side at 0% 50%, rgba(0, 0, 0, .2), transparent),
+        radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, .2), transparent) 0 100%;
+    background-repeat: no-repeat;
+    background-size: 40px 100%, 40px 100%, 14px 100%, 14px 100%;
+    background-position: 0 0, 100%, 0 0, 100%;
+    background-attachment: local, local, scroll, scroll;
+}
+
+
+
+/* ── TABLES ── */
+.guide-container table {
+    width: 100%;
+    min-width: 480px;
+    border-collapse: collapse;
+    font-size: 0.75rem;
+    box-sizing: border-box;
+}
+
+.guide-container table th,
+.guide-container table td {
+    padding: 6px 5px;
+    border: 1px solid #ddd;
+    vertical-align: middle;
+    word-break: break-word;
+    line-height: 1.4;
+    box-sizing: border-box;
+}
+
+/* ── WATER MANAGEMENT TOP IMAGES ── */
+.guide-water-top-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin: 0 0 16px 0;
+}
+
+.guide-water-top-grid .img-cell {
+    text-align: center;
+}
+
+.guide-water-top-grid img {
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.guide-water-top-grid .img-caption {
+    font-size: 0.7rem;
+    margin: 4px 0 0 0;
+    color: #555;
+    text-align: center;
+    word-break: break-word;
+    line-height: 1.3;
+}
+
+/* ── DISEASE PREVENTION IMAGE ── */
+.guide-disease-prevention-img {
+    width: 400px;
+    max-width: 100%;
+    display: block;
+    margin: 15px auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* =============================================================
+   RESPONSIVE BREAKPOINTS
+   ============================================================= */
+
+/* ── TABLET ≤ 640px ── */
+@media (max-width: 640px) {
+    #guide-modal {
+        padding: 8px;
+    }
+
+    .guide-container {
+        padding: 14px 12px;
+        border-radius: 6px;
+        font-size: 15px;
+    }
+
+    /* Features: keep side-by-side but smaller image */
+    .guide-features-image {
+        flex: 0 0 120px;
+        max-width: 120px;
+    }
+
+    /* 4-col → 2-col */
+    .guide-img-grid-4,
+    .guide-water-top-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .guide-img-grid-4 img {
+        height: 85px;
+    }
+
+    .guide-water-top-grid img {
+        height: 85px;
+    }
+
+    /* 5-col → 3-col */
+    .guide-img-grid-5 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .guide-img-grid-5 img {
+        height: 80px;
+    }
+
+    /* 2-col grid: keep 2 cols but shorter images */
+    .guide-img-grid-2.contain img {
+        height: 150px;
+    }
+
+    /* Tables */
+    .guide-container table {
+        font-size: 13px;
+        min-width: 420px;
+    }
+
+    .guide-container table th,
+    .guide-container table td {
+        padding: 5px 3px;
+        font-size: 12px;
+    }
+}
+
+/* ── MOBILE ≤ 420px ── */
+@media (max-width: 420px) {
+    #guide-modal {
+        padding: 4px;
+    }
+
+    .guide-container {
+        padding: 10px 8px;
+        font-size: 15px;
+    }
+
+    /* Features: stack vertically on very small screens */
+    .guide-features-layout {
+        flex-direction: column;
+    }
+
+    .guide-features-image {
+        flex: none;
+        max-width: 160px;
+        align-self: center;
+    }
+
+    /* 2-col → 1-col */
+    .guide-img-grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .guide-img-grid-2.contain img {
+        height: 180px;
+    }
+
+    /* 4-col → 2-col */
+    .guide-img-grid-4,
+    .guide-water-top-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6px;
+    }
+
+    .guide-img-grid-4 img {
+        height: 75px;
+    }
+
+    .guide-water-top-grid img {
+        height: 75px;
+    }
+
+    .guide-img-grid-4 .img-caption,
+    .guide-water-top-grid .img-caption {
+        font-size: 11px;
+    }
+
+    /* 5-col → 2-col */
+    .guide-img-grid-5 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6px;
+    }
+
+    .guide-img-grid-5 img {
+        height: 75px;
+    }
+
+    .guide-img-grid-5 .img-caption {
+        font-size: 11px;
+    }
+
+    /* Tables: tightest */
+    .guide-container table {
+        font-size: 12px;
+        min-width: 340px;
+    }
+
+    .guide-container table th,
+    .guide-container table td {
+        padding: 4px 2px;
+        font-size: 11px;
+    }
+
+    .guide-section-title {
+        font-size: 17px;
+    }
+
+    .guide-subtitle {
+        font-size: 17px;
+    }
+}

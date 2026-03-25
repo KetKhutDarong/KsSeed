@@ -1,0 +1,1524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KSSEED Disease Resistance - Pest &amp; Disease Resistant Seeds</title>
+    <meta name="description"
+        content="KSSEED breeds vegetable seeds with natural disease and pest resistance to reduce chemical inputs and ensure healthy crop production." />
+    <link rel="icon" href="/image/General/Picture1.png" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/research.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hanuman:wght@400;700&amp;family=Poppins:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <style>
+        /* ══════════════════════════════════════════
+       DISEASE RESISTANCE PAGE — UNIQUE STRUCTURE
+       Editorial / split-layout aesthetic
+    ══════════════════════════════════════════ */
+
+        /* ── Hero: full-screen split ── */
+        .dr-hero {
+            position: relative;
+            min-height: 520px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            overflow: hidden;
+            background: #0b1f0c;
+        }
+
+        .dr-hero-left {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 120px 60px 80px 60px;
+            background: linear-gradient(135deg, #0b2e10 0%, #1a4d1e 100%);
+        }
+
+        .dr-hero-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(76, 175, 80, .15);
+            border: 1px solid rgba(76, 175, 80, .35);
+            color: #81c784;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 6px 14px;
+            border-radius: 4px;
+            margin-bottom: 24px;
+            width: fit-content;
+        }
+
+        .dr-hero h1 {
+            font-size: clamp(32px, 4vw, 52px);
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.15;
+            margin: 0 0 20px;
+            font-family: 'Hanuman', 'Poppins', sans-serif;
+        }
+
+        .dr-hero h1 span {
+            color: #66bb6a;
+        }
+
+        .dr-hero-sub {
+            font-size: 16px;
+            color: rgba(255, 255, 255, .65);
+            line-height: 1.75;
+            max-width: 440px;
+            margin: 0 0 36px;
+        }
+
+        .dr-hero-stats {
+            display: flex;
+            gap: 32px;
+            padding-top: 32px;
+            border-top: 1px solid rgba(255, 255, 255, .1);
+        }
+
+        .dr-hero-stat .num {
+            font-size: 28px;
+            font-weight: 700;
+            color: #66bb6a;
+            line-height: 1;
+        }
+
+        .dr-hero-stat .lbl {
+            font-size: 12px;
+            color: rgba(255, 255, 255, .5);
+            margin-top: 4px;
+            line-height: 1.4;
+        }
+
+        .dr-hero-right {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .dr-hero-right img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            loading: eager;
+        }
+
+        .dr-hero-right::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, rgba(11, 46, 16, .6) 0%, transparent 50%);
+        }
+
+        /* ── Intro strip ── */
+        .dr-intro {
+            padding: 70px 0;
+            background: #fff;
+        }
+
+        .dr-intro-inner {
+            display: grid;
+            grid-template-columns: 1fr 2px 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .dr-intro-divider {
+            background: linear-gradient(to bottom, transparent, #43b048, transparent);
+            align-self: stretch;
+        }
+
+        .dr-intro h2 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1b5e20;
+            margin: 0 0 16px;
+            font-family: 'Hanuman', 'Poppins', sans-serif;
+            line-height: 1.3;
+        }
+
+        .dr-intro p {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        .dr-intro-right {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .dr-intro-pill {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            background: #f1f8e9;
+            border-left: 4px solid #43b048;
+            border-radius: 0 10px 10px 0;
+            padding: 14px 18px;
+        }
+
+        .dr-intro-pill .icon {
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+
+        .dr-intro-pill .text {
+            font-size: 14px;
+            color: #2e7d32;
+            font-weight: 500;
+            line-height: 1.5;
+        }
+
+        /* ── 4-step process: horizontal timeline ── */
+        .dr-process {
+            padding: 80px 0;
+            background: #f9fbe7;
+            overflow: hidden;
+        }
+
+        .dr-process-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+
+        .dr-process-header h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #1b5e20;
+            font-family: 'Hanuman', 'Poppins', sans-serif;
+            margin: 0 0 10px;
+        }
+
+        .dr-process-header p {
+            font-size: 15px;
+            color: #666;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .dr-timeline {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            position: relative;
+            gap: 0;
+        }
+
+        .dr-timeline::before {
+            content: '';
+            position: absolute;
+            top: 38px;
+            left: calc(12.5%);
+            right: calc(12.5%);
+            height: 2px;
+            background: linear-gradient(to right, #43b048, #8bc34a);
+            z-index: 0;
+        }
+
+        .dr-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .dr-step-dot {
+            width: 76px;
+            height: 76px;
+            border-radius: 50%;
+            background: #fff;
+            border: 3px solid #43b048;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            box-shadow: 0 4px 16px rgba(67, 176, 72, .2);
+            margin-bottom: 20px;
+            position: relative;
+            transition: transform .25s, box-shadow .25s;
+        }
+
+        .dr-step:hover .dr-step-dot {
+            transform: scale(1.08);
+            box-shadow: 0 8px 24px rgba(67, 176, 72, .35);
+        }
+
+        .dr-step-num {
+            position: absolute;
+            top: -6px;
+            right: -6px;
+            width: 22px;
+            height: 22px;
+            background: #43b048;
+            color: #fff;
+            border-radius: 50%;
+            font-size: 11px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .dr-step h3 {
+            font-size: 15px;
+            font-weight: 700;
+            color: #1b5e20;
+            margin: 0 0 8px;
+            font-family: 'Hanuman', 'Poppins', sans-serif;
+        }
+
+        .dr-step p {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* ── Disease types: magazine card grid ── */
+        .dr-diseases {
+            padding: 80px 0;
+            background: #fff;
+        }
+
+        .dr-diseases-header {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            margin-bottom: 44px;
+            gap: 20px;
+        }
+
+        .dr-diseases-header h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #1b5e20;
+            font-family: 'Hanuman', 'Poppins', sans-serif;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .dr-diseases-header p {
+            font-size: 14px;
+            color: #888;
+            max-width: 320px;
+            text-align: right;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .dr-disease-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            grid-template-rows: auto auto;
+            gap: 20px;
+        }
+
+        .dr-disease-card {
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+            background: #fff;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, .08);
+            transition: transform .3s, box-shadow .3s;
+            cursor: default;
+        }
+
+        .dr-disease-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 36px rgba(0, 0, 0, .14);
+        }
+
+        /* Large feature card */
+        .dr-disease-card.large {
+            grid-row: 1 / 3;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .dr-disease-card.large .dc-img {
+            height: 260px;
+        }
+
+        .dc-img {
+            height: 160px;
+            overflow: hidden;
+            background: #e8f5e9;
+            position: relative;
+        }
+
+        .dc-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .4s ease;
+        }
+
+        .dr-disease-card:hover .dc-img img {
+            transform: scale(1.05);
+        }
+
+        .dc-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: #43b048;
+            color: #fff;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 4px;
+            letter-spacing: .5px;
+            text-transform: uppercase;
+        }
+
+        .dc-body {
+            padding: 22px 20px;
+            flex: 1;
+        }
+
+        .dc-icon-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .dc-icon {
+            font-size: 26px;
+            line-height: 1;
+        }
+
+        .dc-body h3 {
+            font-size: 17px;
+            font-weight: 700;
+            color: #1b5e20;
+            margin: 0;
+            font-family: 'Hanuman', 'Poppins', sans-serif;
+        }
+
+        .dc-body p {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.65;
+            margin: 8px 0 0;
+        }
+
+        .dc-tags {
+            margin-top: 14px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .dc-tag {
+            background: #e8f5e9;
+            color: #2e7d32;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 20px;
+        }
+
+        /* ── Benefits: alternating split rows ── */
+        .dr-benefits {
+            padding: 80px 0;
+            background: #f9fbe7;
+        }
+
+        .dr-benefits-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+
+        .dr-benefits-header h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #1b5e20;
+            font-family: 'Hanuman', 'Poppins', sans-serif;
+            margin: 0 0 10px;
+        }
+
+        .dr-benefits-header p {
+            font-size: 15px;
+            color: #666;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .dr-benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .dr-benefit-card {
+            background: #fff;
+            border-radius: 14px;
+            padding: 30px 24px;
+            box-shadow: 0 2px 14px rgba(0, 0, 0, .06);
+            border-bottom: 4px solid #43b048;
+            transition: transform .25s, box-shadow .25s;
+        }
+
+        .dr-benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(67, 176, 72, .12);
+        }
+
+        .dr-benefit-card .b-icon {
+            font-size: 36px;
+            margin-bottom: 14px;
+            line-height: 1;
+        }
+
+        .dr-benefit-card h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: #1b5e20;
+            margin: 0 0 8px;
+            font-family: 'Hanuman', 'Poppins', sans-serif;
+        }
+
+        .dr-benefit-card p {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.65;
+            margin: 0;
+        }
+
+        /* ── Gallery: masonry-inspired ── */
+        .dr-gallery {
+            padding: 80px 0;
+            background: #fff;
+        }
+
+        .dr-gallery h2 {
+            text-align: center;
+            font-size: 32px;
+            font-weight: 700;
+            color: #1b5e20;
+            font-family: 'Hanuman', 'Poppins', sans-serif;
+            margin: 0 0 48px;
+        }
+
+        .dr-gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 200px 200px;
+            gap: 12px;
+        }
+
+        .dr-gallery-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #e8f5e9;
+        }
+
+        .dr-gallery-item:first-child {
+            grid-column: 1 / 3;
+            grid-row: 1 / 3;
+        }
+
+        .dr-gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .4s ease;
+            display: block;
+        }
+
+        .dr-gallery-item:hover img {
+            transform: scale(1.06);
+        }
+
+        .dr-gallery-item .g-cap {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(11, 46, 16, .85), transparent);
+            color: #fff;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 30px 14px 12px;
+            opacity: 0;
+            transition: opacity .3s;
+        }
+
+        .dr-gallery-item:hover .g-cap {
+            opacity: 1;
+        }
+
+        /* ── Stats strip ── */
+        .dr-stats {
+            background: #1b5e20;
+            padding: 50px 0;
+        }
+
+        .dr-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+            text-align: center;
+        }
+
+        .dr-stat-item {
+            padding: 20px;
+            border-right: 1px solid rgba(255, 255, 255, .15);
+        }
+
+        .dr-stat-item:last-child {
+            border-right: none;
+        }
+
+        .dr-stat-item .n {
+            font-size: 42px;
+            font-weight: 700;
+            color: #a5d6a7;
+            line-height: 1;
+        }
+
+        .dr-stat-item .l {
+            font-size: 13px;
+            color: rgba(255, 255, 255, .6);
+            margin-top: 6px;
+            line-height: 1.4;
+        }
+
+        /* ── CTA (same dark green design as other pages) ── */
+        .cta-research-section {
+            position: relative;
+            padding: 90px 0;
+            overflow: hidden;
+            background: linear-gradient(135deg, #0a2e14 0%, #1a5c2a 50%, #0d3b1a 100%);
+        }
+
+        .cta-research-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 15% 50%, rgba(76, 175, 80, .18) 0%, transparent 50%),
+                radial-gradient(circle at 85% 20%, rgba(139, 195, 74, .12) 0%, transparent 40%);
+            pointer-events: none;
+        }
+
+        .cta-research-inner {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-research-header {
+            text-align: center;
+            margin-bottom: 52px;
+        }
+
+        .cta-research-badge {
+            display: inline-block;
+            background: rgba(76, 175, 80, .18);
+            border: 1px solid rgba(76, 175, 80, .4);
+            color: #a5d6a7;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 6px 18px;
+            border-radius: 20px;
+            letter-spacing: .5px;
+            margin-bottom: 20px;
+        }
+
+        .cta-research-header h2 {
+            font-size: 38px;
+            font-weight: 700;
+            color: #fff;
+            margin: 0 0 14px;
+            line-height: 1.3;
+            font-family: 'Hanuman', 'Poppins', sans-serif;
+        }
+
+        .cta-research-header p {
+            font-size: 16px;
+            color: rgba(255, 255, 255, .6);
+            max-width: 540px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .cta-research-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .cta-research-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 28px 24px;
+            background: rgba(255, 255, 255, .06);
+            border: 1px solid rgba(255, 255, 255, .1);
+            border-radius: 16px;
+            text-decoration: none;
+            transition: all .3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-research-card::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #43b048, #8bc34a);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform .35s ease;
+        }
+
+        .cta-research-card:hover {
+            background: rgba(255, 255, 255, .11);
+            border-color: rgba(76, 175, 80, .45);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 44px rgba(0, 0, 0, .35);
+        }
+
+        .cta-research-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .cta-card-icon {
+            font-size: 34px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .cta-card-body {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .cta-card-body h3 {
+            font-size: 17px;
+            font-weight: 700;
+            color: #fff;
+            margin: 0 0 8px;
+            line-height: 1.3;
+            font-family: 'Hanuman', 'Poppins', sans-serif;
+        }
+
+        .cta-card-body p {
+            font-size: 13px;
+            color: rgba(255, 255, 255, .58);
+            line-height: 1.65;
+            margin: 0;
+        }
+
+        .cta-card-arrow {
+            font-size: 20px;
+            color: #66bb6a;
+            flex-shrink: 0;
+            align-self: center;
+            transition: transform .3s;
+        }
+
+        .cta-research-card:hover .cta-card-arrow {
+            transform: translateX(6px);
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 1024px) {
+            .dr-disease-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .dr-disease-card.large {
+                grid-row: auto;
+            }
+
+            .dr-disease-card.large .dc-img {
+                height: 200px;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .dr-hero {
+                grid-template-columns: 1fr;
+            }
+
+            .dr-hero-right {
+                height: 260px;
+            }
+
+            .dr-hero-left {
+                padding: 100px 30px 50px;
+            }
+
+            .dr-intro-inner {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .dr-intro-divider {
+                display: none;
+            }
+
+            .dr-timeline {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+
+            .dr-timeline::before {
+                display: none;
+            }
+
+            .dr-benefits-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .dr-gallery-grid {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 180px 180px 180px;
+            }
+
+            .dr-gallery-item:first-child {
+                grid-column: 1 / 3;
+                grid-row: 1 / 2;
+            }
+
+            .dr-stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .dr-stat-item {
+                border-right: none;
+                border-bottom: 1px solid rgba(255, 255, 255, .15);
+            }
+
+            .dr-stat-item:nth-child(2n) {
+                border-bottom: 1px solid rgba(255, 255, 255, .15);
+            }
+
+            .cta-research-cards {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .dr-diseases-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .dr-diseases-header p {
+                text-align: left;
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .dr-hero-left {
+                padding: 80px 20px 40px;
+            }
+
+            .dr-hero-stats {
+                gap: 20px;
+                flex-wrap: wrap;
+            }
+
+            .dr-disease-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .dr-benefits-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .dr-gallery-grid {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: repeat(3, 160px);
+            }
+
+            .dr-gallery-item:first-child {
+                grid-column: 1 / 3;
+                grid-row: 1 / 2;
+            }
+
+            .dr-stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .cta-research-cards {
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
+
+            .cta-research-section {
+                padding: 60px 0;
+            }
+
+            .cta-research-header h2 {
+                font-size: 26px;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .dr-timeline {
+                grid-template-columns: 1fr;
+            }
+
+            .dr-gallery-grid {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(5, 160px);
+            }
+
+            .dr-gallery-item:first-child {
+                grid-column: 1;
+                grid-row: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="../index.html#home" class="logo-link">
+                        <img src="../image/logo/ksseed.png" alt="KsSEED Logo" />
+                        <span class="logo-text">KSSEED</span>
+                    </a>
+                </div>
+
+                <nav class="nav" id="nav">
+                    <a href="../index.html#home" class="nav-link" data-en="Home" data-km="ទំព័រដើម">Home</a>
+                    <a href="../index.html#products" class="nav-link" data-en="Seeds" data-km="គ្រាប់ពូជ">Seeds</a>
+                    <a href="../index.html#about" class="nav-link" data-en="About Us" data-km="អំពីយើង">About Us</a>
+
+                    <!-- Research dropdown -->
+                    <div class="nav-item-dropdown">
+                        <a href="../index.html#research" class="nav-link nav-link-dropdown active" data-en="Research"
+                            data-km="ស្រាវជ្រាវ">
+                            Research
+                            <span class="dropdown-arrow"></span>
+                        </a>
+                        <div class="nav-dropdown">
+                            <a href="../research/seed-testing.html" class="dropdown-link" data-en="Seed Testing"
+                                data-km="ការសាកល្បងគ្រាប់ពូជ">Seed Testing</a>
+                            <a href="../research/climate-adaptation.html" class="dropdown-link"
+                                data-en="Climate Adaptation" data-km="ការសម្របខ្លួនអាកាសធាតុ">Climate Adaptation</a>
+                            <a href="../research/disease-resistance.html" class="dropdown-link"
+                                data-en="Disease Resistance" data-km="ការធន់នឹងជំងឺ">Disease Resistance</a>
+                            <a href="../research/yield-optimization.html" class="dropdown-link"
+                                data-en="Yield Optimization" data-km="ការបង្កើនផលិតកម្ម">Yield Optimization</a>
+                        </div>
+                    </div>
+
+                    <a href="../index.html#stories" class="nav-link" data-en="Farmer's Stories"
+                        data-km="រឿងរ៉ាវកសិករ">Farmer's Stories</a>
+                    <a href="../index.html#blog" class="nav-link" data-en="Blog" data-km="ប្លុក">Blog</a>
+                    <a href="../index.html#contact" class="nav-link" data-en="Contact" data-km="ទំនាក់ទំនង">Contact</a>
+                </nav>
+
+                <div class="header-actions">
+                    <button class="lang-switch" id="langSwitch">
+                        <span class="lang-option active" data-lang="en">EN</span>
+                        <span class="lang-divider">|</span>
+                        <span class="lang-option" data-lang="km">ខ្មែរ</span>
+                    </button>
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- BREADCRUMB -->
+    <section class="breadcrumb">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="../index.html" data-en="Home" data-km="ទំព័រដើម">Home</a>
+                <span class="breadcrumb-separator">/</span>
+                <a href="../research.html" data-en="Research" data-km="ស្រាវជ្រាវ">Research</a>
+                <span class="breadcrumb-separator">/</span>
+                <span class="breadcrumb-current" data-en="Disease Resistance" data-km="ការធន់នឹងជំងឺ">Disease
+                    Resistance</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- HERO: split layout -->
+    <section class="dr-hero">
+        <div class="dr-hero-left">
+            <div class="dr-hero-tag" data-en="🛡️ Research Program" data-km="🛡️ កម្មវិធីស្រាវជ្រាវ">
+                🛡️ Research Program
+            </div>
+            <h1 data-en="Disease &amp; Pest Resistance Breeding" data-km="ការបង្កាត់ពូជធន់នឹងជំងឺ និងសត្វល្អិត">
+                Disease &amp; Pest <span>Resistance</span> Breeding
+            </h1>
+            <p class="dr-hero-sub"
+                data-en="KSSEED breeds vegetable varieties with built-in natural resistance to pests and diseases — helping Cambodian farmers grow healthier crops with fewer chemicals and lower costs."
+                data-km="KSSEED បង្កាត់ពូជបន្លែដែលមានភាពធន់ពីកំណើតប្រឆាំងនឹងសមាសភាពចង្រៃ និងជំងឺ ដើម្បីជួយកសិករកម្ពុជាឱ្យទទួលបានទិន្នផលខ្ពស់ កាត់បន្ថយការប្រើប្រាស់គីមី និងចំណាយតិច។">
+                KSSEED breeds vegetable varieties with built-in natural resistance to pests and diseases — helping
+                Cambodian farmers grow healthier crops with fewer chemicals and lower costs.
+            </p>
+            <div class="dr-hero-stats">
+                <div class="dr-hero-stat">
+                    <div class="num">60%</div>
+                    <div class="lbl" data-en="Less pesticide needed" data-km="កាត់បន្ថយការប្រើថ្នាំកសិកម្ម">Less
+                        pesticide
+                        needed</div>
+                </div>
+                <div class="dr-hero-stat">
+                    <div class="num">8+</div>
+                    <div class="lbl" data-en="Disease-resistant varieties" data-km="ប្រភេទពូជធន់នឹងជំងឺ">
+                        Disease-resistant
+                        varieties</div>
+                </div>
+                <div class="dr-hero-stat">
+                    <div class="num">4</div>
+                    <div class="lbl" data-en="Resistance categories" data-km="ប្រភេទនៃភាពធន់ចម្បងៗ">Resistance
+                        categories
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dr-hero-right">
+            <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1200&amp;q=80"
+                alt="Healthy disease-resistant crops" loading="eager" fetchpriority="high" decoding="sync" />
+        </div>
+    </section>
+
+    <!-- INTRO: two-column with divider -->
+    <section class="dr-intro">
+        <div class="container">
+            <div class="dr-intro-inner">
+                <div>
+                    <h2 data-en="Natural Resistance Through Selective Breeding"
+                        data-km="ការបង្កើនភាពធន់តាមបែបធម្មជាតិ តាមរយៈការជ្រើសរើសបង្កាត់ពូជ">
+                        Natural Resistance Through Selective Breeding
+                    </h2>
+                    <p data-en="KSSEED focuses on developing vegetable varieties with inherent resistance to the most common pests and diseases that threaten Cambodian agriculture. Rather than relying on chemical inputs, we identify and breed natural resistance traits that allow crops to defend themselves. This approach reduces pesticide costs for farmers, protects soil health, and produces safer, healthier vegetables for Cambodian consumers and export markets."
+                        data-km="KSSEED ផ្តោតសំខាន់លើការអភិវឌ្ឍពូជបន្លែដែលមានភាពធន់ពីកំណើតប្រឆាំងនឹងសមាសភាពចង្រៃ និងជំងឺដែលគំរាមកំហែងដល់វិស័យកសិកម្មនៅកម្ពុជា។ ជំនួសឱ្យការពឹងផ្អែកលើសារធាតុគីមី យើងសិក្សាស្វែងរក និងបង្កាត់យកលក្ខណៈពិសេសនៃភាពធន់ពីធម្មជាតិ ដែលអនុញ្ញាតឱ្យដំណាំមានសមត្ថភាពការពារខ្លួន។ វិធីសាស្ត្រនេះជួយកាត់បន្ថយការចំណាយលើថ្នាំកសិកម្ម ការពារសុខភាពដី និងផ្តល់នូវបន្លែដែលមានសុវត្ថិភាពខ្ពស់សម្រាប់អ្នកបរិភោគទាំងក្នុងស្រុក និងទីផ្សារនាំចេញ។">
+                        KSSEED focuses on developing vegetable varieties with inherent resistance to the most common
+                        pests and diseases that threaten Cambodian agriculture. Rather than relying on chemical inputs,
+                        we identify and breed natural resistance traits that allow crops to defend themselves. This
+                        approach reduces pesticide costs for farmers, protects soil health, and produces safer,
+                        healthier vegetables for Cambodian consumers and export markets.
+                    </p>
+                </div>
+                <div class="dr-intro-divider"></div>
+                <div class="dr-intro-right">
+                    <div class="dr-intro-pill">
+                        <span class="icon">🌿</span>
+                        <span class="text" data-en="100% natural breeding — no genetic modification involved"
+                            data-km="ការបង្កាត់ពូជតាមធម្មជាតិ ១០០% — គ្មានការកែប្រែហ្សែន (Non-GMO)">
+                            100% natural breeding — no genetic modification involved
+                        </span>
+                    </div>
+                    <div class="dr-intro-pill">
+                        <span class="icon">🧪</span>
+                        <span class="text" data-en="Laboratory-confirmed resistance testing before variety release"
+                            data-km="ការធ្វើតេស្តបញ្ជាក់ពីភាពធន់ក្នុងមន្ទីរពិសោធន៍ មុនពេលបញ្ចេញលក់">
+                            Laboratory-confirmed resistance testing before variety release
+                        </span>
+                    </div>
+                    <div class="dr-intro-pill">
+                        <span class="icon">👨‍🌾</span>
+                        <span class="text" data-en="On-farm validation with Cambodian farmers across multiple provinces"
+                            data-km="ការចុះអនុវត្តផ្ទាល់ និងបញ្ជាក់គុណភាពដោយកសិករនៅតាមបណ្តាខេត្តនានា">
+                            On-farm validation with Cambodian farmers across multiple provinces
+                        </span>
+                    </div>
+                    <div class="dr-intro-pill">
+                        <span class="icon">📉</span>
+                        <span class="text" data-en="Proven to cut pesticide use by up to 60% in field trials"
+                            data-km="កាត់បន្ថយការប្រើប្រាស់ថ្នាំកសិកម្មបានរហូតដល់ ៦០% តាមរយៈការធ្វើតេស្តជាក់ស្តែង">
+                            Proven to cut pesticide use by up to 60% in field trials
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS: horizontal timeline -->
+    <section class="dr-process">
+        <div class="container">
+            <div class="dr-process-header">
+                <h2 data-en="Our Resistance Development Process" data-km="ដំណើរការអភិវឌ្ឍភាពធន់នៃពូជដំណាំ">
+                    Our Resistance Development Process
+                </h2>
+                <p data-en="From identifying threats to releasing certified resistant varieties — a rigorous 4-stage journey."
+                    data-km="ចាប់តាំងពីការកំណត់មុខសញ្ញាជំងឺ រហូតដល់ការបញ្ចេញលក់ពូជដែលបានបញ្ជាក់គុណភាព — នេះគឺជាដំណើរការដ៏ម៉ត់ចត់ទាំង ៤ ដំណាក់កាល។">
+                    From identifying threats to releasing certified resistant varieties — a rigorous 4-stage journey.
+                </p>
+            </div>
+            <div class="dr-timeline">
+
+                <div class="dr-step" data-aos="fade-up" data-aos-delay="0">
+                    <div class="dr-step-dot">
+                        🔬
+                        <span class="dr-step-num">1</span>
+                    </div>
+                    <h3 data-en="Disease Identification" data-km="ការកំណត់អត្តសញ្ញាណជំងឺ">Disease Identification</h3>
+                    <p data-en="We map and analyze the major pests, viruses, fungi, and bacteria affecting vegetable crops across all provinces of Cambodia."
+                        data-km="យើងធ្វើការសិក្សា និងវិភាគលើសមាសភាពចង្រៃសំខាន់ៗដូចជា សត្វល្អិត វីរុស ផ្សិត និងបាក់តេរី ដែលប៉ះពាល់ដល់ដំណាំបន្លែនៅតាមបណ្តាខេត្តនានាក្នុងប្រទេសកម្ពុជា។">
+                        We map and analyze the major pests, viruses, fungi, and bacteria affecting vegetable crops
+                        across all
+                        provinces of Cambodia.
+                    </p>
+                </div>
+
+                <div class="dr-step" data-aos="fade-up" data-aos-delay="150">
+                    <div class="dr-step-dot">
+                        🔍
+                        <span class="dr-step-num">2</span>
+                    </div>
+                    <h3 data-en="Resistance Screening" data-km="ការស្វែងរកហ្សែនធន់">Resistance Screening</h3>
+                    <p data-en="We screen wild relatives and traditional varieties using genomic tools to identify natural resistance genes and valuable defense traits."
+                        data-km="យើងធ្វើការជ្រើសរើសពូជព្រៃ និងពូជក្នុងស្រុកមកសិក្សាដោយប្រើប្រាស់បច្ចេកវិទ្យាហ្សែន ដើម្បីស្វែងរកហ្សែនដែលធន់នឹងជំងឺពីធម្មជាតិ និងលក្ខណៈការពារខ្លួនដ៏មានតម្លៃផ្សេងៗ។">
+                        We screen wild relatives and traditional varieties using genomic tools to identify natural
+                        resistance genes
+                        and valuable defense traits.
+                    </p>
+                </div>
+
+                <div class="dr-step" data-aos="fade-up" data-aos-delay="300">
+                    <div class="dr-step-dot">
+                        🌱
+                        <span class="dr-step-num">3</span>
+                    </div>
+                    <h3 data-en="Breeding & Selection" data-km="ការបង្កាត់ និងជ្រើសរើសពូជ">Breeding & Selection</h3>
+                    <p data-en="Through controlled crosses and multi-generation selection, we combine resistance with high yield, good taste, and desirable farmer traits."
+                        data-km="តាមរយៈការបង្កាត់ និងការជ្រើសរើសពូជជាច្រើនជំនាន់ យើងបានបញ្ចូលគ្នាសម្រាំងយកភាពធន់ ជាមួយទិន្នផលខ្ពស់ រសជាតិឆ្ងាញ់ និងលក្ខណៈពិសេសផ្សេងទៀតដែលកសិករត្រូវការ។">
+                        Through controlled crosses and multi-generation selection, we combine resistance with high
+                        yield, good
+                        taste, and desirable farmer traits.
+                    </p>
+                </div>
+
+                <div class="dr-step" data-aos="fade-up" data-aos-delay="450">
+                    <div class="dr-step-dot">
+                        📋
+                        <span class="dr-step-num">4</span>
+                    </div>
+                    <h3 data-en="Evaluation & Release" data-km="ការវាយតម្លៃ និងការចែកចាយ">Evaluation & Release</h3>
+                    <p data-en="New varieties undergo rigorous on-farm trials with farmer participation before being certified and released to Cambodian farmers."
+                        data-km="ពូជថ្មីៗត្រូវឆ្លងកាត់ការសាកល្បងយ៉ាងម៉ត់ចត់នៅលើចំការផ្ទាល់ជាមួយកសិករ មុននឹងទទួលបានការបញ្ជាក់គុណភាព និងចែកចាយជូនដល់បងប្អូនកសិករខ្មែរយកទៅដាំដុះ។">
+                        New varieties undergo rigorous on-farm trials with farmer participation before being certified
+                        and released
+                        to Cambodian farmers.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- DISEASE TYPES: magazine card grid -->
+    <section class="dr-diseases">
+        <div class="container">
+            <div class="dr-diseases-header">
+                <h2 data-en="Resistance Against Major Threats" data-km="ភាពធន់ប្រឆាំងនឹងការគំរាមកំហែងចម្បងៗ">Resistance
+                    Against Major Threats</h2>
+                <p data-en="Our varieties are engineered to fight back against four categories of biological threats common in Cambodia."
+                    data-km="ពូជដំណាំរបស់យើងត្រូវបានបង្កាត់ឡើងដើម្បីប្រឆាំងនឹងការគំរាមកំហែងជីវសាស្ត្រទាំង ៤ ប្រភេទដែលកើតមានជាញឹកញាប់នៅក្នុងប្រទេសកម្ពុជា។">
+                    Our varieties are engineered to fight back against four categories of biological threats common in
+                    Cambodia.
+                </p>
+            </div>
+            <div class="dr-disease-grid">
+
+                <div class="dr-disease-card large" data-aos="fade-right">
+                    <div class="dc-img">
+                        <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=700&amp;q=80"
+                            alt="Viral disease resistance research" />
+                        <span class="dc-badge" data-en="Featured" data-km="ពិសេស">Featured</span>
+                    </div>
+                    <div class="dc-body">
+                        <div class="dc-icon-row">
+                            <span class="dc-icon">🦠</span>
+                            <h3 data-en="Viral Disease Resistance" data-km="ភាពធន់នឹងជំងឺវីរុស">Viral Disease Resistance
+                            </h3>
+                        </div>
+                        <p data-en="We breed varieties with strong resistance to the most destructive plant viruses in Cambodia, including Cucumber Mosaic Virus (CMV), Papaya Ringspot Virus (PRSV), Tomato Yellow Leaf Curl Virus (TYLCV), and Pepper Mottle Virus. These viruses can cause 40–80% yield losses if uncontrolled."
+                            data-km="យើងបង្កាត់ពូជដែលមានភាពធន់ខ្លាំងប្រឆាំងនឹងវីរុសបំផ្លាញដំណាំបំផុតនៅកម្ពុជា រួមមាន វីរុសម៉ូសាអ៊ិកលើត្រសក់ (CMV) វីរុសអុតអុជលើល្ហុង (PRSV) វីរុសរួញស្លឹកលើប៉េងប៉ោះ (TYLCV) និងវីរុសអុតលើម្ទេស។ វីរុសទាំងនេះអាចបណ្តាលឱ្យបាត់បង់ទិន្នផលពី ៤០-៨០% ប្រសិនបើគ្មានការការពារ។">
+                            We breed varieties with strong resistance to the most destructive plant viruses in Cambodia,
+                            including Cucumber Mosaic Virus (CMV), Papaya Ringspot Virus (PRSV), Tomato Yellow Leaf Curl
+                            Virus (TYLCV), and Pepper Mottle Virus. These viruses can cause 40–80% yield losses if
+                            uncontrolled.
+                        </p>
+                        <div class="dc-tags">
+                            <span class="dc-tag">CMV</span>
+                            <span class="dc-tag">PRSV</span>
+                            <span class="dc-tag">TYLCV</span>
+                            <span class="dc-tag">Pepper Mottle</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dr-disease-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="dc-img">
+                        <img src="https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?w=400&amp;q=80"
+                            alt="Fungal disease resistant crops" />
+                    </div>
+                    <div class="dc-body">
+                        <div class="dc-icon-row">
+                            <span class="dc-icon">🍄</span>
+                            <h3 data-en="Fungal Disease Resistance" data-km="ភាពធន់នឹងជំងឺផ្សិត">Fungal Disease
+                                Resistance
+                            </h3>
+                        </div>
+                        <p data-en="Resistance to powdery mildew, anthracnose, leaf blight, and downy mildew — the most yield-damaging fungal threats in Cambodia's humid climate."
+                            data-km="ភាពធន់នឹងជំងឺផ្សិតម្សៅ ជំងឺអង់ត្រាក់ណូស ជំងឺខ្លោចស្លឹក និងជំងឺផ្សិតសន្សើម ដែលជាការគំរាមកំហែងដ៏ធំក្នុងលក្ខខណ្ឌអាកាសធាតុសើមនៅកម្ពុជា។">
+                            Resistance to powdery mildew, anthracnose, leaf blight, and downy mildew — the most
+                            yield-damaging fungal threats in Cambodia's humid climate.
+                        </p>
+                        <div class="dc-tags">
+                            <span class="dc-tag">Powdery Mildew</span>
+                            <span class="dc-tag">Anthracnose</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dr-disease-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="dc-img">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&amp;q=80"
+                            alt="Insect pest resistant plants" />
+                    </div>
+                    <div class="dc-body">
+                        <div class="dc-icon-row">
+                            <span class="dc-icon">🐛</span>
+                            <h3 data-en="Insect Pest Tolerance" data-km="ភាពធន់នឹងសត្វល្អិតចង្រៃ">Insect Pest Tolerance
+                            </h3>
+                        </div>
+                        <p data-en="Varieties with natural tolerance to whiteflies, aphids, spider mites, and thrips — vectors that spread viruses and directly damage crops."
+                            data-km="ពូជដែលមានភាពធន់ពីធម្មជាតិទៅនឹង រុយស ចៃ សត្វពីងពាងក្រហម និងគ្រីប ដែលជាភ្នាក់ងារចម្លងវីរុស និងបំផ្លាញដំណាំដោយផ្ទាល់។">
+                            Varieties with natural tolerance to whiteflies, aphids, spider mites, and thrips — vectors
+                            that spread viruses and directly damage crops.
+                        </p>
+                        <div class="dc-tags">
+                            <span class="dc-tag">Whitefly</span>
+                            <span class="dc-tag">Aphids</span>
+                            <span class="dc-tag">Spider Mites</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dr-disease-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="dc-img">
+                        <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=400&amp;q=80"
+                            alt="Healthy bacterial-resistant farm" />
+                    </div>
+                    <div class="dc-body">
+                        <div class="dc-icon-row">
+                            <span class="dc-icon">🌾</span>
+                            <h3 data-en="Bacterial Wilt Resistance" data-km="ភាពធន់នឹងជំងឺបាក់តេរី">Bacterial Wilt
+                                Resistance</h3>
+                        </div>
+                        <p data-en="Varieties tolerant of bacterial wilt and soft rot — bacterial infections that can devastate an entire crop within days during Cambodia's wet season."
+                            data-km="ពូជដែលធន់នឹងជំងឺស្រពោនបាក់តេរី និងជំងឺរលួយមើម ដែលអាចបំផ្លាញដំណាំទាំងមូលក្នុងរយៈពេលតែប៉ុន្មានថ្ងៃក្នុងអំឡុងរដូវវស្សា។">
+                            Varieties tolerant of bacterial wilt and soft rot — bacterial infections that can devastate
+                            an entire crop within days during Cambodia's wet season.
+                        </p>
+                        <div class="dc-tags">
+                            <span class="dc-tag">Bacterial Wilt</span>
+                            <span class="dc-tag">Soft Rot</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- BENEFITS: 3-col cards -->
+    <section class="dr-benefits">
+        <div class="container">
+            <div class="dr-benefits-header">
+                <h2 data-en="Why Disease-Resistant Seeds Matter"
+                    data-km="ហេតុអ្វីបានជាគ្រាប់ពូជធន់នឹងជំងឺមានសារៈសំខាន់?">
+                    Why Disease-Resistant Seeds Matter</h2>
+                <p data-en="The benefits go far beyond the farm — from healthier food to a cleaner environment."
+                    data-km="អត្ថប្រយោជន៍លើសពីការរំពឹងទុក — ចាប់ពីការផ្តល់នូវអាហារមានសុខភាពល្អ រហូតដល់ការចូលរួមថែរក្សាបរិស្ថាន។">
+                    The benefits go far beyond the farm — from healthier food to a cleaner environment.</p>
+            </div>
+            <div class="dr-benefits-grid">
+
+                <div class="dr-benefit-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="b-icon">💰</div>
+                    <h3 data-en="Lower Production Costs" data-km="កាត់បន្ថយថ្លៃដើមផលិតកម្ម">Lower Production Costs</h3>
+                    <p data-en="Disease-resistant varieties cut pesticide and fungicide spending by up to 60%, directly increasing farmer net income and profitability season after season."
+                        data-km="ពូជធន់នឹងជំងឺជួយកាត់បន្ថយការចំណាយលើថ្នាំកសិកម្ម និងថ្នាំសម្លាប់ផ្សិតបានរហូតដល់ ៦០% ដែលជួយបង្កើនប្រាក់ចំណេញសុទ្ធដល់កសិកររៀងរាល់រដូវកាល។">
+                        Disease-resistant varieties cut pesticide and fungicide spending by up to 60%, directly
+                        increasing farmer net income and profitability season after season.
+                    </p>
+                </div>
+
+                <div class="dr-benefit-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="b-icon">🥦</div>
+                    <h3 data-en="Healthier Vegetables" data-km="បន្លែមានសុខភាពល្អ និងសុវត្ថិភាព">Healthier Vegetables
+                    </h3>
+                    <p data-en="With fewer chemical treatments, vegetables grown from resistant varieties carry less pesticide residue — delivering safer, better-tasting produce to Cambodian markets."
+                        data-km="តាមរយៈការប្រើប្រាស់ថ្នាំតិចជាងមុន បន្លែដែលដាំចេញពីពូជធន់គឺមានជាតិពុលទាបបំផុត — ផ្តល់នូវបន្លែដែលមានសុវត្ថិភាព និងរសជាតិឆ្ងាញ់សម្រាប់ទីផ្សារកម្ពុជា។">
+                        With fewer chemical treatments, vegetables grown from resistant varieties carry less pesticide
+                        residue — delivering safer, better-tasting produce to Cambodian markets.
+                    </p>
+                </div>
+
+                <div class="dr-benefit-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="b-icon">🌱</div>
+                    <h3 data-en="Healthier Soil" data-km="ដីមានជីជាតិ និងសុខភាពល្អ">Healthier Soil</h3>
+                    <p data-en="Reduced pesticide and fungicide applications protect beneficial soil microbes and earthworms, maintaining long-term soil fertility and structure for future crops."
+                        data-km="ការកាត់បន្ថយការប្រើថ្នាំគីមីជួយការពារអតិសុខុមប្រាណល្អៗ និងជន្លេនក្នុងដី រក្សាបាននូវជីជាតិដី និងរចនាសម្ព័ន្ធដីសម្រាប់ដាំដុះរយៈពេលវែង។">
+                        Reduced pesticide and fungicide applications protect beneficial soil microbes and earthworms,
+                        maintaining long-term soil fertility and structure for future crops.
+                    </p>
+                </div>
+
+                <div class="dr-benefit-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="b-icon">📊</div>
+                    <h3 data-en="More Stable Yields" data-km="ទិន្នផលមានស្ថិរភាពខ្ពស់">More Stable Yields</h3>
+                    <p data-en="Resistant varieties maintain strong yields even during disease outbreaks and pest pressure, giving farmers reliable income throughout the growing season."
+                        data-km="ពូជធន់រក្សាបាននូវទិន្នផលខ្ពស់ ទោះបីជាមានការផ្ទុះឡើងនូវជំងឺ ឬសត្វល្អិតក៏ដោយ ដែលជួយឱ្យកសិករទទួលបានប្រាក់ចំណូលជាទីទុកចិត្តពេញមួយរដូវកាល។">
+                        Resistant varieties maintain strong yields even during disease outbreaks and pest pressure,
+                        giving farmers reliable income throughout the growing season.
+                    </p>
+                </div>
+
+                <div class="dr-benefit-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="b-icon">🌍</div>
+                    <h3 data-en="Environmental Protection" data-km="ការការពារបរិស្ថាន">Environmental Protection</h3>
+                    <p data-en="Fewer chemical inputs means less run-off into Cambodia's waterways, protecting aquatic life and the ecosystems that farming communities depend on."
+                        data-km="ការប្រើប្រាស់សារធាតុគីមីតិច មានន័យថាការកាត់បន្ថយជាតិពុលហូរចូលក្នុងប្រភពទឹក ការពារសត្វទឹក និងប្រព័ន្ធអេកូឡូស៊ីដែលសហគមន៍កសិកម្មពឹងផ្អែកលើ។">
+                        Fewer chemical inputs means less run-off into Cambodia's waterways, protecting aquatic life and
+                        the ecosystems that farming communities depend on.
+                    </p>
+                </div>
+
+                <div class="dr-benefit-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="b-icon">⏱️</div>
+                    <h3 data-en="Less Labor & Stress" data-km="កាត់បន្ថយកម្លាំងពលកម្ម និងការព្រួយបារម្ភ">Less Labor &
+                        Stress
+                    </h3>
+                    <p data-en="Farmers spend less time scouting for disease and applying treatments, freeing up labor for other farm activities and reducing the physical and financial burden of crop protection."
+                        data-km="កសិករចំណាយពេលតិចក្នុងការតាមដានជំងឺ និងការបាញ់ថ្នាំ ដែលជួយឱ្យពួកគាត់មានពេលសម្រាក ឬធ្វើកិច្ចការផ្សេងទៀត និងកាត់បន្ថយសម្ពាធផ្នែកហិរញ្ញវត្ថុផងដែរ។">
+                        Farmers spend less time scouting for disease and applying treatments, freeing up labor for other
+                        farm activities and reducing the physical and financial burden of crop protection.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY: masonry-inspired -->
+    <section class="dr-gallery">
+        <div class="container">
+            <h2 data-en="Disease Resistance Research Gallery" data-km="កម្រងរូបភាពនៃការស្រាវជ្រាវភាពធន់នឹងជំងឺ">
+                Disease Resistance Research Gallery
+            </h2>
+            <div class="dr-gallery-grid">
+                <div class="dr-gallery-item" data-aos="fade-right">
+                    <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&amp;q=80"
+                        alt="Healthy resistant vegetable crops" />
+                    <div class="g-cap" data-en="Healthy Resistant Crops" data-km="ដំណាំដែលមានភាពធន់ និងសុខភាពល្អ">
+                        Healthy
+                        Resistant Crops</div>
+                </div>
+                <div class="dr-gallery-item" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=500&amp;q=80"
+                        alt="Laboratory disease testing" />
+                    <div class="g-cap" data-en="Lab Disease Testing"
+                        data-km="ការធ្វើតេស្តរោគវិនិច្ឆ័យក្នុងមន្ទីរពិសោធន៍">
+                        Lab Disease Testing</div>
+                </div>
+                <div class="dr-gallery-item" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1586771107445-d3ca888129ff?w=500&amp;q=80"
+                        alt="Pest resistance field screening" />
+                    <div class="g-cap" data-en="Pest Resistance Screening" data-km="ការវាយតម្លៃភាពធន់នឹងសត្វល្អិតចង្រៃ">
+                        Pest
+                        Resistance Screening</div>
+                </div>
+                <div class="dr-gallery-item" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?w=500&amp;q=80"
+                        alt="Fungal resistance trial crops" />
+                    <div class="g-cap" data-en="Fungal Resistance Trials" data-km="ការសាកល្បងភាពធន់នឹងជំងឺផ្សិត">Fungal
+                        Resistance Trials</div>
+                </div>
+                <div class="dr-gallery-item" data-aos="fade-up" data-aos-delay="400">
+                    <img src="https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=500&amp;q=80"
+                        alt="On-farm disease monitoring Cambodia" />
+                    <div class="g-cap" data-en="On-Farm Disease Monitoring" data-km="ការតាមដានជំងឺផ្ទាល់នៅតាមចំការ">
+                        On-Farm
+                        Disease Monitoring</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="dr-stats">
+        <div class="container">
+            <div class="dr-stats-grid" data-aos="fade-up">
+                <div class="dr-stat-item">
+                    <div class="n">60%</div>
+                    <div class="l" data-en="Reduction in pesticide use" data-km="ការកាត់បន្ថយការប្រើថ្នាំកសិកម្ម">
+                        Reduction
+                        in pesticide use</div>
+                </div>
+                <div class="dr-stat-item">
+                    <div class="n">8+</div>
+                    <div class="l" data-en="Disease-resistant varieties" data-km="ប្រភេទពូជដែលធន់នឹងជំងឺ">
+                        Disease-resistant
+                        varieties</div>
+                </div>
+                <div class="dr-stat-item">
+                    <div class="n">4</div>
+                    <div class="l" data-en="Resistance categories covered" data-km="ប្រភេទនៃភាពធន់ចម្បងៗ">Resistance
+                        categories covered</div>
+                </div>
+                <div class="dr-stat-item">
+                    <div class="n">25+</div>
+                    <div class="l" data-en="Pathogens studied &amp; targeted" data-km="ភ្នាក់ងារចម្លងរោគដែលបានសិក្សា">
+                        Pathogens studied &amp; targeted</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-research-section">
+        <div class="container cta-research-inner">
+            <div class="cta-research-header" data-aos="fade-up">
+                <span class="cta-research-badge" data-en="🔬 Research &amp; Innovation"
+                    data-km="🔬 ការស្រាវជ្រាវ និងនវានុវត្តន៍">
+                    🔬 Research &amp; Innovation
+                </span>
+                <h2 data-en="Explore Other Research Areas" data-km="ស្វែងយល់ពីផ្នែកស្រាវជ្រាវផ្សេងទៀត">Explore Other
+                    Research Areas</h2>
+                <p data-en="Discover how KSSEED pushes the boundaries of agricultural science to help Cambodian farmers thrive."
+                    data-km="ស្វែងយល់ពីរបៀបដែល KSSEED ពង្រីកវិសាលភាពវិទ្យាសាស្ត្រកសិកម្ម ដើម្បីជួយកសិករកម្ពុជាឱ្យកាន់តែរីកចម្រើន។">
+                    Discover how KSSEED pushes the boundaries of agricultural science to help Cambodian farmers thrive.
+                </p>
+            </div>
+            <div class="cta-research-cards">
+                <a href="seed-testing.html" class="cta-research-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="cta-card-icon">🧪</div>
+                    <div class="cta-card-body">
+                        <h3 data-en="Seed Testing" data-km="ការធ្វើតេស្តគ្រាប់ពូជ">Seed Testing</h3>
+                        <p data-en="Rigorous quality control ensuring every KSSEED seed meets high germination standards."
+                            data-km="ការត្រួតពិនិត្យគុណភាពយ៉ាងម៉ត់ចត់ ដើម្បីធានាថាគ្រាប់ពូជ KSSEED ទាំងអស់មានអត្រាដំណុះខ្ពស់តាមស្តង់ដារ។">
+                            Rigorous quality control ensuring every KSSEED seed meets high germination standards.
+                        </p>
+                    </div>
+                    <span class="cta-card-arrow">→</span>
+                </a>
+                <a href="climate-adaptation.html" class="cta-research-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="cta-card-icon">🌦️</div>
+                    <div class="cta-card-body">
+                        <h3 data-en="Climate Adaptation" data-km="ការបន្ស៊ាំនឹងអាកាសធាតុ">Climate Adaptation</h3>
+                        <p data-en="Developing seed varieties that thrive under Cambodia's changing climate conditions."
+                            data-km="ការអភិវឌ្ឍពូជគ្រាប់ពូជដែលអាចលូតលាស់បានយ៉ាងល្អ ទោះបីស្ថិតក្នុងស្ថានភាពប្រែប្រួលអាកាសធាតុនៅកម្ពុជា។">
+                            Developing seed varieties that thrive under Cambodia's changing climate conditions.
+                        </p>
+                    </div>
+                    <span class="cta-card-arrow">→</span>
+                </a>
+                <a href="yield-optimization.html" class="cta-research-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="cta-card-icon">📈</div>
+                    <div class="cta-card-body">
+                        <h3 data-en="Yield Optimization" data-km="ការបង្កើនសក្តានុពលទិន្នផល">Yield Optimization</h3>
+                        <p data-en="Maximizing crop output per hectare through advanced hybrid breeding programs."
+                            data-km="បង្កើនទិន្នផលដំណាំឱ្យបានជាអតិបរមាក្នុងមួយហិកតា តាមរយៈកម្មវិធីបង្កាត់ពូជកូនកាត់កម្រិតខ្ពស់។">
+                            Maximizing crop output per hectare through advanced hybrid breeding programs.
+                        </p>
+                    </div>
+                    <span class="cta-card-arrow">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="../image/logo/ksseed.png" alt="KsSEED Logo" />
+                        <span class="logo-text">KSSEED</span>
+                    </div>
+                    <p data-en="Quality, Confidence, and Growth are primary."
+                        data-km="គុណភាព ទំនុកចិត្ត និងភាពរីកចម្រើនជាចម្បង">Quality, Confidence, and Growth are primary.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-en="Quick Links" data-km="តំណភ្ជាប់រហ័ស">Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html#home" data-en="Home" data-km="ទំព័រដើម">Home</a></li>
+                        <li><a href="../index.html#about" data-en="About Us" data-km="អំពីយើង">About Us</a></li>
+                        <li><a href="../index.html#products" data-en="Products" data-km="ផលិតផល">Products</a></li>
+                        <li><a href="../index.html#research" data-en="Research" data-km="ស្រាវជ្រាវ">Research</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 data-en="Resources" data-km="ធនធាន">Resources</h4>
+                    <ul>
+                        <li><a href="../index.html#stories" data-en="Farmer's Stories" data-km="រឿងរ៉ាវកសិករ">Farmer's
+                                Stories</a></li>
+                        <li><a href="../index.html#blog" data-en="Blog" data-km="ប្លុក">Blog</a></li>
+                        <li><a href="../faq.html" data-en="FAQs" data-km="សំណួរញឹកញាប់">FAQs</a></li>
+                        <li><a href="#" data-en="Downloads" data-km="ទាញយក">Downloads</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 data-en="Contact" data-km="ទំនាក់ទំនង">Contact</h4>
+                    <ul>
+                        <li data-en="📍 Phnom Penh, Cambodia" data-km="📍 ភ្នំពេញ, កម្ពុជា">📍 Phnom Penh, Cambodia</li>
+                        <li>📞 +855 93 755 638</li>
+                        <li><a href="mailto:ksseed.info@gmail.com" style="padding-left:0;">✉️ ksseed.info@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 KsSeed. <span data-en="All rights reserved." data-km="រក្សាសិទ្ធិគ្រប់យ៉ាង។">All rights
+                        reserved.</span></p>
+                <div class="footer-links">
+                    <a href="../privacy-policy.html" data-en="Privacy Policy" data-km="គោលការណ៍ភាពឯកជន">Privacy Policy</a>
+                    <a href="../terms.html" data-en="Terms of Service" data-km="លក្ខខណ្ឌសេវាកម្ម">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop">&#10094;</button>
+    <script src="../js/script.js"></script>
+    <script src="../js/language-toggle.js"></script>
+    <script src="../js/header-nav.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 800, easing: 'ease-in-out', once: true });</script>
+</body>
+
+</html>

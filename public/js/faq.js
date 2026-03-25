@@ -4,8 +4,20 @@ const faqData = [
     id: 1,
     category: "seed",
     question: {
-      en: "Q1: In what year was KsSeed established?",
-      km: "សំណួរ 1: តើក្រុមហ៊ុនខេ អេស​ សុីដ បានបង្កើតឡើងនៅឆ្នាំណា?",
+      en: "Q1: What is KsSeed?",
+      km: "សំណួរ 1: តើខេ អេស សុីដជាអ្វី?",
+    },
+    answer: {
+      en: "KsSeed is a leading Cambodian agricultural enterprise that does more than just distribute seeds; it is a dedicated breeder and producer of vegetable seeds, homegrown and handcrafted by Cambodians. Through meticulous local research and breeding, KsSeed has developed high-quality, climate-resilient, and high-yielding crop varieties aimed at reducing the reliance on imported seeds. Furthermore, the company serves as a close partner to farmers by providing hands-on cultivation techniques, striving to modernize the agricultural sector and improve the livelihoods of Cambodian farming families.",
+      km: "ខេ អេស សុីដ គឺជាសហគ្រាសកសិកម្មឈានមុខមួយរបស់កម្ពុជា ដែលមិនត្រឹមតែចែកចាយគ្រាប់ពូជប៉ុណ្ណោះទេ ប៉ុន្តែគឺជាអ្នកបង្កាត់ និងផលិតគ្រាប់ពូជបន្លែដោយផ្ទាល់ដៃកូនខ្មែរពិតៗ។ តាមរយៈការស្រាវជ្រាវ និងបង្កាត់ពូជយ៉ាងសម្រិតសម្រាំងក្នុងស្រុក KsSeed បានបង្កើតនូវពូជដំណាំដែលមានគុណភាពខ្ពស់ ធន់នឹងអាកាសធាតុ និងផ្តល់ទិន្នផលច្រើន ដើម្បីជួយកាត់បន្ថយការនាំចូលគ្រាប់ពូជពីបរទេស។ លើសពីនេះ ក្រុមហ៊ុនបានដើរតួជាដៃគូដ៏ជិតស្និទ្ធរបស់កសិករ តាមរយៈការផ្តល់បច្ចេកទេសដាំដុះយ៉ាងដិតដល់ សំដៅប្រែក្លាយវិស័យកសិកម្មឱ្យកាន់តែមានភាពរីកចម្រើន និងបង្កើនប្រាក់ចំណូលជូនគ្រួសារកសិករខ្មែរឱ្យកាន់តែប្រសើរឡើង។",
+    },
+  },
+  {
+    id: 2,
+    category: "seed",
+    question: {
+      en: "Q2: In what year was KsSeed established?",
+      km: "សំណួរ 2: តើក្រុមហ៊ុនខេ អេស​ សុីដ បានបង្កើតឡើងនៅឆ្នាំណា?",
     },
     answer: {
       en: "We began producing trial seeds in 2018 and were officially registered in 2020.",
@@ -13,11 +25,11 @@ const faqData = [
     },
   },
   {
-    id: 2,
+    id: 3,
     category: "seed",
     question: {
-      en: "Q2: In which season is it best to plant KsSeed vegetable seeds?",
-      km: "សំណួរ 2: តើគ្រាប់ពូជបន្លែរបស់ក្រុមហ៊ុនខេ អេស សុីដ អាចដាំបាននៅរដូវណាល្អ?",
+      en: "Q3: In which season is it best to plant KsSeed vegetable seeds?",
+      km: "សំណួរ 3: តើគ្រាប់ពូជបន្លែរបស់ក្រុមហ៊ុនខេ អេស សុីដ អាចដាំបាននៅរដូវណាល្អ?",
     },
     answer: {
       en: "KsSeed pays close attention to all our seeds to ensure they are climate-resilient and easy to grow in Cambodia. Every KsSeed variety undergoes rigorous testing, ensuring that all our products meet high-quality standards.",
@@ -25,11 +37,11 @@ const faqData = [
     },
   },
   {
-    id: 3,
+    id: 4,
     category: "storage",
     question: {
-      en: "Q3: What types of seeds does KsSeed offer?",
-      km: "សំណួរ 3: តើក្រុមហ៊ុនខេ អេស សុីដ​ មានគ្រាប់ពូជអ្វីខ្លះ?",
+      en: "Q4: What types of seeds does KsSeed offer?",
+      km: "សំណួរ 4: តើក្រុមហ៊ុនខេ អេស សុីដ​ មានគ្រាប់ពូជអ្វីខ្លះ?",
     },
     answer: {
       en: "Over the past three years, KsSeed has built a strong reputation for developing vegetable seeds that meet market demands. We are currently researching and developing 75 seed varieties, all of which are specifically selected to meet the actual market needs in Cambodia.",
@@ -37,11 +49,11 @@ const faqData = [
     },
   },
   {
-    id: 4,
+    id: 5,
     category: "storage",
     question: {
-      en: "Q4: How long do KsSEED seeds remain viable?",
-      km: "សំណួរ 4: តើគ្រាប់ពូជ KsSEED នៅតែអាចប្រើបានរហូតដល់ពេលណា?",
+      en: "Q5: How long do KsSEED seeds remain viable?",
+      km: "សំណួរ 5: តើគ្រាប់ពូជ KsSEED នៅតែអាចប្រើបានរហូតដល់ពេលណា?",
     },
     answer: {
       en: "When stored properly in cool, dry conditions: Vegetable seeds (tomato, cucumber) - 3-4 years; Rice seeds - 1-2 years; Corn seeds - 2-3 years. Always check the packaging date and perform a simple germination test if unsure about seed viability.",
@@ -49,11 +61,11 @@ const faqData = [
     },
   },
   {
-    id: 5,
+    id: 6,
     category: "growing",
     question: {
-      en: "Q5: What is the best planting time for vegetables in Cambodia?",
-      km: "សំណួរ 5: តើពេលណាជាពេលវេលាដាំដុះបន្លែដ៏ល្អបំផុតនៅកម្ពុជា?",
+      en: "Q6: What is the best planting time for vegetables in Cambodia?",
+      km: "សំណួរ 6: តើពេលណាជាពេលវេលាដាំដុះបន្លែដ៏ល្អបំផុតនៅកម្ពុជា?",
     },
     answer: {
       en: "For most vegetables: Cool season (Nov-Feb): Lettuce, cabbage, broccoli, carrots. Hot season (Mar-May): Tomatoes, cucumbers, eggplants, peppers. Rainy season (Jun-Oct): Leafy greens, morning glory, yardlong beans. Avoid planting during peak rainy periods to prevent waterlogging.",
@@ -61,11 +73,11 @@ const faqData = [
     },
   },
   {
-    id: 6,
+    id: 7,
     category: "growing",
     question: {
-      en: "Q6: How much water do vegetable seeds need in Cambodia's climate?",
-      km: "សំណួរ 6: តើគ្រាប់ពូជបន្លែត្រូវការទឹកប៉ុន្មាននៅក្នុងអាកាសធាតុកម្ពុជា?",
+      en: "Q7: How much water do vegetable seeds need in Cambodia's climate?",
+      km: "សំណួរ 7: តើគ្រាប់ពូជបន្លែត្រូវការទឹកប៉ុន្មាននៅក្នុងអាកាសធាតុកម្ពុជា?",
     },
     answer: {
       en: "Water requirements vary by crop, but general guidelines: Seedling stage: Light watering twice daily. Growing stage: 1-2 cm of water every 2-3 days. Mature plants: Deep watering every 3-4 days. Always water early morning or late afternoon to minimize evaporation. Use mulch to retain soil moisture.",
@@ -73,23 +85,23 @@ const faqData = [
     },
   },
   {
-    id: 7,
+    id: 8,
     category: "support",
     question: {
-      en: "Q7: How can I get technical support for farming problems?",
-      km: "សំណួរ 7: តើខ្ញុំអាចទទួលបានជំនួយបច្ចេកទេfrancès សម្រាប់បញ្ហាកសិកម្មយ៉ាងដូចម្តេច?",
+      en: "Q8: How can I get technical support for farming problems?",
+      km: "សំណួរ 8: តើខ្ញុំអាចទទួលបានជំនួយបច្ចេកទេfrancès សម្រាប់បញ្ហាកសិកម្មយ៉ាងដូចម្តេច?",
     },
     answer: {
       en: "Contact your nearest KsSEED dealer who can connect you with our agricultural experts. We also offer: Field visits for major issues, WhatsApp support group for quick questions, Monthly training workshops at dealer locations, and a hotline for urgent problems: +855 93 755 638",
-      km: "ទាក់ទងអ្នកចែកចាយ KsSEED ជិតបំផុតរបស់អ្នក ដែលអាចភ្ជាប់អ្នកជាមួយអ្នកជំនាញកសិកម្មរបស់យើង។ យើងក៏ផ្តល់នូវ៖ ការមកជួបផ្ទាល់សម្រាប់បញ្ហាធំៗ ក្រុមជំនួយ WhatsApp សម្រាប់សំណួररហ័ស សិក្ខាសាលាបណ្តុះបណ្តាលប្រចាំខែនៅទីតាំងអ្នកចែកចាយ និងបន្ទាត់ទូរស័ព្ទសម្រាប់បញ្ហាបន្ទាន់៖ +855 93 755 638",
+      km: "ទាក់ទងអ្នកចែកចាយ KsSEED ជិតបំផុតរបស់អ្នក ដែលអាចភ្ជាប់អ្នកជាមួយអ្នកជំនាញកសិកម្មរបស់យើង។ យើងក៏ផ្តល់នូវ៖ ការមកជួបផ្ទាល់សម្រាប់បញ្ហាធំៗ ក្រុមជំនួយ WhatsApp សម្រាប់សំណួររហ័ស សិក្ខាសាលាបណ្តុះបណ្តាលប្រចាំខែនៅទីតាំងអ្នកចែកចាយ និងបន្ទាត់ទូរស័ព្ទសម្រាប់បញ្ហាបន្ទាន់៖ +855 93 755 638",
     },
   },
   {
-    id: 8,
+    id: 9,
     category: "ordering",
     question: {
-      en: "Q8: How can I purchase KsSEED products?",
-      km: "សំណួរ 8: តើខ្ញុំអាចទិញផលិតផល KsSEED បានយ៉ាងដូចម្តេច?",
+      en: "Q9: How can I purchase KsSEED products?",
+      km: "សំណួរ 9: តើខ្ញុំអាចទិញផលិតផល KsSEED បានយ៉ាងដូចម្តេច?",
     },
     answer: {
       en: "KsSEED products are available through our authorized dealer network across Cambodia. We do not sell directly online. Visit our 'Products' page to find dealers in your province, or call our hotline for dealer information. All dealers are trained to provide proper seed selection advice.",
@@ -97,11 +109,11 @@ const faqData = [
     },
   },
   {
-    id: 9,
+    id: 10,
     category: "quality",
     question: {
-      en: "Q9: What quality certifications does KsSEED have?",
-      km: "សំណួរ 9: តើ KsSEED មានវិញ្ញាបនបត្រគុណភាពអ្វីខ្លះ?",
+      en: "Q10: What quality certifications does KsSEED have?",
+      km: "សំណួរ 10: តើ KsSEED មានវិញ្ញាបនបត្រគុណភាពអ្វីខ្លះ?",
     },
     answer: {
       en: "KsSEED follows strict quality control protocols: All seeds are tested for germination rate (minimum 85% for vegetables, 90% for rice), Certified free from major seed-borne diseases, Packaged in moisture-resistant materials, Production follows Good Agricultural Practices (GAP), Regular laboratory testing at each batch.",
@@ -109,11 +121,11 @@ const faqData = [
     },
   },
   {
-    id: 10,
+    id: 11,
     category: "quality",
     question: {
-      en: "Q10: What makes KsSEED seeds better suited for Cambodian conditions?",
-      km: "សំណួរ 10: តើអ្វីដែលធ្វើឱ្យគ្រាប់ពូជ KsSEED សមស្របបន្ថែមទៀតសម្រាប់លក្ខខណ្ឌកម្ពុជា?",
+      en: "Q11: What makes KsSEED seeds better suited for Cambodian conditions?",
+      km: "សំណួរ 11: តើអ្វីដែលធ្វើឱ្យគ្រាប់ពូជ KsSEED សមស្របបន្ថែមទៀតសម្រាប់លក្ខខណ្ឌកម្ពុជា?",
     },
     answer: {
       en: "Our seeds are specifically developed and tested for Cambodian conditions: Heat-tolerant varieties for hot seasons, Disease-resistant strains for common local pathogens, Optimized for Cambodian soil types, Field-tested across multiple provinces for 3+ years, Developed with input from Cambodian farmers and agricultural experts.",
@@ -121,11 +133,11 @@ const faqData = [
     },
   },
   {
-    id: 11,
+    id: 12,
     category: "seed",
     question: {
-      en: "Q11: What is the germination rate of KsSEED seeds?",
-      km: "សំណួរ 11: តើអត្រាដុះនៃគ្រាប់ពូជ KsSEED គឺជាអ្វី?",
+      en: "Q12: What is the germination rate of KsSEED seeds?",
+      km: "សំណួរ 12: តើអត្រាដុះនៃគ្រាប់ពូជ KsSEED គឺជាអ្វី?",
     },
     answer: {
       en: "Our seeds undergo rigorous testing to ensure high germination rates: Vegetable seeds minimum 85%, Rice seeds minimum 90%, Corn seeds minimum 85%. All seeds are tested before packaging, and we provide germination test instructions with each purchase.",
@@ -133,11 +145,11 @@ const faqData = [
     },
   },
   {
-    id: 12,
+    id: 13,
     category: "storage",
     question: {
-      en: "Q12: What should I do if my seeds get wet or damaged?",
-      km: "សំណួរ 12: តើខ្ញុំគួរធ្វើអ្វីប្រសិនបើគ្រាប់ពូជរបស់ខ្ញុំទទួលទឹក ឬខូច?",
+      en: "Q13: What should I do if my seeds get wet or damaged?",
+      km: "សំណួរ 13: តើខ្ញុំគួរធ្វើអ្វីប្រសិនបើគ្រាប់ពូជរបស់ខ្ញុំទទួលទឹក ឬខូច?",
     },
     answer: {
       en: "If seeds get wet: 1) Spread them out on a dry paper towel immediately. 2) Place in a well-ventilated area (not in direct sun). 3) Once completely dry, store in a new airtight container with silica gel. If mold appears, do not use the seeds. Contact your dealer for replacement if damaged during storage.",
@@ -145,7 +157,6 @@ const faqData = [
     },
   },
 ];
-
 // // Language Switching System
 // let currentLang = "en";
 // const langSwitch = document.getElementById("langSwitch");

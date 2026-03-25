@@ -16,7 +16,10 @@ class Carousel {
     this.currentIndex = 3;
     this.autoScrollInterval = null;
     this.autoScrollDelay = 3000; // 3 seconds
-    this.currentLang = localStorage.getItem("language") || "en";
+    // this.currentLang = localStorage.getItem("language") || "en";
+
+    // Get language from localStorage
+    this.currentLang = localStorage.getItem("ksseed-language") || "en";
 
     // Initialize
     this.init();
@@ -90,6 +93,7 @@ class Carousel {
     card.className = "blog-card";
     card.dataset.id = blog._id;
 
+    // Use current language
     const title = this.currentLang === "km" ? blog.title.km : blog.title.en;
     const preview =
       this.currentLang === "km" ? blog.preview.km : blog.preview.en;
@@ -358,9 +362,8 @@ class Carousel {
   }
 }
 
-// Initialize carousel when DOM is loaded
+// Initialize carousel
 document.addEventListener("DOMContentLoaded", () => {
-  // Create global carousel instance
   window.blogCarousel = new Carousel();
 
   // Listen for language changes
@@ -370,7 +373,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
-
 // Language change helper function (add this to your language switcher)
 function triggerLanguageChange(lang) {
   const event = new CustomEvent("languageChange", {

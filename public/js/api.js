@@ -1,10 +1,17 @@
-// api.js - Updated API helper for MongoDB
-const API_BASE = "";
+// api.js - Updated API helper for MongoDB (Render + Local)
+
+// ✅ Auto-detect backend URL
+const API_BASE =
+  window.location.hostname === "localhost"
+    ? "http://localhost:5502"
+    : "https://ksseedcambodian.onrender.com";
 
 // Fetch all products
 async function fetchProducts(page = 1, limit = 12) {
   try {
-    const response = await fetch(`/api/products?page=${page}&limit=${limit}`);
+    const response = await fetch(
+      `${API_BASE}/api/products?page=${page}&limit=${limit}`,
+    );
     const data = await response.json();
 
     if (data.success) {
@@ -20,7 +27,7 @@ async function fetchProducts(page = 1, limit = 12) {
 // Fetch single product by key
 async function fetchProductByKey(productKey) {
   try {
-    const response = await fetch(`/api/products/${productKey}`);
+    const response = await fetch(`${API_BASE}/api/products/${productKey}`);
     const data = await response.json();
 
     if (data.success) {
@@ -38,7 +45,7 @@ async function fetchProductByKey(productKey) {
 async function fetchProductVariant(productKey, variantIndex) {
   try {
     const response = await fetch(
-      `/api/products/${productKey}/variants/${variantIndex}`,
+      `${API_BASE}/api/products/${productKey}/variants/${variantIndex}`,
     );
     const data = await response.json();
 
@@ -55,7 +62,9 @@ async function fetchProductVariant(productKey, variantIndex) {
 // Search products
 async function searchProducts(query) {
   try {
-    const response = await fetch(`/api/search?q=${encodeURIComponent(query)}`);
+    const response = await fetch(
+      `${API_BASE}/api/search?q=${encodeURIComponent(query)}`,
+    );
     const data = await response.json();
 
     if (data.success) {
@@ -71,7 +80,7 @@ async function searchProducts(query) {
 // Get categories
 async function fetchCategories() {
   try {
-    const response = await fetch("/api/categories");
+    const response = await fetch(`${API_BASE}/api/categories`);
     const data = await response.json();
 
     if (data.success) {
@@ -88,7 +97,7 @@ async function fetchCategories() {
 async function incrementViewCount(productKey, variantIndex) {
   try {
     const response = await fetch(
-      `/api/products/${productKey}/variants/${variantIndex}/view`,
+      `${API_BASE}/api/products/${productKey}/variants/${variantIndex}/view`,
       {
         method: "POST",
       },
@@ -104,7 +113,7 @@ async function incrementViewCount(productKey, variantIndex) {
 // Send contact form
 async function sendContactForm(formData) {
   try {
-    const response = await fetch("/contact", {
+    const response = await fetch(`${API_BASE}/api/contact`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -121,7 +130,7 @@ async function sendContactForm(formData) {
 // Subscribe to newsletter
 async function subscribeNewsletter(email) {
   try {
-    const response = await fetch("/subscribe", {
+    const response = await fetch(`${API_BASE}/api/subscribe`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -5,30 +5,41 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Cambodian Vegetable Seeds | KsSEED</title>
-
+  <!-- SEO-Friendly Title -->
+  <title>Home — Premium Cambodian Vegetable Seeds | KsSeed</title>
   <meta name="description"
-    content="KsSEED offers high-quality vegetable seeds in Cambodia, including cucumber, tomato, pumpkin, watermelon, and corn." />
+    content="Welcome to KsSEED – offering high-quality vegetable seeds in Cambodia, including cucumber, tomato, pumpkin, watermelon, and corn for farmers." />
+  <link rel="canonical" href="https://yourdomain.com/index.html" />
 
-  <link rel="canonical" href="https://yourdomain.com/prdDetail.html" />
-
-  <meta property="og:title" content="Cambodian Vegetable Seeds | KsSEED" />
-  <meta property="og:description" content="High-quality vegetable seeds produced for Cambodian farmers." />
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Home — Premium Cambodian Vegetable Seeds | KsSeed" />
+  <meta property="og:description"
+    content="KsSeed provides premium vegetable seeds produced for Cambodian farmers in Cambodia." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://yourdomain.com/prdDetail.html" />
-  <meta property="og:image" content="https://yourdomain.com/image/General/Picture1.png" />
+  <meta property="og:url" content="https://yourdomain.com/index.html" />
+  <meta property="og:image" content="https://yourdomain.com/image/logo/ksseed.png" />
 
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Home — Premium Cambodian Vegetable Seeds | KsSeed" />
+  <meta name="twitter:description"
+    content="Premium vegetable seeds for Cambodian farmers: cucumber, tomato, pumpkin, watermelon, and corn." />
+  <meta name="twitter:image" content="https://yourdomain.com/image/logo/ksseed.png" />
 
-  <link rel="icon" href="/image/General/Picture1.png" />
+  <!-- Favicon -->
+  <link rel="icon" href="image/logo/ksseed.png" type="image/png" />
+
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="css/style.css" />
 
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Hanuman:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap"
     rel="stylesheet" />
 
+  <!-- Icons -->
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 
@@ -38,15 +49,32 @@
     <div class="container">
       <div class="header-content">
         <div class="logo">
-          <img src="image/General/Picture1.png" alt="KsSEED Logo" />
-          <span class="logo-text">KSSEED</span>
+          <a href="#home" class="logo-link">
+            <img src="image/logo/ksseed.png" alt="KsSEED Logo" />
+            <span class="logo-text">KSSEED</span>
+          </a>
         </div>
 
         <nav class="nav" id="nav">
           <a href="#home" class="nav-link active" data-en="Home" data-km="ទំព័រដើម">Home</a>
-          <a href="#products" class="nav-link" data-en="Products" data-km="ផលិតផល">Products</a>
+          <a href="#products" class="nav-link" data-en="Seeds" data-km="គ្រាប់ពូជ">Seeds</a>
           <a href="#about" class="nav-link" data-en="About Us" data-km="អំពីយើង">About Us</a>
-          <a href="#research" class="nav-link" data-en="Research" data-km="ស្រាវជ្រាវ">Research</a>
+          <div class="nav-item-dropdown">
+            <a href="#research" class="nav-link nav-link-dropdown" data-en="Research" data-km="ស្រាវជ្រាវ">
+              Research
+              <span class="dropdown-arrow"></span>
+            </a>
+            <div class="nav-dropdown">
+              <a href="research/seed-testing.html" class="dropdown-link" data-en="Seed Testing"
+                data-km="ការសាកល្បងគ្រាប់ពូជ">Seed Testing</a>
+              <a href="research/climate-adaptation.html" class="dropdown-link" data-en="Climate Adaptation"
+                data-km="ការសម្របខ្លួនអាកាសធាតុ">Climate Adaptation</a>
+              <a href="research/disease-resistance.html" class="dropdown-link" data-en="Disease Resistance"
+                data-km="ការធន់នឹងជំងឺ">Disease Resistance</a>
+              <a href="research/yield-optimization.html" class="dropdown-link" data-en="Yield Optimization"
+                data-km="ការបង្កើនផលិតកម្ម">Yield Optimization</a>
+            </div>
+          </div>
           <a href="#stories" class="nav-link" data-en="Farmer's Stories" data-km="រឿងរ៉ាវកសិករ">Farmer's Stories</a>
           <a href="#blog" class="nav-link" data-en="Blog" data-km="ប្លុក">Blog</a>
           <a href="#contact" class="nav-link" data-en="Contact" data-km="ទំនាក់ទំនង">Contact</a>
@@ -73,8 +101,8 @@
     <div class="hero-background">
       <img src="image/General/backKsSeed.jpg" alt="Cambodian Farm" class="hero-image active" />
       <img src="image/General/backKsSeed2.jpg" alt="Farm 1" class="hero-image" />
-      <img src="image/General/pngtree-hand.jpg" alt="Farm 2" class="hero-image" />
-      <img src="image/General/vegetable.png" alt="Farm 3" class="hero-image" />
+      <img src="image/General/Tomatoes_cherry.jpg" alt="Farm 2" class="hero-image" />
+      <img src="image/General/chili_krisna.jpg" alt="Farm 3" class="hero-image" />
       <div class="hero-overlay"></div>
       <!-- Slideshow Dots -->
     </div>
@@ -167,10 +195,12 @@
                 <h3 class="product-name" data-en="Pumpkin" data-km="ល្ពៅ">
                   Pumpkin
                 </h3>
-                <p class="product-description" data-en="Harvesting: 90 to 95 days from direct planting."
-                  data-km="អាយុប្រមូល៖ 90 ទៅ 95 ថ្ងៃរន្ទារ់ពីដាំផ្ទាល់។ សាច់ពណ៌លឿង ស្អិតរមួត. 6-8kg /ផ្លែ & 2-3ផ្លែ/ដើម">
-                  Harvesting: 90 to 95 days from direct planting. Yellow
-                  flesh, 6–8 kg / fruit & 2–3 fruits / plant.
+                <p class="product-description"
+                  data-en="Harvest age is 90 to 95 days after direct planting. It has yellow flesh with a good sticky texture. Fruit weight is 6-8 kg, and it yields 2-3 fruits per plant."
+                  data-km="អាយុប្រមូលផល ៩០ ទៅ ៩៥ ថ្ងៃបន្ទាប់ពីដាំផ្ទាល់។ សាច់ពណ៌លឿង ស្វិតល្អ។ ទម្ងន់ផ្លែ ៦-៨ គីឡូក្រាម និងអាចប្រមូលផលបាន ២-៣ ផ្លែក្នុងមួយដើម។">
+                  Harvest age is 90 to 95 days after direct planting. It has yellow flesh with a good sticky texture.
+                  Fruit weight is 6-8
+                  kg, and it yields 2-3 fruits per plant.
                 </p>
               </div>
             </div>
@@ -186,10 +216,11 @@
                   Hot Pepper
                 </h3>
                 <p class="product-description"
-                  data-en="Strong and healthy plant, resistant to wilt, anthracnose, and some viruses."
-                  data-km="ដើមរឹងមាំល្អ ធន់នឹងជម្ងឺស្វិតស្រពោនស្រស់ Antracnose និងវីរុសមួយចំនួន។">
-                  Strong and healthy plant, resistant to wilt, anthracnose,
-                  and some viruses.
+                  data-en="A high-yielding, resilient variety with superior disease and climate resistance for a healthy harvest in any environment."
+                  data-km="ជាប្រភេទពូជផ្តល់ទិន្នផលខ្ពស់ និងធន់នឹងជំងឺបានយ៉ាងល្អ ដែលធានាបាននូវការប្រមូលផលដ៏ប្រសើរក្នុងគ្រប់លក្ខខណ្ឌអាកាសធាតុ។">
+                  A high-yielding, resilient variety with superior disease and climate resistance for a healthy harvest
+                  in any
+                  environment.
                 </p>
               </div>
             </div>
@@ -205,10 +236,11 @@
                   Cucumber
                 </h3>
                 <p class="product-description"
-                  data-en="We found a cucumber seed that achieves high yield and strong disease resistance."
-                  data-km="យើងរកឃើញគ្រាប់ត្រសក់ដែលទទួលបាន ទិន្នផលខ្ពស់និងភាពស៊ាំនឹងជំងឺខ្លាំង។">
-                  We found a cucumber seed that achieves high yield and strong
-                  disease resistance.
+                  data-en="KsSeed cucumber seeds are high-yielding, climate-resilient varieties specifically developed for tropical growing conditions."
+                  data-km="គ្រាប់ពូជត្រសក់ KsSeed គឺជាប្រភេទពូជដែលផ្តល់ទិន្នផលខ្ពស់ និងធន់នឹងអាកាសធាតុ ដែលត្រូវបានអភិវឌ្ឍឡើងយ៉ាងពិសេសសម្រាប់លក្ខខណ្ឌដាំដុះក្នុងតំបន់ត្រូពិក។">
+                  KsSeed cucumber seeds are high-yielding, climate-resilient varieties specifically developed for
+                  tropical growing
+                  conditions.
                 </p>
               </div>
             </div>
@@ -223,10 +255,11 @@
                   Bitter Melon
                 </h3>
                 <p class="product-description"
-                  data-en="Resistant to weather, can be cultivated in all seasons, and receives high yield."
-                  data-km="ធន់និងអាកាសធាតុ អាចដាំដុះបានគ្រប់រដូវកាល និងទទូលបានទិន្នផលខ្ពស់">
-                  Resistant to weather, can be cultivated in all seasons, and
-                  receives high yield.
+                  data-en="A highly climate-resilient variety designed for year-round cultivation, offering exceptional disease resistance and consistently high yields of premium quality fruit."
+                  data-km="ជាប្រភេទពូជដែលមានភាពធន់នឹងអាកាសធាតុខ្ពស់ អាចដាំដុះបានគ្រប់រដូវកាល ផ្តល់នូវភាពស៊ាំនឹងជំងឺបានយ៉ាងល្អប្រសើរ និងផ្តល់ទិន្នផលខ្ពស់ប្រកបដោយគុណភាព។">
+                  A highly climate-resilient variety designed for year-round cultivation, offering exceptional disease
+                  resistance and
+                  consistently high yields of premium quality fruit.
                 </p>
               </div>
             </div>
@@ -240,10 +273,11 @@
                 <h3 class="product-name" data-en="Wax gourd" data-km="ត្រឡាច">
                   Wax gourd
                 </h3>
-                <p class="product-description" data-en="Harvesting: 32 to 35 days(small pods), 58-65 days(large pods)."
-                  data-km="អាយុប្រមូលផល៖32ទៅ35ថ្ងៃ(ផ្លៃតូច)58-65ថ្ងៃ(ផ្ផែធំ)បន្ទាប់ពីដាំផ្ទាល់។">
-                  Harvesting: 32 to 35 days (small pods), 58-65 days (large
-                  pods).
+                <p class="product-description"
+                  data-en="Harvest early at 32–35 days for small pods or wait 58–65 days for full maturity, offering a flexible and continuous market supply."
+                  data-km="ប្រមូលផលផ្លែតូចក្នុងរយៈពេល ៣២-៣៥ ថ្ងៃ ឬផ្លែធំពេញវ័យក្នុងរយៈពេល ៥៨-៦៥ ថ្ងៃ ដែលផ្តល់ភាពងាយស្រួលដល់ការផ្គត់ផ្គង់ទីផ្សារ។">
+                  Harvest early at 32–35 days for small pods or wait 58–65 days for full maturity, offering a flexible
+                  and continuous market supply.
                 </p>
               </div>
             </div>
@@ -358,8 +392,38 @@
       <div class="about-content">
         <div class="about-mission">
           <div class="mission-card">
+            <div class="mission-icon">💎</div>
+            <h3 data-en="Core Values" data-km="គុណតម្លៃនៃក្រុមហ៊ុន ខេ​ អេស សុីដ">
+              Core Values
+            </h3>
+            <p data-en="The foundation of success and trust of KsSeed is based on core values such as:"
+              data-km="គ្រឹះនៃភាពជោគជ័យ និងទំនុកចិត្តរបស់ ខេ អេស ស៊ីដ គឺផ្អែកលើគុណតម្លៃដូចជា៖">
+              The foundation of success and trust of KsSeed is based on core values such as:
+            </p>
+            <p class="point" data-en=" 1. Identification of Essential Demand Crops for Markets in and
+                Out of Each Region."
+              data-km="1. ជាក្រុមហ៊ុនបែប អាជីវកម្មបៃតង ដែលមានផ្តើមពី ក-អ (ពីការស្រាវជ្រាវគ្រាប់ពូជបន្លែ រហូតដល់កសិករប្រមូលផល)​។">
+              1. A "Green Business" enterprise that operates from A to Z (from vegetable seed research to the final
+              farmer's harvest).
+            </p>
+            <p data-en="2. Capturing 85% of the domestic crop varieties market and
+                targeting overseas sales markets."
+              data-km="2. ជាក្រុមហ៊ុនកូនខ្មែរ ដំបូងគេបំផុតបានចាប់ផ្តើមលើវិស័យផលិតកម្មគ្រាប់ពូជបន្លែ(១វដ្តផលិតកម្មពូជ) ដែលបង្កើតឱកាសការងារ និងលើកកម្ពស់ជីវភាពដល់ប្រជាជនក្នុងស្រុកខ្មែរយ៉ាងច្រើន។">
+              2. The very first Cambodian-owned company to start in the field of vegetable seed production (covering the
+              full production cycle), creating numerous job opportunities and improving the livelihoods of many local
+              people.
+            </p>
+            <p data-en="  3. Acquired modern breeding techniques and established vegetable
+                crop breeding stations (short-term crops) to become an
+                international standard."
+              data-km="3. ស្រាវជ្រាវលើប្រភេទពូជបន្លែប្រពៃណី ក្នុងស្រុកដើម្បីផលិតកម្មគ្រាប់ពូជ(OP) និងបង្កើតពូជមេបាថ្មីៗ (F1)។">
+              3. Researching traditional local vegetable varieties for seed production (OP) and developing new parental
+              lines (F1).
+            </p>
+          </div>
+          <div class="mission-card">
             <div class="mission-icon">🌱</div>
-            <h3 data-en="Our Mission" data-km="បេសកកម្មរបស់យើង">
+            <h3 data-en="Our Mission" data-km="បេសកកម្មនៃក្រុមហ៊ុន ខេ​ អេស សុីដ">
               Our Mission
             </h3>
             <p data-en="To accomplish the mission, Ks Seed has set goals such as:"
@@ -387,14 +451,14 @@
               international standard.
             </p>
             <p data-en="4. Contributing to creating jobs and producing many Khmer Rouge
-                professionals." data-km="4. រួមចំណែកបង្កើតការងារ និងផលិតអ្នកជំនាញជនជាតិខ្មែរឲ្យបានច្រើន">
+                professionals." data-km="4. រួមចំណែកបង្កើតការងារ និងផលិតអ្នកជំនាញជនជាតិខ្មែរឲ្យបានច្រើន។">
               4. Contributing to creating jobs and producing many Khmer Rouge
               professionals.
             </p>
           </div>
           <div class="mission-card">
             <div class="mission-icon">🎯</div>
-            <h3 data-en="Our Vision" data-km="ចក្ខុវិស័យរបស់យើង">
+            <h3 data-en="Our Vision" data-km="ចក្ខុវិស័យនៃក្រុមហ៊ុន ខេ​ អេស សុីដ">
               Our Vision
             </h3>
             <p data-en="
@@ -418,7 +482,7 @@
               data-km="3. ស្រាវជ្រាវ និងពង្រឹងពូជថ្មីៗ និងពូជដែលបានចរាចរណ៍">
               3. Research and reinforce new and established varieties.
             </p>
-            <p data-en="4. Collaborate with relevant partners." data-km="4. សហការណ៍ជាមួយដៃគូរ ដែលពាក់ពន្ឋ័">
+            <p data-en="4. Collaborate with relevant partners." data-km="4. សហការណ៍ជាមួយដៃគូរ ដែលពាក់ពន្ឋ័។">
               4. Collaborate with relevant partners.
             </p>
           </div>
@@ -559,25 +623,35 @@
           </h3>
           <div class="partners-grid">
             <div class="partner-logo">
-              <img src="image/General/image.png" alt="Ministry of Agriculture" />
+              <img src="image/logo/gov.jpg" alt="Ministry of Agriculture" />
             </div>
             <div class="partner-logo">
-              <img class="big_part" src="image/General/imagecopy.png" alt="FAO" />
+              <img src="image/logo/KSIT.png" alt="World Bank" />
             </div>
             <div class="partner-logo">
-              <img src="image/General/imagecopy2.png" alt="USAID" />
+              <img src="image/logo/KE.png" alt="World Bank" />
             </div>
             <div class="partner-logo">
-              <img src="image/General/Aide_et_action.jpg" alt="World Bank" />
+              <img src="image/logo/CACU.jpg" alt="World Bank" />
             </div>
             <div class="partner-logo">
-              <img src="image/General/imagecopy3.png" alt="World Bank" />
+              <img src="image/logo/impact-hub.png" alt="World Bank" />
+            </div>
+            <div class="partner-logo">
+              <img class="big_part" src="image/logo/nurture.png" alt="FAO" />
+            </div>
+            <div class="partner-logo">
+              <img src="image/logo/Halo-logo-blue.png" alt="USAID" />
+            </div>
+            <div class="partner-logo">
+              <img src="image/logo/AEA.jpg" alt="World Bank" />
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
+
 
   <!-- Research & Innovation Section -->
   <section class="research" id="research">
@@ -592,6 +666,7 @@
         future even better
       </p>
 
+      <!-- Updated Research Features with Navigation Links -->
       <div class="research-content">
         <div class="research-image">
           <img src="image/General/Picture4.png" alt="Research Lab" />
@@ -609,7 +684,7 @@
           </p>
 
           <div class="research-features">
-            <div class="research-feature">
+            <a href="research/seed-testing.html" class="research-feature">
               <div class="feature-icon">🔬</div>
               <div class="feature-content">
                 <h4 data-en="Seed Testing" data-km="ការសាកល្បងគ្រាប់ពូជ">
@@ -620,8 +695,8 @@
                   Rigorous quality control and germination testing
                 </p>
               </div>
-            </div>
-            <div class="research-feature">
+            </a>
+            <a href="research/climate-adaptation.html" class="research-feature">
               <div class="feature-icon">🌡️</div>
               <div class="feature-content">
                 <h4 data-en="Climate Adaptation" data-km="ការសម្របខ្លួនអាកាសធាតុ">
@@ -632,8 +707,8 @@
                   Developing varieties resistant to heat and drought
                 </p>
               </div>
-            </div>
-            <div class="research-feature">
+            </a>
+            <a href="research/disease-resistance.html" class="research-feature">
               <div class="feature-icon">🛡️</div>
               <div class="feature-content">
                 <h4 data-en="Disease Resistance" data-km="ការធន់នឹងជំងឺ">
@@ -644,8 +719,8 @@
                   Breeding seeds with natural pest and disease resistance
                 </p>
               </div>
-            </div>
-            <div class="research-feature">
+            </a>
+            <a href="research/yield-optimization.html" class="research-feature">
               <div class="feature-icon">📊</div>
               <div class="feature-content">
                 <h4 data-en="Yield Optimization" data-km="ការបង្កើនផលិតកម្ម">
@@ -656,10 +731,11 @@
                   Maximizing crop productivity and farmer income
                 </p>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>
+
     </div>
   </section>
 
@@ -677,39 +753,47 @@
         <div class="story-card">
           <div class="story-media">
             <img src="image/General/farmer1.png" alt="Success Story" />
-            <button class="play-button">
-              <a href="https://www.youtube.com/watch?v=Sjjm7IJt0Vg&t=22s">▶</a>
+            <button class="play-button" data-video="https://www.youtube.com/watch?v=Sjjm7IJt0Vg&t=22s">
+              <i class="ri-play-fill"></i>
             </button>
           </div>
           <div class="story-content">
-            <h3 data-en="Chili receives high yield." data-km="ម្ទេសទទួលបានទិន្នផលខ្ពស់">
+            <h3 data-en="Chili receives high yield" data-km="ម្ទេសទទួលបានទិន្នផលខ្ពស់">
               Chili receives high yield
             </h3>
-            <p data-en="Mr. Smarn Mut, a chili farmer in Battambang, tripled his harvest by utilizing our climate-resilient and disease-resistant chili varieties from KsSEED."
-              data-km="ជួបលោក ស្មាន់ មុត ដែលជាកសិករដាំម្ទេសនៅបាត់ដំបង បានបង្កើនទិន្នផលរបស់គាត់ដល់បីដង ដោយប្រើប្រាស់ពូជម្ទេសរបស់យើងដែលធន់នឹងអាកាសធាតុ ធន់និងជម្ងឺរបស់ ខេ អេស​ សុីដ។">
-              Mr. Smarn Mut, a chili farmer in Battambang, tripled his harvest
-              by utilizing our climate-resilient and disease-resistant chili
-              varieties from KsSEED.
+            <p data-en="Mr. Smarn Muth, a chili farmer in Battambang province, has successfully tripled his yield by using KSSeed's chili seeds, which have high immunity to diseases and excellent resistance to climate change."
+              data-km="លោក ស្មាន់ មុត កសិករដាំម្ទេសនៅខេត្តបាត់ដំបង បានសម្រេចជោគជ័យក្នុងការបង្កើនទិន្នផលរហូតដល់ ៣ដង។ តាមរយៈការប្រើប្រាស់គ្រាប់ពូជម្ទេសរបស់ក្រុមហ៊ុន ខេ អេស ស៊ីដ (KSSeed) ដែលមានភាពស៊ាំនឹងជំងឺខ្ពស់ និងធន់នឹងការប្រែប្រួលអាកាសធាតុបានយ៉ាងល្អប្រសើរ។">
+              Mr. Smarn Muth, a chili farmer in Battambang province, has successfully tripled his yield by using
+              KSSeed's chili seeds,
+              which have high immunity to diseases and excellent resistance to climate change.
             </p>
-            <span class="story-location">📍 Battambang Province</span>
+            <span class="story-location" data-en="📍 Battambang Province" data-km="📍 ខេត្តបាត់ដំបង">📍 Battambang
+              Province</span>
           </div>
         </div>
 
         <div class="story-card">
           <div class="story-media">
-            <img src="/placeholder.svg?height=400&width=600" alt="Success Story" />
-            <button class="play-button">▶</button>
+            <img
+              src="https://scontent.fpnh11-1.fna.fbcdn.net/v/t39.30808-6/653042087_1524243386371025_1049662699936417692_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=13d280&_nc_ohc=cFjhSLot-jkQ7kNvwEb3z7K&_nc_oc=AdoL0mk-3KLg2r8WWrHOMZNQ31Zy4WpxP3ZP63eUdHVNxqGxhCvGpnQGEkFpmVHONVc&_nc_zt=23&_nc_ht=scontent.fpnh11-1.fna&_nc_gid=dYmndrw7LwQrt2sgXbw44Q&_nc_ss=7a30f&oh=00_AfyekqGRHfPOggdwEmbrD8p_hT32p1HYPBMahezaistksw&oe=69C3E175"
+              alt="Success Story" />
+            <button class="play-button" data-video="https://www.youtube.com/watch?v=hiM7TBZ0-84&si=UUcDfMrMEyaPyolN"><i
+                class="ri-play-fill"></i></button>
           </div>
           <div class="story-content">
-            <h3 data-en="Empowering Women Farmers" data-km="ផ្តល់សិទ្ធិអំណាចដល់កសិករស្ត្រី">
-              Empowering Women Farmers
+            <h3 data-en="Yardlong Bean Seed Production & Harvesting" data-km="ការប្រមូលផល និងការផលិតគ្រាប់ពូជសណ្ដែកកួរ">
+              Yardlong Bean Seed Production & Harvesting
             </h3>
-            <p data-en="Mrs. Sreymom shares how KsSEED's vegetable seeds helped her start a successful organic farm and support her family."
-              data-km="លោកស្រី ស្រីមុំ ចែករំលែកពីរបៀបដែលគ្រាប់ពូជបន្លែរបស់ KsSEED បានជួយនាងចាប់ផ្តើមកសិដ្ឋានសរីរាង្គជោគជ័យ និងគាំទ្រគ្រួសាររបស់នាង។">
-              Mrs. Sreymom shares how KsSEED's vegetable seeds helped her
-              start a successful organic farm and support her family.
+            <p data-en="From cultivation to hands-on breeding and seed production—our goal is to develop yardlong bean seeds that are climate-resilient, disease-resistant, high-yielding, and vigorous, ensuring healthy starts for our fellow farmers to continue their success."
+              data-km="ពីការដាំដុះ ឈានដល់ការបង្កាត់ និងផលិតគ្រាប់ពូជដោយផ្ទាល់ដៃ។ គោលដៅរបស់យើងគឺចង់បានគ្រាប់ពូជសណ្ដែកកួរដែលធន់នឹងអាកាសធាតុ​  ធន់នឹងជម្ងឺ  ផ្ដល់ទិន្នផលខ្ពស់  និងមានសុខភាពល្អ ដើម្បីចែកជូនបងប្អូនកសិករយកទៅដាំបន្ត។">
+              From cultivation to hands-on breeding and seed production—our goal is to develop yardlong bean seeds that
+              are
+              climate-resilient, disease-resistant, high-yielding, and vigorous, ensuring healthy starts for our fellow
+              farmers to
+              continue their success.
             </p>
-            <span class="story-location">📍 Siem Reap Province</span>
+            <span class="story-location" data-en="📍 Kampong Thom Province" data-km="📍 ខេត្តកំពង់ធំ">📍 Kampong Thom
+              Province</span>
           </div>
         </div>
 
@@ -727,10 +811,15 @@
               Young farmer Dara combines traditional knowledge with KsSEED's
               innovative seeds to create a thriving fruit farm.
             </p>
-            <span class="story-location">📍 Kampong Cham Province</span>
+            <span class="story-location" data-en="📍 Kampong Cham Province" data-km="📍 ខេត្តកំពង់ចាម">📍 Kampong Cham
+              Province</span>
           </div>
         </div>
       </div>
+    </div>
+    <div class="hero-buttons">
+      <a href="farmers-stories.html" data-en="All Stories" data-km="មើលប្រវត្តិទាំងអស់"
+        class="btn btn-stories btn-primary">All Stories</a>
     </div>
   </section>
 
@@ -810,7 +899,7 @@
         <form class="newsletter-form" id="newsletterForm">
           <input id="newsletterEmail" type="email" placeholder="Enter your email" data-placeholder-en="Enter your email"
             data-placeholder-km="បញ្ចូលអ៊ីមែលរបស់អ្នក" required />
-          <button type="submit" class="btn btn-primary" data-en="Subscribe" data-km="ជាវ">
+          <button type="submit" class="btn btn-subcribe btn-primary" data-en="Subscribe" data-km="ជាវ">
             Subscribe
           </button>
         </form>
@@ -837,12 +926,7 @@
               <h4 data-en="Address" data-km="អាសយដ្ឋាន">Address</h4>
               <p data-en="Borey Piphup Thmei Boeung Chhouk, House No. 313, Street F, Kraing Kasang Village, Kraing Thnong Sangkat, Sen Sok District, Phnom Penh."
                 data-km="បុរីពីភពថ្មីផ្ទះលេខ៣១៣ផ្លូវFភូមិក្រាំងអង្ករងសង្កាត់ក្រាំងធ្នង់ខណ្ឌសែនសុខ ភ្នំពេញ។">
-                Borey Piphup Thmei Boeung Chhouk, <br />House No. 313, Street
-                F,<br />
-                Kraing Kasang Village,<br />
-                Kraing Thnong Sangkat,<br />
-                Sen Sok District,<br />
-                Phnom Penh
+
               </p>
             </div>
           </div>
@@ -857,11 +941,12 @@
             <div class="contact-icon">✉️</div>
             <div class="contact-details">
               <h4 data-en="Email" data-km="អ៊ីមែល">Email</h4>
-              <p>ksseed.info@gmail.com</p>
+              <a href="mailto:ksseed.info@gmail.com" data-en="ksseed.info@gmail.com"
+                data-km="ksseed.info@gmail.com">ksseed.info@gmail.com</a>
             </div>
           </div>
           <div class="contact-item">
-            <div class="contact-icon">🕒</div>
+            <div class="contact-icon">⏰</div>
             <div class="contact-details">
               <h4 data-en="Business Hours" data-km="ម៉ោងធ្វើការ">
                 Business Hours
@@ -947,7 +1032,7 @@
       <div class="footer-content">
         <div class="footer-section">
           <div class="footer-logo">
-            <img src="image/General/Picture1.png" alt="KsSEED Logo" />
+            <img src="image/logo/ksseed.png" alt="KsSEED Logo" />
             <span class="logo-text">KSSEED</span>
           </div>
           <p data-en="Quality, Confidence, and Growth are primary." data-km="គុណភាព ទំនុកចិត្ត និងភាពរីកចម្រើនជាចម្បង">
@@ -996,18 +1081,18 @@
               📍 Phnom Penh, Cambodia
             </li>
             <li>📞 +855 93 755 638</li>
-            <li>✉️ ksseed.info@gmail.com</li>
+            <li> <a href="mailto:ksseed.info@gmail.com">✉️ ksseed.info@gmail.com</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
         <p>
-          &copy; 2026 KsSEED.
+          &copy; 2026 KsSeed.
           <span data-en="All rights reserved." data-km="រក្សាសិទ្ធិគ្រប់យ៉ាង។">All rights reserved.</span>
         </p>
         <div class="footer-links">
-          <a href="#" data-en="Privacy Policy" data-km="គោលការណ៍ភាពឯកជន">Privacy Policy</a>
-          <a href="#" data-en="Terms of Service" data-km="លក្ខខណ្ឌសេវាកម្ម">Terms of Service</a>
+          <a href="privacy-policy.html" data-en="Privacy Policy" data-km="គោលការណ៍ភាពឯកជន">Privacy Policy</a>
+          <a href="terms.html" data-en="Terms of Service" data-km="លក្ខខណ្ឌសេវាកម្ម">Terms of Service</a>
         </div>
       </div>
     </div>
@@ -1044,74 +1129,22 @@
   <!-- Scroll to Top Button -->
   <button class="scroll-top" id="scrollTop">&#10094;</button>
 
-  <!-- General JS -->
   <!-- Remove this line -->
   <!-- <script src="/ksseed-website/data/prdData.js"></script> -->
-
+  <!-- General JS -->
+  <script src="js/script.js"></script>
+  
   <!-- Add API helper -->
   <script src="js/api.js"></script>
 
   <!-- Keep other scripts with correct paths -->
   <script src="js/form-handler.js"></script>
-  <script src="js/script.js"></script>
 
   <!-- Load blog data first -->
   <script src="data/blog_data.js"></script>
 
   <!-- Then load blog functionality -->
   <script src="js/blog.js"></script>
-
-
-  <!-- Product Detial -->
-
-
-  <!-- Tidio chat bot -->
-
-  <!-- <script
-      src="//code.tidio.co/5yzmqtkln9j6tbkfhdnjhtzgplc32rsl.js"
-      async
-    ></script> -->
-
-  <!--Start of Tawk.to Script-->
-
-  <!-- <script type="text/javascript">
-      var Tawk_API = Tawk_API || {},
-        Tawk_LoadStart = new Date();
-      (function () {
-        var s1 = document.createElement("script"),
-          s0 = document.getElementsByTagName("script")[0];
-        s1.async = true;
-        s1.src = "https://embed.tawk.to/693f8dd14f7afe19760b4386/1jcg43v97";
-        s1.charset = "UTF-8";
-        s1.setAttribute("crossorigin", "*");
-        s0.parentNode.insertBefore(s1, s0);
-      })();
-    </script> -->
-
-  <!--End of Tawk.to Script-->
-
-  <!-- <script>
-    // In your mobile menu toggle function
-    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-    const nav = document.getElementById('nav');
-    const body = document.body;
-
-    mobileMenuToggle.addEventListener('click', function () {
-      this.classList.toggle('active');
-      nav.classList.toggle('active');
-      body.classList.toggle('menu-open');
-    });
-
-    // Close menu when clicking a link
-    const navLinks = document.querySelectorAll('.nav-link');
-    navLinks.forEach(link => {
-      link.addEventListener('click', function () {
-        mobileMenuToggle.classList.remove('active');
-        nav.classList.remove('active');
-        body.classList.remove('menu-open');
-      });
-    });
-  </script> -->
 </body>
 
 </html>

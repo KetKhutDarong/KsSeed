@@ -1,0 +1,1425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KSSEED Yield Optimization - High-Yielding Seed Varieties</title>
+    <meta name="description"
+        content="KSSEED develops high-yielding seed varieties that maximize crop productivity and farmer income through improved genetics." />
+    <link rel="icon" href="/image/General/Picture1.png" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/research.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hanuman:wght@400;700&amp;family=Poppins:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <style>
+        /* ══════════════════════════════════════════
+       YIELD OPTIMIZATION — UNIQUE STRUCTURE
+       Warm harvest / abundance aesthetic
+       Gold-green tones, data-forward layout
+    ══════════════════════════════════════════ */
+
+        /* ── Hero: full-width with diagonal text overlay ── */
+        .yo-hero {
+            position: relative;
+            height: 560px;
+            overflow: hidden;
+            background: #1a2e0a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .yo-hero-bg {
+            position: absolute;
+            inset: 0;
+        }
+
+        .yo-hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .yo-hero-bg::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(100deg, rgba(10, 28, 5, .92) 0%, rgba(10, 28, 5, .75) 45%, rgba(10, 28, 5, .2) 100%);
+        }
+
+        .yo-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .yo-hero-content {
+            max-width: 100%;
+        }
+
+        .yo-hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #ffd54f;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .yo-hero-eyebrow::before {
+            content: '';
+            width: 28px;
+            height: 2px;
+            background: #ffd54f;
+            display: inline-block;
+        }
+
+        .yo-hero h1 {
+            font-size: clamp(34px, 4.5vw, 58px);
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.1;
+            margin: 0 0 22px;
+            font-family: 'Hanuman', 'Poppins', sans-serif;
+        }
+
+        .yo-hero h1 .accent {
+            color: #ffd54f;
+        }
+
+        .yo-hero-desc {
+            font-size: 16px;
+            color: rgba(255, 255, 255, .7);
+            line-height: 1.75;
+            margin: 0 0 40px;
+            max-width: 520px;
+        }
+
+        .yo-hero-badges {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .yo-hero-badge {
+            background: rgba(255, 213, 79, .12);
+            border: 1px solid rgba(255, 213, 79, .3);
+            color: #ffd54f;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 6px;
+        }
+
+        /* ── Big number strip ── */
+        .yo-numbers {
+            background: #fff;
+            border-bottom: 3px solid #f9fbe7;
+        }
+
+        .yo-numbers-inner {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .yo-number-item {
+            padding: 36px 28px;
+            border-right: 1px solid #f0f0f0;
+            position: relative;
+            transition: background .25s;
+        }
+
+        .yo-number-item:last-child {
+            border-right: none;
+        }
+
+        .yo-number-item:hover {
+            background: #f9fbe7;
+        }
+
+        .yo-number-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #ffd54f, #43b048);
+            opacity: 0;
+            transition: opacity .25s;
+        }
+
+        .yo-number-item:hover::before {
+            opacity: 1;
+        }
+
+        .yo-num {
+            font-size: 44px;
+            font-weight: 700;
+            color: #1b5e20;
+            line-height: 1;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .yo-num-unit {
+            font-size: 22px;
+            color: #ffd54f;
+            font-weight: 700;
+        }
+
+        .yo-num-label {
+            font-size: 13px;
+            color: #666;
+            margin-top: 6px;
+            line-height: 1.4;
+        }
+
+        /* ── About: text left, image mosaic right ── */
+        .yo-about {
+            padding: 90px 0;
+            background: #fff;
+        }
+
+        .yo-about-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .yo-about-text h2 {
+            font-size: 30px;
+            font-weight: 700;
+            color: #1b5e20;
+            margin: 0 0 18px;
+            line-height: 1.3;
+            font-family: 'Hanuman', 'Poppins', sans-serif;
+        }
+
+        .yo-about-text p {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.85;
+            margin: 0 0 20px;
+        }
+
+        .yo-about-highlights {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 8px;
+        }
+
+        .yo-highlight {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .yo-highlight .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #43b048;
+            flex-shrink: 0;
+        }
+
+        /* Image mosaic */
+        .yo-mosaic {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 200px 200px;
+            gap: 10px;
+        }
+
+        .yo-mosaic-item {
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .yo-mosaic-item:first-child {
+            grid-row: 1 / 3;
+            border-radius: 14px;
+        }
+
+        .yo-mosaic-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .4s ease;
+            display: block;
+        }
+
+        .yo-mosaic-item:hover img {
+            transform: scale(1.05);
+        }
+
+        /* ── Strategy: 4 steps in numbered accordion style ── */
+        .yo-strategy {
+            padding: 80px 0;
+            background: #1b5e20;
+        }
+
+        .yo-strategy-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+
+        .yo-strategy-header h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #fff;
+            font-family: 'Hanuman', 'Poppins', sans-serif;
+            margin: 0 0 10px;
+        }
+
+        .yo-strategy-header p {
+            font-size: 15px;
+            color: rgba(255, 255, 255, .6);
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        .yo-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2px;
+            background: rgba(255, 255, 255, .08);
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .yo-step {
+            padding: 36px 28px;
+            background: rgba(255, 255, 255, .04);
+            transition: background .3s;
+            border-right: 1px solid rgba(255, 255, 255, .08);
+            position: relative;
+        }
+
+        .yo-step:last-child {
+            border-right: none;
+        }
+
+        .yo-step:hover {
+            background: rgba(255, 255, 255, .1);
+        }
+
+        .yo-step-num {
+            font-size: 52px;
+            font-weight: 700;
+            color: rgba(255, 213, 79, .2);
+            line-height: 1;
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 16px;
+        }
+
+        .yo-step-icon {
+            font-size: 32px;
+            margin-bottom: 14px;
+            display: block;
+        }
+
+        .yo-step h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: #ffd54f;
+            margin: 0 0 10px;
+            font-family: 'Hanuman', 'Poppins', sans-serif;
+            line-height: 1.3;
+        }
+
+        .yo-step p {
+            font-size: 13px;
+            color: rgba(255, 255, 255, .65);
+            line-height: 1.65;
+            margin: 0;
+        }
+
+        /* ── Yield traits: horizontal scrollable cards ── */
+        .yo-traits {
+            padding: 80px 0;
+            background: #f9fbe7;
+        }
+
+        .yo-traits-header {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            margin-bottom: 44px;
+            gap: 20px;
+        }
+
+        .yo-traits-header h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #1b5e20;
+            font-family: 'Hanuman', 'Poppins', sans-serif;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .yo-traits-sub {
+            font-size: 14px;
+            color: #888;
+            max-width: 280px;
+            text-align: right;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .yo-traits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .yo-trait-card {
+            background: #fff;
+            border-radius: 14px;
+            padding: 28px 22px;
+            box-shadow: 0 2px 14px rgba(0, 0, 0, .06);
+            border-top: 4px solid transparent;
+            transition: all .3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .yo-trait-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #ffd54f, #43b048);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform .35s ease;
+        }
+
+        .yo-trait-card:hover::after {
+            transform: scaleX(1);
+        }
+
+        .yo-trait-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 28px rgba(0, 0, 0, .1);
+        }
+
+        .yo-trait-icon {
+            font-size: 36px;
+            margin-bottom: 12px;
+            line-height: 1;
+        }
+
+        .yo-trait-card h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: #1b5e20;
+            margin: 0 0 8px;
+            font-family: 'Hanuman', 'Poppins', sans-serif;
+        }
+
+        .yo-trait-card p {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.65;
+            margin: 0;
+        }
+
+        .yo-trait-stat {
+            margin-top: 14px;
+            padding-top: 14px;
+            border-top: 1px solid #f0f0f0;
+            font-size: 13px;
+            color: #43b048;
+            font-weight: 600;
+        }
+
+        /* ── Farmer impact: full-bleed image with overlay text ── */
+        .yo-impact {
+            position: relative;
+            overflow: hidden;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+        }
+
+        .yo-impact-bg {
+            position: absolute;
+            inset: 0;
+        }
+
+        .yo-impact-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .yo-impact-bg::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(10, 40, 10, .92) 0%, rgba(10, 40, 10, .7) 55%, rgba(10, 40, 10, .15) 100%);
+        }
+
+        .yo-impact .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .yo-impact-content {
+            max-width: 560px;
+        }
+
+        .yo-impact-content h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #fff;
+            margin: 0 0 24px;
+            font-family: 'Hanuman', 'Poppins', sans-serif;
+            line-height: 1.3;
+        }
+
+        .yo-impact-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .yo-impact-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 15px;
+            color: rgba(255, 255, 255, .85);
+            line-height: 1.6;
+        }
+
+        .yo-impact-list li .check {
+            color: #ffd54f;
+            font-size: 18px;
+            font-weight: 700;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        /* ── Gallery: horizontal masonry ── */
+        .yo-gallery {
+            padding: 80px 0;
+            background: #fff;
+        }
+
+        .yo-gallery h2 {
+            text-align: center;
+            font-size: 32px;
+            font-weight: 700;
+            color: #1b5e20;
+            font-family: 'Hanuman', 'Poppins', sans-serif;
+            margin: 0 0 48px;
+        }
+
+        .yo-gallery-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            grid-template-rows: 220px 220px;
+            gap: 14px;
+        }
+
+        .yo-gallery-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #e8f5e9;
+        }
+
+        .yo-gallery-item:first-child {
+            grid-row: 1 / 3;
+        }
+
+        .yo-gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform .4s ease;
+        }
+
+        .yo-gallery-item:hover img {
+            transform: scale(1.06);
+        }
+
+        .yo-gallery-item .g-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(10, 40, 10, .85), transparent);
+            color: #fff;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 28px 14px 12px;
+            opacity: 0;
+            transition: opacity .3s;
+        }
+
+        .yo-gallery-item:hover .g-label {
+            opacity: 1;
+        }
+
+        /* ── CTA ── */
+        .cta-research-section {
+            position: relative;
+            padding: 90px 0;
+            overflow: hidden;
+            background: linear-gradient(135deg, #0a2e14 0%, #1a5c2a 50%, #0d3b1a 100%);
+        }
+
+        .cta-research-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 15% 50%, rgba(76, 175, 80, .18) 0%, transparent 50%),
+                radial-gradient(circle at 85% 20%, rgba(139, 195, 74, .12) 0%, transparent 40%);
+            pointer-events: none;
+        }
+
+        .cta-research-inner {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-research-header {
+            text-align: center;
+            margin-bottom: 52px;
+        }
+
+        .cta-research-badge {
+            display: inline-block;
+            background: rgba(76, 175, 80, .18);
+            border: 1px solid rgba(76, 175, 80, .4);
+            color: #a5d6a7;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 6px 18px;
+            border-radius: 20px;
+            letter-spacing: .5px;
+            margin-bottom: 20px;
+        }
+
+        .cta-research-header h2 {
+            font-size: 38px;
+            font-weight: 700;
+            color: #fff;
+            margin: 0 0 14px;
+            line-height: 1.3;
+            font-family: 'Hanuman', 'Poppins', sans-serif;
+        }
+
+        .cta-research-header p {
+            font-size: 16px;
+            color: rgba(255, 255, 255, .6);
+            max-width: 540px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .cta-research-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .cta-research-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 28px 24px;
+            background: rgba(255, 255, 255, .06);
+            border: 1px solid rgba(255, 255, 255, .1);
+            border-radius: 16px;
+            text-decoration: none;
+            transition: all .3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-research-card::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #43b048, #8bc34a);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform .35s ease;
+        }
+
+        .cta-research-card:hover {
+            background: rgba(255, 255, 255, .11);
+            border-color: rgba(76, 175, 80, .45);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 44px rgba(0, 0, 0, .35);
+        }
+
+        .cta-research-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .cta-card-icon {
+            font-size: 34px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .cta-card-body {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .cta-card-body h3 {
+            font-size: 17px;
+            font-weight: 700;
+            color: #fff;
+            margin: 0 0 8px;
+            line-height: 1.3;
+            font-family: 'Hanuman', 'Poppins', sans-serif;
+        }
+
+        .cta-card-body p {
+            font-size: 13px;
+            color: rgba(255, 255, 255, .58);
+            line-height: 1.65;
+            margin: 0;
+        }
+
+        .cta-card-arrow {
+            font-size: 20px;
+            color: #66bb6a;
+            flex-shrink: 0;
+            align-self: center;
+            transition: transform .3s;
+        }
+
+        .cta-research-card:hover .cta-card-arrow {
+            transform: translateX(6px);
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 1024px) {
+            .yo-traits-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 900px) {
+            .yo-numbers-inner {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .yo-number-item {
+                border-bottom: 1px solid #f0f0f0;
+            }
+
+            .yo-about-inner {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .yo-mosaic {
+                order: -1;
+            }
+
+            .yo-steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .yo-gallery-grid {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: repeat(3, 180px);
+            }
+
+            .yo-gallery-item:first-child {
+                grid-row: 1 / 2;
+                grid-column: 1 / 3;
+            }
+
+            .cta-research-cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .yo-traits-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .yo-traits-sub {
+                text-align: left;
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .yo-hero {
+                height: auto;
+                min-height: 480px;
+                padding: 110px 0 60px;
+            }
+
+            .yo-hero-badges {
+                gap: 8px;
+            }
+
+            .yo-numbers-inner {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .yo-steps {
+                grid-template-columns: 1fr;
+                gap: 2px;
+            }
+
+            .yo-step {
+                border-right: none;
+                border-bottom: 1px solid rgba(255, 255, 255, .08);
+            }
+
+            .yo-traits-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .yo-gallery-grid {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: repeat(3, 150px);
+            }
+
+            .yo-gallery-item:first-child {
+                grid-column: 1 / 3;
+                grid-row: 1;
+            }
+
+            .cta-research-cards {
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
+
+            .cta-research-section {
+                padding: 60px 0;
+            }
+
+            .cta-research-header h2 {
+                font-size: 26px;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .yo-numbers-inner {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .yo-num {
+                font-size: 34px;
+            }
+
+            .yo-gallery-grid {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(5, 150px);
+            }
+
+            .yo-gallery-item:first-child {
+                grid-column: 1;
+                grid-row: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="../index.html#home" class="logo-link">
+                        <img src="../image/logo/ksseed.png" alt="KsSEED Logo" />
+                        <span class="logo-text">KSSEED</span>
+                    </a>
+                </div>
+
+                <nav class="nav" id="nav">
+                    <a href="../index.html#home" class="nav-link" data-en="Home" data-km="ទំព័រដើម">Home</a>
+                    <a href="../index.html#products" class="nav-link" data-en="Seeds" data-km="គ្រាប់ពូជ">Seeds</a>
+                    <a href="../index.html#about" class="nav-link" data-en="About Us" data-km="អំពីយើង">About Us</a>
+
+                    <!-- Research dropdown -->
+                    <div class="nav-item-dropdown">
+                        <a href="../index.html#research" class="nav-link nav-link-dropdown active" data-en="Research"
+                            data-km="ស្រាវជ្រាវ">
+                            Research
+                            <span class="dropdown-arrow"></span>
+                        </a>
+                        <div class="nav-dropdown">
+                            <a href="../research/seed-testing.html" class="dropdown-link" data-en="Seed Testing"
+                                data-km="ការសាកល្បងគ្រាប់ពូជ">Seed Testing</a>
+                            <a href="../research/climate-adaptation.html" class="dropdown-link"
+                                data-en="Climate Adaptation" data-km="ការសម្របខ្លួនអាកាសធាតុ">Climate Adaptation</a>
+                            <a href="../research/disease-resistance.html" class="dropdown-link"
+                                data-en="Disease Resistance" data-km="ការធន់នឹងជំងឺ">Disease Resistance</a>
+                            <a href="../research/yield-optimization.html" class="dropdown-link"
+                                data-en="Yield Optimization" data-km="ការបង្កើនផលិតកម្ម">Yield Optimization</a>
+                        </div>
+                    </div>
+
+                    <a href="../index.html#stories" class="nav-link" data-en="Farmer's Stories"
+                        data-km="រឿងរ៉ាវកសិករ">Farmer's Stories</a>
+                    <a href="../index.html#blog" class="nav-link" data-en="Blog" data-km="ប្លុក">Blog</a>
+                    <a href="../index.html#contact" class="nav-link" data-en="Contact" data-km="ទំនាក់ទំនង">Contact</a>
+                </nav>
+
+                <div class="header-actions">
+                    <button class="lang-switch" id="langSwitch">
+                        <span class="lang-option active" data-lang="en">EN</span>
+                        <span class="lang-divider">|</span>
+                        <span class="lang-option" data-lang="km">ខ្មែរ</span>
+                    </button>
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- BREADCRUMB -->
+    <section class="breadcrumb">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="../index.html" data-en="Home" data-km="ទំព័រដើម">Home</a>
+                <span class="breadcrumb-separator">/</span>
+                <a href="../research.html" data-en="Research" data-km="ស្រាវជ្រាវ">Research</a>
+                <span class="breadcrumb-separator">/</span>
+                <span class="breadcrumb-current" data-en="Yield Optimization" data-km="ការបង្កើនផលិតកម្ម">Yield
+                    Optimization</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- HERO -->
+    <section class="yo-hero">
+        <div class="yo-hero-bg">
+            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1600&amp;q=80"
+                alt="Abundant high-yield crop fields" loading="eager" fetchpriority="high" decoding="sync" />
+        </div>
+        <div class="container">
+            <div class="yo-hero-content">
+                <div class="yo-hero-eyebrow" data-en="📈 Yield Research Program"
+                    data-km="📈 កម្មវិធីស្រាវជ្រាវបង្កើនទិន្នផល">
+                    📈 Yield Research Program
+                </div>
+                <h1 data-en="Maximize Every Harvest" data-km="បង្កើនទិន្នផលអតិបរមា គ្រប់រដូវកាល">
+                    Maximize Every <span class="accent">Harvest</span>
+                </h1>
+                <p class="yo-hero-desc"
+                    data-en="KSSEED's yield optimization program develops high-performing vegetable varieties that deliver more produce per plant, per hectare, and per season — putting more income in the hands of Cambodian farmers."
+                    data-km="កម្មវិធីបង្កើនទិន្នផលរបស់ KSSEED អភិវឌ្ឍពូជបន្លែដែលមានសក្តានុពលខ្ពស់ ផ្តល់ទិន្នផលបានច្រើនទាំងក្នុងមួយដើម ក្នុងមួយហិកតា និងក្នុងមួយរដូវកាល ដើម្បីជួយបង្កើនប្រាក់ចំណូលជូនដល់បងប្អូនកសិករកម្ពុជា។">
+                    KSSEED's yield optimization program develops high-performing vegetable varieties that deliver more
+                    produce per plant, per hectare, and per season — putting more income in the hands of Cambodian
+                    farmers.
+                </p>
+                <div class="yo-hero-badges">
+                    <span class="yo-hero-badge" data-en="40–50% Higher Yields"
+                        data-km="ទិន្នផលខ្ពស់ជាងមុន ៤០–៥០%">40–50% Higher
+                        Yields</span>
+                    <span class="yo-hero-badge" data-en="Larger Fruit Size" data-km="ទំហំផ្លែធំល្អ">Larger Fruit
+                        Size</span>
+                    <span class="yo-hero-badge" data-en="Longer Harvest Season" data-km="រដូវប្រមូលផលបានយូរ">Longer
+                        Harvest
+                        Season</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BIG NUMBERS STRIP -->
+    <section class="yo-numbers">
+        <div class="container">
+            <div class="yo-numbers-inner" data-aos="fade-up">
+                <div class="yo-number-item">
+                    <div class="yo-num">50<span class="yo-num-unit">%</span></div>
+                    <div class="yo-num-label" data-en="Average yield increase over conventional varieties"
+                        data-km="កំណើនទិន្នផលមធ្យម ធៀបនឹងពូជក្នុងស្រុកទូទៅ">Average yield
+                        increase over conventional varieties</div>
+                </div>
+                <div class="yo-number-item">
+                    <div class="yo-num">3<span class="yo-num-unit">×</span></div>
+                    <div class="yo-num-label" data-en="More fruits per plant in top-performing varieties"
+                        data-km="ផ្ដល់ផ្លែច្រើនជាង ៣ដង សម្រាប់ប្រភេទពូជដែលមានសក្តានុពលខ្ពស់">More
+                        fruits per plant in top-performing varieties</div>
+                </div>
+                <div class="yo-number-item">
+                    <div class="yo-num">6<span class="yo-num-unit">+</span></div>
+                    <div class="yo-num-label" data-en="High-yield certified varieties available to farmers"
+                        data-km="ប្រភេទពូជដែលបានបញ្ជាក់គុណភាព និងផ្ដល់ទិន្នផលខ្ពស់សម្រាប់កសិករ">High-yield certified
+                        varieties available to farmers</div>
+                </div>
+                <div class="yo-number-item">
+                    <div class="yo-num">20<span class="yo-num-unit">+</span></div>
+                    <div class="yo-num-label" data-en="Provinces where high-yield varieties are grown"
+                        data-km="បណ្ដាខេត្តនានាដែលកំពុងដាំដុះពូជផ្តល់ទិន្នផលខ្ពស់">Provinces
+                        where high-yield varieties are grown</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT: text + image mosaic -->
+    <section class="yo-about">
+        <div class="container">
+            <div class="yo-about-inner">
+                <div class="yo-about-text" data-aos="fade-right">
+                    <h2 data-en="Increasing Farmer Profitability Through Better Genetics"
+                        data-km="ការបង្កើនប្រាក់ចំណេញរបស់កសិករ តាមរយៈការកែលម្អគុណភាពហ្សែន">
+                        Increasing Farmer Profitability Through Better Genetics
+                    </h2>
+                    <p data-en="KSSEED's yield optimization program develops vegetable varieties that produce significantly higher quantities of better-quality crops per plant. We combine improved genetics with rigorous agronomic testing to help Cambodian farmers increase income, feed their families, and contribute to national food security."
+                        data-km="កម្មវិធីបង្កើនទិន្នផលរបស់ KSSEED អភិវឌ្ឍពូជបន្លែដែលអាចផ្តល់ទិន្នផលខ្ពស់ និងគុណភាពល្អប្រសើរក្នុងមួយដើម។ យើងរួមបញ្ចូលការកែលម្អហ្សែន ជាមួយការធ្វើតេស្តបច្ចេកទេសកសិកម្មយ៉ាងម៉ត់ចត់ ដើម្បីជួយកសិករកម្ពុជាបង្កើនប្រាក់ចំណូល ចិញ្ចឹមគ្រួសារ និងរួមចំណែកដល់សន្តិសុខស្បៀងជាតិ។">
+                        KSSEED's yield optimization program develops vegetable varieties that produce significantly
+                        higher quantities of better-quality crops per plant. We combine improved genetics with rigorous
+                        agronomic testing to help Cambodian farmers increase income, feed their families, and contribute
+                        to national food security.
+                    </p>
+                    <p data-en="Our research examines every aspect of plant performance — from early germination vigor and root strength to fruit size, fruit number, marketability, and shelf life. Each variety released by KSSEED has been proven to outperform conventional local varieties under real Cambodian farming conditions."
+                        data-km="ការស្រាវជ្រាវរបស់យើងពិនិត្យលើគ្រប់ទិដ្ឋភាពនៃដំណើរការលូតលាស់ — ចាប់ពីដំណុះគ្រាប់ដំបូង និងភាពរឹងមាំនៃឫស រហូតដល់ទំហំផ្លែ ចំនួនផ្លែ ភាពទាក់ទាញក្នុងទីផ្សារ និងរយៈពេលរក្សាទុកបានយូរ។ រាល់ប្រភេទពូជដែលបញ្ចេញដោយ KSSEED ត្រូវបានបង្ហាញថាផ្តល់លទ្ធផលល្អជាងពូជក្នុងស្រុកទូទៅ ក្រោមលក្ខខណ្ឌដាំដុះជាក់ស្តែងនៅកម្ពុជា។">
+                        Our research examines every aspect of plant performance — from early germination vigor and root
+                        strength to fruit size, fruit number, marketability, and shelf life. Each variety released by
+                        KSSEED has been proven to outperform conventional local varieties under real Cambodian farming
+                        conditions.
+                    </p>
+                    <div class="yo-about-highlights">
+                        <div class="yo-highlight"><span class="dot"></span><span
+                                data-en="Proven 40–50% yield increase in multi-season field trials"
+                                data-km="បង្ហាញពីកំណើនទិន្នផល ៤០-៥០% ក្នុងការសាកល្បងផ្ទាល់ច្រើនរដូវកាល">Proven 40–50%
+                                yield increase in multi-season field trials</span></div>
+                        <div class="yo-highlight"><span class="dot"></span><span
+                                data-en="Larger, heavier fruits that command premium market prices"
+                                data-km="ផ្លែធំ និងធ្ងន់ជាងមុន ដែលអាចលក់បានថ្លៃខ្ពស់នៅលើទីផ្សារ">Larger, heavier fruits
+                                that command premium market prices</span></div>
+                        <div class="yo-highlight"><span class="dot"></span><span
+                                data-en="Extended harvesting windows that reduce post-harvest losses"
+                                data-km="រយៈពេលប្រមូលផលបានយូរ ដែលជួយកាត់បន្ថយការខូចខាតក្រោយប្រមូលផល">Extended harvesting
+                                windows that
+                                reduce post-harvest losses</span></div>
+                        <div class="yo-highlight"><span class="dot"></span><span
+                                data-en="Farmer training and agronomic support included"
+                                data-km="រួមបញ្ចូលការបណ្តុះបណ្តាល និងការគាំទ្រផ្នែកបច្ចេកទេសកសិកម្មដល់កសិករ">Farmer
+                                training
+                                and
+                                agronomic support included</span></div>
+                    </div>
+                </div>
+                <div class="yo-mosaic" data-aos="fade-left">
+                    <div class="yo-mosaic-item">
+                        <img src="https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?w=600&amp;q=80"
+                            alt="Abundant vegetable harvest" />
+                    </div>
+                    <div class="yo-mosaic-item">
+                        <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400&amp;q=80"
+                            alt="Large fruit vegetables" />
+                    </div>
+                    <div class="yo-mosaic-item">
+                        <img src="https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=400&amp;q=80"
+                            alt="Field of high-yield crops" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STRATEGY: dark green step blocks -->
+    <section class="yo-strategy">
+        <div class="container">
+            <div class="yo-strategy-header">
+                <h2 data-en="Our Yield Improvement Strategy" data-km="យុទ្ធសាស្ត្របង្កើនទិន្នផលរបស់យើង">Our Yield
+                    Improvement
+                    Strategy</h2>
+                <p data-en="A data-driven, four-stage approach to developing varieties that consistently outperform."
+                    data-km="វិធីសាស្ត្រ ៤ ដំណាក់កាលផ្អែកលើទិន្នន័យច្បាស់លាស់ ដើម្បីអភិវឌ្ឍពូជដែលផ្តល់លទ្ធផលល្អឥតខ្ចោះ។">
+                    A
+                    data-driven, four-stage approach to
+                    developing varieties that consistently outperform.</p>
+            </div>
+            <div class="yo-steps">
+
+                <div class="yo-step" data-aos="fade-up" data-aos-delay="0">
+                    <div class="yo-step-num">01</div>
+                    <span class="yo-step-icon">📊</span>
+                    <h3 data-en="Performance Analysis" data-km="ការវិភាគលើលទ្ធផលលូតលាស់">Performance Analysis</h3>
+                    <p data-en="We analyze yield data from farmer feedback, field trials, and market demand across all growing regions of Cambodia to understand exactly what drives crop productivity."
+                        data-km="យើងវិភាគទិន្នន័យទិន្នផលពីមតិកសិករ ការសាកល្បងផ្ទាល់ និងតម្រូវការទីផ្សារនៅតាមតំបន់ដាំដុះទូទាំងកម្ពុជា ដើម្បីស្វែងយល់ពីកត្តាជម្រុញផលិតភាពដំណាំ។">
+                        We analyze yield data from farmer feedback, field trials, and market demand across all growing
+                        regions of Cambodia to understand exactly what drives crop productivity.
+                    </p>
+                </div>
+
+                <div class="yo-step" data-aos="fade-up" data-aos-delay="150">
+                    <div class="yo-step-num">02</div>
+                    <span class="yo-step-icon">🧬</span>
+                    <h3 data-en="Genetic Selection" data-km="ការជ្រើសរើសពូជតាមរយៈហ្សែន">Genetic Selection</h3>
+                    <p data-en="We select and cross-breed plants showing superior yield components — larger fruits, more fruits per plant, faster maturity, and better post-harvest quality."
+                        data-km="យើងជ្រើសរើស និងបង្កាត់ពូជរុក្ខជាតិដែលមានសមាសភាគទិន្នផលខ្ពស់ រួមមានផ្លែធំ ចំនួនផ្លែច្រើន ឆាប់ប្រមូលផល និងគុណភាពល្អក្រោយពេលប្រមូលផល។">
+                        We select and cross-breed plants showing superior yield components — larger fruits, more fruits
+                        per plant, faster maturity, and better post-harvest quality.
+                    </p>
+                </div>
+
+                <div class="yo-step" data-aos="fade-up" data-aos-delay="300">
+                    <div class="yo-step-num">03</div>
+                    <span class="yo-step-icon">🌾</span>
+                    <h3 data-en="Multi-Season Field Testing" data-km="ការសាកល្បងលើវាលស្រែច្រើនរដូវ">Multi-Season Field
+                        Testing</h3>
+                    <p data-en="New varieties undergo multiple growing seasons of field testing across different provinces, elevations, and soil types to confirm that high-yield performance is consistent and reliable."
+                        data-km="ពូជថ្មីៗត្រូវបានសាកល្បងដាំដុះច្រើនរដូវកាលនៅតាមបណ្តាខេត្ត តំបន់ដែលមានកម្ពស់ខុសគ្នា និងប្រភេទដីផ្សេងៗគ្នា ដើម្បីធានាថាទិន្នផលខ្ពស់មានស្ថិរភាព និងគួរឱ្យទុកចិត្ត។">
+                        New varieties undergo multiple growing seasons of field testing across different provinces,
+                        elevations, and soil types to confirm that high-yield performance is consistent and reliable.
+                    </p>
+                </div>
+
+                <div class="yo-step" data-aos="fade-up" data-aos-delay="450">
+                    <div class="yo-step-num">04</div>
+                    <span class="yo-step-icon">🎓</span>
+                    <h3 data-en="Farmer Training &amp; Support" data-km="ការបណ្តុះបណ្តាល និងការគាំទ្រកសិករ">Farmer
+                        Training &amp; Support</h3>
+                    <p data-en="We train farmers on optimal cultivation practices, proper fertilization schedules, and correct harvesting techniques to ensure they capture the full yield potential of our varieties."
+                        data-km="យើងបណ្តុះបណ្តាលកសិករអំពីការដាំដុះតាមបច្ចេកទេស ការប្រើប្រាស់ជីឱ្យបានត្រឹមត្រូវ និងបច្ចេកទេសប្រមូលផល ដើម្បីធានាថាពួកគាត់ទទួលបានទិន្នផលអតិបរមាពីពូជរបស់យើង។">
+                        We train farmers on optimal cultivation practices, proper fertilization schedules, and correct
+                        harvesting techniques to ensure they capture the full yield potential of our varieties.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- YIELD TRAITS -->
+    <section class="yo-traits">
+        <div class="container">
+            <div class="yo-traits-header">
+                <h2 data-en="High-Yield Characteristics" data-km="លក្ខណៈពិសេសនៃពូជផ្តល់ទិន្នផលខ្ពស់">
+                    High-Yield Characteristics
+                </h2>
+                <p class="yo-traits-sub"
+                    data-en="Six key traits that make KSSEED varieties deliver more, season after season."
+                    data-km="លក្ខណៈពិសេសចម្បងៗទាំង ៦ ដែលធ្វើឱ្យពូជរបស់ KSSEED ផ្តល់ទិន្នផលបានច្រើនរៀងរាល់រដូវកាល។">
+                    Six key traits that make KSSEED varieties deliver more, season after season.
+                </p>
+            </div>
+            <div class="yo-traits-grid">
+
+                <div class="yo-trait-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="yo-trait-icon">🌱</div>
+                    <h3 data-en="Strong Seedling Vigor" data-km="កូនដំណាំលូតលាស់ខ្លាំង">Strong Seedling Vigor</h3>
+                    <p data-en="High-vigor seeds germinate rapidly and establish deep, strong root systems — giving plants the best possible start for maximum productivity."
+                        data-km="គ្រាប់ពូជមានអត្រាដំណុះខ្ពស់ និងលូតលាស់លឿន ជាមួយប្រព័ន្ធឫសរឹងមាំ ដែលជាការចាប់ផ្តើមដ៏ល្អបំផុតសម្រាប់ផលិតភាពដំណាំ។">
+                        High-vigor seeds germinate rapidly and establish deep, strong root systems.
+                    </p>
+                    <div class="yo-trait-stat" data-en="↑ 30% faster establishment" data-km="↑ លូតលាស់លឿនជាងមុន ៣០%">↑
+                        30%
+                        faster establishment</div>
+                </div>
+
+                <div class="yo-trait-card" data-aos="fade-up" data-aos-delay="80">
+                    <div class="yo-trait-icon">🌳</div>
+                    <h3 data-en="Vigorous Plant Growth" data-km="ដើមលូតលាស់មាំមួន">Vigorous Plant Growth</h3>
+                    <p data-en="Strong vegetative growth maximizes leaf area for photosynthesis, enabling the plant to produce greater biomass and support more fruits simultaneously."
+                        data-km="ការលូតលាស់មាំមួនជួយបង្កើនផ្ទៃស្លឹកសម្រាប់រស្មីសំយោគ ដែលអនុញ្ញាតឱ្យដើមអាចទ្រទ្រង់ផ្លែបានច្រើនក្នុងពេលតែមួយ។">
+                        Strong vegetative growth maximizes leaf area for photosynthesis.
+                    </p>
+                    <div class="yo-trait-stat" data-en="↑ 25% more leaf area" data-km="↑ បង្កើនផ្ទៃស្លឹក ២៥%">↑ 25% more
+                        leaf area</div>
+                </div>
+
+                <div class="yo-trait-card" data-aos="fade-up" data-aos-delay="160">
+                    <div class="yo-trait-icon">🍅</div>
+                    <h3 data-en="More Fruits Per Plant" data-km="ចំនួនផ្លែច្រើនក្នុងមួយដើម">More Fruits Per Plant</h3>
+                    <p data-en="Our varieties are bred for improved flowering efficiency and fruit set — naturally producing up to 3x more fruits per plant than conventional varieties."
+                        data-km="ពូជរបស់យើងត្រូវបានបង្កាត់ដើម្បីបង្កើនប្រសិទ្ធភាពនៃការផ្កា និងផ្លែ ដែលផ្តល់ផ្លែច្រើនជាងពូជធម្មតារហូតដល់ ៣ដង។">
+                        Our varieties are bred for improved flowering efficiency and fruit set.
+                    </p>
+                    <div class="yo-trait-stat" data-en="↑ Up to 3× more fruits" data-km="↑ ផ្តល់ផ្លែច្រើនជាងមុនដល់ ៣ដង">
+                        ↑ Up
+                        to 3× more fruits</div>
+                </div>
+
+                <div class="yo-trait-card" data-aos="fade-up" data-aos-delay="240">
+                    <div class="yo-trait-icon">📏</div>
+                    <h3 data-en="Larger, Heavier Fruits" data-km="ផ្លែធំ និងធ្ងន់ជាងមុន">Larger, Heavier Fruits</h3>
+                    <p data-en="Bigger fruits command premium prices at Cambodian markets — increasing farmer income even when total plant numbers stay the same."
+                        data-km="ផ្លែធំល្អជួយឱ្យលក់បានថ្លៃខ្ពស់នៅលើទីផ្សារកម្ពុជា ដែលជួយបង្កើនចំណូលកសិករទោះបីជាដាំក្នុងចំនួនដើមដដែលក៏ដោយ។">
+                        Bigger fruits command premium prices at Cambodian markets.
+                    </p>
+                    <div class="yo-trait-stat" data-en="↑ 20–35% heavier per fruit"
+                        data-km="↑ ទម្ងន់ធ្ងន់ជាងមុន ២០–៣៥%">↑
+                        20–35% heavier per fruit</div>
+                </div>
+
+                <div class="yo-trait-card" data-aos="fade-up" data-aos-delay="320">
+                    <div class="yo-trait-icon">⏱️</div>
+                    <h3 data-en="Extended Harvest Period" data-km="រយៈពេលប្រមូលផលវែង">Extended Harvest Period</h3>
+                    <p data-en="Varieties that continue fruiting over a longer season allow farmers to spread sales, reduce market gluts, and maintain a steady, reliable income stream."
+                        data-km="ពូជដែលអាចផ្តល់ផ្លែបានក្នុងរយៈពេលយូរ ជួយឱ្យកសិករអាចលក់បានច្រើនដង និងរក្សាចំណូលឱ្យមានស្ថិរភាព។">
+                        Varieties that continue fruiting over a longer season allow farmers to spread sales.
+                    </p>
+                    <div class="yo-trait-stat" data-en="↑ 40% longer fruiting window"
+                        data-km="↑ រយៈពេលផ្តល់ផ្លែយូរជាងមុន ៤០%">↑ 40% longer fruiting window</div>
+                </div>
+
+                <div class="yo-trait-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="yo-trait-icon">⭐</div>
+                    <h3 data-en="Superior Market Quality" data-km="គុណភាពខ្ពស់សម្រាប់ទីផ្សារ">Superior Market Quality
+                    </h3>
+                    <p data-en="Excellent taste, vibrant color, uniform shape, and longer shelf life give KSSEED varieties a competitive edge in local markets and export channels."
+                        data-km="រសជាតិឆ្ងាញ់ ពណ៌ស្រស់ រាងស្អាត និងរក្សាទុកបានយូរ ធ្វើឱ្យពូជ KSSEED មានប្រៀបខ្ពស់ក្នុងទីផ្សារក្នុងស្រុក និងការនាំចេញ។">
+                        Excellent taste, vibrant color, uniform shape, and longer shelf life.
+                    </p>
+                    <div class="yo-trait-stat" data-en="↑ Premium market price achieved"
+                        data-km="↑ ទទួលបានតម្លៃខ្ពស់លើទីផ្សារ">↑ Premium market price achieved</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FARMER IMPACT: full-bleed image overlay -->
+    <section class="yo-impact">
+        <div class="yo-impact-bg">
+            <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=1600&amp;q=80"
+                alt="Cambodian farmer with successful harvest" />
+        </div>
+        <div class="container">
+            <div class="yo-impact-content" data-aos="fade-right">
+                <h2 data-en="Real Impact on Farmer Income" data-km="ឥទ្ធិពលជាក់ស្តែងលើប្រាក់ចំណូលកសិករ">Real Impact on
+                    Farmer Income</h2>
+                <ul class="yo-impact-list">
+                    <li>
+                        <span class="check">✓</span>
+                        <span data-en="40–50% increase in total crop yield compared to conventional local varieties"
+                            data-km="បង្កើនទិន្នផលសរុបចន្លោះ ៤០–៥០% ធៀបនឹងពូជក្នុងស្រុកទូទៅ">40–50% increase in total
+                            crop yield compared to conventional local varieties</span>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <span data-en="Higher market prices for premium-size, premium-quality vegetables"
+                            data-km="ទទួលបានតម្លៃខ្ពស់លើទីផ្សារ សម្រាប់បន្លែដែលមានទំហំធំ និងគុណភាពល្អឥតខ្ចោះ">Higher
+                            market prices for premium-size, premium-quality vegetables</span>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <span data-en="Reduced seed-to-harvest cycle time, allowing more growing seasons per year"
+                            data-km="កាត់បន្ថយរយៈពេលដាំដុះ ដែលអនុញ្ញាតឱ្យបង្កើនរដូវដាំដុះបានច្រើនដងក្នុងមួយឆ្នាំ">Reduced
+                            seed-to-harvest cycle time, allowing more growing seasons per year</span>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <span
+                            data-en="Improved soil health from better crop residue quality and reduced chemical runoff"
+                            data-km="កែលម្អសុខភាពដីតាមរយៈគុណភាពសំណល់កសិកម្ម និងការកាត់បន្ថយការប្រើប្រាស់គីមី">Improved
+                            soil
+                            health from better crop residue
+                            quality and reduced chemical runoff</span>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <span data-en="Enhanced household food security and nutrition from higher vegetable output"
+                            data-km="លើកកម្ពស់សន្តិសុខស្បៀង និងអាហារូបត្ថម្ភក្នុងគ្រួសារ តាមរយៈបរិមាណបន្លែដែលកើនឡើង">Enhanced
+                            household
+                            food security and nutrition from higher vegetable output</span>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <span
+                            data-en="Greater market competitiveness and access to export markets for Cambodian farmers"
+                            data-km="បង្កើនសមត្ថភាពប្រកួតប្រជែង និងឱកាសនាំចេញបន្លែកម្ពុជាទៅកាន់ទីផ្សារអន្តរជាតិ">Greater
+                            market competitiveness and access to export markets for Cambodian farmers</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="yo-gallery">
+        <div class="container">
+            <h2 data-en="High-Yield Research Gallery" data-km="កម្រងរូបភាពនៃការស្រាវជ្រាវបង្កើនទិន្នផល">High-Yield
+                Research
+                Gallery
+            </h2>
+            <div class="yo-gallery-grid">
+                <div class="yo-gallery-item" data-aos="fade-right">
+                    <img src="https://static0.backyardbossimages.com/wordpress/wp-content/uploads/2023/07/shutterstock_2330602811.jpg?q=50&fit=crop&w=1600&h=900&dpr=1.5"
+                        alt="Abundant high-yield vegetable crop" />
+                    <div class="g-label" data-en="High-Yield Field" data-km="ចម្ការផ្តល់ទិន្នផលខ្ពស់">High-Yield Field
+                    </div>
+                </div>
+                <div class="yo-gallery-item" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=500&amp;q=80"
+                        alt="Quality fruits ready for harvest" />
+                    <div class="g-label" data-en="Quality Harvest" data-km="ការប្រមូលផលប្រកបដោយគុណភាព">Quality Harvest
+                    </div>
+                </div>
+                <div class="yo-gallery-item" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1586771107445-d3ca888129ff?w=500&amp;q=80"
+                        alt="Seedlings with vigorous growth" />
+                    <div class="g-label" data-en="Vigorous Seedlings" data-km="កូនដំណាំដែលលូតលាស់មាំមួន">Vigorous
+                        Seedlings
+                    </div>
+                </div>
+                <div class="yo-gallery-item" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?w=500&amp;q=80"
+                        alt="Large premium quality produce" />
+                    <div class="g-label" data-en="Premium Produce" data-km="បន្លែគុណភាពខ្ពស់">Premium Produce</div>
+                </div>
+                <div class="yo-gallery-item" data-aos="fade-up" data-aos-delay="400">
+                    <img src="https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=500&amp;q=80"
+                        alt="Farmer training on yield practices" />
+                    <div class="g-label" data-en="Farmer Training" data-km="ការបណ្តុះបណ្តាលកសិករ">Farmer Training</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-research-section">
+        <div class="container cta-research-inner">
+            <div class="cta-research-header" data-aos="fade-up">
+                <span class="cta-research-badge" data-en="🔬 Research &amp; Innovation"
+                    data-km="🔬 ការស្រាវជ្រាវ និងនវានុវត្តន៍">
+                    🔬 Research &amp; Innovation
+                </span>
+                <h2 data-en="Explore Other Research Areas" data-km="ស្វែងយល់ពីផ្នែកស្រាវជ្រាវផ្សេងៗទៀត">Explore Other
+                    Research
+                    Areas</h2>
+                <p data-en="Discover how KSSEED pushes the boundaries of agricultural science to help Cambodian farmers thrive."
+                    data-km="ស្វែងយល់ពីរបៀបដែល KSSEED ជំរុញព្រំដែនវិទ្យាសាស្ត្រកសិកម្ម ដើម្បីជួយកសិករកម្ពុជាឱ្យរីកចម្រើន។">
+                    Discover how KSSEED pushes the boundaries of agricultural science to help Cambodian farmers thrive.
+                </p>
+            </div>
+            <div class="cta-research-cards">
+                <a href="seed-testing.html" class="cta-research-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="cta-card-icon">🧪</div>
+                    <div class="cta-card-body">
+                        <h3 data-en="Seed Testing" data-km="ការសាកល្បងគ្រាប់ពូជ">Seed Testing</h3>
+                        <p data-en="Rigorous quality control ensuring every KSSEED seed meets high germination standards."
+                            data-km="ការត្រួតពិនិត្យគុណភាពយ៉ាងម៉ត់ចត់ ដើម្បីធានាថាគ្រាប់ពូជ KSSEED គ្រប់គ្រាប់ស្របតាមស្តង់ដារដំណុះខ្ពស់។">
+                            Rigorous quality control ensuring every KSSEED seed meets high germination standards.</p>
+                    </div>
+                    <span class="cta-card-arrow">→</span>
+                </a>
+                <a href="climate-adaptation.html" class="cta-research-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="cta-card-icon">🌦️</div>
+                    <div class="cta-card-body">
+                        <h3 data-en="Climate Adaptation" data-km="ការបន្ស៊ាំនឹងការប្រែប្រួលអាកាសធាតុ">Climate Adaptation
+                        </h3>
+                        <p data-en="Developing seed varieties that thrive under Cambodia's changing climate conditions."
+                            data-km="អភិវឌ្ឍពូជគ្រាប់ពូជដែលលូតលាស់បានល្អបំផុត ក្រោមលក្ខខណ្ឌនៃការប្រែប្រួលអាកាសធាតុនៅកម្ពុជា។">
+                            Developing seed varieties that thrive under Cambodia's changing climate conditions.</p>
+                    </div>
+                    <span class="cta-card-arrow">→</span>
+                </a>
+                <a href="disease-resistance.html" class="cta-research-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="cta-card-icon">🛡️</div>
+                    <div class="cta-card-body">
+                        <h3 data-en="Disease Resistance" data-km="ការធន់នឹងជំងឺ">Disease Resistance</h3>
+                        <p data-en="Breeding naturally resistant varieties to reduce pesticide use and protect crop yields."
+                            data-km="បង្កាត់ពូជដែលមានភាពធន់ពីធម្មជាតិ ដើម្បីកាត់បន្ថយការប្រើប្រាស់ថ្នាំសម្លាប់សត្វល្អិត និងការពារទិន្នផលដំណាំ។">
+                            Breeding naturally resistant varieties to reduce pesticide use and protect crop yields.</p>
+                    </div>
+                    <span class="cta-card-arrow">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="../image/logo/ksseed.png" alt="KsSEED Logo" />
+                        <span class="logo-text">KSSEED</span>
+                    </div>
+                    <p data-en="Quality, Confidence, and Growth are primary."
+                        data-km="គុណភាព ទំនុកចិត្ត និងការរីកចម្រើន គឺជាចម្បង។">Quality,
+                        Confidence, and Growth are primary.</p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-en="Quick Links" data-km="តំណភ្ជាប់រហ័ស">Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html#home" data-en="Home" data-km="ទំព័រដើម">Home</a></li>
+                        <li><a href="../index.html#about" data-en="About Us" data-km="អំពីយើង">About Us</a></li>
+                        <li><a href="../index.html#products" data-en="Products" data-km="ផលិតផល">Products</a></li>
+                        <li><a href="../index.html#research" data-en="Research" data-km="ការស្រាវជ្រាវ">Research</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 data-en="Resources" data-km="ធនធាន">Resources</h4>
+                    <ul>
+                        <li><a href="../index.html#stories" data-en="Farmer's Stories"
+                                data-km="រឿងរ៉ាវរបស់កសិករ">Farmer's
+                                Stories</a></li>
+                        <li><a href="../index.html#blog" data-en="Blog" data-km="ប្លុក">Blog</a></li>
+                        <li><a href="../faq.html" data-en="FAQs" data-km="សំណួរដែលសួរញឹកញាប់">FAQs</a></li>
+                        <li><a href="#" data-en="Downloads" data-km="ទាញយក">Downloads</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 data-en="Contact" data-km="ទំនាក់ទំនង">Contact</h4>
+                    <ul>
+                        <li data-en="📍 Phnom Penh, Cambodia" data-km="📍 ភ្នំពេញ, កម្ពុជា">📍 Phnom Penh, Cambodia</li>
+                        <li>📞 +855 93 755 638</li>
+                        <li><a href="mailto:ksseed.info@gmail.com" style="padding-left:0;">✉️ ksseed.info@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 KsSeed. <span data-en="All rights reserved." data-km="រក្សាសិទ្ធិគ្រប់យ៉ាង។">All rights
+                        reserved.</span></p>
+                <div class="footer-links">
+                    <a href="../privacy-policy.html" data-en="Privacy Policy" data-km="គោលការណ៍ភាពឯកជន">Privacy Policy</a>
+                    <a href="../terms.html" data-en="Terms of Service" data-km="លក្ខខណ្ឌសេវាកម្ម">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/language-toggle.js"></script>
+    <script src="../js/header-nav.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 800, easing: 'ease-in-out', once: true });</script>
+</body>
+
+</html>

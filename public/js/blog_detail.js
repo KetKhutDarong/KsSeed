@@ -1,10 +1,33 @@
-// blog_detail.js - For blog_detail.html
-// Works with MongoDB API
+// blog_detail.js - For blog_detail.html - Updated with proper language sync
 
 // Get blog ID from URL parameter
 function getBlogIdFromUrl() {
   const params = new URLSearchParams(window.location.search);
   return params.get("id");
+}
+
+// Get current language from localStorage
+function getCurrentLanguage() {
+  return localStorage.getItem("ksseed-language") || "en";
+}
+
+// Refresh blog content on language change
+function refreshBlogContent() {
+  const blogId = getBlogIdFromUrl();
+  if (blogId) {
+    // Clear current content
+    const container = document.getElementById("blogDetailContainer");
+    const descContainer = document.getElementById("blogDescContainer");
+    const otherContainer = document.getElementById("otherBlogsGrid");
+
+    if (container)
+      container.innerHTML = '<div class="blog-loading">Loading blog...</div>';
+    if (descContainer) descContainer.innerHTML = "";
+    if (otherContainer) otherContainer.innerHTML = "";
+
+    // Reload blog with current language
+    loadBlogDetail();
+  }
 }
 
 // Main function to load and display blog
@@ -63,7 +86,7 @@ function displayBlogDetail(blog) {
     return;
   }
 
-  const currentLang = localStorage.getItem("language") || "en";
+  const currentLang = getCurrentLanguage();
   const title = currentLang === "km" ? blog.title.km : blog.title.en;
   const preview = currentLang === "km" ? blog.preview.km : blog.preview.en;
   const category = currentLang === "km" ? blog.category?.km : blog.category?.en;
@@ -111,7 +134,7 @@ function displayBlogDetail(blog) {
         </div>
         <div class="author-section">
           <p>${currentLang === "km" ? "ដោយ" : "By"} <strong>KsSEED Team</strong></p>
-          <p>${currentLang === "km" ? "អាន់ថ្ងៃចុងក្រោយ" : "Updated on"} ${new Date(blog.updatedAt || blog.createdAt).toLocaleDateString()}</p>
+          <p>${currentLang === "km" ? "ធ្វើបច្ចុប្បន្ននៅ" : "Updated on"} ${new Date(blog.updatedAt || blog.createdAt).toLocaleDateString()}</p>
         </div>
       </div>
     </div>
@@ -165,7 +188,7 @@ async function loadOtherBlogs(currentBlogId, currentCategory) {
 
 // Display other blogs
 function displayOtherBlogs(blogs, container) {
-  const currentLang = localStorage.getItem("language") || "en";
+  const currentLang = getCurrentLanguage();
 
   container.innerHTML = blogs
     .map((blog) => {
@@ -202,7 +225,7 @@ function displayOtherBlogs(blogs, container) {
 
 // Share blog function
 function shareBlog(blogId, title) {
-  const currentLang = localStorage.getItem("language") || "en";
+  const currentLang = getCurrentLanguage();
   const shareText =
     currentLang === "km"
       ? `អាន "${title}" នៅលើ KsSEED`
@@ -277,8 +300,9 @@ function showLoadingState(show) {
   const otherContainer = document.getElementById("otherBlogsGrid");
 
   if (show) {
-    if (container)
+    if (container) {
       container.innerHTML = '<div class="blog-loading">Loading blog...</div>';
+    }
     if (descContainer) descContainer.innerHTML = "";
     if (otherContainer) otherContainer.innerHTML = "";
   }
@@ -287,33 +311,22 @@ function showLoadingState(show) {
 // Show error message
 function showErrorMessage(message) {
   const container = document.getElementById("blogDetailContainer");
+  const currentLang = getCurrentLanguage();
+
   if (container) {
     container.innerHTML = `
       <div class="blog-error">
         <h2>${message}</h2>
         <p>${
-          localStorage.getItem("language") === "km"
+          currentLang === "km"
             ? "សូមព្យាយាមម្តងទៀត ឬត្រលប់ទៅទំព័របច្ចុប្បន្នលម្អិត។"
             : "Please try again or return to the blog page."
         }</p>
         <a href="blog.html" class="btn btn-primary">
-          ${
-            localStorage.getItem("language") === "km"
-              ? "ត្រឡប់ទៅប្លុក"
-              : "Back to Blog"
-          }
+          ${currentLang === "km" ? "ត្រឡប់ទៅប្លុក" : "Back to Blog"}
         </a>
       </div>
     `;
-  }
-}
-
-// Language change handler
-function onLanguageChange() {
-  const blogId = getBlogIdFromUrl();
-  if (blogId) {
-    // Reload the page to get content in new language
-    window.location.reload();
   }
 }
 
@@ -325,15 +338,37 @@ document.addEventListener("DOMContentLoaded", () => {
   // Listen for language changes
   document.addEventListener("languageChange", (event) => {
     if (event.detail && event.detail.lang) {
-      localStorage.setItem("language", event.detail.lang);
-      onLanguageChange();
+      // Update localStorage
+      localStorage.setItem("ksseed-language", event.detail.lang);
+      // Refresh blog content without page reload
+      refreshBlogContent();
     }
   });
 
-  // Add print button event listener
+  // Add print button event listener if needed
   document.addEventListener("click", function (e) {
     if (e.target.classList.contains("print-btn")) {
       window.print();
     }
   });
+
+  // Add share button functionality if needed
+  document.addEventListener("click", function (e) {
+    if (e.target.classList.contains("share-btn")) {
+      const blogId = getBlogIdFromUrl();
+      const title =
+        document.querySelector(".text-blog-title")?.textContent || "";
+      shareBlog(blogId, title);
+    }
+  });
 });
+
+// Optional: Add a function to trigger share from button
+function triggerShare() {
+  const blogId = getBlogIdFromUrl();
+  const title = document.querySelector(".text-blog-title")?.textContent || "";
+  shareBlog(blogId, title);
+}
+
+
+

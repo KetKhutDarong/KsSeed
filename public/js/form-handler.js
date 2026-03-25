@@ -2,7 +2,7 @@
 // Newsletter now sends ONLY email. Contact still sends full fields.
 
 document.addEventListener("DOMContentLoaded", () => {
-  const BACKEND_URL = "http://localhost:5502";
+  const BACKEND_URL = window.location.origin;
 
   const alertMessages = {
     en: {
@@ -21,10 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
       thankYouSubscribe: "Thank you for subscribing to our newsletter!",
       alreadySubscribed: "This email is already on our mailing list!",
       subscribeError: "Unable to subscribe. Please try again.",
-      videoGuide: "Video Guide",
-      close: "Close",
-      videoComingSoon:
-        "Video feature is coming soon! We're preparing high-quality instructional videos.",
+      confirmText: "OK",
     },
     km: {
       missingFields: "សូមបំពេញគ្រប់ព័ត៌មានដែលត្រូវការ",
@@ -42,10 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
       thankYouSubscribe: "សូមអរគុណសម្រាប់ការជាវព្រឹត្តិប័ត្រព័ត៌មានរបស់យើង!",
       alreadySubscribed: "អ៊ីមែលនេះបានជាវរួចហើយ!",
       subscribeError: "មិនអាចជាវបាន។ សូមព្យាយាមម្តងទៀត។",
-      videoGuide: "វីដេអូណែនាំ",
-      close: "បិទ",
-      videoComingSoon:
-        "មុខងារវីដេអូនឹងមកដល់ឆាប់ៗ! យើងកំពុងរៀបចំវីដេអូណែនាំដែលមានគុណភាពខ្ពស់។",
+      confirmText: "យល់ព្រម",
     },
   };
 
@@ -102,6 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .loading-dots { display:flex; gap:8px; justify-content:center; margin:12px 0 16px; }
     .loading-dot { width:10px; height:10px; border-radius:50%; background:var(--primary-green); animation: bounce 1.2s infinite; }
     .loading-dot:nth-child(1) { animation-delay:-0.24s; } .loading-dot:nth-child(2) { animation-delay:-0.12s; }
+    .subBtn{background: linear-gradient(90deg, #4d96ff 0%, #256ed7 100%); color:var(--white); box-shadow: 0 8px 22px rgba(74,197,99,0.18);}
     @keyframes bounce { 0%,80%,100% { transform: scale(0) } 40% { transform: scale(1) } }
     @media (max-width:420px) { .custom-alert-container { max-width:94%; border-radius:12px; } .alert-icon { width:64px; height:64px; } .custom-alert-body { padding:18px; } }
     `;
@@ -111,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.head.appendChild(s);
   }
 
-  // ModalAlert class with proper loading minimum visible duration
+  // --- ModalAlert class (updated language handling & confirm text) ---
   class ModalAlert {
     constructor() {
       this.currentLang = "en";
@@ -123,8 +118,13 @@ document.addEventListener("DOMContentLoaded", () => {
       this.minLoadingMs = 600;
     }
 
+    // Accepts values like "en", "en-US", "km", etc.
     setLanguage(lang) {
-      this.currentLang = lang;
+      try {
+        this.currentLang = String(lang || "en").toLowerCase();
+      } catch (e) {
+        this.currentLang = "en";
+      }
     }
 
     createContainer() {
@@ -209,21 +209,24 @@ document.addEventListener("DOMContentLoaded", () => {
         loading: "var(--primary-green)",
       };
 
-      const confirmText = this.currentLang === "en" ? "OK" : "យល់ព្រម";
+      // Normalize and use base language (e.g. "en" from "en-US")
+      const baseLang = (this.currentLang || "en").split("-")[0];
+      // Get confirm text from alertMessages using getAlertMessage
+      const confirmText = getAlertMessage("confirmText");
 
       const html = `
-        <div class="custom-alert-modal" id="${id}" role="dialog" aria-modal="true" aria-labelledby="${id}-title" aria-describedby="${id}-desc">
-          <div class="custom-alert-container" role="document">
-            <div class="custom-alert-header" style="background: linear-gradient(90deg, ${colorMap[type]} 0%, ${this.darkenColor(colorMap[type].replace("var(--primary-green)", "#4caf50"))} 100%);">
-              <h3 id="${id}-title"><i class="${iconMap[type]}"></i> ${title}</h3>
-              <button class="close-alert" aria-label="Close dialog"><span aria-hidden="true">✕</span></button>
-            </div>
-            <div class="custom-alert-body">
-              ${type === "loading" ? `<div class="loading-dots" aria-hidden="true"><div class="loading-dot"></div><div class="loading-dot"></div><div class="loading-dot"></div></div><p id="${id}-desc">${message}</p>` : `<div class="alert-icon ${type}"><i class="${iconMap[type]}"></i></div><p id="${id}-desc">${message}</p><div class="custom-alert-actions"><button class="custom-alert-btn primary" data-action="confirm">${confirmText}</button></div>`}
-            </div>
+      <div class="custom-alert-modal" id="${id}" role="dialog" aria-modal="true" aria-labelledby="${id}-title" aria-describedby="${id}-desc">
+        <div class="custom-alert-container" role="document">
+          <div class="custom-alert-header" style="background: linear-gradient(90deg, ${colorMap[type]} 0%, ${this.darkenColor(colorMap[type].replace("var(--primary-green)", "#4caf50"))} 100%);">
+            <h3 id="${id}-title"><i class="${iconMap[type]}"></i> ${title}</h3>
+            <button class="close-alert" aria-label="Close dialog"><span aria-hidden="true">✕</span></button>
+          </div>
+          <div class="custom-alert-body">
+            ${type === "loading" ? `<div class="loading-dots" aria-hidden="true"><div class="loading-dot"></div><div class="loading-dot"></div><div class="loading-dot"></div></div><p id="${id}-desc">${message}</p>` : `<div class="alert-icon ${type}"><i class="${iconMap[type]}"></i></div><p id="${id}-desc">${message}</p><div class="custom-alert-actions"><button class="custom-alert-btn subBtn" data-action="confirm">${confirmText}</button></div>`}
           </div>
         </div>
-      `;
+      </div>
+    `;
 
       const container = document.getElementById("custom-alert-container");
       container.insertAdjacentHTML("beforeend", html);
@@ -233,9 +236,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const createdAt = Date.now();
       modal.dataset.createdAt = String(createdAt);
 
-      // Save last focused element and apply font
+      // Save last focused element and apply font (use baseLang for font mapping)
       this.lastFocused = document.activeElement;
-      modal.style.fontFamily = fontMapping[this.currentLang] || fontMapping.en;
+      modal.style.fontFamily = fontMapping[baseLang] || fontMapping.en;
 
       setTimeout(() => {
         modal.classList.add("active");
@@ -446,7 +449,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return false;
       }
 
-      const payload = { email }; 
+      const payload = { email };
 
       let loadingAlert = null;
       try {
@@ -632,57 +635,6 @@ document.addEventListener("DOMContentLoaded", () => {
       return false;
     });
   }
-
-  // ---------------- VIDEO ALERT (uses same modal system) ----------------
-  function showVideoAlert() {
-    customAlert.removePreviousModals();
-    const html = `
-      <div class="custom-alert-modal" id="tempVideoModal" role="dialog" aria-modal="true">
-        <div class="custom-alert-container">
-          <div class="custom-alert-header" style="background: linear-gradient(90deg, var(--primary-green) 0%, ${customAlert.darkenColor("#4caf50")} 100%);">
-            <h3><i class="ri-video-line"></i> ${alertMessages[currentLang].videoGuide}</h3>
-            <button class="close-alert" aria-label="Close dialog"><span aria-hidden="true">✕</span></button>
-          </div>
-          <div class="custom-alert-body">
-            <div class="alert-icon info"><i class="ri-video-add-line"></i></div>
-            <p>${alertMessages[currentLang].videoComingSoon}</p>
-            <div class="custom-alert-actions">
-              <button class="custom-alert-btn primary" id="tempCloseVideoBtn">${alertMessages[currentLang].close}</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    `;
-    document.body.insertAdjacentHTML("beforeend", html);
-    const modal = document.getElementById("tempVideoModal");
-    const closeBtn = document.getElementById("tempCloseVideoBtn");
-    setTimeout(() => {
-      modal.classList.add("active");
-      document.body.style.overflow = "hidden";
-    }, 10);
-    const close = () => {
-      modal.classList.remove("active");
-      document.body.style.overflow = "auto";
-      setTimeout(() => modal.remove(), 300);
-    };
-    const ctrl = modal.querySelector(".close-alert");
-    if (ctrl) ctrl.addEventListener("click", close);
-    if (closeBtn) closeBtn.addEventListener("click", close);
-    modal.addEventListener("click", (e) => {
-      if (e.target === modal) close();
-    });
-  }
-
-  document
-    .querySelectorAll(
-      "[data-video-alert], .play-button, .video-btn, .btn-video",
-    )
-    .forEach((btn) => {
-      btn.addEventListener("click", (e) => {
-        e.preventDefault();
-        showVideoAlert();
-      });
-    });
 
   console.log(
     "✅ Form handler initialized (newsletter sends only email; loading modal min duration enforced)",

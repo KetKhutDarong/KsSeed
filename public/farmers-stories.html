@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmers' Stories - KSSEED</title>
+    <meta name="description" content="Real stories from farmers growing success with KSSEED seeds across Cambodia.">
+    <link rel="icon" href="https://ksseedcambodia.pages.dev/image/General/Picture1.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hanuman:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <!-- Language Switch & Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html#home" class="logo-link">
+                        <img src="image/logo/ksseed.png" alt="KsSEED Logo" />
+                        <span class="logo-text">KSSEED</span>
+                    </a>
+                </div>
+
+                <nav class="nav" id="nav">
+                    <a href="index.html#home" class="nav-link active" data-en="Home" data-km="ទំព័រដើម">Home</a>
+                    <a href="index.html#products" class="nav-link" data-en="Seeds" data-km="គ្រាប់ពូជ">Seeds</a>
+                    <a href="index.html#about" class="nav-link" data-en="About Us" data-km="អំពីយើង">About Us</a>
+                    <div class="nav-item-dropdown">
+                        <a href="index.html#research" class="nav-link nav-link-dropdown" data-en="Research"
+                            data-km="ស្រាវជ្រាវ">
+                            Research
+                            <span class="dropdown-arrow"></span>
+                        </a>
+                        <div class="nav-dropdown">
+                            <a href="research/seed-testing.html" class="dropdown-link" data-en="Seed Testing"
+                                data-km="ការសាកល្បងគ្រាប់ពូជ">Seed Testing</a>
+                            <a href="research/climate-adaptation.html" class="dropdown-link"
+                                data-en="Climate Adaptation" data-km="ការសម្របខ្លួនអាកាសធាតុ">Climate Adaptation</a>
+                            <a href="research/disease-resistance.html" class="dropdown-link"
+                                data-en="Disease Resistance" data-km="ការធន់នឹងជំងឺ">Disease Resistance</a>
+                            <a href="research/yield-optimization.html" class="dropdown-link"
+                                data-en="Yield Optimization" data-km="ការបង្កើនផលិតកម្ម">Yield Optimization</a>
+                        </div>
+                    </div>
+                    <a href="index.html#stories" class="nav-link active" data-en="Farmer's Stories"
+                        data-km="រឿងរ៉ាវកសិករ">Farmer's
+                        Stories</a>
+                    <a href="index.html#blog" class="nav-link" data-en="Blog" data-km="ប្លុក">Blog</a>
+                    <a href="index.html#contact" class="nav-link" data-en="Contact" data-km="ទំនាក់ទំនង">Contact</a>
+                </nav>
+
+                <div class="header-actions">
+                    <button class="lang-switch" id="langSwitch">
+                        <span class="lang-option active" data-lang="en">EN</span>
+                        <span class="lang-divider">|</span>
+                        <span class="lang-option" data-lang="km">ខ្មែរ</span>
+                    </button>
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hero-stories">
+        <div class="container">
+            <div class="hero-content-farmer">
+                <h1 class="hero-title-farmer" data-en="Farmers' Stories" data-km="រឿងរ៉ាវរបស់កសិករ">Farmers' Stories
+                </h1>
+                <p class="hero-subtitle-farmer" data-en="Real stories from farmers growing success with KSSEED seeds."
+                    data-km="រឿងរ៉ាវពិតពីកសិករដែលទទួលបានជោគជ័យក្នុងការដាំដុះជាមួយគ្រាប់ពូជ KSSEED។">
+                    Real stories from farmers growing success with KSSEED seeds.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stories Grid -->
+    <section class="stories-section">
+        <div class="container">
+            <div class="stories-grid" id="storiesGrid"></div>
+            <div class="load-more-container">
+                <button class="load-more-btn" id="loadMoreBtn">Load More Stories</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <!-- <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title" data-en="Share Your Farming Success" data-km="ចែករំលែកជោគជ័យកសិកម្មរបស់អ្នក">
+                Share Your Farming Success
+            </h2>
+            <p class="cta-description"
+                data-en="Are you growing KSSEED crops successfully? Share your story and inspire other farmers."
+                data-km="តើអ្នកកំពុងដាំដុះដោយជោគជ័យជាមួយ KSSEED? ចែករំលែករឿងរ៉ាវរបស់អ្នក ហើយលើកទឹកចិត្តកសិករផ្សេងទៀត។">
+                Are you growing KSSEED crops successfully? Share your story and inspire other farmers.
+            </p>
+            <a href="YOUR_GOOGLE_FORM_LINK" target="_blank" class="cta-button" data-en="Submit Your Story"
+                data-km="ដាក់ស្នើរឿងរ៉ាវរបស់អ្នក">
+                Submit Your Story
+            </a>
+        </div>
+    </section> -->
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="modal">
+        <div class="video-modal-wrapper">
+            <button class="modal-close video-modal-close" onclick="closeVideoModal()"
+                aria-label="Close video">×</button>
+            <div class="video-modal-content">
+                <!-- Using YouTube's enhanced privacy mode and fixed embed parameters -->
+                <iframe id="videoFrame" width="100%" height="100%" src="about:blank"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen loading="lazy" style="border: none; background: #000;">
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Story Detail Modal -->
+    <div id="storyModal" class="modal">
+        <div class="modal-content story-modal-content">
+            <button class="modal-close story-modal-close" onclick="closeStoryModal()"
+                aria-label="Close story">×</button>
+            <div id="storyDetailContent"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="image/logo/ksseed.png" alt="KsSEED Logo" />
+                        <span class="logo-text">KSSEED</span>
+                    </div>
+                    <p data-en="Quality, Confidence, and Growth are primary."
+                        data-km="គុណភាព ទំនុកចិត្ត និងភាពរីកចម្រើនជាចម្បង">
+                        Quality, Confidence, and Growth are primary.
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h4 data-en="Quick Links" data-km="តំណភ្ជាប់រហ័ស">Quick Links</h4>
+                    <ul>
+                        <li>
+                            <a href="index.html#home" data-en="Home" data-km="ទំព័រដើម">Home</a>
+                        </li>
+                        <li>
+                            <a href="index.html#about" data-en="About Us" data-km="អំពីយើង">About Us</a>
+                        </li>
+                        <li>
+                            <a href="index.html#products" data-en="Products" data-km="ផលិតផល">Products</a>
+                        </li>
+                        <li>
+                            <a href="index.html#research" data-en="Research" data-km="ស្រាវជ្រាវ">Research</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 data-en="Resources" data-km="ធនធាន">Resources</h4>
+                    <ul>
+                        <li>
+                            <a href="index.html#stories" data-en="Farmer's Stories" data-km="រឿងរ៉ាវកសិករ">Farmer's
+                                Stories</a>
+                        </li>
+                        <li>
+                            <a href="index.html#blog" data-en="Blog" data-km="ប្លុក">Blog</a>
+                        </li>
+                        <li>
+                            <a href="faq.html" data-en="FAQs" data-km="សំណួរញឹកញាប់">FAQs</a>
+                        </li>
+                        <li>
+                            <a href="#" data-en="Downloads" data-km="ទាញយក">Downloads</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 data-en="Contact" data-km="ទំនាក់ទំនង">Contact</h4>
+                    <ul>
+                        <li data-en="📍 Phnom Penh, Cambodia" data-km="📍 ភ្នំពេញុ, កម្ពុជា">
+                            📍 Phnom Penh, Cambodia
+                        </li>
+                        <li>📞 +855 93 755 638</li>
+                        <li> <a style="padding-left: 0px;" href="mailto:ksseed.info@gmail.com">✉️
+                                ksseed.info@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>
+                    &copy; 2026 KsSeed.
+                    <span data-en="All rights reserved." data-km="រក្សាសិទ្ធិគ្រប់យ៉ាង។">All rights reserved.</span>
+                </p>
+                <div class="footer-links">
+                    <a href="privacy-policy.html" data-en="Privacy Policy" data-km="គោលការណ៍ភាពឯកជន">Privacy Policy</a>
+                    <a href="terms.html" data-en="Terms of Service" data-km="លក្ខខណ្ឌសេវាកម្ម">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chat Widget -->
+    <div class="chat-widget" id="chatWidget">
+        <button class="chat-button" id="chatButton">
+            <span class="chat-icon">&#128172;</span>
+            <span class="chat-close">✕</span>
+        </button>
+        <div class="chat-box" id="chatBox">
+            <div class="chat-header">
+                <h4 data-en="Chat with Us" data-km="ជជែកជាមួយយើង">Chat with Us</h4>
+                <p data-en="We're here to help!" data-km="យើងនៅទីនេះដើម្បីជួយ!">
+                    We're here to help!
+                </p>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="chat-message bot">
+                    <p data-en="Hello! How can we help you today?" data-km="សួស្តី! តើយើងអាចជួយអ្នកយ៉ាងណាថ្ងៃនេះ?">
+                        Hello! How can we help you today?
+                    </p>
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" placeholder="Type your message..." data-placeholder-en="Type your message..."
+                    data-placeholder-km="វាយសាររបស់អ្នក..." id="chatInput" />
+                <button id="chatSend">➤</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop">&#10094;</button>
+
+    <script>
+        // ── Shared language state ──────────────────────────────────────────
+        window.currentLang = 'en';
+
+        window.onLangChange = function (lang) {
+            window.currentLang = lang;
+            displayStories(allStories.slice(0, displayedCount));
+            const btn = document.getElementById('loadMoreBtn');
+            if (btn) btn.textContent = lang === 'km' ? 'បន្ថែមរឿងទៀត' : 'Load More Stories';
+        };
+
+        const allStories = [
+            {
+                id: 1,
+                title: {
+                    en: "Chili receives high yield",
+                    km: "ម្ទេសទទួលបានទិន្នផលខ្ពស់"
+                },
+                description: {
+                    en: "Mr. Smarn Muth, a chili farmer in Battambang province, has successfully tripled his yield by using KSSeed's chili seeds, which have high immunity to diseases and excellent resistance to climate change.",
+                    km: "លោក ស្មាន់ មុត កសិករដាំម្ទេសនៅខេត្តបាត់ដំបង បានសម្រេចជោគជ័យក្នុងការបង្កើនទិន្នផលរហូតដល់ ៣ដង តាមរយៈការប្រើប្រាស់គ្រាប់ពូជម្ទេសរបស់ក្រុមហ៊ុន KSSeed ដែលមានភាពស៊ាំនឹងជំងឺខ្ពស់ និងធន់នឹងការប្រែប្រួលអាកាសធាតុ។"
+                },
+                fullStory: {
+                    en: [
+                        "Mr. Smarn Muth has been farming chili for over 10 years in Battambang. For a long time, he struggled with low yields and frequent disease outbreaks that affected his livelihood.",
+                        "After switching to KSSEED's climate-resilient chili seeds, the results were transformative. His harvest tripled in just one season because the seeds adapted perfectly to the local weather and resisted common pests.",
+                        "Today, Mr. Smarn has expanded his farm from 1 hectare to 3 hectares. He is now a key supplier for local markets, proving that the right seeds are the foundation of farming success."
+                    ],
+                    km: [
+                        "លោក ស្មាន់ មុត គឺជាកសិករដាំម្ទេសដែលមានបទពិសោធន៍ជាង ១០ ឆ្នាំនៅខេត្តបាត់ដំបង។ កន្លងមក លោកតែងតែជួបបញ្ហាប្រឈមនឹងទិន្នផលទាប និងការបំផ្លាញពីជំងឺផ្សេងៗដែលធ្វើឱ្យប៉ះពាល់ដល់សេដ្ឋកិច្ចគ្រួសារ។",
+                        "ក្រោយពីបានប្តូរមកប្រើប្រាស់ពូជម្ទេសរបស់ KSSEED ដែលធន់នឹងអាកាសធាតុ លទ្ធផលពិតជាគួរឱ្យភ្ញាក់ផ្អើល ដោយទិន្នផលរបស់លោកបានកើនឡើងរហូតដល់ ៣ដងក្នុងរដូវកាលតែមួយ ព្រោះពូជនេះមានភាពស៊ាំនឹងជំងឺបានយ៉ាងល្អ។",
+                        "សព្វថ្ងៃ លោក ស្មាន់ បានពង្រីកផ្ទៃដីដាំដុះពី ១ ហិកតា រហូតដល់ ៣ ហិកតា។ លោកបានក្លាយជាអ្នកផ្គត់ផ្គង់ម្ទេសដ៏សំខាន់ប្រចាំតំបន់ និងជាគំរូដល់កសិករដទៃទៀតក្នុងការជ្រើសរើសគ្រាប់ពូជត្រឹមត្រូវ។"
+                    ]
+                },
+                image: "https://ksseedcambodia.pages.dev/image/General/farmer1.png",
+                province: {
+                    en: "Battambang",
+                    km: "បាត់ដំបង"
+                },
+                crop: {
+                    en: "Chili",
+                    km: "ម្ទេស"
+                },
+                year: 2024,
+                hasVideo: true,
+                videoId: "Sjjm7IJt0Vg",
+                videoUrl: "https://www.youtube.com/watch?v=Sjjm7IJt0Vg&t=22s"
+            },
+            {
+                id: 2,
+                title: {
+                    en: "Yardlong Bean Seed Production & Harvesting",
+                    km: "ការប្រមូលផល និងការផលិតគ្រាប់ពូជសណ្ដែកកួរ"
+                },
+                description: {
+                    en: "From careful cultivation to the final harvest—our goal is to produce premium yardlong bean seeds that are climate-resilient and high-yielding, ensuring a strong start for every farm.",
+                    km: "ចាប់តាំងពីការដាំដុះ រហូតដល់ការប្រមូលផលគ្រាប់ពូជដោយផ្ទាល់ដៃ។ គោលដៅរបស់យើងគឺផលិតគ្រាប់ពូជសណ្ដែកកួរដែលមានគុណភាពខ្ពស់ ធន់នឹងអាកាសធាតុ និងផ្ដល់ទិន្នផលច្រើនសម្រាប់កសិករ។"
+                },
+                fullStory: {
+                    en: [
+                        "Quality seed production is the foundation of a successful harvest. In Kampong Thom, we focus on advanced harvesting techniques to transform standard cultivation into professional-grade seed supply.",
+                        "By implementing strict selection criteria during the harvest, we ensure that only the most vigorous and disease-resistant yardlong beans are kept for seeds. This meticulous process results in crops that are stronger and more productive.",
+                        "Producing these 'Romsay Sok' seeds locally ensures they are perfectly adapted to the Cambodian climate. Our focus remains on delivering high-standard agricultural inputs that bring success to every farm and every harvest."
+                    ],
+                    km: [
+                        "ការផលិតគ្រាប់ពូជដែលមានគុណភាព គឺជាគ្រឹះនៃភាពជោគជ័យក្នុងការប្រមូលផល។ នៅខេត្តកំពង់ធំ យើងផ្ដោតលើបច្ចេកទេសប្រមូលផលកម្រិតខ្ពស់ ដើម្បីប្រែក្លាយការដាំដុះធម្មតា ទៅជាការផលិតគ្រាប់ពូជលក្ខណៈវិជ្ជាជីវៈ។",
+                        "តាមរយៈការសម្រិតសម្រាំងយ៉ាងយកចិត្តទុកដាក់ក្នុងអំឡុងពេលប្រមូលផល យើងធានាថាមានតែសណ្ដែកកួរដែលរឹងមាំ និងធន់នឹងជំងឺបំផុតប៉ុណ្ណោះ ដែលត្រូវបានជ្រើសរើសធ្វើជាពូជ។ ដំណើរការដ៏ហ្មត់ចត់នេះ ជួយឱ្យដំណាំកាន់តែមានសុខភាពល្អ និងផ្ដល់ផលច្រើន។",
+                        "ការផលិតគ្រាប់ពូជ 'រំសាយសក់' នៅក្នុងស្រុកផ្ទាល់ ធានាបានថាគ្រាប់ពូជទាំងនេះសមស្របបំផុតទៅនឹងលក្ខខណ្ឌអាកាសធាតុនៅក្នុងប្រទេសកម្ពុជា ដែលនាំមកនូវភាពជោគជ័យដល់ការបង្កបង្កើនផលរបស់កសិករគ្រប់រូប។"
+                    ]
+                },
+                image: "https://scontent.fpnh11-1.fna.fbcdn.net/v/t39.30808-6/653042087_1524243386371025_1049662699936417692_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=13d280&_nc_ohc=cFjhSLot-jkQ7kNvwEb3z7K&_nc_oc=AdoL0mk-3KLg2r8WWrHOMZNQ31Zy4WpxP3ZP63eUdHVNxqGxhCvGpnQGEkFpmVHONVc&_nc_zt=23&_nc_ht=scontent.fpnh11-1.fna&_nc_gid=dYmndrw7LwQrt2sgXbw44Q&_nc_ss=7a30f&oh=00_AfyekqGRHfPOggdwEmbrD8p_hT32p1HYPBMahezaistksw&oe=69C3E175",
+                province: {
+                    en: "Kampong Thom",
+                    km: "កំពង់ធំ"
+                },
+                crop: {
+                    en: "Yardlong Bean",
+                    km: "សណ្តែកកួរ"
+                },
+                year: 2024,
+                hasVideo: true,
+                videoId: "Lrqw2XD85zU",
+                videoUrl: "https://www.youtube.com/watch?v=hiM7TBZ0-84&si=UUcDfMrMEyaPyolN"
+            }
+        ];
+
+        let displayedCount = 3;
+        const itemsPerPage = 3;
+
+        function initPage() {
+            displayStories(allStories.slice(0, displayedCount));
+            updateLoadMoreButton();
+            setupEventListeners();
+        }
+
+        function displayStories(stories) {
+            const grid = document.getElementById('storiesGrid');
+            grid.innerHTML = '';
+            stories.forEach(story => grid.appendChild(createStoryCard(story)));
+        }
+
+        // Update createStoryCard to use currentLang
+        function createStoryCard(story) {
+            const card = document.createElement('div');
+            card.className = 'story-card';
+
+            const lang = window.currentLang || 'en';
+            const title = story.title[lang] || story.title.en;
+            const description = story.description[lang] || story.description.en;
+            const province = story.province[lang] || story.province.en;
+            const readLabel = lang === 'km' ? 'អានបន្ថែម' : 'Read More';
+
+            const playButtonHTML = story.hasVideo
+                ? `<button class="play-button" onclick="event.stopPropagation(); openVideo('${story.videoUrl}')">▶</button>`
+                : '';
+
+            card.innerHTML = `
+        <div class="story-media">
+            <img src="${story.image}" alt="${title}">
+            ${playButtonHTML}
+        </div>
+        <div class="story-content">
+            <h3 class="story-title">${title}</h3>
+            <p class="story-description">${description}</p>
+            <div class="story-location">
+                <span>📍</span>
+                <span>${province}</span>
+            </div>
+            <button class="read-story-btn" onclick="readFullStory(${story.id})">${readLabel}</button>
+        </div>
+    `;
+            return card;
+        }
+        function setupEventListeners() {
+            document.getElementById('loadMoreBtn').addEventListener('click', loadMore);
+            document.getElementById('mobileMenuToggle').addEventListener('click', toggleMobileMenu);
+
+            // Keyboard escape to close modals
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') {
+                    closeVideoModal();
+                    closeStoryModal();
+                }
+            });
+        }
+
+        function loadMore() {
+            displayedCount += itemsPerPage;
+            displayStories(allStories.slice(0, displayedCount));
+            updateLoadMoreButton();
+        }
+
+        function updateLoadMoreButton(totalStories = allStories.length) {
+            const btn = document.getElementById('loadMoreBtn');
+            btn.classList.toggle('hidden', displayedCount >= totalStories);
+        }
+
+        // openVideo() and closeVideoModal() are shared — defined in js/script.js
+
+        function readFullStory(id) {
+            const story = allStories.find(s => s.id === id);
+            if (!story) return;
+
+            const lang = window.currentLang || 'en';
+            const title = story.title[lang] || story.title.en;
+            const description = story.description[lang] || story.description.en;
+            const province = story.province[lang] || story.province.en;
+            const crop = story.crop[lang] || story.crop.en;
+
+            // Build full story paragraphs from array
+            const fullStoryParagraphs = (story.fullStory?.[lang] || story.fullStory?.en || [])
+                .map(p => `<p>${p}</p>`)
+                .join('');
+
+            const overviewLabel = lang === 'km' ? 'ទិដ្ឋភាពទូទៅ' : 'Overview';
+            const fullStoryLabel = lang === 'km' ? 'រឿងពេញ' : 'Full Story';
+            const locationLabel = lang === 'km' ? 'ទីតាំង' : 'Location';
+            const cropLabel = lang === 'km' ? 'គ្រាប់ពូជ' : 'Crop';
+            const yearLabel = lang === 'km' ? 'ឆ្នាំ' : 'Year';
+
+            document.getElementById('storyDetailContent').innerHTML = `
+                        <img src="${story.image}" alt="${title}">
+                        <div class="story-modal-text">
+                            <h2>${title}</h2>
+                            <div class="story-detail-text">
+                                <p><strong>${overviewLabel}</strong></p>
+                                <p>${description}</p>
+                            </div>
+                            <div class="story-detail-text">
+                                <p style="margin-top: 1rem;"><strong>${fullStoryLabel}</strong></p>
+                                ${fullStoryParagraphs}
+                            </div>
+                            <div class="story-detail-meta">
+                                <div class="detail-meta-item">
+                                    <span>📍</span>
+                                    <span><strong>${locationLabel}:</strong> ${province}</span>
+                                </div>
+                                <div class="detail-meta-item">
+                                    <span>🌾</span>
+                                    <span><strong>${cropLabel}:</strong> ${crop}</span>
+                                </div>
+                                <div class="detail-meta-item">
+                                    <span>📅</span>
+                                    <span><strong>${yearLabel}:</strong> ${story.year}</span>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+            document.getElementById('storyModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeStoryModal() {
+            document.getElementById('storyModal').classList.remove('active');
+            document.body.style.overflow = ''; // Restore scrolling
+        }
+
+        window.addEventListener('click', function (event) {
+            if (event.target === document.getElementById('videoModal')) closeVideoModal();
+            if (event.target === document.getElementById('storyModal')) closeStoryModal();
+        });
+
+        function toggleMobileMenu() {
+            document.getElementById('nav').classList.toggle('active');
+        }
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('nav').classList.remove('active');
+            });
+        });
+
+        window.addEventListener('load', initPage);
+    </script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

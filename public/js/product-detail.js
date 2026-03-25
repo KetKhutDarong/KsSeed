@@ -7,7 +7,8 @@ let db;
 // Global variables
 let currentLang = "en";
 let currentProduct = "cucumber";
-let productsCache = {}; // Cache for MongoDB products
+
+let products = {};
 
 // DOM Elements
 const langSwitch = document.getElementById("langSwitch");
@@ -28,80 +29,6 @@ const fontMap = {
   en: "'Poppins', sans-serif",
   km: "'Hanuman', serif",
 };
-
-// ========== API FUNCTIONS ==========
-async function fetchProductFromAPI(productKey) {
-  try {
-    const response = await fetch(`/api/products/${productKey}`);
-    const data = await response.json();
-
-    if (data.success) {
-      return data.product;
-    }
-    console.error("Product not found:", data.message);
-    return null;
-  } catch (error) {
-    console.error("Network error:", error);
-    return null;
-  }
-}
-
-async function fetchAllProducts() {
-  try {
-    const response = await fetch("/api/products?limit=100");
-    const data = await response.json();
-
-    if (data.success) {
-      // Convert array to object format for compatibility
-      const productsObj = {};
-      data.products.forEach((product) => {
-        productsObj[product.productKey] = {
-          name: product.name,
-          desc: product.desc,
-          imgs: product.imgs || [],
-        };
-      });
-      return productsObj;
-    }
-    return {};
-  } catch (error) {
-    console.error("Error fetching products:", error);
-    return {};
-  }
-}
-
-async function fetchProductVariant(productKey, variantIndex) {
-  try {
-    const response = await fetch(
-      `/api/products/${productKey}/variants/${variantIndex}`,
-    );
-    const data = await response.json();
-
-    if (data.success) {
-      return data.variant;
-    }
-    return null;
-  } catch (error) {
-    console.error("Network error:", error);
-    return null;
-  }
-}
-
-async function incrementViewCount(productKey, variantIndex) {
-  try {
-    const response = await fetch(
-      `/api/products/${productKey}/variants/${variantIndex}/view`,
-      {
-        method: "POST",
-      },
-    );
-    const data = await response.json();
-    return data.success ? data.views : null;
-  } catch (error) {
-    console.error("Error incrementing view:", error);
-    return null;
-  }
-}
 
 // ========== INDEXEDDB FUNCTIONS ==========
 function initDB() {
@@ -198,7 +125,7 @@ function updateURL(
 
     if (variantIndex !== null && variantTitle) {
       // Use English title for URL regardless of current language
-      const variant = productsCache[productKey]?.imgs[variantIndex - 1]; // Convert from 1-based to 0-based
+      const variant = products[productKey]?.imgs[variantIndex - 1]; // Convert from 1-based to 0-based
       if (variant) {
         const seoName = createSEOString(variant.title.en);
         newSearch += `&variant=${variantIndex}`; // Store as 1-based
@@ -214,7 +141,7 @@ function updateURL(
   console.log("URL updated to:", url.toString());
 }
 
-async function handleURLParameters() {
+function handleURLParameters() {
   const search = window.location.search;
   console.log("URL search:", search);
 
@@ -227,24 +154,9 @@ async function handleURLParameters() {
   // First param is product key
   const productKey = params[0];
 
-  if (!productKey) {
-    console.log("No product key in URL");
+  if (!productKey || !products[productKey]) {
+    console.log("Invalid product key:", productKey);
     return false;
-  }
-
-  // Check if product exists in cache or fetch it
-  if (!productsCache[productKey]) {
-    const product = await fetchProductFromAPI(productKey);
-    if (!product) {
-      console.log("Product not found in MongoDB:", productKey);
-      return false;
-    }
-    // Cache the product
-    productsCache[productKey] = {
-      name: product.name,
-      desc: product.desc,
-      imgs: product.imgs || [],
-    };
   }
 
   let variantIndex = null;
@@ -272,21 +184,21 @@ async function handleURLParameters() {
   });
 
   // Show the product category
-  await showProduct(productKey);
+  showProduct(productKey);
 
   // If variant index is specified, open modal
   if (variantIndex !== null) {
     const index = parseInt(variantIndex);
-    if (!isNaN(index) && productsCache[productKey]?.imgs[index - 1]) {
+    if (!isNaN(index) && products[productKey].imgs[index - 1]) {
       // Convert from 1-based to 0-based
-      setTimeout(async () => {
+      setTimeout(() => {
         console.log(
           "Opening modal for:",
           productKey,
           "variant (1-based):",
           index,
         );
-        await showModal(productKey, index); // Pass 1-based index
+        showModal(productKey, index); // Pass 1-based index
       }, 100);
       return true;
     }
@@ -312,9 +224,7 @@ langOptions.forEach((option) => {
       option.classList.add("active");
 
       // Update product display with new language
-      if (currentProduct) {
-        await showProduct(currentProduct);
-      }
+      showProduct(currentProduct);
     }
   });
 });
@@ -328,7 +238,19 @@ function updateLanguage(lang) {
     if (text) {
       if (element.tagName === "INPUT" || element.tagName === "TEXTAREA") {
         element.placeholder = text;
+      } else if (element.children.length > 0) {
+        // ✅ Has child elements (e.g. dropdown arrow span) — only update text nodes
+        for (const node of element.childNodes) {
+          if (
+            node.nodeType === Node.TEXT_NODE &&
+            node.textContent.trim() !== ""
+          ) {
+            node.textContent = " " + text + " ";
+            break;
+          }
+        }
       } else {
+        // ✅ No children — safe to replace all text
         element.textContent = text;
       }
     }
@@ -348,32 +270,23 @@ function updateLanguage(lang) {
 }
 
 // ========== PRODUCT DISPLAY FUNCTIONS ==========
-async function showProduct(productKey) {
-  // Check cache first
-  if (!productsCache[productKey]) {
-    const product = await fetchProductFromAPI(productKey);
-    if (!product) {
-      console.error(`Product ${productKey} not found in MongoDB`);
-      return;
-    }
-    productsCache[productKey] = {
-      name: product.name,
-      desc: product.desc,
-      imgs: product.imgs || [],
-    };
+function showProduct(productKey) {
+  const product = products[productKey];
+  if (!product) {
+    console.error(`Product ${productKey} not found`);
+    return;
   }
 
-  const product = productsCache[productKey];
   currentProduct = productKey;
-  const displayElement = document.getElementById("product-display");
+  const display = document.getElementById("product-display");
   const lang = currentLang;
 
   // Save to IndexedDB
   // saveToIndexedDB("currentProduct", productKey).catch(console.error);
 
-  displayElement.classList.remove("fade-up");
-  void displayElement.offsetWidth;
-  displayElement.classList.add("fade-up");
+  display.classList.remove("fade-up");
+  void display.offsetWidth;
+  display.classList.add("fade-up");
 
   // Update sidebar
   document.querySelectorAll(".product-list li").forEach((item) => {
@@ -384,30 +297,31 @@ async function showProduct(productKey) {
   });
 
   // Generate HTML - use 1-based index for display
-  displayElement.innerHTML = `
+  display.innerHTML = `
         <h2>${product.name[lang]}</h2>
         <p>${product.desc[lang]}</p>
         <div class="image-grid">
           ${product.imgs
             .map((img, index) => {
-              // Always use English for URL generation
-              const seoName = createSEOString(img.title.en);
-              const displayIndex = index + 1; // 1-based for display
+              const title = img.title || { en: "", km: "" }; // ← safe fallback
+              const info = img.info || { en: [""], km: [""] }; // ← safe fallback
+              const seoName = createSEOString(title.en || "");
+              const displayIndex = index + 1;
               return `
-                <div class="image-card" 
-                     data-product="${productKey}" 
-                     data-index="${displayIndex}" 
-                     data-seo-name="${seoName}">
-                  <img src="${img.src}" alt="${img.title[lang]}" loading="lazy">
-                  <h3>${img.title[lang]}</h3>
-                  <p>${img.info[lang]}</p>
-                  <div class="image-card-overlay">
-                    <button class="see-detail-btn">
-                      ${lang === "en" ? "See Detail" : "មើលលម្អិត"}
-                    </button>
-                  </div>
+              <div class="image-card" 
+                  data-product="${productKey}" 
+                  data-index="${displayIndex}" 
+                  data-seo-name="${seoName}">
+                <img src="${img.src || ""}" alt="${title[lang] || ""}">
+                <h3>${title[lang] || ""}</h3>
+                <p>${Array.isArray(info?.[lang]) ? info[lang][0] : info?.[lang] || ""}</p>
+                <div class="image-card-overlay">
+                  <button class="see-detail-btn">
+                    ${lang === "en" ? "See Detail" : "មើលលម្អិត"}
+                  </button>
                 </div>
-              `;
+              </div>
+            `;
             })
             .join("")}
         </div>
@@ -415,16 +329,16 @@ async function showProduct(productKey) {
 
   // Add click listeners to image cards
   document.querySelectorAll(".image-card").forEach((card) => {
-    card.addEventListener("click", async function () {
+    card.addEventListener("click", function () {
       const productKey = this.dataset.product;
       const index = Number.parseInt(this.dataset.index); // This is 1-based
 
       console.log("Card clicked:", { productKey, index });
 
       // Update URL (always use English for URL)
-      const variant = productsCache[productKey].imgs[index - 1]; // Convert to 0-based for array access
-      updateURL(productKey, index, variant.title.en);
-      await showModal(productKey, index); // Pass 1-based index
+      const variant = products[productKey].imgs[index - 1]; // Convert to 0-based for array access
+      updateURL(productKey, index, variant.title?.en || "");
+      showModal(productKey, index); // Pass 1-based index
     });
   });
 }
@@ -466,25 +380,10 @@ async function downloadPdfWithCleanName(url, fileName) {
   }
 }
 
-async function showModal(productKey, variantIndex) {
+function showModal(productKey, variantIndex) {
   // variantIndex is 1-based, convert to 0-based for array access
   const arrayIndex = variantIndex - 1;
-
-  // Ensure product is in cache
-  if (!productsCache[productKey]) {
-    const product = await fetchProductFromAPI(productKey);
-    if (!product) {
-      console.error(`Product ${productKey} not found`);
-      return;
-    }
-    productsCache[productKey] = {
-      name: product.name,
-      desc: product.desc,
-      imgs: product.imgs || [],
-    };
-  }
-
-  const product = productsCache[productKey];
+  const product = products[productKey];
   if (!product || !product.imgs[arrayIndex]) {
     console.error(
       `Variant ${variantIndex} (0-based: ${arrayIndex}) not found for product ${productKey}`,
@@ -497,14 +396,11 @@ async function showModal(productKey, variantIndex) {
 
   currentVariantData = variant;
 
-  // Increment view count in MongoDB
-  await incrementViewCount(productKey, arrayIndex);
-
   const weightLabel = lang === "en" ? "Weight" : "ទម្ងន់";
   const viewsLabel = lang === "en" ? "Views" : "ចំនួនមើល";
   const descLabel = lang === "en" ? "Description" : "ការពិពណ៌នា";
   const growingGuideLabel = lang === "en" ? "Technical" : "បច្ចេកទេស​ដាំដុះ";
-  const seeVideoLabel = lang === "en" ? "See Video" : "មើលវីដេអូ";
+  const seeVideoLabel = lang === "en" ? "Watch Video" : "មើលវីដេអូ";
   const downloadLabel =
     lang === "en" ? "Download Technical" : "ទាញយកបច្ចេកទេស​ដាំដុះ";
 
@@ -554,12 +450,31 @@ async function showModal(productKey, variantIndex) {
         <h2 class="modal-title">${variant.title[lang]}</h2>
         <div class="modal-meta">
           <span>⚖️ ${weightLabel}: <strong>${variant.weight}</strong></span>
-          <span>👁️ ${viewsLabel}: <strong>${variant.views || 0}</strong></span>
+          <span>👁️ ${viewsLabel}: <strong>${variant.views}</strong></span>
         </div>
         
         <div class="modal-section">
           <h3>${descLabel}</h3>
-          <p>${variant.info[lang]}</p>
+          ${(() => {
+            const info =
+              variant.info && variant.info[lang] ? variant.info[lang] : [];
+            if (Array.isArray(info)) {
+              return (
+                '<ul style="padding-left:18px; margin:0; line-height:1.6;">' +
+                info
+                  .slice(1)
+                  .map(
+                    (item) =>
+                      '<li style="margin-bottom:-5px; text-align:justify;">' +
+                      item +
+                      "</li>",
+                  )
+                  .join("") +
+                "</ul>"
+              );
+            }
+            return '<p style="text-align:justify;">' + info + "</p>";
+          })()}
         </div>
 
         <div class="modal-actions">
@@ -619,6 +534,7 @@ async function showModal(productKey, variantIndex) {
             ? "PDF guide is not available for this product variant yet."
             : "ឯកសារ PDF មិនទាន់មានសម្រាប់ប្រភេទរងនៃផលិតផលនេះទេ។";
         alert(message);
+        វ;
       }
     });
   }
@@ -640,119 +556,658 @@ async function showModal(productKey, variantIndex) {
   );
 }
 
+// =============================================================
+//  GROWING GUIDE — guide.js
+//  All layout/style handled by guide.css (no inline styles)
+// =============================================================
+
+// ── Helper: format water-management description bullets ──────
+function formatBulletPoints(text) {
+  if (!text) return "";
+  let html = "";
+  const lines = text.split("\n");
+  let inBulletSection = false;
+
+  for (let line of lines) {
+    line = line.trim();
+    if (!line) continue;
+
+    if (line.includes("❖")) {
+      html += `<p style="margin:10px 0 0 0;">${line}</p>`;
+      inBulletSection = true;
+    } else if (line.includes("➤")) {
+      html += `<p style="margin:0 0 8px 0; padding-left:20px; text-align:justify;">${line}</p>`;
+    } else if (inBulletSection) {
+      html += `<p style="margin:0 0 8px 0; padding-left:20px; text-align:justify;">${line}</p>`;
+    } else {
+      html += `<p style="margin:0 0 10px 0; text-align:justify;">${line}</p>`;
+    }
+  }
+  return html;
+}
+
+// ── Helper: format watering schedule ────────────────────────
+function formatWateringSchedule(text) {
+  if (!text) return "";
+  let html = "";
+  const lines = text.split("\n");
+
+  for (let line of lines) {
+    line = line.trim();
+    if (!line) continue;
+
+    if (line.includes("❖")) {
+      html += `<p style="margin:15px 0 8px 0;">${line}</p>`;
+    } else if (line.includes("➤")) {
+      const colonIdx = line.indexOf(":");
+      const label = colonIdx !== -1 ? line.substring(0, colonIdx + 1) : line;
+      const rest = colonIdx !== -1 ? line.substring(colonIdx + 1) : "";
+      html += `<p style="margin:0 0 5px 0; padding-left:20px;"><span>${label}</span>${rest}</p>`;
+    } else {
+      const indent = line.startsWith(" ") ? "40px" : "20px";
+      html += `<p style="margin:0 0 5px 0; padding-left:${indent}; text-align:justify;">${line}</p>`;
+    }
+  }
+  return html;
+}
+
+// ── Helper: build a 2-column image grid ─────────────────────
+function imgGrid2(srcs = [], captions = [], extraClass = "") {
+  const imgs = srcs
+    .map(
+      (src, i) => `
+    <img src="${src}" alt="${captions[i] || ""}"
+      onerror="this.style.display='none'">
+  `,
+    )
+    .join("");
+  return `<div class="guide-img-grid-2 ${extraClass}">${imgs}</div>`;
+}
+
+// ── Helper: build a 4-column image grid with captions ───────
+function imgGrid4(srcs = [], captions = []) {
+  const cells = srcs
+    .map(
+      (src, i) => `
+    <div class="img-cell">
+      <img src="${src}" alt="${captions[i] || ""}"
+        onerror="this.style.display='none'">
+      <p class="img-caption">${captions[i] || ""}</p>
+    </div>
+  `,
+    )
+    .join("");
+  return `<div class="guide-img-grid-4">${cells}</div>`;
+}
+
+// ── Helper: build a 5-column image grid with captions ───────
+function imgGrid5(srcs = [], captions = []) {
+  const cells = srcs
+    .slice(0, 5)
+    .map(
+      (src, i) => `
+    <div class="img-cell">
+      <img src="${src}" alt="${captions[i] || ""}"
+        onerror="this.style.display='none'">
+      <p class="img-caption">${captions[i] || ""}</p>
+    </div>
+  `,
+    )
+    .join("");
+  return `<div class="guide-img-grid-5">${cells}</div>`;
+}
+
+// ── Helper: wrap every table in a scroll wrapper ─────────────
+function wrapTables(container) {
+  container.querySelectorAll("table").forEach((table) => {
+    if (table.closest(".table-scroll-wrapper")) return;
+
+    const outer = document.createElement("div");
+    outer.className = "table-scroll-outer";
+
+    const wrapper = document.createElement("div");
+    wrapper.className = "table-scroll-wrapper";
+
+    table.parentNode.insertBefore(outer, table);
+    outer.appendChild(wrapper);
+    wrapper.appendChild(table);
+  });
+}
+
+// ── Main function ────────────────────────────────────────────
 function showGrowingGuide() {
-  if (!currentVariantData) return;
+  console.log("showGrowingGuide called");
+
+  if (!currentVariantData) {
+    console.error("No variant data available");
+    return;
+  }
 
   const lang = currentLang;
-  const featuresLabel = lang === "en" ? "Features" : "លក្ខណៈពិសេស";
-  const plantingGuideLabel =
-    lang === "en" ? "Planting Guide" : "បច្ចេកទេសដាំដុះ";
-  const distanceLabel = lang === "en" ? "Distance" : "ចម្ងាយ";
-  const plantDistanceLabel = lang === "en" ? "Plant Distance" : "ចម្ងាយរវាងដើម";
-  const densityLabel = lang === "en" ? "Density" : "ដង់ស៊ីតេ";
-  const landPrepLabel = lang === "en" ? "Land Preparation" : "ការរៀបចំដី";
-  const cultivationLabel = lang === "en" ? "Cultivation" : "ការដាំដុះ";
-  const irrigationLabel = lang === "en" ? "Irrigation" : "ការស្រោចទឹក";
+  const v = currentVariantData;
+  console.log("Variant data:", v);
 
-  guideContent.innerHTML = `
-        <div class="modal-section">
-          <h3>${featuresLabel}</h3>
-          <ul>
-            ${currentVariantData.features[lang]
-              .map((feature) => `<li>${feature}</li>`)
+  const guideContent = document.getElementById("guide-content");
+  const guideModal = document.getElementById("guide-modal");
+
+  if (!guideContent) {
+    console.error("guide-content not found");
+    return;
+  }
+  if (!guideModal) {
+    console.error("guide-modal not found");
+    return;
+  }
+
+  // Shorthand to get localised string
+  const t = (obj, fallback = "") => (obj && obj[lang]) || fallback;
+
+  // Shorthand: direct access for already-localised strings (sectionTitles, subtitleTitles)
+  const st = (key, fallback = "") => v.sectionTitles?.[lang]?.[key] || fallback;
+  const sub = (key, fallback = "") =>
+    v.subtitleTitles?.[lang]?.[key] || fallback;
+
+  // ── BUILD HTML ───────────────────────────────────────────────
+  const html = `
+<div class="guide-container">
+
+  <!-- ═══════════════════════════════════════════════════════
+       PAGE 1 · Features & Land Preparation
+  ═══════════════════════════════════════════════════════ -->
+  <div class="guide-page">
+    <h3 class="guide-section-title">
+      ${st("section1", "1. Features (Crop Characteristics)")}
+    </h3>
+
+    <div class="guide-features-layout">
+      ${
+        v.featuresImage
+          ? `
+        <div class="guide-features-image">
+          <img src="${v.featuresImage}" alt="Features"
+            onerror="this.style.display='none'">
+          <p class="guide-features-image-caption">${t(v.featuresTitle)}</p>
+        </div>
+      `
+          : ""
+      }
+      <div class="guide-features-bullets">
+        <ul class="guide-bullets">
+          ${(v.features?.[lang] || []).map((f) => `<li>${f}</li>`).join("")}
+        </ul>
+      </div>
+    </div>
+
+    <hr class="guide-divider">
+
+    <h3 class="guide-section-title">
+      ${st("section2", "2. Land Preparation")}
+    </h3>
+    <ul class="guide-bullets">
+      ${(v.landPreparation?.[lang] || []).map((f) => `<li>${f}</li>`).join("")}
+    </ul>
+  </div>
+
+  <hr class="guide-divider">
+
+  <!-- ═══════════════════════════════════════════════════════
+       PAGE 2 · Raising Beds
+  ═══════════════════════════════════════════════════════ -->
+  <div class="guide-page">
+    <h3 class="guide-section-title">
+      ${st("section3", "3. Raising Beds for Planting")}
+    </h3>
+
+    <ul class="guide-bullets">
+      ${(v.bedPreparation?.[lang] || []).map((f) => `<li>${f}</li>`).join("")}
+    </ul>
+
+    <div class="guide-checkmarks">
+      ${(v.bedPreparationNotes?.[lang] || [])
+        .map(
+          (note) => `
+        <div class="guide-checkmark-item">
+          <span class="check-icon">✓</span>
+          <span class="check-text">${note.substring(2)}</span>
+        </div>
+      `,
+        )
+        .join("")}
+    </div>
+
+    <p class="guide-indent" style="font-weight:bold;">
+      ${t(v.bedPreparationFooter)}
+    </p>
+
+    ${imgGrid2(v.bedImages || [], [], "contain")}
+    <p class="guide-img-caption-shared">${t(v.bedtitle)}</p>
+  </div>
+
+  <hr class="guide-divider">
+
+  <!-- ═══════════════════════════════════════════════════════
+       PAGE 3 · Nursery
+  ═══════════════════════════════════════════════════════ -->
+  <div class="guide-page">
+    <h3 class="guide-section-title">
+      ${st("section4", "4. Nursery of Romyoul Seedlings")}
+    </h3>
+
+    <p class="guide-indent">${t(v.nursery, "To achieve high efficiency and target yields, farmers can use two planting methods:")}</p>
+
+    <h4 class="guide-subtitle">
+      ${sub("directSeeding", "4.1. Direct Seeding")}
+    </h4>
+    <p class="guide-indent">${(v.directSeeding?.[lang] || []).join(" ")}</p>
+
+    <h4 class="guide-subtitle">
+      ${sub("seedlingNursing", "4.2. Seedling Nursing")}
+    </h4>
+    ${(v.seedlingNursing?.[lang] || [])
+      .map((p) => `<p class="guide-indent">${p}</p>`)
+      .join("")}
+
+    ${imgGrid2(v.nurseryImages || [])}
+    <p class="guide-img-caption-shared">${t(v.nurserytitle)}</p>
+  </div>
+
+  <hr class="guide-divider">
+
+  <!-- ═══════════════════════════════════════════════════════
+       PAGE 4 · Transplanting
+  ═══════════════════════════════════════════════════════ -->
+  <div class="guide-page">
+    <h3 class="guide-section-title">
+      ${st("section5", "5. Transplanting Seedlings")}
+    </h3>
+
+    <p class="guide-indent">${(v.transplanting?.[lang] || [])[0] || ""}</p>
+
+    <ul class="guide-bullets">
+      ${(v.transplanting?.[lang] || [])
+        .slice(1)
+        .map((f) => `<li>${f}</li>`)
+        .join("")}
+    </ul>
+
+    <!-- Row 1 -->
+    ${imgGrid2([v.transplantingImages?.[0] || "", v.transplantingImages?.[1] || ""])}
+    <p class="guide-img-caption-left">
+      <strong>${t(v.trantitle?.[0]?.tran1, "រូបភាពទី៣")}៖</strong>
+      ${t(v.trantitle?.[0]?.tran1caption)}
+    </p>
+
+    <!-- Row 2 -->
+    ${imgGrid2([v.transplantingImages?.[2] || "", v.transplantingImages?.[3] || ""])}
+    <p class="guide-img-caption-left">
+      <strong>${t(v.trantitle?.[0]?.tran3, "រូបភាពទី៥")}៖</strong>
+      ${t(v.trantitle?.[0]?.tran3caption)}
+    </p>
+  </div>
+
+  <hr class="guide-divider">
+
+  <!-- ═══════════════════════════════════════════════════════
+       PAGE 5 · Water Management
+  ═══════════════════════════════════════════════════════ -->
+  <div class="guide-page">
+    <h3 class="guide-section-title">
+      ${st("section6", "6. Maintenance")}
+    </h3>
+    <h4 class="guide-subtitle">
+      ${sub("waterManagement", "6.1. Water Management")}
+    </h4>
+
+    <!-- 4-col top images -->
+    <div class="guide-water-top-grid">
+      ${(v.waterManagementTopImages || [])
+        .slice(0, 4)
+        .map(
+          (src, i) => `
+        <div class="img-cell">
+          <img src="${src}" alt="" onerror="this.style.display='none'">
+          <p class="img-caption">${t(v.waterManagementLabels?.[i])}</p>
+        </div>
+      `,
+        )
+        .join("")}
+    </div>
+
+    <!-- Description -->
+    <div style="margin-bottom:12px;">
+      ${(() => {
+        const parts = (v.waterManagementDesc?.[lang] || "").split("\n\n");
+        let out = "";
+        if (parts[1]) out += `<p class="guide-indent">${parts[1].trim()}</p>`;
+        out += `<div style="text-indent:2.3em; line-height:1.6; text-align:justify;">
+          ${formatBulletPoints(v.waterManagementDesc?.[lang] || "")}
+        </div>`;
+        return out;
+      })()}
+    </div>
+
+    <!-- Watering schedule -->
+    <div style="text-indent:2.3em; margin-bottom:16px; line-height:1.6; text-align:justify;">
+      ${formatWateringSchedule(v.wateringSchedule?.[lang] || "")}
+    </div>
+
+    <!-- Center images -->
+    ${imgGrid2(v.waterManagementCenterImages || [])}
+    <p class="guide-img-caption-shared">
+      ${t(v.centerImageLabels?.[0], "កូនម្រះបន្ទាប់ពីបណ្តុះបាន១០ថ្ងៃ")}
+    </p>
+  </div>
+
+  <hr class="guide-divider">
+
+  <!-- ═══════════════════════════════════════════════════════
+       PAGE 6 · Fertilizer Management
+  ═══════════════════════════════════════════════════════ -->
+  <div class="guide-page">
+    <h4 class="guide-subtitle">
+      ${sub("fertilizerManagement", "6.2. Fertilizer Management")}
+    </h4>
+
+    <p class="guide-indent">${t(v.fertilizerIntro, "Farmers can use two methods for fertilization:")}</p>
+    <p class="guide-indent">${t(v.fertilizerStep1, "Step 1: Manual/Direct Application")}</p>
+
+    <!-- Fertilizer Table 1 -->
+    <table>
+      <thead>
+        <tr style="text-align:center; font-weight:bold;">
+          <th rowspan="2" style="background:#4caf50; color:#fff; white-space:pre-line; min-width:45px;">
+            ${t(v.fertilizerTable1.col1)}
+          </th>
+          <th rowspan="2" style="background:#4caf50; color:#fff; white-space:pre-line; min-width:65px;">
+            ${t(v.fertilizerTable1.col2)}
+          </th>
+          ${v.fertilizerTable1.fertilizers
+            .map(
+              (f) => `
+            <th style="background:${f.headerColor}; color:#fff; min-width:60px;">${t(f.name)}</th>
+          `,
+            )
+            .join("")}
+          <th rowspan="3" style="background:#4caf50; color:#fff; min-width:90px;">
+            ${t(v.fertilizerTable1.noteHeader)}
+          </th>
+        </tr>
+        <tr style="text-align:center;">
+          ${v.fertilizerTable1.fertilizers
+            .map(
+              (f) => `
+            <td style="background:${f.color}; font-weight:bold; color:#333;">${f.spec}</td>
+          `,
+            )
+            .join("")}
+        </tr>
+        <tr style="text-align:center; font-weight:bold;">
+          <td colspan="2" style="background:#4caf50; color:#fff; white-space:pre-line; font-size:0.7rem; vertical-align:middle;">
+            ${t(v.fertilizerTable1.totalRowLabel)}
+          </td>
+          ${v.fertilizerTable1.fertilizers
+            .map(
+              (f) => `
+            <td style="background:#00bcd4; color:#fff;">${f.total}</td>
+          `,
+            )
+            .join("")}
+        </tr>
+      </thead>
+      <tbody>
+        ${v.fertilizerTable1.rows
+          .map(
+            (row, i) => `
+          <tr style="background:${i % 2 === 0 ? "#fff" : "#f9f9f9"}; text-align:center;">
+            <td style="font-weight:bold;">${row.day}</td>
+            <td>${row.dist}</td>
+            ${row.vals
+              .map(
+                (val, vi) => `
+              <td style="background:${val ? v.fertilizerTable1.fertilizers[vi].color : "transparent"};">${val}</td>
+            `,
+              )
               .join("")}
-          </ul>
-        </div>
+            <td style="text-align:center;">${t(row.note)}</td>
+          </tr>
+        `,
+          )
+          .join("")}
+      </tbody>
+    </table>
 
-        <div class="modal-section">
-          <h3>${plantingGuideLabel}</h3>
-          <table class="modal-table">
-            <tr>
-              <th>${distanceLabel}</th>
-              <td>${currentVariantData.planting.distance[lang]}</td>
-            </tr>
-            <tr>
-              <th>${plantDistanceLabel}</th>
-              <td>${currentVariantData.planting.plantDistance[lang]}</td>
-            </tr>
-            <tr>
-              <th>${densityLabel}</th>
-              <td>${currentVariantData.planting.density[lang]}</td>
-            </tr>
-          </table>
-        </div>
+    <p class="guide-indent" style="margin-top:32px;">
+      ${t(v.fertilizerStep2, "Step 2: Fertigation via Drip System")}
+    </p>
 
-        <div class="modal-section">
-          <h3>${landPrepLabel}</h3>
-          <ul>
-            ${currentVariantData.landPreparation[lang]
-              .map((item) => `<li>${item}</li>`)
+    <!-- Fertilizer Table 2 -->
+    <table>
+      <thead>
+        <tr style="background:#43b048; color:#fff; text-align:center;">
+          <th rowspan="2" style="white-space:pre-line; min-width:45px;">${t(v.fertilizerTable2.headers[0].label)}</th>
+          <th rowspan="2" style="min-width:90px;">${t(v.fertilizerTable2.headers[1].label)}</th>
+          ${v.fertilizerTable2.headers
+            .slice(2)
+            .map(
+              (h) => `
+            <th style="min-width:52px;">${t(h.label)}</th>
+          `,
+            )
+            .join("")}
+        </tr>
+        <tr style="background:#fff; text-align:center; color:#333;">
+          ${v.fertilizerTable2.headers
+            .slice(2)
+            .map(
+              (h) => `
+            <td style="font-size:0.7rem; white-space:pre-line; color:#555; vertical-align:middle;">${h.spec || ""}</td>
+          `,
+            )
+            .join("")}
+        </tr>
+      </thead>
+      <tbody>
+        ${v.fertilizerTable2.sections
+          .map((section) => {
+            const rowCount = section.rows.length;
+            const isGreen = section.bgColor === "#c6efce";
+            return section.rows
+              .map((row, rowIdx) => {
+                const stageTd =
+                  rowIdx === 0
+                    ? `<td rowspan="${rowCount}" style="background:${isGreen ? "#c6efce" : "#e8f5e9"}; text-align:center; vertical-align:middle; font-weight:bold; white-space:pre-line; line-height:1.5;">${t(section.stage)}</td>`
+                    : "";
+                const rowBg = isGreen
+                  ? "#c6efce"
+                  : rowIdx % 2 === 0
+                    ? "#f4faf4"
+                    : "#fff";
+                return `
+              <tr style="background:${rowBg}; text-align:center;">
+                <td>${row[0]}</td>
+                ${stageTd}
+                ${row
+                  .slice(2)
+                  .map((cell) => `<td>${cell}</td>`)
+                  .join("")}
+              </tr>
+            `;
+              })
+              .join("");
+          })
+          .join("")}
+        <tr style="background:#43b048; color:#fff; font-weight:bold; text-align:center;">
+          <td colspan="2" style="white-space:pre-line;">${t(v.fertilizerTable2.totals.label)}</td>
+          ${v.fertilizerTable2.totals.values.map((val) => `<td>${val}</td>`).join("")}
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <hr class="guide-divider">
+
+  <!-- ═══════════════════════════════════════════════════════
+       PAGE 7 · Pest & Disease Management
+  ═══════════════════════════════════════════════════════ -->
+  <div class="guide-page">
+    <h3 class="guide-section-title">
+      ${st("section7", "7. Pest and Disease Management")}
+    </h3>
+
+    <!-- 7.1 Pest Management -->
+    <h4 class="guide-subtitle">
+      ${sub("pestManagement", "7.1. Pest Management")}
+    </h4>
+    <p class="guide-indent">${t(v.pestIntro)}</p>
+
+    <h5 class="guide-subsubtitle">
+      ${sub("preventionMethods", "7.1.1. Prevention Methods")}
+    </h5>
+    <p class="guide-indent">${(v.preventionMethods?.[lang] || [])[0] || ""}</p>
+    <ul class="guide-bullets">
+      ${(v.preventionMethods?.[lang] || [])
+        .slice(1)
+        .map((f) => `<li>${f}</li>`)
+        .join("")}
+    </ul>
+
+    <h5 class="guide-subsubtitle">
+      ${sub("eliminationMethods", "7.1.2. Elimination Methods")}
+    </h5>
+    <p class="guide-indent">${t(v.eliminationMethods)}</p>
+
+    <!-- Pest Table -->
+    <p>${t(v.pestTable?.[lang]?.title, "Chemical Control")}</p>
+    <table>
+      <thead>
+        <tr style="background:#43b048; color:#fff; text-align:center;">
+          ${(v.pestTable?.[lang]?.headers || [])
+            .map((h) => `<th style="padding:8px;">${h}</th>`)
+            .join("")}
+        </tr>
+      </thead>
+      <tbody>
+        ${(v.pestTable?.[lang]?.rows || [])
+          .map(
+            (row) => `
+          <tr style="border-bottom:1px solid #ddd;">
+            ${row
+              .map(
+                (cell, idx) => `
+              <td style="padding:8px; ${idx === 0 ? "text-align:left;" : "text-align:center;"}">${cell}</td>
+            `,
+              )
               .join("")}
-          </ul>
-        </div>
+          </tr>
+        `,
+          )
+          .join("")}
+      </tbody>
+    </table>
 
-        <div class="modal-section">
-          <h3>${cultivationLabel}</h3>
-          <ul>
-            ${currentVariantData.cultivation[lang]
-              .map((item) => `<li>${item}</li>`)
+    <p class="guide-note">${t(v.pestLegend)}</p>
+
+    <!-- Pest images 4-col grid -->
+    <p style="font-weight:bold; margin:16px 0 8px 0;">ប្រភេទសត្វល្អិត / Type of Pests:</p>
+    ${imgGrid4(
+      v.pestImages || [],
+      v.pestNames?.[lang] || v.pestNames?.en || [],
+    )}
+
+    <!-- 7.2 Disease Management -->
+    <h4 class="guide-subtitle" style="margin-top:24px;">
+      ${sub("diseaseManagement", "7.2. Disease Management")}
+    </h4>
+    <p class="guide-indent">${t(v.diseaseIntro)}</p>
+
+    <!-- Disease images 5-col grid -->
+    ${imgGrid5(
+      (v.diseaseImages || []).slice(0, 5),
+      (v.diseaseNames?.[lang] || v.diseaseNames?.en || []).slice(0, 5),
+    )}
+
+    <h5 class="guide-subsubtitle">
+      ${sub("diseasePrevention", "7.2.1. Plant Disease Prevention Methods")}
+    </h5>
+    <p class="guide-indent">${(v.diseasePrevention?.[lang] || [])[0] || ""}</p>
+    <ul class="guide-bullets">
+      ${(v.diseasePrevention?.[lang] || [])
+        .slice(1)
+        .map((f) => `<li>${f}</li>`)
+        .join("")}
+    </ul>
+
+    <img src="${v.diseasePreventionImage || ""}"
+      class="guide-disease-prevention-img"
+      onerror="this.style.display='none'">
+
+    <!-- Disease Treatment Table -->
+    <p style="margin-top:16px;">${t(v.diseasetable, "Chemical Control")}</p>
+    <table>
+      <thead>
+        <tr style="background:#43b048; color:#fff; text-align:center;">
+          ${(v.diseaseTreatmentTable?.[lang]?.headers || [])
+            .map((h) => `<th style="padding:8px;">${h}</th>`)
+            .join("")}
+        </tr>
+      </thead>
+      <tbody>
+        ${(v.diseaseTreatmentTable?.[lang]?.rows || [])
+          .map(
+            (row) => `
+          <tr>
+            ${row
+              .map(
+                (cell) =>
+                  `<td style="padding:8px; text-align:justify;">${cell}</td>`,
+              )
               .join("")}
-          </ul>
-        </div>
+          </tr>
+        `,
+          )
+          .join("")}
+      </tbody>
+    </table>
 
-        <div class="modal-section">
-          <h3>${irrigationLabel}</h3>
-          <ul>
-            ${currentVariantData.irrigation[lang]
-              .map((item) => `<li>${item}</li>`)
-              .join("")}
-          </ul>
-        </div>
-      `;
+    <p class="guide-note">${t(v.diseaseNote)}</p>
+  </div>
 
+</div>
+  `;
+
+  // ── Inject HTML ────────────────────────────────────────────
+  guideContent.innerHTML = html;
+
+  // ── Wrap all tables for responsive horizontal scroll ──────
+  wrapTables(guideContent);
+
+  // ── Show modal ────────────────────────────────────────────
   guideModal.classList.add("active");
+  document.body.style.overflow = "hidden";
+  console.log("Guide modal activated");
+}
+
+async function loadAllProducts() {
+  try {
+    const res = await fetch(`${API_BASE}/api/products?limit=100`);
+    const data = await res.json();
+    if (data.success) {
+      data.products.forEach((p) => {
+        products[p.key] = p; // e.g. products["bitter_melon"] = {...}
+      });
+      console.log("✅ Products loaded:", Object.keys(products));
+    }
+  } catch (err) {
+    console.error("❌ Failed to load products:", err);
+  }
 }
 
 function showVideo() {
-  if (!currentVariantData) return;
-
-  const variantTitle = currentVariantData.title[currentLang];
-  const productTitle =
-    currentProduct && productsCache[currentProduct]
-      ? productsCache[currentProduct].name[currentLang]
-      : "";
-
-  // Update video alert message if modal exists
-  const videoAlertMessage = document.getElementById("videoAlertMessage");
-  if (videoAlertMessage) {
-    const message =
-      currentLang === "en"
-        ? `Instructional videos for "${variantTitle}" ${productTitle ? `(${productTitle})` : ""} are coming soon! We're preparing step-by-step video guides to help you achieve the best results.`
-        : `វីដេអូណែនាំសម្រាប់ "${variantTitle}" ${productTitle ? `(${productTitle})` : ""} នឹងមកដល់ឆាប់ៗ! យើងកំពុងរៀបចំវីដេអូណែនាំជំហានៗដើម្បីជួយអ្នកទទួលបានលទ្ធផលល្អបំផុត។`;
-
-    videoAlertMessage.textContent = message;
-  }
-
-  // Use global function if available
-  if (typeof window.showVideoAlert === "function") {
-    window.showVideoAlert();
-  } else {
-    // Fallback
-    const message =
-      currentLang === "en"
-        ? `Video guides for ${variantTitle} are coming soon!`
-        : `វីដេអូណែនាំសម្រាប់ ${variantTitle} នឹងមកដល់ឆាប់ៗ!`;
-
-    if (window.customAlert && typeof window.customAlert.info === "function") {
-      window.customAlert.info(
-        currentLang === "en" ? "Video Guide" : "វីដេអូណែនាំ",
-        message,
-        { autoClose: true, closeTime: 5000 },
-      );
-    } else {
-      alert(message);
-    }
-  }
+  const message =
+    currentLang === "en"
+      ? "Video feature coming soon! This will show instructional videos for growing this seed variety."
+      : "មុខងារវីដេអូនឹងមកដល់ឆាប់ៗនេះ! វានឹងបង្ហាញវីដេអូណែនាំសម្រាប់ការដាំដុះពូជគ្រាប់នេះ។";
+  alert(message);
 }
 
 function closeModal() {
@@ -773,7 +1228,7 @@ function closeGuideModal() {
 // ========== EVENT LISTENERS ==========
 // Product list click handlers
 listItems.forEach((item) => {
-  item.addEventListener("click", async () => {
+  item.addEventListener("click", () => {
     listItems.forEach((i) => i.classList.remove("active"));
     item.classList.add("active");
 
@@ -781,7 +1236,7 @@ listItems.forEach((item) => {
     const url = new URL(window.location);
     url.search = `?${productKey}`;
     window.history.pushState({}, "", url);
-    await showProduct(productKey);
+    showProduct(productKey);
   });
 });
 
@@ -822,14 +1277,14 @@ document.querySelectorAll(".nav-link").forEach((link) => {
 });
 
 // Browser back/forward navigation
-window.addEventListener("popstate", async function () {
+window.addEventListener("popstate", function () {
   console.log("popstate event fired");
-  const urlHandled = await handleURLParameters();
+  const urlHandled = handleURLParameters();
   if (!urlHandled) {
     // If URL doesn't contain product params, show default
     const urlParams = window.location.search;
     if (!urlParams || urlParams === "?" || urlParams === "") {
-      await showProduct(currentProduct);
+      showProduct(currentProduct);
     }
   }
 });
@@ -841,6 +1296,8 @@ window.addEventListener("DOMContentLoaded", async () => {
   try {
     // Initialize database
     await initDB();
+
+    await loadAllProducts();
 
     // Load saved language
     const savedLang = await loadFromIndexedDB("currentLang", "en");
@@ -865,24 +1322,18 @@ window.addEventListener("DOMContentLoaded", async () => {
     });
 
     // Handle URL parameters FIRST (this will open modal if URL has variant)
-    const urlHandled = await handleURLParameters();
+    const urlHandled = handleURLParameters();
 
     // If URL doesn't specify a product, show saved product
     if (!urlHandled) {
       console.log("No URL params, showing default product:", currentProduct);
-      await showProduct(currentProduct);
+      showProduct(currentProduct);
     }
   } catch (error) {
     console.error("Error initializing:", error);
     // Fallback to defaults
     updateLanguage("en");
-    try {
-      await showProduct("cucumber");
-    } catch (e) {
-      console.error("Failed to show default product:", e);
-      document.getElementById("product-display").innerHTML =
-        '<p class="error">Error loading products. Please check your connection.</p>';
-    }
+    showProduct("cucumber");
   }
 });
 
@@ -904,13 +1355,6 @@ if (!document.querySelector("#fade-animation")) {
         opacity: 1;
         transform: translateY(0);
       }
-    }
-    
-    .error {
-      color: #dc3545;
-      text-align: center;
-      padding: 2rem;
-      font-size: 1.1rem;
     }
   `;
   document.head.appendChild(style);

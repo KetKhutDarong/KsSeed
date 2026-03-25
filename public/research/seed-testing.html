@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KSSEED Seed Testing &amp; Quality Control</title>
+    <meta name="description"
+        content="Learn how KSSEED performs rigorous laboratory and field testing to ensure seeds meet high germination and quality standards." />
+    <link rel="canonical" href="https://yourdomain.com/research/seed-testing.html" />
+    <meta property="og:title" content="KSSEED Seed Testing &amp; Quality Control" />
+    <meta property="og:description" content="Rigorous quality control and germination testing at KSSEED." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourdomain.com/research/seed-testing.html" />
+    <meta property="og:image" content="https://yourdomain.com/image/General/Picture1.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="/image/General/Picture1.png" />
+    <!-- Preload hero image for instant display -->
+    <link rel="preload" as="image"
+        href="https://seedworld.com/cdn/wp-content/uploads/20251006014941/3F5A4939-1024x682.jpg" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/research.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hanuman:wght@400;700&amp;family=Poppins:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <style>
+        /* ── Stats Section ── */
+        .stats-section {
+            background: var(--light-gray, #f5f5f5);
+            padding: 60px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            text-align: center;
+        }
+
+        .stat-card {
+            padding: 28px 20px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, .06);
+            transition: transform .25s, box-shadow .25s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(76, 175, 80, .12);
+        }
+
+        .stat-number {
+            font-size: 40px;
+            font-weight: 700;
+            color: var(--primary-green, #43b048);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: #666;
+            margin-top: 8px;
+            line-height: 1.4;
+        }
+
+        /* ── Hero fix: image fills container ── */
+        .detail-hero {
+            background-color: #2e7d32;
+        }
+
+        .hero-background-seed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .hero-image-seed {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* ── CTA Research Section ── */
+        .cta-research-section {
+            position: relative;
+            padding: 90px 0;
+            overflow: hidden;
+            background: linear-gradient(135deg, #0a2e14 0%, #1a5c2a 50%, #0d3b1a 100%);
+        }
+
+        .cta-research-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 15% 50%, rgba(76, 175, 80, .18) 0%, transparent 50%), radial-gradient(circle at 85% 20%, rgba(139, 195, 74, .12) 0%, transparent 40%);
+            pointer-events: none;
+        }
+
+        .cta-research-inner {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-research-header {
+            text-align: center;
+            margin-bottom: 52px;
+        }
+
+        .cta-research-badge {
+            display: inline-block;
+            background: rgba(76, 175, 80, .18);
+            border: 1px solid rgba(76, 175, 80, .4);
+            color: #a5d6a7;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 6px 18px;
+            border-radius: 20px;
+            letter-spacing: .5px;
+            margin-bottom: 20px;
+        }
+
+        .cta-research-header h2 {
+            font-size: 38px;
+            font-weight: 700;
+            color: #fff;
+            margin: 0 0 14px;
+            line-height: 1.3;
+            font-family: 'Hanuman', 'Poppins', sans-serif;
+        }
+
+        .cta-research-header p {
+            font-size: 16px;
+            color: rgba(255, 255, 255, .6);
+            max-width: 540px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .cta-research-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .cta-research-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 28px 24px;
+            background: rgba(255, 255, 255, .06);
+            border: 1px solid rgba(255, 255, 255, .1);
+            border-radius: 16px;
+            text-decoration: none;
+            transition: all .3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-research-card::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #43b048, #8bc34a);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform .35s ease;
+        }
+
+        .cta-research-card:hover {
+            background: rgba(255, 255, 255, .11);
+            border-color: rgba(76, 175, 80, .45);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 44px rgba(0, 0, 0, .35);
+        }
+
+        .cta-research-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .cta-card-icon {
+            font-size: 34px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .cta-card-body {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .cta-card-body h3 {
+            font-size: 17px;
+            font-weight: 700;
+            color: #fff;
+            margin: 0 0 8px;
+            line-height: 1.3;
+            font-family: 'Hanuman', 'Poppins', sans-serif;
+        }
+
+        .cta-card-body p {
+            font-size: 13px;
+            color: rgba(255, 255, 255, .58);
+            line-height: 1.65;
+            margin: 0;
+        }
+
+        .cta-card-arrow {
+            font-size: 20px;
+            color: #66bb6a;
+            flex-shrink: 0;
+            align-self: center;
+            transition: transform .3s;
+        }
+
+        .cta-research-card:hover .cta-card-arrow {
+            transform: translateX(6px);
+        }
+
+        /* ── Nav dropdown active fix ── */
+        .nav-link.active,
+        .nav-link-dropdown.active {
+            color: var(--primary-green, #43b048) !important;
+            /* border-bottom: 2px solid var(--primary-green, #43b048); */
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 900px) {
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .cta-research-cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+
+            .stat-number {
+                font-size: 32px;
+            }
+
+            .cta-research-section {
+                padding: 60px 0;
+            }
+
+            .cta-research-header h2 {
+                font-size: 26px;
+            }
+
+            .cta-research-cards {
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
+
+            .cta-research-card {
+                padding: 20px 18px;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .stat-card {
+                padding: 20px 12px;
+            }
+
+            .stat-number {
+                font-size: 28px;
+            }
+
+            .cta-research-header h2 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="../index.html#home" class="logo-link">
+                        <img src="../image/logo/ksseed.png" alt="KsSEED Logo" />
+                        <span class="logo-text">KSSEED</span>
+                    </a>
+                </div>
+
+                <nav class="nav" id="nav">
+                    <a href="../index.html#home" class="nav-link" data-en="Home" data-km="ទំព័រដើម">Home</a>
+                    <a href="../index.html#products" class="nav-link" data-en="Seeds" data-km="គ្រាប់ពូជ">Seeds</a>
+                    <a href="../index.html#about" class="nav-link" data-en="About Us" data-km="អំពីយើង">About Us</a>
+
+                    <!-- Research dropdown -->
+                    <div class="nav-item-dropdown">
+                        <a href="../index.html#research" class="nav-link nav-link-dropdown active" data-en="Research"
+                            data-km="ស្រាវជ្រាវ">
+                            Research
+                            <span class="dropdown-arrow"></span>
+                        </a>
+                        <div class="nav-dropdown">
+                            <a href="../research/seed-testing.html" class="dropdown-link" data-en="Seed Testing"
+                                data-km="ការសាកល្បងគ្រាប់ពូជ">Seed Testing</a>
+                            <a href="../research/climate-adaptation.html" class="dropdown-link"
+                                data-en="Climate Adaptation" data-km="ការសម្របខ្លួនអាកាសធាតុ">Climate Adaptation</a>
+                            <a href="../research/disease-resistance.html" class="dropdown-link"
+                                data-en="Disease Resistance" data-km="ការធន់នឹងជំងឺ">Disease Resistance</a>
+                            <a href="../research/yield-optimization.html" class="dropdown-link"
+                                data-en="Yield Optimization" data-km="ការបង្កើនផលិតកម្ម">Yield Optimization</a>
+                        </div>
+                    </div>
+
+                    <a href="../index.html#stories" class="nav-link" data-en="Farmer's Stories"
+                        data-km="រឿងរ៉ាវកសិករ">Farmer's Stories</a>
+                    <a href="../index.html#blog" class="nav-link" data-en="Blog" data-km="ប្លុក">Blog</a>
+                    <a href="../index.html#contact" class="nav-link" data-en="Contact" data-km="ទំនាក់ទំនង">Contact</a>
+                </nav>
+
+                <div class="header-actions">
+                    <button class="lang-switch" id="langSwitch">
+                        <span class="lang-option active" data-lang="en">EN</span>
+                        <span class="lang-divider">|</span>
+                        <span class="lang-option" data-lang="km">ខ្មែរ</span>
+                    </button>
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- BREADCRUMB -->
+    <section class="breadcrumb">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="../index.html" data-en="Home" data-km="ទំព័រដើម">Home</a>
+                <span class="breadcrumb-separator">/</span>
+                <a href="../research.html" data-en="Research" data-km="ស្រាវជ្រាវ">Research</a>
+                <span class="breadcrumb-separator">/</span>
+                <span class="breadcrumb-current" data-en="Seed Testing" data-km="ការសាកល្បងគ្រាប់ពូជ">Seed
+                    Testing</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- HERO -->
+    <section class="detail-hero">
+        <div class="hero-background-seed">
+            <img src="https://seedworld.com/cdn/wp-content/uploads/20251006014941/3F5A4939-1024x682.jpg"
+                alt="Seed Testing Laboratory" class="hero-image-seed" loading="eager" fetchpriority="high"
+                decoding="sync" />
+            <div class="research-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title" data-en="Seed Testing &amp; Quality Control"
+                    data-km="ការសាកល្បងគ្រាប់ពូជ និងការត្រួតពិនិត្យគុណភាព">
+                    Seed Testing &amp; Quality Control
+                </h1>
+                <p class="hero-subtitle"
+                    data-en="Ensuring every KSSEED seed meets strict germination and quality standards"
+                    data-km="ធានាថាគ្រាប់ពូជ KSSEED គ្រប់គ្រាប់ បំពេញលក្ខណៈការលូតលាស់ និងស្តង់ដារគុណភាពតឹងរ៉ឹង">
+                    Ensuring every KSSEED seed meets strict germination and quality standards
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT PROGRAM -->
+    <section class="research-description">
+        <div class="container">
+            <div class="description-content" data-aos="fade-up">
+                <h2 data-en="About Our Seed Testing Program" data-km="អំពីកម្មវិធីសាកល្បងគ្រាប់ពូជរបស់យើង">
+                    About Our Seed Testing Program
+                </h2>
+                <p data-en="KSSEED performs rigorous laboratory and field testing to ensure seeds meet high germination and vigor standards before distribution to farmers. Our comprehensive testing protocols verify seed authenticity, genetic purity, and potential for successful crop production. Every batch undergoes multiple quality assessments to guarantee farmer confidence and crop success."
+                    data-km="KSSEED ធ្វើការសាកល្បងក្នុងមន្ទីរ និងលើស្រែចំការដ៏តឹងរ៉ឹង ដើម្បីធានាថាគ្រាប់ពូជបំពេញលក្ខខណ្ឌនៃការលូតលាស់ និងស្តង់ដារសម្ថភាពខ្ពស់ មុនពេលចែកចាយទៅដល់កសិករ។ ដំណើរការសាកល្បងដ៏ពេញលេញរបស់យើង ផ្ទៀងផ្ទាត់ភាពស្វាហាប់ សុទ្ធភាពហ្សែន និងសក្ដានុពលសម្រាប់ការដាំដុះដំណាំប្រកបដោយជោគជ័យ។">
+                    KSSEED performs rigorous laboratory and field testing to ensure seeds meet high germination and
+                    vigor standards before distribution to farmers. Our comprehensive testing protocols verify seed
+                    authenticity, genetic purity, and potential for successful crop production. Every batch undergoes
+                    multiple quality assessments to guarantee farmer confidence and crop success.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTING PROCESS -->
+    <section class="research-process">
+        <div class="container">
+            <h2 data-en="Our Testing Process" data-km="ដំណើរការសាកល្បងរបស់យើង">Our Testing Process</h2>
+            <div class="process-grid">
+
+                <div class="process-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="process-number">1</div>
+                    <div class="process-icon">🧬</div>
+                    <h3 data-en="Genetic Purity Analysis" data-km="ការវិភាគសុទ្ធភាពហ្សែន">Genetic Purity Analysis</h3>
+                    <p data-en="We analyze seed genetics to ensure pure breeding lines and genetic authenticity using molecular markers and advanced DNA testing techniques in our state-of-the-art laboratory."
+                        data-km="យើងវិភាគហ្សែនគ្រាប់ពូជ ដើម្បីធានាបាននូវខ្សែបន្ទាត់ការបង្កាត់ដ៏សុទ្ធ និងលក្ខណៈពិតប្រាកដនៃហ្សែន ដោយប្រើប្រាស់ម៉ូលេគុលសម្គាល់ និងបច្ចេកទេសសាកល្បង DNA ទំនើប។">
+                        We analyze seed genetics to ensure pure breeding lines and genetic authenticity using molecular
+                        markers and advanced DNA testing techniques in our state-of-the-art laboratory.
+                    </p>
+                </div>
+
+                <div class="process-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="process-number">2</div>
+                    <div class="process-icon">🧪</div>
+                    <h3 data-en="Germination Testing" data-km="ការសាកល្បងការលូតលាស់">Germination Testing</h3>
+                    <p data-en="Laboratory germination tests measure seed viability under precisely controlled temperature and humidity conditions to accurately predict field performance and planting success rates."
+                        data-km="ការសាកល្បងលូតលាស់ក្នុងមន្ទីរ វាស់វែងលទ្ធភាពរស់នៃគ្រាប់ពូជ ក្រោមការគ្រប់គ្រងសីតុណ្ហភាព និងសំណើមអាកាសដ៏ត្រឹមត្រូវ ដើម្បីព្យាករណ៍ប្រសិទ្ធភាពលើវាលស្រែ។">
+                        Laboratory germination tests measure seed viability under precisely controlled temperature and
+                        humidity conditions to accurately predict field performance and planting success rates.
+                    </p>
+                </div>
+
+                <div class="process-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="process-number">3</div>
+                    <div class="process-icon">🌱</div>
+                    <h3 data-en="Vigor Testing" data-km="ការសាកល្បងសក្ដានុពលគ្រាប់ពូជ">Vigor Testing</h3>
+                    <p data-en="We measure seed vigor through accelerated aging and cold stress tests to ensure strong, healthy seedling emergence across various growing environments and seasonal conditions."
+                        data-km="យើងវាស់វែងសក្ដានុពលគ្រាប់ពូជ តាមរយៈការសាកល្បងចាស់លឿន និងការសាកល្បងអណ្ដែតត្រជាក់ ដើម្បីធានាឱ្យដើមស្លឹកលូតលាស់ខ្លាំង សុខភាពល្អ នៅក្នុងបរិស្ថានដំណាំ និងរដូវកាលផ្សេងៗ។">
+                        We measure seed vigor through accelerated aging and cold stress tests to ensure strong, healthy
+                        seedling emergence across various growing environments and seasonal conditions.
+                    </p>
+                </div>
+
+                <div class="process-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="process-number">4</div>
+                    <div class="process-icon">✅</div>
+                    <h3 data-en="Quality Approval" data-km="ការអនុម័តគុណភាព">Quality Approval</h3>
+                    <p data-en="Final quality checks certify that every seed batch meets all KSSEED internal standards and international seed trade guidelines before packaging and distribution to farmers across Cambodia."
+                        data-km="ការត្រួតពិនិត្យគុណភាពចុងក្រោយ បញ្ជាក់ថាគ្រាប់ពូជគ្រប់ ដំណើកបំពេញស្តង់ដារផ្ទៃក្នុង KSSEED និងស្តង់ដារអន្តរជាតិ មុនពេលធ្វើការវេចខ្ចប់ និងចែកចាយដល់កសិករនៅទូទាំងកម្ពុជា។">
+                        Final quality checks certify that every seed batch meets all KSSEED internal standards and
+                        international seed trade guidelines before packaging and distribution to farmers across
+                        Cambodia.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY TESTING MATTERS -->
+    <section class="advantages-section">
+        <div class="container">
+            <div class="advantages-content">
+                <div class="advantages-image" data-aos="fade-right">
+                    <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=800&q=80"
+                        alt="Scientist examining seedlings in greenhouse" />
+                </div>
+                <div class="advantages-text" data-aos="fade-left">
+                    <h2 data-en="Why KSSEED Testing Matters" data-km="ហេតុអ្វីដែលការសាកល្បង KSSEED មានសារៈសំខាន់">
+                        Why KSSEED Testing Matters
+                    </h2>
+                    <ul class="advantages-list">
+                        <li data-en="Higher germination rates ensure farmer success from the very first planting"
+                            data-km="អត្រាលូតលាស់ខ្ពស់ ធានាជោគជ័យដល់កសិករ ចាប់ពីការដាំទីមួយ">
+                            Higher germination rates ensure farmer success from the very first planting
+                        </li>
+                        <li data-en="Reduced replanting costs through reliable and consistent seed performance"
+                            data-km="ថ្លៃដាំឡើងវិញថយចុះ ដោយសារលក្ខខណ្ឌគ្រាប់ពូជដែលទុកចិត្ត និងស្ថិរភាព">
+                            Reduced replanting costs through reliable and consistent seed performance
+                        </li>
+                        <li data-en="Genetic authenticity guarantees true-to-type crop varieties every season"
+                            data-km="ភាពស្វាហាប់ហ្សែន ធានាបាននូវពូជដំណាំពិតប្រាកដ រាល់រដូវកាល">
+                            Genetic authenticity guarantees true-to-type crop varieties every season
+                        </li>
+                        <li data-en="Full compliance with international seed standards and Cambodian regulations"
+                            data-km="ប្រឹតតាមស្តង់ដារអន្តរជាតិ និងបទប្បញ្ញត្តិគ្រាប់ពូជកម្ពុជា">
+                            Full compliance with international seed standards and Cambodian regulations
+                        </li>
+                        <li data-en="Enhanced farmer confidence in KSSEED brand quality and crop reliability"
+                            data-km="ពង្រឹងទំនុកចិត្តកសិករលើគុណភាព KSSEED និងភាពទុកចិត្តបាននៃដំណាំ">
+                            Enhanced farmer confidence in KSSEED brand quality and crop reliability
+                        </li>
+                        <li data-en="Transparent quality data available so farmers can make informed planting decisions"
+                            data-km="ទិន្នន័យគុណភាពតម្លាភាព អាចរកបាន ដើម្បីជួយកសិករសម្រេចចិត្តដាំដុះដ៏ត្រឹមត្រូវ">
+                            Transparent quality data so farmers can make informed planting decisions
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery-section">
+        <div class="container">
+            <h2 data-en="Research Facility Gallery" data-km="វិចិត្រសាលមន្ទីរស្រាវជ្រាវ">Research Facility Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="0">
+                    <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80"
+                        alt="Seed germination trays" />
+                    <div class="gallery-overlay">
+                        <p data-en="Germination Trays" data-km="ថាសសាកល្បងលូតលាស់">Germination Trays</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600&q=80"
+                        alt="Laboratory testing equipment" />
+                    <div class="gallery-overlay">
+                        <p data-en="Testing Equipment" data-km="ឧបករណ៍សាកល្បង">Testing Equipment</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="https://images.unsplash.com/photo-1586771107445-d3ca888129ff?w=600&q=80"
+                        alt="Greenhouse seedling trials" />
+                    <div class="gallery-overlay">
+                        <p data-en="Greenhouse Trials" data-km="ការសាកល្បងក្នុងផ្ទះកញ្ចក់">Greenhouse Trials</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="600">
+                    <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?w=600&q=80"
+                        alt="Expert scientists examining seeds" />
+                    <div class="gallery-overlay">
+                        <p data-en="Expert Scientists" data-km="អ្នកវិទ្យាសាស្ត្រជំនាញ">Expert Scientists</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid" data-aos="fade-up">
+                <div class="stat-card">
+                    <div class="stat-number">95%+</div>
+                    <div class="stat-label" data-en="Average Germination Rate" data-km="អត្រាលូតលាស់មធ្យម">Average
+                        Germination Rate</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label" data-en="Seed Batches Tested / Year"
+                        data-km="ដំណើកគ្រាប់ពូជសាកល្បង / ឆ្នាំ">Seed Batches Tested / Year</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">4</div>
+                    <div class="stat-label" data-en="Quality Testing Stages" data-km="ដំណាក់កាលសាកល្បងគុណភាព">Quality
+                        Testing Stages</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label" data-en="Non-GMO Certified Seeds"
+                        data-km="គ្រាប់ពូជដែលទទួលបានការបញ្ជាក់ Non-GMO">Non-GMO Certified Seeds</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-research-section">
+        <div class="container cta-research-inner">
+            <div class="cta-research-header" data-aos="fade-up">
+                <span class="cta-research-badge" data-en="🔬 Research &amp; Innovation"
+                    data-km="🔬 ការស្រាវជ្រាវ និងនវានុវត្ត">
+                    🔬 Research &amp; Innovation
+                </span>
+                <h2 data-en="Explore Other Research Areas" data-km="ស្វែងយល់ផ្នែកស្រាវជ្រាវផ្សេងទៀត">Explore Other
+                    Research Areas</h2>
+                <p data-en="Discover how KSSEED pushes the boundaries of agricultural science to help Cambodian farmers thrive."
+                    data-km="ស្វែងយល់ពីរបៀបដែល KSSEED រុញច្រានព្រំដែននៃវិទ្យាសាស្ត្រកសិកម្ម ដើម្បីជួយកសិករខ្មែររីកចម្រើន។">
+                    Discover how KSSEED pushes the boundaries of agricultural science to help Cambodian farmers thrive.
+                </p>
+            </div>
+            <div class="cta-research-cards">
+                <a href="climate-adaptation.html" class="cta-research-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="cta-card-icon">🌦️</div>
+                    <div class="cta-card-body">
+                        <h3 data-en="Climate Adaptation" data-km="ការសម្របខ្លួនអាកាសធាតុ">Climate Adaptation</h3>
+                        <p data-en="Developing seed varieties that thrive under Cambodia's changing climate conditions."
+                            data-km="ការអភិវឌ្ឍពូជគ្រាប់ពូជ ដែលរស់ស្គាន់ក្រោមការប្រែប្រួលអាកាសធាតុ">Developing seed
+                            varieties that thrive under Cambodia's changing climate conditions.</p>
+                    </div>
+                    <span class="cta-card-arrow">→</span>
+                </a>
+                <a href="disease-resistance.html" class="cta-research-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="cta-card-icon">🛡️</div>
+                    <div class="cta-card-body">
+                        <h3 data-en="Disease Resistance" data-km="ការធន់នឹងជំងឺ">Disease Resistance</h3>
+                        <p data-en="Breeding naturally resistant varieties to reduce pesticide use and protect crop yields."
+                            data-km="ការបង្កាត់ពូជធន់ជាធម្មជាតិ ដើម្បីកាត់បន្ថយថ្នាំ និងការពារទិន្នផល">Breeding
+                            naturally resistant varieties to reduce pesticide use and protect crop yields.</p>
+                    </div>
+                    <span class="cta-card-arrow">→</span>
+                </a>
+                <a href="yield-optimization.html" class="cta-research-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="cta-card-icon">📈</div>
+                    <div class="cta-card-body">
+                        <h3 data-en="Yield Optimization" data-km="ការបង្កើនផលិតផល">Yield Optimization</h3>
+                        <p data-en="Maximizing crop output per hectare through advanced hybrid breeding programs."
+                            data-km="បង្កើនទិន្នផលដំណាំ ក្នុងមួយហិកតា តាមរយៈកម្មវិធីបង្កាត់ស្ងោរ">Maximizing crop output
+                            per hectare through advanced hybrid breeding programs.</p>
+                    </div>
+                    <span class="cta-card-arrow">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="../image/logo/ksseed.png" alt="KsSEED Logo" />
+                        <span class="logo-text">KSSEED</span>
+                    </div>
+                    <p data-en="Quality, Confidence, and Growth are primary."
+                        data-km="គុណភាព ទំនុកចិត្ត និងភាពរីកចម្រើនជាចម្បង">
+                        Quality, Confidence, and Growth are primary.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-en="Quick Links" data-km="តំណភ្ជាប់រហ័ស">Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html#home" data-en="Home" data-km="ទំព័រដើម">Home</a></li>
+                        <li><a href="../index.html#about" data-en="About Us" data-km="អំពីយើង">About Us</a></li>
+                        <li><a href="../index.html#products" data-en="Products" data-km="ផលិតផល">Products</a></li>
+                        <li><a href="../index.html#research" data-en="Research" data-km="ស្រាវជ្រាវ">Research</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 data-en="Resources" data-km="ធនធាន">Resources</h4>
+                    <ul>
+                        <li><a href="../index.html#stories" data-en="Farmer's Stories" data-km="រឿងរ៉ាវកសិករ">Farmer's
+                                Stories</a></li>
+                        <li><a href="../index.html#blog" data-en="Blog" data-km="ប្លុក">Blog</a></li>
+                        <li><a href="../faq.html" data-en="FAQs" data-km="សំណួរញឹកញាប់">FAQs</a></li>
+                        <li><a href="#" data-en="Downloads" data-km="ទាញយក">Downloads</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 data-en="Contact" data-km="ទំនាក់ទំនង">Contact</h4>
+                    <ul>
+                        <li data-en="📍 Phnom Penh, Cambodia" data-km="📍 ភ្នំពេញ, កម្ពុជា">📍 Phnom Penh, Cambodia</li>
+                        <li>📞 +855 93 755 638</li>
+                        <li><a href="mailto:ksseed.info@gmail.com" style="padding-left:0;">✉️ ksseed.info@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>
+                    &copy; 2026 KsSeed.
+                    <span data-en="All rights reserved." data-km="រក្សាសិទ្ធិគ្រប់យ៉ាង។">All rights reserved.</span>
+                </p>
+                <div class="footer-links">
+                    <a href="../privacy-policy.html" data-en="Privacy Policy" data-km="គោលការណ៍ភាពឯកជន">Privacy
+                        Policy</a>
+                    <a href="../terms.html" data-en="Terms of Service" data-km="លក្ខខណ្ឌសេវាកម្ម">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop">&#10094;</button>
+
+    <!-- ✅ All 3 scripts loaded — language + nav + AOS -->
+    <script src="../js/script.js"></script>
+    <script src="../js/language-toggle.js"></script>
+    <script src="../js/header-nav.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
+
+        // Keep Research dropdown active while on any research sub-page
+        document.addEventListener('DOMContentLoaded', function () {
+            const allNavLinks = document.querySelectorAll('.nav-link, .nav-link-dropdown');
+            allNavLinks.forEach(link => link.classList.remove('active'));
+            const researchLink = document.querySelector('.nav-link-dropdown');
+            if (researchLink) researchLink.classList.add('active');
+        });
+    </script>
+</body>
+
+</html>
