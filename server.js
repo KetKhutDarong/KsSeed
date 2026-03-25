@@ -141,7 +141,7 @@ app.get("/api/health", (req, res) => {
 // PRODUCTS
 app.get("/api/products", async (req, res) => {
   const page = parseInt(req.query.page) || 1;
-  const limit = 12;
+  const limit = parseInt(req.query.limit) || 12; // ← now reads from query
   const skip = (page - 1) * limit;
 
   const products = await Product.find({ isActive: true })

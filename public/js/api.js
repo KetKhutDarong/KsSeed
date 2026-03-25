@@ -4,7 +4,7 @@
 const API_BASE =
   window.location.hostname === "localhost"
     ? "http://localhost:5502"
-    : "https://ksseedcambodian.onrender.com";
+    : "https://ksseed.onrender.com";
 
 // Fetch all products
 async function fetchProducts(page = 1, limit = 12) {
