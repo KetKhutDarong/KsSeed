@@ -8,55 +8,49 @@ document.onkeydown = function (e) {
   }
 };
 
-// IndexedDB Setup
+// ─── IndexedDB Setup ────────────────────────────────────────────
 const DB_NAME = "LanguageDB";
 const DB_VERSION = 1;
 const STORE_NAME = "settings";
+
+window.DB_NAME = DB_NAME;
+window.DB_VERSION = DB_VERSION;
+window.STORE_NAME = STORE_NAME;
+
 let db;
 
-// Initialize IndexedDB
 function initDB() {
   return new Promise((resolve, reject) => {
     const request = indexedDB.open(DB_NAME, DB_VERSION);
-
     request.onerror = () => {
       console.error("Database failed to open");
       reject(request.error);
     };
-
     request.onsuccess = () => {
       db = request.result;
       console.log("Database opened successfully");
       resolve(db);
     };
-
     request.onupgradeneeded = (event) => {
       db = event.target.result;
-
-      // Create object store if it doesn't exist
       if (!db.objectStoreNames.contains(STORE_NAME)) {
-        const objectStore = db.createObjectStore(STORE_NAME, {
-          keyPath: "key",
-        });
+        db.createObjectStore(STORE_NAME, { keyPath: "key" });
         console.log("Object store created");
       }
     };
   });
 }
 
-// Save language to IndexedDB
 function saveLanguage(lang) {
   return new Promise((resolve, reject) => {
+    localStorage.setItem("ksseed-language", lang);
     const transaction = db.transaction([STORE_NAME], "readwrite");
     const objectStore = transaction.objectStore(STORE_NAME);
-
     const request = objectStore.put({ key: "currentLang", value: lang });
-
     request.onsuccess = () => {
       console.log("Language saved:", lang);
       resolve();
     };
-
     request.onerror = () => {
       console.error("Error saving language");
       reject(request.error);
@@ -64,24 +58,20 @@ function saveLanguage(lang) {
   });
 }
 
-// Load language from IndexedDB
 function loadLanguage() {
   return new Promise((resolve, reject) => {
     const transaction = db.transaction([STORE_NAME], "readonly");
     const objectStore = transaction.objectStore(STORE_NAME);
-
     const request = objectStore.get("currentLang");
-
     request.onsuccess = () => {
       if (request.result) {
         console.log("Language loaded:", request.result.value);
         resolve(request.result.value);
       } else {
         console.log("No saved language, using default: en");
-        resolve("en"); // Default language
+        resolve("en");
       }
     };
-
     request.onerror = () => {
       console.error("Error loading language");
       reject(request.error);
@@ -89,10 +79,9 @@ function loadLanguage() {
   });
 }
 
-// Language Switching with Font Support
-let currentLang = "en";
+// ─── Language & Font ────────────────────────────────────────────
+let currentLang = "en"; // temporary default, will be overwritten by IndexedDB
 
-const langSwitch = document.getElementById("langSwitch");
 const langOptions = document.querySelectorAll(".lang-option");
 
 langOptions.forEach((option) => {
@@ -100,26 +89,30 @@ langOptions.forEach((option) => {
     const lang = option.getAttribute("data-lang");
     if (lang !== currentLang) {
       currentLang = lang;
-
-      // Keep window.currentLang in sync for pages that use it (e.g. farmers-stories.html)
       window.currentLang = lang;
 
       updateLanguage(lang);
       updateFont(lang);
 
-      // Notify any page-specific language hooks
+      // Re-render stat numbers immediately in the new language
+      refreshStatNumbers(lang);
+
       if (typeof window.onLangChange === "function") {
         window.onLangChange(lang);
       }
 
-      // Save to IndexedDB
       try {
         await saveLanguage(lang);
+        if (typeof triggerLanguageChange === "function") {
+          triggerLanguageChange(lang);
+        }
+        if (typeof refreshBlogContent === "function") {
+          refreshBlogContent();
+        }
       } catch (error) {
         console.error("Failed to save language:", error);
       }
 
-      // Update active state
       langOptions.forEach((opt) => opt.classList.remove("active"));
       option.classList.add("active");
     }
@@ -133,19 +126,20 @@ function updateLanguage(lang) {
       if (element.tagName === "INPUT" || element.tagName === "TEXTAREA") {
         element.placeholder = text;
       } else if (element.children.length > 0) {
-        // ✅ Has child elements (like the arrow span) — only update text nodes
         for (const node of element.childNodes) {
           if (
             node.nodeType === Node.TEXT_NODE &&
             node.textContent.trim() !== ""
           ) {
-            node.textContent = text + " "; // keep a space before the arrow
+            node.textContent = text + " ";
             break;
           }
         }
       } else {
-        // ✅ No children — safe to set textContent
-        element.textContent = text;
+        // Skip stat-number elements — managed by formatStatNumber
+        if (!element.classList.contains("stat-number")) {
+          element.textContent = text;
+        }
       }
     }
   });
@@ -159,54 +153,92 @@ function updateLanguage(lang) {
 }
 
 function updateFont(lang) {
-  const body = document.body;
+  document.body.style.fontFamily =
+    lang === "km" ? '"Hanuman", sans-serif' : '"Poppins", sans-serif';
+}
 
+// ─── Stat Number Formatting ─────────────────────────────────────
+function formatStatNumber(value, suffix, lang) {
   if (lang === "km") {
-    // Use Khmer font for Khmer language
-    body.style.fontFamily = '"Hanuman", sans-serif';
+    if (value >= 1000000) {
+      const m = value / 1000000;
+      return (Number.isInteger(m) ? m : m.toFixed(1)) + "លាន" + suffix;
+    }
+    if (value >= 1000) {
+      const k = value / 1000;
+      return (Number.isInteger(k) ? k : k.toFixed(1)) + "ពាន់" + suffix;
+    }
+    return value + suffix;
   } else {
-    // Use English font for English language
-    body.style.fontFamily = '"Poppins", sans-serif';
+    if (value >= 1000000) {
+      const m = value / 1000000;
+      return (Number.isInteger(m) ? m : m.toFixed(1)) + "M" + suffix;
+    }
+    if (value >= 1000) {
+      const k = value / 1000;
+      return (Number.isInteger(k) ? k : k.toFixed(1)) + "K" + suffix;
+    }
+    return value + suffix;
   }
 }
 
-// Initialize with saved language on page load
-window.addEventListener("DOMContentLoaded", async () => {
-  try {
-    // Initialize database
-    await initDB();
-
-    // Load saved language
-    const savedLang = await loadLanguage();
-    currentLang = savedLang;
-
-    // Apply saved language
-    updateLanguage(savedLang);
-    updateFont(savedLang);
-
-    // Keep window.currentLang in sync
-    window.currentLang = savedLang;
-
-    // Notify any page-specific language hooks
-    if (typeof window.onLangChange === "function") {
-      window.onLangChange(savedLang);
+// Re-render all stat numbers instantly without animation
+function refreshStatNumbers(lang) {
+  document.querySelectorAll(".stat-number").forEach((el) => {
+    const target = parseInt(el.getAttribute("data-count"));
+    const suffix = el.getAttribute("data-suffix") ?? "+";
+    if (!isNaN(target)) {
+      el.textContent = formatStatNumber(target, suffix, lang);
     }
+  });
+}
 
-    // Update active state in UI
-    langOptions.forEach((opt) => {
-      if (opt.getAttribute("data-lang") === savedLang) {
-        opt.classList.add("active");
-      } else {
-        opt.classList.remove("active");
+function animateCounter(element) {
+  const target = parseInt(element.getAttribute("data-count"));
+  const suffix = element.getAttribute("data-suffix") ?? "+";
+  const duration = 1700;
+  const increment = target / (duration / 16);
+  let current = 0;
+
+  // ✅ Read currentLang at animation time — guaranteed correct because
+  //    we only call this AFTER loadLanguage() has resolved
+  const lang = currentLang;
+
+  const updateCounter = () => {
+    current += increment;
+    if (current < target) {
+      element.textContent = formatStatNumber(Math.floor(current), suffix, lang);
+      requestAnimationFrame(updateCounter);
+    } else {
+      element.textContent = formatStatNumber(target, suffix, lang);
+    }
+  };
+
+  updateCounter();
+}
+
+// ─── Stats Observer ─────────────────────────────────────────────
+// ✅ Defined here but NOT started yet — started only after lang loads
+const statsBar = document.querySelector(".stats-bar");
+
+const statsObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.querySelectorAll(".stat-number").forEach((stat) => {
+          if (stat.getAttribute("data-animated") !== "true") {
+            stat.setAttribute("data-animated", "true");
+            animateCounter(stat);
+          }
+        });
+        statsObserver.unobserve(entry.target);
       }
     });
-  } catch (error) {
-    console.error("Error initializing language:", error);
-    // Fallback to English if there's an error
-    updateFont("en");
-  }
-});
+  },
+  { threshold: 0.5 },
+);
 
+// ─── Hero Slideshow ─────────────────────────────────────────────
 let currentSlide = 0;
 const slides = document.querySelectorAll(".hero-image");
 const dots = document.querySelectorAll(".hero_dot");
@@ -237,7 +269,7 @@ if (slides.length > 0) {
   });
 }
 
-// Mobile Menu Toggle
+// ─── Mobile Menu ────────────────────────────────────────────────
 const mobileMenuToggle = document.getElementById("mobileMenuToggle");
 const nav = document.getElementById("nav");
 
@@ -248,7 +280,6 @@ if (mobileMenuToggle) {
   });
 }
 
-// Close mobile menu when clicking on a link
 document.querySelectorAll(".nav-link").forEach((link) => {
   link.addEventListener("click", () => {
     nav.classList.remove("active");
@@ -256,7 +287,7 @@ document.querySelectorAll(".nav-link").forEach((link) => {
   });
 });
 
-// Smooth Scrolling
+// ─── Smooth Scrolling ───────────────────────────────────────────
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
@@ -266,30 +297,22 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       const elementPosition = target.getBoundingClientRect().top;
       const offsetPosition =
         elementPosition + window.pageYOffset - headerOffset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
+      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
     }
   });
 });
 
-// Active Navigation Link on Scroll
+// ─── Active Nav Link on Scroll ──────────────────────────────────
 const sections = document.querySelectorAll("section[id]");
 const navLinks = document.querySelectorAll(".nav-link");
 
 window.addEventListener("scroll", () => {
   let current = "";
-
   sections.forEach((section) => {
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.clientHeight;
-    if (pageYOffset >= sectionTop - 100) {
+    if (pageYOffset >= section.offsetTop - 100) {
       current = section.getAttribute("id");
     }
   });
-
   navLinks.forEach((link) => {
     link.classList.remove("active");
     if (link.getAttribute("href") === `#${current}`) {
@@ -298,62 +321,56 @@ window.addEventListener("scroll", () => {
   });
 });
 
-// Header Scroll Effect
+// ─── Header Scroll Effect ───────────────────────────────────────
 const header = document.getElementById("header");
-
 if (header) {
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 50) {
-      header.classList.add("scrolled");
-    } else {
-      header.classList.remove("scrolled");
-    }
+    header.classList.toggle("scrolled", window.scrollY > 50);
   });
 }
 
-// animated counter for stats
-function animateCounter(element) {
-  const target = Number.parseInt(element.getAttribute("data-count"));
-  const duration = 1700;
-  const increment = target / (duration / 16);
-  let current = 0;
+// ─── Page Initialization ────────────────────────────────────────
+// ✅ This is the ONLY place statsObserver.observe() is called.
+//    It runs strictly after IndexedDB has resolved with the correct language.
+window.addEventListener("DOMContentLoaded", async () => {
+  try {
+    await initDB();
 
-  const updateCounter = () => {
-    current += increment;
-    if (current < target) {
-      element.textContent = Math.floor(current) + "+";
-      requestAnimationFrame(updateCounter);
-    } else {
-      element.textContent = target + "+";
+    const savedLang = await loadLanguage();
+
+    // ✅ Set currentLang BEFORE anything reads it
+    currentLang = savedLang;
+    window.currentLang = savedLang;
+    localStorage.setItem("ksseed-language", savedLang);
+
+    updateLanguage(savedLang);
+    updateFont(savedLang);
+
+    if (typeof window.onLangChange === "function") {
+      window.onLangChange(savedLang);
     }
-  };
 
-  updateCounter();
-}
-
-// Intersection observer for stats animation
-const statsObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const statNumbers = entry.target.querySelectorAll(".stat-number");
-        statNumbers.forEach((stat) => {
-          if (stat.textContent === "0") {
-            animateCounter(stat);
-          }
-        });
-        statsObserver.unobserve(entry.target);
-      }
+    langOptions.forEach((opt) => {
+      opt.classList.toggle(
+        "active",
+        opt.getAttribute("data-lang") === savedLang,
+      );
     });
-  },
-  { threshold: 0.5 },
-);
 
-const statsBar = document.querySelector(".stats-bar");
-if (statsBar) {
-  statsObserver.observe(statsBar);
-}
+    // ✅ Start observing stats ONLY after currentLang is set correctly
+    if (statsBar) {
+      statsObserver.observe(statsBar);
+    }
+  } catch (error) {
+    console.error("Error initializing language:", error);
+    updateFont("en");
 
+    // Fallback — still start observer even on error
+    if (statsBar) {
+      statsObserver.observe(statsBar);
+    }
+  }
+});
 // product filtering: but add later cuz now that need to do is chnage product
 
 // Newsletter form submission
@@ -687,220 +704,6 @@ document
 //       document.getElementById("contactForm").reset();
 //     });
 // });
-
-// Carousel - Make sure everything is inside DOMContentLoaded
-// carousel
-
-// Product Carousel - Continuous Infinite Loop
-document.addEventListener("DOMContentLoaded", () => {
-  const carouselContainer = document.getElementById("carouselContainer");
-  const arrowLeft = document.getElementById("arrowLeft");
-  const arrowRight = document.getElementById("arrowRight");
-  const dots = document.querySelectorAll(".dots");
-
-  if (!carouselContainer || !arrowLeft || !arrowRight) return;
-
-  // Get original cards
-  const originalCards = Array.from(
-    carouselContainer.querySelectorAll(".product-card-link"),
-  );
-  const totalCards = originalCards.length;
-
-  if (totalCards === 0) return;
-
-  // Clear container and rebuild with cloned cards for infinite loop
-  carouselContainer.innerHTML = "";
-
-  // Clone first few cards and append to end
-  const cardsToClone = 3; // How many cards to clone for smooth transition
-  const clonedStart = originalCards.slice(0, cardsToClone);
-  const clonedEnd = originalCards.slice(-cardsToClone);
-
-  // Append cloned end cards to beginning
-  clonedEnd.forEach((card) => {
-    const clone = card.cloneNode(true);
-    carouselContainer.appendChild(clone);
-  });
-
-  // Append original cards
-  originalCards.forEach((card) => {
-    carouselContainer.appendChild(card);
-  });
-
-  // Append cloned start cards to end
-  clonedStart.forEach((card) => {
-    const clone = card.cloneNode(true);
-    carouselContainer.appendChild(clone);
-  });
-
-  // Get all cards including clones
-  const allCards = Array.from(
-    carouselContainer.querySelectorAll(".product-card-link"),
-  );
-  const allCardsCount = allCards.length;
-
-  let currentIndex = cardsToClone; // Start at first original card
-  let cardWidth = 0;
-  const gap = 30; // From CSS
-  let autoScrollInterval = null;
-  const autoScrollDelay = 4000; // 4 seconds
-
-  // Calculate card width
-  function calculateCardWidth() {
-    if (allCards[0]) {
-      const cardStyle = window.getComputedStyle(allCards[0]);
-      const margin = parseFloat(cardStyle.marginRight) || 0;
-      cardWidth = allCards[0].offsetWidth + gap;
-    }
-    return cardWidth;
-  }
-
-  // Update dot indicators
-  function updateDots() {
-    if (!dots.length) return;
-    let displayIndex = currentIndex - cardsToClone;
-
-    // Handle wrap-around for dots
-    if (displayIndex < 0) {
-      displayIndex += totalCards;
-    } else if (displayIndex >= totalCards) {
-      displayIndex -= totalCards;
-    }
-
-    dots.forEach((dot, index) => {
-      dot.classList.toggle("active", index === displayIndex);
-    });
-  }
-
-  // Scroll to specific index with smooth animation
-  function scrollToIndex(index, smooth = true) {
-    currentIndex = index;
-
-    // Calculate scroll position
-    const scrollPosition = currentIndex * cardWidth;
-
-    if (smooth) {
-      carouselContainer.style.scrollBehavior = "smooth";
-    } else {
-      carouselContainer.style.scrollBehavior = "auto";
-    }
-
-    carouselContainer.scrollLeft = scrollPosition;
-    updateDots();
-
-    // Handle wrap-around for seamless infinite loop
-    handleWrapAround();
-  }
-
-  // Handle seamless wrap-around
-  function handleWrapAround() {
-    // If we're at the cloned end (right side), jump back to real cards
-    if (currentIndex >= totalCards + cardsToClone) {
-      setTimeout(() => {
-        currentIndex = cardsToClone;
-        carouselContainer.style.scrollBehavior = "auto";
-        const scrollPosition = currentIndex * cardWidth;
-        carouselContainer.scrollLeft = scrollPosition;
-        updateDots();
-      }, 500); // Wait for smooth scroll to complete
-    }
-    // If we're at the cloned beginning (left side), jump forward to real cards
-    else if (currentIndex < cardsToClone) {
-      setTimeout(() => {
-        currentIndex = totalCards + cardsToClone - 1;
-        carouselContainer.style.scrollBehavior = "auto";
-        const scrollPosition = currentIndex * cardWidth;
-        carouselContainer.scrollLeft = scrollPosition;
-        updateDots();
-      }, 500);
-    }
-  }
-
-  // Next slide
-  function nextSlide() {
-    scrollToIndex(currentIndex + 1);
-  }
-
-  // Previous slide
-  function prevSlide() {
-    scrollToIndex(currentIndex - 1);
-  }
-
-  // Go to specific slide (for dots)
-  function goToSlide(index) {
-    const targetIndex = index + cardsToClone;
-    scrollToIndex(targetIndex);
-  }
-
-  // Setup auto-scroll
-  function startAutoScroll() {
-    stopAutoScroll();
-    autoScrollInterval = setInterval(nextSlide, autoScrollDelay);
-  }
-
-  function stopAutoScroll() {
-    if (autoScrollInterval) {
-      clearInterval(autoScrollInterval);
-      autoScrollInterval = null;
-    }
-  }
-
-  // Initialize and setup event listeners
-  function initCarousel() {
-    // Calculate initial card width
-    calculateCardWidth();
-
-    // Start at first original card
-    carouselContainer.scrollLeft = cardsToClone * cardWidth;
-    updateDots();
-
-    // Arrow click events
-    arrowLeft.addEventListener("click", () => {
-      stopAutoScroll();
-      prevSlide();
-      startAutoScroll();
-    });
-
-    arrowRight.addEventListener("click", () => {
-      stopAutoScroll();
-      nextSlide();
-      startAutoScroll();
-    });
-
-    // Dot click events
-    dots.forEach((dot, index) => {
-      dot.addEventListener("click", () => {
-        stopAutoScroll();
-        goToSlide(index);
-        startAutoScroll();
-      });
-    });
-
-    // Pause auto-scroll on hover
-    carouselContainer.addEventListener("mouseenter", stopAutoScroll);
-    carouselContainer.addEventListener("mouseleave", startAutoScroll);
-
-    // Handle window resize
-    let resizeTimeout;
-    window.addEventListener("resize", () => {
-      clearTimeout(resizeTimeout);
-      resizeTimeout = setTimeout(() => {
-        calculateCardWidth();
-        carouselContainer.style.scrollBehavior = "auto";
-        carouselContainer.scrollLeft = currentIndex * cardWidth;
-        carouselContainer.style.scrollBehavior = "smooth";
-      }, 100);
-    });
-
-    // Start auto-scroll
-    startAutoScroll();
-  }
-
-  // Initialize the carousel
-  initCarousel();
-});
-
-// ... (keep your existing script.js content) ...
 
 // UNIVERSAL FORM HANDLER - ensure it SKIPS contactForm and newsletterForm
 document.addEventListener("DOMContentLoaded", function () {

@@ -16,13 +16,20 @@ class Carousel {
     this.currentIndex = 3;
     this.autoScrollInterval = null;
     this.autoScrollDelay = 3000; // 3 seconds
-    // this.currentLang = localStorage.getItem("language") || "en";
-
-    // Get language from localStorage
     this.currentLang = localStorage.getItem("ksseed-language") || "en";
 
     // Initialize
     this.init();
+  }
+
+  // Always get the most up-to-date language
+  getLang() {
+    return (
+      window.currentLang ||
+      this.currentLang ||
+      localStorage.getItem("ksseed-language") ||
+      "en"
+    );
   }
 
   async init() {
@@ -47,7 +54,7 @@ class Carousel {
   async loadBlogData() {
     try {
       // Fetch blogs from MongoDB API
-      const response = await fetch("/api/blogs?limit=10");
+      const response = await fetch("/api/blogs?limit=5");
       const data = await response.json();
 
       if (!data.success || !data.blogs || data.blogs.length === 0) {
@@ -59,8 +66,11 @@ class Carousel {
       this.wrapper.innerHTML = "";
       this.dotsContainer.innerHTML = "";
 
-      // Create blog cards
-      data.blogs.forEach((blog) => {
+      // Sort by date descending (newest first), then take 5
+      const blogsToShow = data.blogs
+        .sort((a, b) => new Date(b.date) - new Date(a.date))
+        .slice(0, 5);
+      blogsToShow.forEach((blog) => {
         const card = this.createBlogCard(blog);
         this.wrapper.appendChild(card);
       });
@@ -93,14 +103,11 @@ class Carousel {
     card.className = "blog-card";
     card.dataset.id = blog._id;
 
-    // Use current language
-    const title = this.currentLang === "km" ? blog.title.km : blog.title.en;
-    const preview =
-      this.currentLang === "km" ? blog.preview.km : blog.preview.en;
-    const category =
-      this.currentLang === "km" ? blog.category?.km : blog.category?.en;
-    const readMoreText =
-      this.currentLang === "km" ? "អានបន្ថែម →" : "Read More →";
+    const lang = this.getLang();
+    const title = lang === "km" ? blog.title.km : blog.title.en;
+    const preview = lang === "km" ? blog.preview.km : blog.preview.en;
+    const category = lang === "km" ? blog.category?.km : blog.category?.en;
+    const readMoreText = lang === "km" ? "អានបន្ថែម →" : "Read More →";
 
     card.innerHTML = `
       <div class="blog-image">
@@ -291,26 +298,39 @@ class Carousel {
     }
   }
 
-  updateLanguage(lang) {
+  async updateLanguage(lang) {
     this.currentLang = lang;
-    this.refreshCarousel();
+    await this.refreshCarousel();
   }
 
   async refreshCarousel() {
-    // Store current scroll position
+    // Stop auto scroll during refresh
+    this.stopAutoScroll();
+
+    // Store current blog id
     const currentId = this.getCurrentBlogId();
 
-    // Reload data with new language
+    // Reload cards in the new language
     await this.loadBlogData();
 
-    // Restore position if possible
+    // Re-init dots after rebuild
+    this.initDots();
+
+    // Update card width in case layout changed
+    this.cardWidth = this.originalCards[0]?.offsetWidth || 400;
+
+    // Restore position, or go to start
     if (currentId) {
       const newIndex = this.findCardIndexById(currentId);
-      if (newIndex !== -1) {
-        this.currentIndex = newIndex + 3;
-        this.scrollToSlide(false);
-      }
+      this.currentIndex = newIndex !== -1 ? newIndex + 3 : 3;
+    } else {
+      this.currentIndex = 3;
     }
+
+    this.scrollToSlide(false);
+
+    // Restart auto scroll
+    this.startAutoScroll();
   }
 
   getCurrentBlogId() {
@@ -362,8 +382,9 @@ class Carousel {
   }
 }
 
-// Initialize carousel
+// Initialize carousel when DOM is loaded
 document.addEventListener("DOMContentLoaded", () => {
+  // Create global carousel instance
   window.blogCarousel = new Carousel();
 
   // Listen for language changes
@@ -373,6 +394,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
 // Language change helper function (add this to your language switcher)
 function triggerLanguageChange(lang) {
   const event = new CustomEvent("languageChange", {

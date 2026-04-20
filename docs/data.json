@@ -1,0 +1,4220 @@
+{
+  "bitter_melon": {
+    "name": {
+      "en": "Bitter Gourd",
+      "km": "ម្រះ"
+    },
+    "desc": {
+      "en": "Bitter gourd has high yield and can grow well in all seasons.",
+      "km": "ពូជម្រះ​មាន​ទិន្នផល​ខ្ពស់ ហើយ​អាច​លូតលាស់​បាន​ល្អ​គ្រប់​រដូវកាល។"
+    },
+    "imgs": [
+      {
+        "src": "image/bitter/Picture18.jpg",
+        "title": {
+          "en": "Bitter gourd F1 Romyol variety",
+          "km": "ម្រះ F1 ពូជ រំយោល"
+        },
+        "info": {
+          "en": [
+            "The F1 RomYol bitter gourd is a high-quality local hybrid variety that is extremely popular in the Cambodian market.",
+            "Plant Characteristics: Strong stems with many branches.",
+            "Harvest Age: 40 to 42 days after transplanting.",
+            "Fruit Size: Length of 18–21 cm and diameter of 5–5.3 cm.",
+            "Appearance: Smooth green fruit with a wavy skin texture and large ridges.",
+            "Yield: 5 to 6 kg per plant."
+          ],
+          "km": [
+            "ពូជម្រះ F1 រំយោល (RomYol) គឺជាពូជម្រះក្នុងស្រុកដែលមានគុណភាពខ្ពស់ ពេញនិយមខ្លាំងនៅលើទីផ្សារកម្ពុជា។",
+            "ដើមដងរឹងមាំល្អ និងមានមែកច្រើន",
+            "អាយុប្រមូលផល ៖ ៤០ ទៅ ៤២ ថ្ងៃ បន្ទាប់ពីស្ទូងកូន",
+            "ទំហំផ្លែ ៖ ប្រវែង ១៨ ទៅ ២១ សង់ទីម៉ែត្រ និងមុខកាត់ផ្លែ ៖ ៥ ទៅ ៥.៣ សង់ទីម៉ែត្រ",
+            "ផ្លែពណ៌បៃតងរលាង សម្បកឡាអង្គាញ់ និងមានទ្រនង់អង្គាញ់ធំ",
+            "ទិន្នផល ៖ ៥ ទៅ ៦ គីឡូក្រាម/ដើម"
+          ]
+        },
+        "weight": "20 grams/pkt",
+        "views": 1156,
+        "pdfUrl": "data/pdf/ម្រះរំយោល-V005.pdf",
+        "gallery": [
+          {
+            "src": "image/bitter/Picture18.jpg",
+            "label": {
+              "en": "Ear",
+              "km": "ផ្លែ"
+            }
+          },
+          {
+            "src": "image/bitter/bitter1.jpg",
+            "label": {
+              "en": "Kernels",
+              "km": "គ្រាប់"
+            }
+          },
+          {
+            "src": "image/bitter/bitter2.jpg",
+            "label": {
+              "en": "Field",
+              "km": "វាល"
+            }
+          }
+        ],
+        "sectionTitles": {
+          "en": {
+            "section1": "1. Features (Crop Characteristics)",
+            "section2": "2. Land Preparation",
+            "section3": "3. Raising Beds for Planting",
+            "section4": "4. Nursery of Romyoul Seedlings",
+            "section5": "5. Transplanting Seedlings",
+            "section6": "6. Maintenance",
+            "section7": "7. Pest and Disease Management",
+            "section8": "8. Harvest",
+            "section9": "9. Summary"
+          },
+          "km": {
+            "section1": "១. លក្ខណៈពូជ",
+            "section2": "២. ការរៀបចំដី",
+            "section3": "៣. ការលើករងដាំ",
+            "section4": "៤. ការបណ្តុះកូនម្រះរំយោល",
+            "section5": "៥. ការស្ទូងកូន",
+            "section6": "៦. ការថែទាំ",
+            "section7": "៧. ការគ្រប់គ្រងសត្វល្អិត និងជំងឺ",
+            "section8": "៨. ការប្រមូលផល",
+            "section9": "៩. សេចក្តីសង្ខេប"
+          }
+        },
+        "subtitleTitles": {
+          "en": {
+            "pestManagement": "7.1. Pest Management",
+            "preventionMethods": "7.1.1. Prevention Methods",
+            "eliminationMethods": "7.1.2. Elimination Methods",
+            "diseaseManagement": "7.2. Disease Management",
+            "diseasePrevention": "7.2.1. Plant Disease Prevention Methods",
+            "waterManagement": "6.1. Water Management",
+            "fertilizerManagement": "6.2. Fertilizer Management",
+            "directSeeding": "4.1. Direct Seeding",
+            "seedlingNursing": "4.2. Seedling Nursing"
+          },
+          "km": {
+            "pestManagement": "៧.១. ការគ្រប់គ្រងសត្វល្អិត",
+            "preventionMethods": "៧.១.១. វិធីសាស្រ្តការពារ",
+            "eliminationMethods": "៧.១.២. វិធីសាស្រ្តកំចាត់",
+            "diseaseManagement": "៧.២. ការគ្រប់គ្រងជំងឺ",
+            "diseasePrevention": "៧.២.១. វិធីសាស្រ្តការពារជំងឺ",
+            "waterManagement": "៦.១. ការគ្រប់គ្រងទឹក",
+            "fertilizerManagement": "៦.២. ការគ្រប់គ្រងជី",
+            "directSeeding": "៤.១. ការដាំដោយផ្ទាល់",
+            "seedlingNursing": "៤.២. ការបណ្តុះកូន"
+          }
+        },
+        "features": {
+          "en": [
+            "Plant Structure: Strong stems with many branches.",
+            "Harvest Age: 40 to 42 days after transplanting.",
+            "Fruit Size: Length of 18–21 cm and diameter of 5–5.3 cm.",
+            "Appearance: Smooth green fruit with a wavy skin texture and large ridges.",
+            "Yield: 5 to 6 kg per plant."
+          ],
+          "km": [
+            "ដើមដងរឹងមាំល្អ និងមានមែកច្រើន",
+            "អាយុប្រមូលផល ៖ ៤០ ទៅ ៤២ ថ្ងៃ បន្ទាប់ពីស្ទូងកូន",
+            "ទំហំផ្លែ ៖ ប្រវែង ១៨ ទៅ ២១ សង់ទីម៉ែត្រ និងមុខកាត់ផ្លែ ៖ ៥ ទៅ ៥.៣ សង់ទីម៉ែត្រ",
+            "ផ្លែពណ៌បៃតងរលាង សម្បកឡាអង្គាញ់ និងមានទ្រនង់អង្គាញ់ធំ",
+            "ទិន្នផល ៖ ៥ ទៅ ៦ គីឡូក្រាម/ដើម"
+          ]
+        },
+        "featuresImage": "image/packet/Bitter_melon_F1_Romyol_variety_package.png",
+        "featuresTitle": {
+          "en": "Image of Romyoul Bitter Gourd seed packet",
+          "km": "រូបភាពកញ្ចប់ម្រះពូជរំយោល"
+        },
+        "landPreparation": {
+          "en": [
+            "Cleaning: Clean the farm land and remove all weeds completely.",
+            "Soil Treatment: Plow and rake the soil until fine, then sun-dry it for 10 to 15 days.",
+            "Plowing Depth: Plow (using buffalo or mechanical tillers) to a depth of 15 to 20 cm."
+          ],
+          "km": [
+            "សំអាតដីចំការ និង រើសស្មៅចេញឱ្យអស់។",
+            "ភ្ជួរ រាស់ដីឲ្យបានម៉ដ្ឋល្អ ហើយហាលឱ្យបានពី១០ទៅ១៥ថ្ងៃ។",
+            "ភ្ជួរដី (គោក្របី ឬ គោយន្ត) ជម្រៅពី ១៥ ទៅ ២០ សង់ទីម៉ែត្រ។"
+          ]
+        },
+        "bedPreparation": {
+          "en": [
+            "Bed Design: Double beds with a width of 1 meter.",
+            "Canals: A 0.6-meter drainage canal between the beds.",
+            "Bed Spacing: 3 meters between each set of double beds.",
+            "Bed Height: 20–30 cm in the dry season and 30–50 cm in the rainy season.",
+            "Plant Spacing: 0.4 to 0.5 meters between individual plants.",
+            "Basal Fertilizer: Apply 1 to 2 kg of dry animal manure or compost per square meter as a base.",
+            "Mulching: Essential for reducing weed growth and preventing water and fertilizer loss.",
+            "Support: Sturdy trellises are mandatory for this crop.",
+            "Irrigation: Using an irrigation system helps reduce labor and costs."
+          ],
+          "km": [
+            "ទទឹងរង៖ ជារងភ្លោះ ដែលមានទទឹងរង ១ ម៉ែត្រ ចន្លោះប្រឡាយបង្ហូរទឹក ០,៦ម៉ែត្រ និង បណ្តោយទៅតាមលទ្ធភាពដោយផ្អែកលើប្រព័ន្ឋស្រោចស្រព្វ។",
+            "គម្លាតពីរងភ្លោះនិមួយៗទៅមួយ៖ ៣ម៉ែត្រ",
+            "កំពស់រង៖ នៅរដូវប្រាំង ពី២០ ទៅ៣០សង់ទីម៉ែត្រ និង នៅរដូវវស្សា ពី៣០ ទៅ ៥០ សង់ទីម៉ែត្រ",
+            "ចន្លោះគុម្ព៖ ចន្លោះពីគុម្ព១ ទៅ ១ គឺ 0,៤ ទៅ ០,៥ម៉ែត្រ ",
+            "ដាក់លាមកសត្វស្ងួត ឬ ជីកំប៉ុស្តិ៍៖ បរិមាណពី ១ ទៅ ២គីឡូក្រាម ក្នុងផ្ទៃដីរង១ ម៉ែត្រការ៉េ ទ្រាប់បាត ដោយផ្អែកលើគុណភាពដី។",
+            "ប្រភេទរង៖ រងភ្លោះ ដោយមានចង្អូទឹកកណ្តាល គម្លាតពីរងមួយទៅមួយ ចំងាយ ៣ម៉ែត្រ "
+          ]
+        },
+        "bedImages": [
+          "image/bed/bed_bitter_melon_romyul.png",
+          "image/bed/bed_bitter_melon_romyul1.png"
+        ],
+        "bedtitle": {
+          "en": "Figure 1: Raising beds for Romyoul Bitter Gourd",
+          "km": "រូបភាពទី១៖ ការលើករងម្រះ រំយោល"
+        },
+        "bedPreparationNotes": {
+          "en": [
+            "✓ Mulching is key to reducing weeds, preventing water and fertilizer loss.",
+            "✓ This crop requires sturdy trellises.",
+            "✓ Using an irrigation system helps reduce labor and costs."
+          ],
+          "km": [
+            "✓ ការប្រើប្រាស់ស្មៅគ្របដីជួយកាត់បន្ថយស្មៅដុះ ទប់នឹងការខាតបង់ទឹក និងជី។",
+            "✓ ដំណាំនេះត្រូវប្រើប្រាស់ទ្រើងជាចាំបាច់។",
+            "✓ ការប្រើប្រាស់ប្រព័ន្ឋទឹកជួយកាត់បន្ថយកំលាំងពលកម្ម និងកាត់បន្ថយថ្លៃដើម។"
+          ]
+        },
+        "bedPreparationFooter": {
+          "en": "For bitter gourd, farmers must prepare beds before seedling placement.",
+          "km": "ចំពោះដំណាំម្រះ កសិករត្រូវតែលើករងឲ្យរួចរាល់មុនពេល ដាក់បណ្តុះកូន។"
+        },
+        "nursery": {
+          "en": "To achieve high efficiency and target yields, farmers can use two planting methods:",
+          "km": "ដើម្បីឲ្យកសិករដាំម្រះប្រមូលផលប្រកបដោយប្រសិទ្ឋភាពខ្ពស់ និងទទួលបានទិន្នផលតាមផែនការ នោះកសិករមានវិធីដាំ ជា២បែបគឺ៖"
+        },
+        "directSeeding": {
+          "en": [
+            "For the F1 RomYol bitter gourd seeds from KSSeed Co.,Ltd. farmers can practice direct sowing, provided the farm has a proper irrigation system and can maintain adequate moisture control. Seeds will begin to sprout 3 days after planting, and by day 7, they will develop their first two leaves. When sowing directly, farmers must monitor the field regularly; typically, 3–5% of seeds may fail to grow or be lost due to planting too deep, excessive water/waterlogging, or pest damage. Therefore, it is recommended that farmers prepare an additional 10% of seedlings in trays for replanting (gap filling)."
+          ],
+          "km": [
+            "ចំពោះគ្រាប់ម្រះ F1 ពូជ រំយោល របស់ក្រុមហ៊ុន ខេ អេស ស៊ីដ ឯ.ក កសិករអាចយកគ្រាប់ដាំដោយផ្ទាល់បាន លុះត្រាតែចំការមានប្រព័ន្ឋទឹក និងអាចគ្រប់គ្រងសំណើមគ្រប់គ្រាន់។ បន្ទាប់ពីដាំបានរយៈពេល ៣ថ្ងៃបន្ទាប់មកគ្រាប់ពូជនឹងចេញពន្លក នឹងថ្ងៃទី៧ចេញស្លឹក២។ ការដាំដោយគ្រាប់ផ្ទាល់ គឺកសិករត្រូវពិនិត្យឲ្យបានទៀតទាត់ មានគ្រាប់ចំនួន ៣-៥% នឹងបាត់បង់ ឬមិនដុះ មកពីវីធីកប់គ្រាប់ជ្រៅពេក ឬទឹកជោគជាំពេក ឬមានកត្តាសត្វបំផ្លាញផ្សេងៗ ដូច្នេះកសិករត្រូវបណ្តុះត្រៀមជួសចំនួន ១០%។ "
+          ]
+        },
+        "seedlingNursing": {
+          "en": [
+            "Before nursing bitter gourd, farmers must construct a proper nursery based on the total seedling count. The structure should be 0.8 meters above the ground, enclosed with fine mesh to protect against insects (preventing viruses) and rain, while maintaining proper temperature. On average, 11,000 to 16,000 seedlings are required per hectare, depending on plant and row spacing.",
+            "Farmers must plan the nursery size and soil mixture requirements according to the number of seedling trays or nursery pouches being used.",
+            "The 'Romyol' variety will develop two leaves after direct sowing if moisture and temperature are optimal (30°C to 35°C). After 4 to 6 days, farmers must harden the seedlings (reduce water and provide direct sunlight for 2 days) before transplanting. By day 7 or 8, they are ready for the field."
+          ],
+          "km": [
+            "មុនពេលបណ្តុះកូនម្រះ កសិករត្រូវតែធ្វើរោងបណ្តុះឲ្យបានត្រឹមត្រូវ គឺគិតទៅទំហំចំនួនកូនដែលត្រូវដាំ ដោយផ្តោតលើកំពស់រោង ០,៨ម៉ែត្រពីដី ដែលរោងត្រូវប្រើស្បៃសំណាញ់ការពារសត្វព័ទ្ឋជុំវិញ និងមានដំបូលជិតដែលការពារសត្វល្អិត(ការពារកើតវីរុស) ទឹកភ្លៀង និងពិនិត្យកំរិតកំដៅឲ្យត្រឹមត្រូវ។ ជាមធ្យមកូនម្រះ ត្រូវប្រើចំនួនចន្លោះពី ១១០០០ ទៅ១៦០០០កូនក្នុង១ហិចតា អាស្រ័យលើ ចន្លោះគុម្ព និងចន្លោះរង។",
+            "កសិករត្រូវតែគិតពីទំហំរោងបណ្តុះកូន ការលាយល្បាយដីគឺគិតទៅតាមចំនួនថាសបណ្តុះ ឬកន្ទោងបណ្តុះកូន។",
+            "ម្រះពូជរំយោល នឹងចេញស្លឹក២ បន្ទាប់ពីបានដាក់ដាំគ្រាប់ដោយផ្ទាល់ក្នុងថាសបណ្តុះ ឬកន្ទោង ប្រសិនបើមានសំណើម និងកំដៅសមរម្យ(៣០ ទៅ៣៥អង្សារ)។ បន្ទាប់ពីបណ្តុះកូន បានរយៈ៤ ទៅ ៦ថ្ងៃ កសិករត្រូវពង្រឹងកូន (បន្ថយទឹក និងដាក់កូនឲ្យត្រូវកំដៅដោយផ្ទាល់រយៈពេល២ថ្ងៃ) មុនពេលយកទៅដាំលើរង។ ថ្ងៃទី៧ ឬថ្ងៃទី៨ អាចយកទៅដាំលើរងបានហើយ។"
+          ]
+        },
+        "nurseryImages": [
+          "image/bed/nursery_bitter_melon.png",
+          "image/bed/planting_bitter_melon.png"
+        ],
+        "nurserytitle": {
+          "en": "Figure 2: Building a bitter gourd seedling nursery.",
+          "km": "រូបភាពទី២៖ ការធ្វើរោងបណ្តុះកូនម្រះរំយោល"
+        },
+        "transplanting": {
+          "en": [
+            "When bitter gourd seedlings in trays or pouches are 7 to 8 days old, they must be transplanted to the beds following these steps:",
+            "Trellis Installation: Set up the trellis system first, as the 'Romyol' variety grows extremely fast after transplanting.",
+            "Bed Preparation: Irrigate the beds thoroughly the evening before planting so they are ready for the morning.",
+            "Starter Solution: Before transplanting, pour 150ml of a nutrient mix into each hole (Mixture: 50g Urea + 50g Humic Acid dissolved in 20L of water).",
+            "Planting: After placing the seedling, firmly press the soil around the base to ensure proper contact."
+          ],
+          "km": [
+            "ករណីបណ្តុះកូនម្រះក្នុងថាសបណ្តុះ ឬកន្ទោង អាយុបាន ៧ ទៅ៨ថ្ងៃ ត្រូវស្ទូងលើរងកសិករត្រូវអនុវត្តន៍ដោយ៖",
+            "កសិករត្រូវតម្លើង ទ្រើងជាមុនសិន ព្រោះបន្ទាប់ពីស្ទូងកូនហើយ កូនម្រះរំយោល លូតលាស់លឿនណាស់",
+            "បញ្ចូលទឹក តាមរងឲ្យជោកជាំពេលពីល្ងាច ដើម្បីដាំពេលព្រឹក",
+            "មុនពេលដាំត្រូវលាយល្បាយជីចាក់ចូលរន្តៅមុនពេលស្ទូងកូនចំនួន ១៥០មីលីត្រ/រណ្តៅ (ជីអ៊ុយរ៉េ ៥០ក្រាម និងហ៊ុយមិកអាស៊ីដ ៥០ក្រាមលាយទឹក ២០លីត្រ)",
+            "បន្ទាប់ពីដាក់ត្រូវសង្កត់ដីជុំវិញកូនឲ្យបានត្រឹមត្រូវ"
+          ]
+        },
+        "transplantingImages": [
+          "image/bed/Fertilizering1.png",
+          "image/bed/Fertilizering2.png",
+          "image/bed/PergolaBitter1.jpg",
+          "image/bed/PergolaBitter2.jpg"
+        ],
+        "trantitle": [
+          {
+            "tran1": {
+              "en": "Figure 3",
+              "km": "រូបភាពទី៣"
+            },
+            "tran1caption": {
+              "en": "Applying fertilizer into holes during 'Romyol' bitter gourd transplanting",
+              "km": "ការបញ្ចូលជីក្នុងរណ្តៅ កំឡុងពេលស្ទូងកូនម្រះរំយោល"
+            },
+            "tran3": {
+              "en": "Figure 5",
+              "km": "រូបភាពទី៥"
+            },
+            "tran3caption": {
+              "en": "The type of trellis system commonly used by farmers for 'Romyol' bitter gourd",
+              "km": "ប្រភេទទ្រើងដែលកសិករនិយមដាំម្រះរំយោល"
+            }
+          }
+        ],
+        "waterManagementTopImages": [
+          "image/bed/irrigationBitter1.jpg",
+          "image/bed/irrigationBitter2.jpg",
+          "image/bed/irrigationBitter3.jpg",
+          "image/bed/irrigationBitter4.jpg"
+        ],
+        "waterManagementLabels": [
+          {
+            "en": "Canal Irrigation System",
+            "km": "ការស្រោចស្រព ដោយប្រព័ន្ធប្រឡាយទឹក"
+          },
+          {
+            "en": "Drip Irrigation System",
+            "km": "ការស្រោចស្រពដោយប្រព័ន្ធដំណក់ទឹក"
+          },
+          {
+            "en": "Sprinkler Irrigation System",
+            "km": "ការស្រោចស្រពដោយប្រព័ន្ធSprinkler"
+          },
+          {
+            "en": "Micro-Sprinkler / Mist System",
+            "km": "ការស្រោចស្រពដោយប្រព័ន្ធសាច"
+          }
+        ],
+        "waterManagementDesc": {
+          "en": "Like any other crop, water is vital for bitter gourd. Over-watering wastes time and money and can kill the plants, while under-watering leads to yield loss and plant death.\n      \n      ❖ Irrigation Methods for Farmers:\n      ➤ <b>Drip Irrigation:</b> Highly efficient. It saves a significant amount of water by targeting the root zone directly. It also allows for fertigation (applying fertilizer through the system), saving time and labor.\n      ➤ <b>Hose/Sprinkler System:</b> Provides moderate water savings. It targets the roots effectively and offers flexibility based on the field's layout.\n      ➤ <b>Canal Irrigation:</b> For medium (over 5 acres) to large scales, this method makes it difficult to control soil moisture. It results in water waste, high costs, and risks to the crop, such as low yields or root rot.",
+          "km": "ដំណាំម្រះ ក៍ដូចដំណាំផ្សេងទៀតដែរ ទឹកគឺជាកត្តាសំខាន់ណាស់សម្រប់ជីវិត។ ប្រសិនបើ ការប្រើប្រាស់ទឹកច្រើនពេកនាំឲ្យខាត់បង់ពេលវេលា ចំណាយច្រើន និងធ្វើឲ្យដំណាំម្រះងាប់ តែបើខ្វះធ្វើបាត់បង់ទិន្នផល និងងាប់ដើមដែរ។ តើកសិករគួរតែគ្រប់គ្រងដោយវិធីណា? គួរតែប្រើពេលណា?\n            ❖ ចំពោះដំណាំម្រះកសិករ អាចគ្រប់គ្រងទឹកដោយប្រើ៖ \n            ➤ <b>ប្រព័ន្ឋដំណក់</b> គឺមានប្រសិទ្ឋភាពខ្ពស់ ក្នុងសន្សំសំចៃទឹកកំរិតបានច្រើន ចំគោលដៅតាមប្រព័ន្ឋឬស និងអាចដាក់ជីតាមប្រព័ន្ឋនេះធ្វើឲ្យកសិករសន្សំពេលវេលា និងកំលាំងពលកម្មបានច្រើន។\n            ➤ <b>ប្រើប្រព័ន្ឋទុយោសាចទឹក</b> គឺក្នុងសន្សំសំចៃទឹកកំរិតមធ្យម ចំគោលដៅតាមប្រព័ន្ឋឬស និងអាចដាក់តាមប្រព័ន្ឋនេះ ធ្វើឲ្យកសិករសន្សំពេលវេលា និងងាយបទបែនតាមសណ្ឋនដី។\n            ➤ <b>បង្ហូរតាមចង្អូរទឹក</b> ចំពោះរកសិករខ្នាតមធ្យម(៥អាឡើង) និងខ្នាតធំ គឺពិបាកក្នុងគ្រប់សំណើមដី ធ្វើខាតបង់បរិមាណទឹក ពេលវេលា ចំណាយច្រើន និងមានហានិភ័យលើដំណាំ(ទិន្នផលទាប ឬងាប់ដើម)។ "
+        },
+        "wateringSchedule": {
+          "en": "❖ Watering Schedule: Proper timing is crucial. Incorrect watering can stress the plants, delaying harvest and reducing yield. Farmers should follow the natural needs of the plant:\n\n      ➤ <b>Dry Season (or dry spells lasting 18+ days):</b> Irrigate starting 20 minutes after sunrise until 10:30 AM, and resume at 3:00 PM.\n      ❖ Timing and Water Volume Requirements:\n      ➤ <b>Volume & Requirements:</b> Water usage depends on soil type. For sandy or sandy-loam soil (requires 20-40 tons of compost/ha or cover crops), use 50-55 m³/ha. For recession water planting, use 15-20 m³/ha based on soil moisture.\n      <b>Note:</b> In this season, farmers should use a Mini-Sprinkler system installed 35–50 cm above the trellis. Operating it 1–2 times daily leads to higher yields and reduces pesticide use by 30–40%.\n      ➤ <b>Rainy Season or High Humidity:</b> Wait for the plant to warm up (check by touching the stem or field posts) and wait for dew to dry on the leaves. Irrigate between 10:55 AM and 5:55 PM only.",
+          "km": "❖ ពេលវេលាត្រូវដាក់ទឹក៖ ចំពោះការប្រើប្រាស់ទឹក គឺសំខាន់ណាស់សម្រាប់ដំណាំ តែការប្រើប្រាស់ទឹកក៍អាចនាំឲ្យនាំ ឲ្យដំណាំ ស្ត្រេសឈានដល់ការការពន្យាពេលប្រមូលផល និងបាត់បង់ទិន្នផល។ កសិករត្រូវគោរពគោលការណ៍ តាមបែបធម្មជាតិនៃដំណាំតាមកាលពេលវេលារដូចជា៖\n            ➤ <b>រដូវប្រាំង ឬ កូនរដូវប្រាំង(មិនមានទឹកភ្លៀងចាប់ពី១៨ថ្ងៃឡើង) ៖</b> អាចស្រោចទឹក ក្រោយពីថ្ងៃរៈ២០នាទី រហូតដល់ម៉ោង ១០:៣០នាទីព្រឹក និងចាប់ផ្តើមបន្តស្រោចនៅម៉ោង ០៣:០០នាទីរសៀល។\n            ❖ ពេលវេលា និងបរិមាណកំរិតទឹកដែលត្រូវប្រើ៖\n            ➤ <b>រដូវប្រាំង ឬ កូនរដូវប្រាំង(មិនមានទឹកភ្លៀងចាប់ពី១៨ថ្ងៃឡើង) ៖</b> កំរិតទឹកប្រើប្រាស់គឺពឹងផ្អែកទៅលើប្រភេទដី ចំពោះប្រភេទដីល្បាយខ្សាច់ និងខ្សាច់(ត្រូវប្រើជីកំប៉ុស ២០ ទៅ៤០តោន/១ហិតា ឬប្រើដំណាំគម្របដីបានចាប់ពីពីរដងឡើងទៅ) ៥០ទៅ ៥៥ម៉ែត្រគូប/ហិតា (តែបើដាំនាទឹកសម្រក ត្រូវប្រើតាមសំណើមដី អាច ១៥ទៅ២០ម៉ែត្រគូប/ហិតា)។\n            <b>ចំណាំ៖</b> នៅរដូវនេះ កសិករត្រូវប្រើប្រព័ន្ឋទឹកសាច(Mini-Sprinkler)ពីលើទ្រើងម្រះ ដោយបំពាក់កំពស់ពីលើទ្រើងចន្លោះ៣,៥-៥តឹក ហើយប្រើ១ ទៅ២ដង/១ថ្ងៃ ធ្វើឲ្យទិន្នផលខ្ពស់ និងកាត់បន្ថយការប្រើប្រាស់ថ្នាំសម្លាប់សត្វបានពី៣០ ទៅ៤០% ។\n            ➤ <b>រដូវភ្លៀងធ្លាក់ ឬសំណើមខ្ពស់ ៖</b> កសិកររងចាំឲ្យដើមមានកំដៅសិន(ត្រូវស្ទាបដើម ឬបង្គោលដែលនៅក្នុងចំការ) ឬត្រូវរងចាំស្លឹកស្ងួតសំណើម(រដូវរងារ) ពោលគឺត្រូវចាប់ផ្តើមស្រោចនៅចន្លោះម៉ោង១០:៥៥នាទីព្រឹក រហូតដល់ម៉ោង ៥:៥៥នាទីរសៀល ត្រូវបញ្ចប់ការស្រោច។"
+        },
+        "waterManagementCenterImages": [
+          "image/bed/offspringBitter1.jpg",
+          "image/bed/offspringBitter2.jpg"
+        ],
+        "centerImageLabels": [
+          {
+            "en": "Bitter gourd seedlings 10 days after nursery",
+            "km": "កូនម្រះបន្ទាប់ពីបណ្តុះបាន១០ថ្ងៃ"
+          }
+        ],
+        "fertilizerIntro": {
+          "en": "Bitter gourd farmers must understand soil quality or know the local history of neighboring crops. For instance, in some regions, basal organic fertilizer is not required (such as river delta areas, red soil, or newly cleared forest land). However, in most parts of Cambodia, organic fertilizer must be used—the amount varies depending on soil characteristics. For example, some sandy-loam soils require 20 to 40 tons per hectare or the planting of cover crops at least twice. (Farmers can apply fertilizer in two ways:)",
+          "km": "ដំណាំម្រះកសិករត្រូវយល់ដឹងអំពីគុណភាពដី ឬដឹងពីប្រវត្តនៃការធ្វើដំណាំក្បែរខាងដូចជា តំបន់ខ្លះមិនតម្រូវឲ្យប្រើជីធម្មជាតិទ្រប់បាត(ដីសណ្តរទន្លេ ឬដីក្រហមនិងដីរៀនព្រៃស្រោងថ្មី) តែតំបន់ភាគច្រើននៃស្រុកខ្មែរ ត្រូវតែប្រើជីធម្មជាតិដែលតិច ឬច្រើនទៅតាមលក្ខណៈនៃដី ដូចជាប្រភេទដល្បាយខ្សាច់ខ្លះត្រូវប្រັດចំនິ້ນ20 ទີ່40ຕົນ/1ຮາງ  ທ່ານດຳເນີນການເພີ່ມພູພະລັງໃນການເຊັ່ງສະເໜີໃຫ້ຢ່າງໜ້ອຍ2ຄັ້ງ.(ສຳລັບການເຊັ່ງສະເໜີໃຫ້ຢ່າງແຕກຕ່າງ:)"
+        },
+        "fertilizerStep1": {
+          "en": "<b>Method 1:</b> Farmers can apply fertilizer directly onto the raised beds by digging small holes and placing 5 grams per hole, depending on the growth stage and fertilizer type. Below is the table showing the plant age, quantity, and types of fertilizer required throughout the entire life cycle of the 'Romyol' bitter gourd variety per hectare:",
+          "km": "<b>របៀបទី ១៖</b> កសិករអាចដាក់ផ្ទាល់លើរង ដោយចោះរន្ឋដាក់៥ក្រាមក្នុង១រណ្តៅទៅតាមដំណាក់កាល និងប្រភេទជី។ នេះជាតារាង អាយុកាល ចំនួន និងប្រភេទជី ដែលត្រូវប្រើក្នុង១វដ្តជីវិតរបស់ដំណាំម្រះពូជរំយោល សម្រាប់ផ្ទៃដី ១ហិតា៖"
+        },
+        "fertilizerTable1": {
+          "col1": {
+            "en": "Days to apply fertilizer after transplanting",
+            "km": "ចំនួនថ្ងៃត្រូវដាក់\nជីបន្ទាប់ពីស្ទូងកូន"
+          },
+          "col2": {
+            "en": "Distance to apply from the plant base cm",
+            "km": "ចម្ងាយត្រូវ\nដាក់ពីគល់ cm"
+          },
+          "totalRowLabel": {
+            "en": "Total fertilizer requirement per hectare per crop cycle",
+            "km": "ចំនួនជីត្រូវប្រើសរុប១ហិចតាក្នុងមួយវដ្តដំណាំ Kg"
+          },
+          "noteHeader": {
+            "en": "Note",
+            "km": "កំណត់ចំណាំ"
+          },
+          "fertilizers": [
+            {
+              "name": {
+                "en": "Urea kg",
+                "km": "ជីសរ kg"
+              },
+              "spec": "46-0-0",
+              "total": "212",
+              "color": "#e8f5e9",
+              "headerColor": "#66bb6a"
+            },
+            {
+              "name": {
+                "en": "DAP kg",
+                "km": "ដេអាប៉េ kg"
+              },
+              "spec": "18-46-0",
+              "total": "190",
+              "color": "#e3f2fd",
+              "headerColor": "#42a5f5"
+            },
+            {
+              "name": {
+                "en": "NPK kg",
+                "km": "ចម្រុះ kg"
+              },
+              "spec": "20-20-15+TE",
+              "total": "275",
+              "color": "#fff3e0",
+              "headerColor": "#ffa726"
+            },
+            {
+              "name": {
+                "en": "Potash kg",
+                "km": "កាលី kg"
+              },
+              "spec": "0-0-60",
+              "total": "360",
+              "color": "#fce4ec",
+              "headerColor": "#ef9a9a"
+            }
+          ],
+          "rows": [
+            {
+              "day": "7",
+              "dist": "6-8cm",
+              "vals": [
+                "22",
+                "",
+                "",
+                ""
+              ],
+              "note": {
+                "en": "1hole 2plant & 5g/hole",
+                "km": "1ដើម 2រន្ធ & 1g/រន្ធ"
+              }
+            },
+            {
+              "day": "14",
+              "dist": "10-15cm",
+              "vals": [
+                "10",
+                "45",
+                "",
+                ""
+              ],
+              "note": {
+                "en": "1hole 1plant & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "21",
+              "dist": "20-25cm",
+              "vals": [
+                "",
+                "",
+                "55",
+                ""
+              ],
+              "note": {
+                "en": "1hole 1plant & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "31",
+              "dist": "20-25cm",
+              "vals": [
+                "",
+                "",
+                "55",
+                ""
+              ],
+              "note": {
+                "en": "1hole 1plant & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "41",
+              "dist": "20-25cm",
+              "vals": [
+                "",
+                "25",
+                "",
+                "30"
+              ],
+              "note": {
+                "en": "1hole 1plant & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "51",
+              "dist": "20-25cm",
+              "vals": [
+                "30",
+                "",
+                "",
+                "25"
+              ],
+              "note": {
+                "en": "1hole 1plant & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "61",
+              "dist": "20-25cm",
+              "vals": [
+                "20",
+                "",
+                "",
+                "35"
+              ],
+              "note": {
+                "en": "1hole 1plant & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "71",
+              "dist": "20-25cm",
+              "vals": [
+                "",
+                "",
+                "55",
+                ""
+              ],
+              "note": {
+                "en": "1hole 1plant & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "81",
+              "dist": "20-25cm",
+              "vals": [
+                "10",
+                "30",
+                "",
+                "15"
+              ],
+              "note": {
+                "en": "1hole 1plant & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "91",
+              "dist": "20-25cm",
+              "vals": [
+                "10",
+                "10",
+                "",
+                "25"
+              ],
+              "note": {
+                "en": "1hole 1plant & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "101",
+              "dist": "20-25cm",
+              "vals": [
+                "20",
+                "",
+                "",
+                "35"
+              ],
+              "note": {
+                "en": "1hole 1plant & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "111",
+              "dist": "20-25cm",
+              "vals": [
+                "",
+                "",
+                "55",
+                ""
+              ],
+              "note": {
+                "en": "1hole 1plant & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "121",
+              "dist": "20-25cm",
+              "vals": [
+                "10",
+                "",
+                "",
+                "45"
+              ],
+              "note": {
+                "en": "1hole 1plant & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "131",
+              "dist": "20-25cm",
+              "vals": [
+                "10",
+                "30",
+                "",
+                "15"
+              ],
+              "note": {
+                "en": "1hole 1plant & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "141",
+              "dist": "20-25cm",
+              "vals": [
+                "10",
+                "10",
+                "",
+                "25"
+              ],
+              "note": {
+                "en": "1hole 1plant & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "151",
+              "dist": "20-25cm",
+              "vals": [
+                "",
+                "",
+                "55",
+                ""
+              ],
+              "note": {
+                "en": "1hole 1plant & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "161",
+              "dist": "20-25cm",
+              "vals": [
+                "10",
+                "30",
+                "",
+                "15"
+              ],
+              "note": {
+                "en": "1hole 1plant & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "171",
+              "dist": "20-25cm",
+              "vals": [
+                "10",
+                "10",
+                "",
+                "25"
+              ],
+              "note": {
+                "en": "Apply 1 hole & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "181",
+              "dist": "20-25cm",
+              "vals": [
+                "20",
+                "",
+                "",
+                "35"
+              ],
+              "note": {
+                "en": "Apply 1 hole & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "191",
+              "dist": "20-25cm",
+              "vals": [
+                "20",
+                "",
+                "",
+                "35"
+              ],
+              "note": {
+                "en": "Apply 1 hole & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            }
+          ]
+        },
+        "fertilizerStep2": {
+          "en": "<b>Method 2:</b> Fertigation (Drip Irrigation System). Most farmers use water-soluble fertilizers with minimal residue to avoid clogging the drip emitters. Below is the schedule, quantity, and fertilizer types required for one full crop cycle of 'Romyol' Bitter gourd per hectare:",
+          "km": "<b>របៀបទី២៖</b> ជាការដាក់ជីទៅតាមប្រព័ន្ឋដំណាក់ទឹក គឺភាគច្រើន កសិករត្រូវប្រើជី ប្រភេទដែលរលាយ ក្នុងទឹក និងមិនសូវមានកាកសំណល់ដែលរំខានដល់ រន្ឋដំណក់ទឹក។ នេះជាតារាង អាយុកាល ចំនួន និងប្រភេទជី ដែលត្រូវប្រើក្នុង១វដ្តជីវិតរបស់ដំណាំម្រះពូជរំយោល សម្រាប់ផ្ទៃដី ១ហិតា៖"
+        },
+        "fertilizerTable2": {
+          "headers": [
+            {
+              "label": {
+                "en": "Days after transplanting for fertilizer application",
+                "km": "ចំនួនថ្ងៃត្រូវដាក់ជីបន្ទាប់ពីស្ទូងកូន"
+              },
+              "spec": null
+            },
+            {
+              "label": {
+                "en": "Growth Stage",
+                "km": "វគ្គនៃដំណាំ"
+              },
+              "spec": null
+            },
+            {
+              "label": {
+                "en": "Urea",
+                "km": "Urea"
+              },
+              "spec": "46-0-0"
+            },
+            {
+              "label": {
+                "en": "MAP",
+                "km": "MAP"
+              },
+              "spec": "12-61-0"
+            },
+            {
+              "label": {
+                "en": "KCl",
+                "km": "KCl"
+              },
+              "spec": "0-0-60"
+            },
+            {
+              "label": {
+                "en": "15-15-15+TE",
+                "km": "15-15-15+TE"
+              },
+              "spec": "15-15-15+TE"
+            },
+            {
+              "label": {
+                "en": "CaNO3",
+                "km": "CaNO3"
+              },
+              "spec": "15-0-0+\n24% CaO"
+            },
+            {
+              "label": {
+                "en": "MgSO4",
+                "km": "MgSO4"
+              },
+              "spec": "11-0-0+\n15.4%MgO"
+            },
+            {
+              "label": {
+                "en": "Humic Acid",
+                "km": "Humic Acide"
+              },
+              "spec": "0-0-15+ 40%\nHumic Acide"
+            }
+          ],
+          "sections": [
+            {
+              "stage": {
+                "en": "I. Seedling Stage\n(16 Days)",
+                "km": "I. វគ្គកូនសំណាប\n(១៦ថ្ងៃ)"
+              },
+              "bgColor": "#ffffff",
+              "rows": [
+                [
+                  "7",
+                  "",
+                  "4.03",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "1.00",
+                  "0.00",
+                  "1.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "4.03",
+                  "2.37",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "4.50",
+                  "4.03",
+                  "0.00",
+                  "5.00",
+                  "0.00",
+                  "1.01",
+                  "1.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "4.50",
+                  "4.27",
+                  "0.00",
+                  "6.52",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ]
+              ]
+            },
+            {
+              "stage": {
+                "en": "II. Vegetative Growth Stage\n(32 days)",
+                "km": "II. វគ្គលូតលាស់\n(៣២ថ្ងៃ)"
+              },
+              "bgColor": "#c6efce",
+              "rows": [
+                [
+                  "4",
+                  "",
+                  "4.50",
+                  "3.79",
+                  "2.49",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "4.27",
+                  "0.00",
+                  "6.73",
+                  "1.00",
+                  "1.01",
+                  "1.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "4.27",
+                  "3.56",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "5.69",
+                  "3.56",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ]
+              ]
+            },
+            {
+              "stage": {
+                "en": "III. Flowering, Fruiting,\n and Harvest Management Stage(76 days)",
+                "km": "III. វគ្គថែទាំផ្កាផ្លែ\nនិង ប្រមូលផល\n(៧៦ថ្ងៃ)"
+              },
+              "bgColor": "#ffffff",
+              "rows": [
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "6.54",
+                  "6.51",
+                  "8.00",
+                  "1.00",
+                  "1.50",
+                  "1.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "6.54",
+                  "5.33",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "0.00",
+                  "0.00",
+                  "5.33",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "0.00",
+                  "0.00",
+                  "8.00",
+                  "1.00",
+                  "1.50",
+                  "0.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "0.00",
+                  "5.33",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "0.00",
+                  "5.33",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "0.00",
+                  "0.00",
+                  "8.00",
+                  "1.00",
+                  "1.50",
+                  "1.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "7.59",
+                  "5.33",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "0.00",
+                  "5.33",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "0.00",
+                  "5.33",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "0.00",
+                  "0.00",
+                  "8.00",
+                  "1.00",
+                  "2.00",
+                  "1.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "0.00",
+                  "8.00",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "0.00",
+                  "5.33",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "0.00",
+                  "5.33",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "7.59",
+                  "5.33",
+                  "1.00",
+                  "0.00",
+                  "2.00",
+                  "1.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "0.00",
+                  "5.33",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "0.00",
+                  "8.00",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "0.00",
+                  "5.33",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "0.00",
+                  "5.33",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ]
+              ]
+            }
+          ],
+          "totals": {
+            "label": {
+              "en": "Total Amount (Kg)",
+              "km": "សរុបគិតជា គីឡូក្រាម(Kg)"
+            },
+            "values": [
+              "142.65",
+              "56.94",
+              "106.77",
+              "50.26",
+              "7.00",
+              "10.51",
+              "8.00"
+            ]
+          }
+        },
+        "pestIntro": {
+          "en": "For F1, the Ramyol variety is a variety that is resistant to diseases, viruses, and the climate of our country. In the past, through climate change, it has been seen that insects have damaged crops a lot, especially in the dry season for the Ramyol variety. There are types of insects: sucking insects such as whiteflies, blue spider mites, thrips, lice, worms: fruit borers, caterpillars, leafhoppers, caterpillars, caterpillars, and fruit flies. This species can cause the crop to lose its yield completely if no protective measures are taken. It spreads rapidly whenever the weather is hot and dry or when there is no rain for 5 to 15 consecutive days.",
+          "km": "ចំពោះម្រះF1 ពូជ រំយោល ជាប្រភេទពូជដែលធន់នឹង ជម្ងឺ វីរុស ធន់នឹងអាកាសធាតុស្រុកខ្មែរយើងណាស់។ កន្លងមកតាមរយៈការប្រែប្រួលអាកាសធាតុឃើញថា សត្វល្អិតបានបំផ្លាញដំណាំខ្លាំងណាស់ជាពិសេសរដូវប្រាំងសម្រាប់ពូជរំយោល មានប្រភេទសត្វល្អិតដូចជា៖ ពពួកសត្វជញ្ជក់មានដូចជា រុយស, មមាចខៀវ,ទ្រីប, ចៃពពួកដង្កូវ៖ ដង្កូវចោះផ្លែ, ដង្កូវហ្វូង, ដង្កូវមូស្លឹក,កូនដង្កូវ អណ្តើកមានិងពពួកស្រាំង ឬរុយចោះផ្លែ។ ពពួកនេះ វាអាចធ្វើឲ្យដំណាំបាត់បង់ទិន្នផលទាំងស្រុងបាន ប្រសិនបើមិនមានវិធានការការពារ។ វារីករាលដាលខ្លាំង នៅពេលណា ដែលមានអាកាសធាតុក្តៅ ហើយស្ងួត ឬពេលមិនមានភ្លៀង រយៈពេលចាប់ពី៥ទៅ១៥ថ្ងៃជាប់គ្នា។"
+        },
+        "preventionMethods": {
+          "en": [
+            "Farmers must regularly inspect the farm; if these pests are found, they should be eliminated as quickly as possible through:",
+            "Proper pruning of branches and leaves.",
+            "Using mini-sprinklers over the entire trellis to wash away insect eggs during the dry season.",
+            "Using smoke machines (thermal foggers) mixed with pesticides."
+          ],
+          "km": [
+            "កសិករត្រូវតែត្រួតពិនិត្យចំការជាប្រចាំ ប្រសិនបើឃើញសត្វល្អិតទាំងនេះត្រូវកំចាត់ឲ្យទាន់ពេលវេលា តាមតែអាចធ្វើទៅបាន តាមរយៈ៖",
+            "ការតែងមែក និងស្លឹកឲ្យបានត្រឹមត្រូវ",
+            "ការប្រើប្រាស់ទឹកសាចលើស្លឹក (ប្រព័ន្ឋmini- Sprinkler ពីលើទ្រើងទាំងមូលដើម្បីកំចាត់ពងសត្វ នៅរដូវប្រាំង",
+            "ការប្រើម៉ាស៊ីនបាញ់ផ្សែងលាយថ្នាំសម្លាប់សត្វល្អិត"
+          ]
+        },
+        "eliminationMethods": {
+          "en": [
+            "Consult specialists as some pests have developed immunity."
+          ],
+          "km": [
+            "កសិករត្រូវតែមានការយល់ដឹង ឬប្រឹក្សារជាមួយមន្ត្រីជំនាញលើថ្នាំកំចាត់សត្វល្អិត ឲ្យបានត្រឹមត្រូវ មុនពេលសម្រេចចិត្តប្រើប្រាស់។ ដោយសារតែកន្លងមក ថ្នាំកំចាត់សត្វល្អិតមួយចំនួន បានស៊ាំទៅនឹងតំបន់នោះរួចទៅហើយ នៅពេលកសិករទិញថ្នាំកំចាត់សត្វល្អិតទាំងនោះទៅប្រើប្រាស់ បែជាមិនមានប្រសិទ្ឋភាព នាំឲ្យកសិករខាតបង់ដូចជា លុយ កំលាំងពលកម្ម ពេលវេលា និងបាត់បង់ទិន្នផលទៀតផង។ "
+          ]
+        },
+        "pestTable": {
+          "en": {
+            "title": "The following are highly effective pesticide active ingredients:",
+            "headers": [
+              "Active Ingredient",
+              "Sucking Pests",
+              "Caterpillars (Leaf eaters)",
+              "Caterpillars (Borers)",
+              "Leaf Cutters/Rollers",
+              "Fruit Flies"
+            ],
+            "rows": [
+              [
+                "Pymetrozine 600g/kg + Nitenpyram 200g/kg",
+                "***",
+                "*",
+                "**",
+                "**",
+                "***"
+              ],
+              [
+                "Carbaryl 85% WP",
+                "***",
+                "**",
+                "*",
+                "**",
+                "***"
+              ],
+              [
+                "Thiamethoxam",
+                "**",
+                "*",
+                "*",
+                "**",
+                "***"
+              ],
+              [
+                "Imidacloprid",
+                "***",
+                "*",
+                "*",
+                "**",
+                "***"
+              ],
+              [
+                "Permethrin 500g/L",
+                "*",
+                "*",
+                "***",
+                "*",
+                "*"
+              ],
+              [
+                "Indoxacarb",
+                "*",
+                "*",
+                "**",
+                "**",
+                "***"
+              ],
+              [
+                "Chlorantraniliprole 10% + Chlorfenapyr 20% SC",
+                "**",
+                "***",
+                "*",
+                "***",
+                "***"
+              ],
+              [
+                "Flubendiamide",
+                "**",
+                "*",
+                "*",
+                "**",
+                "***"
+              ]
+            ]
+          },
+          "km": {
+            "title": "ខាងក្រោមនេះជាធាតុសកម្មថ្នាំកំចាត់សត្វល្អិត ដែលមានប្រសិទ្ធភាពខ្ពស់៖",
+            "headers": [
+              "ឈ្មោះធាតុសកម្ម",
+              "ពួកសត្វល្អិត ជញ្ជក់",
+              "ពួកដង្កូវ ស៊ីស្លឹក",
+              "ពួកដង្កូវ ចោះផ្លែ",
+              "ពួកកាត់រម្កល់ ស្លឹក",
+              "រុយផ្លែ"
+            ],
+            "rows": [
+              [
+                "Pymetrozine 600g/kg + Nitenpyram 200g/kg",
+                "***",
+                "*",
+                "**",
+                "**",
+                "***"
+              ],
+              [
+                "Carbaryl 85% WP",
+                "***",
+                "**",
+                "*",
+                "**",
+                "***"
+              ],
+              [
+                "Thiamethoxam",
+                "**",
+                "*",
+                "*",
+                "**",
+                "***"
+              ],
+              [
+                "Imidacloprid",
+                "***",
+                "*",
+                "*",
+                "**",
+                "***"
+              ],
+              [
+                "Permethrin 500g/L",
+                "*",
+                "*",
+                "***",
+                "*",
+                "*"
+              ],
+              [
+                "Indoxacarb",
+                "*",
+                "*",
+                "**",
+                "**",
+                "***"
+              ],
+              [
+                "Chlorantraniliprole 10% + Chlorfenapyr 20% SC",
+                "**",
+                "***",
+                "*",
+                "***",
+                "***"
+              ],
+              [
+                "Flubendiamide",
+                "**",
+                "*",
+                "*",
+                "**",
+                "***"
+              ]
+            ]
+          }
+        },
+        "pestLegend": {
+          "en": "Note: * = Low effectiveness, ** = Medium effectiveness, *** = High effectiveness",
+          "km": "សំគាល់៖ * = ងាប់តិច, ** = ងាប់មធ្យម, *** = ងាប់ខ្លាំង"
+        },
+        "pestImages": [
+          "image/bed/pest1.png",
+          "image/bed/pest2.jpg",
+          "image/bed/pest3.png",
+          "image/bed/pest4.png",
+          "image/bed/pest5.png",
+          "image/bed/pest6.jpg",
+          "image/bed/pest7.jpg",
+          "image/bed/pest8.jpg"
+        ],
+        "pestNames": {
+          "en": [
+            "Thrips",
+            "Whitefly",
+            "Leafhopper",
+            "Aphids",
+            "Fruit Borer",
+            "Leaf Roller",
+            "Tortoise Beetle",
+            "Fruit Fly"
+          ],
+          "km": [
+            "ទ្រីប",
+            "រុយស",
+            "មមាចខៀវ",
+            "ពពួកចៃ",
+            "ដង្កូវចោះផ្លែ",
+            "ដង្កូវរមូស្លឹក",
+            "ដង្កូវអណ្តើកមាស",
+            "ស្រាងទិចផ្លែ"
+          ]
+        },
+        "diseaseIntro": {
+          "en": "For bitter gourd crops, farmers must frequently inspect their fields when the seedlings are small, specifically from 15 days old onwards, as this is the stage when diseases begin to infect the plants. Disease outbreaks can be caused by insect transmission, soil-borne fungi, or seed factors (such as selecting improper varieties or using seeds already infected with disease). Common diseases affecting bitter gourd include: Damping off, Powdery mildew, Downy mildew, Anthracnose, Virus, and Bacterial wilt.",
+          "km": "ចំពោះដំណាំម្រះ កសិករត្រូវឧស្សាហ៍ត្រួតពិនិត្យមើលចំការនៅអំឡុងពេលកូនម្រះនៅតូច ដែលមានអាយុចាប់ពី ១៥ថ្ងៃឡើង ព្រោះជាដំណាក់កាលជំងឺចាប់ផ្តើមឆ្លងចូលដំណាំ ហើយការកើតមានជំងឺអាចបណ្តាលមកពីការចម្លងរបស់សត្វល្អិត, ពពួកផ្សិតនៅក្នុងដី, កត្តាពូជ(ការជ្រើសរើសពូជមិនបានត្រឹមត្រូវ រឺក៏ការទុកពូជដែលមានជំងឺស្រាប់)។ ប្រភេទជំងឺដែលឧស្សាហ៍កើតលើដំណាំម្រះមានដូចជា៖ ជំងឺរលួយគល់កូន(Damping off)ជំងឺផ្សិតម្សៅ(powdery mildew), ជំងឺអ៊ុចលឿងស្លឹក(downy mildew), ជំងឺអ៊ុចភ្នែកកង្កែប(anthracnose), វីរុស(Virus), ជំងឺស្វិតស្រពោនស្រស់(bacterial wilt)។"
+        },
+        "diseaseImages": [
+          "image/bed/disease1.png",
+          "image/bed/disease2.jpg",
+          "image/bed/disease3.png",
+          "image/bed/disease4.jpg",
+          "image/bed/disease5.png"
+        ],
+        "diseaseNames": {
+          "en": [
+            "Damping off",
+            "Powdery Mildew",
+            "Anthracnose",
+            "Virus Mosaic",
+            "Downy Mildew"
+          ],
+          "km": [
+            "ជំងឺ រលួយគល់កូន",
+            "ជំងឺផ្សិតម្សៅ",
+            "ជំងឺអ៊ុចភ្នែកកង្កែប",
+            "វីរុស mosaic",
+            "ជំងឺអ៊ុចលឿងស្លឹក"
+          ]
+        },
+        "diseasePrevention": {
+          "en": [
+            "7.2.1. Plant Disease Prevention Methods:",
+            "Clean the soil and remove old roots/debris.",
+            "Practice crop rotation.",
+            "Add compost or organic fertilizers.",
+            "Remove and destroy infected plants/leaves.",
+            "Clean agricultural tools regularly."
+          ],
+          "km": [
+            "ការពារជំងឺរុក្ខជាតិគឺសំខាន់ណាស់ ដើម្បីរក្សាផលដំណាំឲ្យមានគុណភាពល្អ និងបង្កើនទិន្នផល។ ខាងក្រោមនេះជាវិធីសាស្រ្តសំខាន់ៗ៖",
+            "រៀបចំដីឲ្យល្អកាប់ឫស និងសំណល់រុក្ខជាតិចាស់ៗចេញ",
+            "បន្ថែមជីកំប៉ុស ឬជីសរីរាង្គ",
+            "ប្តូរដំណាំ (crop rotation) ដើម្បីកាត់បន្ថយមេរោគនៅក្នុងដី",
+            "សម្អាត និងកម្ចាត់រុក្ខជាតិឆ្លងជំងឺ",
+            "កាត់បំបាត់ស្លឹក ឬដើមដែលមានជំងឺ",
+            "កុំទុកសំណល់ជំងឺនៅលើវាល",
+            "សម្អាតឧបករណ៍កសិកម្មជាប្រចាំ",
+            "ប្រើថ្នាំការពាររុក្ខជាតិដោយប្រុងប្រយ័ត្ន",
+            "ប្រើថ្នាំតាមការណែនាំបច្ចេកទេស",
+            "ពាក់សម្ភារៈការពារ (ម៉ាស់ ស្រោមដៃ)"
+          ]
+        },
+        "diseasePreventionImage": "image/bed/triels1.png",
+        "diseasetable": {
+          "en": "Table: Active Ingredients for Crop Disease Prevention and Treatment",
+          "km": "ខាងក្រោមនេះជាតារាងធាតុសកម្មថ្នាំការពារ និងព្យាបាលជំងឺ៖"
+        },
+        "diseaseTreatmentTable": {
+          "en": {
+            "headers": [
+              "Active Ingredient",
+              "Type",
+              "Disease Targeted"
+            ],
+            "rows": [
+              [
+                "Metalaxyl",
+                "Treatment",
+                "Downy mildew"
+              ],
+              [
+                "Azoxystrobin",
+                "Treatment",
+                "Powdery mildew"
+              ],
+              [
+                "Azoxystrobin",
+                "Treatment",
+                "Anthracnose"
+              ],
+              [
+                "Chlorothalonil",
+                "Prevention",
+                "-"
+              ],
+              [
+                "Mancozeb",
+                "Prevention",
+                "-"
+              ]
+            ]
+          },
+          "km": {
+            "headers": [
+              "ឈ្មោះធាតុសកម្ម",
+              "របៀបកម្ចាត់",
+              "ប្រភេទជំងឺ"
+            ],
+            "rows": [
+              [
+                "Metalaxyl",
+                "ព្យាបាល",
+                "ជំងឺអ៊ុចលឿងស្លឹក(Downy mildew)"
+              ],
+              [
+                "Azoxystrobin",
+                "ព្យាបាល",
+                "ជំងឺផ្សិតម្សៅ(Powdery Mildew)"
+              ],
+              [
+                "Azoxystrobin",
+                "ព្យាបាល",
+                "ជំងឺអ៊ុចភ្នែកកង្កែប(anthracnose)"
+              ],
+              [
+                "Chlorothalonil",
+                "ការពារ",
+                "-"
+              ],
+              [
+                "Mancozeb",
+                "ការពារ",
+                "-"
+              ]
+            ]
+          }
+        },
+        "diseaseNote": {
+          "en": "Regarding the use of agricultural chemicals, farmers should consult with agricultural officers or technical experts for proper instructions before application.",
+          "km": "ចំពោះការប្រើប្រាស់ថ្នាំកសិកម្ម កសិករត្រូវសាក់សួរពត៍មាននៃការប្រើប្រាស់ពី មន្ត្រីកសិកម្ម និងបុគ្គលិកជំនាញ់ មុនធ្វើការប្រើប្រាស់។"
+        }
+      },
+      {
+        "src": "image/bitter/Picture20.png",
+        "title": {
+          "en": "Bitter gourd F1 Kbalkat variety",
+          "km": "ម្រះ F1 ពូជ ក្បាលកាត់"
+        },
+        "info": {
+          "en": [
+            "F1 Kbal Kat bitter gourd is a premium hybrid favored for its high yield and market shape. It features large, heavy fruits and robust growth.",
+            "Plant Characteristics: Strong and vigorous growth with robust branching; highly resistant to weather variations and diseases.",
+            "Maturity/Harvest: 45 to 50 days after direct sowing.",
+            "Fruit Dimensions: Length: 35–40 cm; Diameter: 5.7–6 cm.",
+            "Fruit Characteristics: Light green skin with dense, recessed ridges divided by straight, prominent ribs. The fruit has thick skin, good weight, and a tapered (pointed) head and tail. Suitable for year-round cultivation.",
+            "Yield/Weight: 0.35 to 0.65 kg per fruit."
+          ],
+          "km": [
+            "ម្រះ F1 ក្បាលកាត់ គឺជាពូជកូនកាត់គុណភាពខ្ពស់ ដែលផ្ដល់ទិន្នផលខ្ពស់ និងមានរូបរាងតម្រូវតាមទីផ្សារ។ វាមានផ្លែធំ ធ្ងន់ និងដើមលូតលាស់ខ្លាំង។",
+            "ដើមរឹងមាំ មានកំលាំង មែកច្រើន ធន់អាកាសធាតុ ធន់នឹងជម្ងឺ ",
+            "អាយុប្រមូលផល ៖ ៤៥ ទៅ៥០ ថ្ងៃបន្ទាប់ពីដាំផ្ទាល់",
+            "ទំហំផ្លែ ៖ ប្រវែ ៣៥-៤០ សង់ទីម៉ែត្រ និងមុខកាត់ផ្លែ ៖ ៦ ទៅ ៥.៧សង់ទីម៉ែត្រ",
+            "លក្ខណៈផ្លែ៖ បៃតងខ្ចី ក្រលាញឹកលឹប និងខ័ណ្ឌដោយទ្រនង់លានត្រង់, សម្បកផ្លែក្រាស ផ្លែមានទំងន់ល្អ ក្បាលកាត់ និងកន្ទុយខ្ពស់ស្រួច អាចដាំ១ឆ្នាំពេញ",
+            "ទិន្នផល ៖ ០.៣៥ ទៅ ០.៦៥គីឡូក្រាម/ផ្លែ"
+          ]
+        },
+        "weight": "20 grams/pkt",
+        "views": 1156,
+        "pdfUrl": "data/pdf/ម្រះពូជក្បាលកាត់_V002.pdf",
+        "gallery": [
+          {
+            "src": "image/bitter/Picture20.png",
+            "label": {
+              "en": "Ear",
+              "km": "ផ្លែ"
+            }
+          },
+          {
+            "src": "image/bitter/bitter7.jpg",
+            "label": {
+              "en": "Kernels",
+              "km": "គ្រាប់"
+            }
+          },
+          {
+            "src": "image/bitter/bitter6.jpg",
+            "label": {
+              "en": "Field",
+              "km": "វាល"
+            }
+          }
+        ],
+        "sectionTitles": {
+          "en": {
+            "section1": "1. Features (Crop Characteristics)",
+            "section2": "2. Land Preparation",
+            "section3": "3. Raising Beds for Planting",
+            "section4": "4. Nursery of Romyoul Seedlings",
+            "section5": "5. Transplanting Seedlings",
+            "section6": "6. Maintenance",
+            "section7": "7. Pest and Disease Management",
+            "section8": "8. Harvest",
+            "section9": "9. Summary"
+          },
+          "km": {
+            "section1": "១. លក្ខណៈពូជ",
+            "section2": "២. ការរៀបចំដី",
+            "section3": "៣. ការលើករងដាំ",
+            "section4": "៤. ការបណ្តុះកូនម្រះក្បាលកាត់",
+            "section5": "៥. ការស្ទូងកូន",
+            "section6": "៦. ការថែទាំ",
+            "section7": "៧. ការគ្រប់គ្រងសត្វល្អិត និងជំងឺ",
+            "section8": "៨. ការប្រមូលផល",
+            "section9": "៩. សេចក្តីសង្ខេប"
+          }
+        },
+        "subtitleTitles": {
+          "en": {
+            "pestManagement": "7.1. Pest Management",
+            "preventionMethods": "7.1.1. Prevention Methods",
+            "eliminationMethods": "7.1.2. Elimination Methods",
+            "diseaseManagement": "7.2. Disease Management",
+            "diseasePrevention": "7.2.1. Plant Disease Prevention Methods",
+            "waterManagement": "6.1. Water Management",
+            "fertilizerManagement": "6.2. Fertilizer Management",
+            "directSeeding": "4.1. Direct Seeding",
+            "seedlingNursing": "4.2. Seedling Nursing"
+          },
+          "km": {
+            "pestManagement": "៧.១. ការគ្រប់គ្រងសត្វល្អិត",
+            "preventionMethods": "៧.១.១. វិធីសាស្រ្តការពារ",
+            "eliminationMethods": "៧.១.២. វិធីសាស្រ្តកំចាត់",
+            "diseaseManagement": "៧.២. ការគ្រប់គ្រងជំងឺ",
+            "diseasePrevention": "៧.២.១. វិធីសាស្រ្តការពារជំងឺ",
+            "waterManagement": "៦.១. ការគ្រប់គ្រងទឹក",
+            "fertilizerManagement": "៦.២. ការគ្រប់គ្រងជី",
+            "directSeeding": "៤.១. ការដាំដោយផ្ទាល់",
+            "seedlingNursing": "៤.២. ការបណ្តុះកូន"
+          }
+        },
+        "features": {
+          "en": [
+            "Plant Characteristics: Strong and vigorous growth with robust branching; highly resistant to weather variations and diseases.",
+            "Maturity/Harvest: 45 to 50 days after direct sowing.",
+            "Fruit Dimensions: Length: 35–40 cm; Diameter: 5.7–6 cm.",
+            "Fruit Characteristics: Light green skin with dense, recessed ridges divided by straight, prominent ribs. The fruit has thick skin, good weight, and a tapered (pointed) head and tail. Suitable for year-round cultivation.",
+            "Yield/Weight: 0.35 to 0.65 kg per fruit."
+          ],
+          "km": [
+            "ដើមរឹងមាំ មានកំលាំង មែកច្រើន ធន់អាកាសធាតុ ធន់នឹងជម្ងឺ ",
+            "អាយុប្រមូលផល ៖ ៤៥ ទៅ៥០ ថ្ងៃបន្ទាប់ពីដាំផ្ទាល់",
+            "ទំហំផ្លែ ៖ ប្រវែ ៣៥-៤០ សង់ទីម៉ែត្រ និងមុខកាត់ផ្លែ ៖ ៦ ទៅ ៥.៧សង់ទីម៉ែត្រ",
+            "លក្ខណៈផ្លែ៖ បៃតងខ្ចី ក្រលាញឹកលឹប និងខ័ណ្ឌដោយទ្រនង់លានត្រង់, សម្បកផ្លែក្រាស ផ្លែមានទំងន់ល្អ ក្បាលកាត់ និងកន្ទុយខ្ពស់ស្រួច អាចដាំ១ឆ្នាំពេញ",
+            "ទិន្នផល ៖ ០.៣៥ ទៅ ០.៦៥គីឡូក្រាម/ផ្លែ"
+          ]
+        },
+        "featuresImage": "image/packet/Bitter_melon_F1_kbalkat_variety_package.png",
+        "featuresTitle": {
+          "en": "Image of Kbalkat Bitter Gourd seed packet",
+          "km": "រូបភាពកញ្ចប់ម្រះពូជក្បាលកាត់"
+        },
+        "landPreparation": {
+          "en": [
+            "Cleaning: Clean the farm land and remove all weeds completely.",
+            "Soil Treatment: Plow and rake the soil until fine, then sun-dry it for 10 to 15 days.",
+            "Plowing Depth: Plow (using buffalo or mechanical tillers) to a depth of 15 to 20 cm."
+          ],
+          "km": [
+            "សំអាតដីចំការ និង រើសស្មៅចេញឱ្យអស់។",
+            "ភ្ជួរ រាស់ដីឲ្យបានម៉ដ្ឋល្អ ហើយហាលឱ្យបានពី១០ទៅ១៥ថ្ងៃ។",
+            "ភ្ជួរដី (គោក្របី ឬ គោយន្ត) ជម្រៅពី ១៥ ទៅ ២០ សង់ទីម៉ែត្រ។"
+          ]
+        },
+        "bedPreparation": {
+          "en": [
+            "Bed Design: Double beds with a width of 1 meter.",
+            "Canals: A 0.6-meter drainage canal between the beds.",
+            "Bed Spacing: 3 meters between each set of double beds.",
+            "Bed Height: 20–30 cm in the dry season and 30–50 cm in the rainy season.",
+            "Plant Spacing: 0.4 to 0.5 meters between individual plants.",
+            "Basal Fertilizer: Apply 1 to 2 kg of dry animal manure or compost per square meter as a base.",
+            "Mulching: Essential for reducing weed growth and preventing water and fertilizer loss.",
+            "Support: Sturdy trellises are mandatory for this crop.",
+            "Irrigation: Using an irrigation system helps reduce labor and costs."
+          ],
+          "km": [
+            "ទទឹងរង៖ ជារងភ្លោះ ដែលមានទទឹងរង ១ ម៉ែត្រ ចន្លោះប្រឡាយបង្ហូរទឹក ០,៦ម៉ែត្រ និង បណ្តោយទៅតាមលទ្ធភាពដោយផ្អែកលើប្រព័ន្ឋស្រោចស្រព្វ។",
+            "គម្លាតពីរងភ្លោះនិមួយៗទៅមួយ៖ ៣ម៉ែត្រ",
+            "កំពស់រង៖ នៅរដូវប្រាំង ពី២០ ទៅ៣០សង់ទីម៉ែត្រ និង នៅរដូវវស្សា ពី៣០ ទៅ ៥០ សង់ទីម៉ែត្រ",
+            "ចន្លោះគុម្ព៖ ចន្លោះពីគុម្ព១ ទៅ ១ គឺ 0,៤ ទៅ ០,៥ម៉ែត្រ ",
+            "ដាក់លាមកសត្វស្ងួត ឬ ជីកំប៉ុស្តិ៍៖ បរិមាណពី ១ ទៅ ២គីឡូក្រាម ក្នុងផ្ទៃដីរង១ ម៉ែត្រការ៉េ ទ្រាប់បាត ដោយផ្អែកលើគុណភាពដី។",
+            "ប្រភេទរង៖ រងភ្លោះ ដោយមានចង្អូទឹកកណ្តាល គម្លាតពីរងមួយទៅមួយ ចំងាយ ៣ម៉ែត្រ "
+          ]
+        },
+        "bedImages": [
+          "image/bed/bed_bitter_melon_romyul.png",
+          "image/bed/bed_bitter_melon_romyul1.png"
+        ],
+        "bedtitle": {
+          "en": "Figure 1: Raising beds for Kbalkat Bitter Gourd",
+          "km": "រូបភាពទី១៖ ការលើករងម្រះ ក្បាលកាត់"
+        },
+        "bedPreparationNotes": {
+          "en": [
+            "✓ Mulching is key to reducing weeds, preventing water and fertilizer loss.",
+            "✓ This crop requires sturdy trellises.",
+            "✓ Using an irrigation system helps reduce labor and costs."
+          ],
+          "km": [
+            "✓ ការប្រើប្រាស់ស្មៅគ្របដីជួយកាត់បន្ថយស្មៅដុះ ទប់នឹងការខាតបង់ទឹក និងជី។",
+            "✓ ដំណាំនេះត្រូវប្រើប្រាស់ទ្រើងជាចាំបាច់។",
+            "✓ ការប្រើប្រាស់ប្រព័ន្ឋទឹកជួយកាត់បន្ថយកំលាំងពលកម្ម និងកាត់បន្ថយថ្លៃដើម។"
+          ]
+        },
+        "bedPreparationFooter": {
+          "en": "For bitter gourd, farmers must prepare beds before seedling placement.",
+          "km": "ចំពោះដំណាំម្រះ កសិករត្រូវតែលើករងឲ្យរួចរាល់មុនពេល ដាក់បណ្តុះកូន។"
+        },
+        "nursery": {
+          "en": "To achieve high efficiency and target yields, farmers can use two planting methods:",
+          "km": "ដើម្បីឲ្យកសិករដាំម្រះប្រមូលផលប្រកបដោយប្រសិទ្ឋភាពខ្ពស់ និងទទួលបានទិន្នផលតាមផែនការ នោះកសិករមានវិធីដាំ ជា២បែបគឺ៖"
+        },
+        "directSeeding": {
+          "en": [
+            "For the F1 Kbalkat bitter gourd seeds from KSSeed Co.,Ltd. farmers can practice direct sowing, provided the farm has a proper irrigation system and can maintain adequate moisture control.Seeds will begin to sprout 3 days after planting, and by day 7, they will develop their first two leaves. When sowing directly, farmers must monitor the field regularly; typically, 3–5% of seeds may fail to grow or be lost due to planting too deep, excessive water/waterlogging, or pest damage. Therefore, it is recommended that farmers prepare an additional 10% of seedlings in trays for replanting (gap filling)."
+          ],
+          "km": [
+            "ចំពោះគ្រាប់ម្រះ F1 ពូជ ក្បាលកាត់ របស់ក្រុមហ៊ុន ខេ អេស ស៊ីដ ឯ.ក កសិករអាចយកគ្រាប់ដាំដោយផ្ទាល់បាន លុះត្រាតែចំការមានប្រព័ន្ឋទឹក និងអាចគ្រប់គ្រងសំណើមគ្រប់គ្រាន់។ បន្ទាប់ពីដាំបានរយៈពេល ៣ថ្ងៃបន្ទាប់មកគ្រាប់ពូជនឹងចេញពន្លក នឹងថ្ងៃទី៧ចេញស្លឹក២។ ការដាំដោយគ្រាប់ផ្ទាល់ គឺកសិករត្រូវពិនិត្យឲ្យបានទៀតទាត់ មានគ្រាប់ចំនួន ៣-៥% នឹងបាត់បង់ ឬមិនដុះ មកពីវីធីកប់គ្រាប់ជ្រៅពេក ឬទឹកជោគជាំពេក ឬមានកត្តាសត្វបំផ្លាញផ្សេងៗ ដូច្នេះកសិករត្រូវបណ្តុះត្រៀមជួសចំនួន ១០%។ "
+          ]
+        },
+        "seedlingNursing": {
+          "en": [
+            "Before nursing bitter gourd, farmers must construct a proper nursery based on the total seedling count. The structure should be 0.8 meters above the ground, enclosed with fine mesh to protect against insects (preventing viruses) and rain, while maintaining proper temperature. On average, 11,000 to 16,000 seedlings are required per hectare, depending on plant and row spacing.",
+            "Farmers must plan the nursery size and soil mixture requirements according to the number of seedling trays or nursery pouches being used.",
+            "The 'Kbalkat' variety will develop two leaves after direct sowing if moisture and temperature are optimal (30°C to 35°C). After 4 to 6 days, farmers must harden the seedlings (reduce water and provide direct sunlight for 2 days) before transplanting. By day 7 or 8, they are ready for the field."
+          ],
+          "km": [
+            "មុនពេលបណ្តុះកូនម្រះ កសិករត្រូវតែធ្វើរោងបណ្តុះឲ្យបានត្រឹមត្រូវ គឺគិតទៅទំហំចំនួនកូនដែលត្រូវដាំ ដោយផ្តោតលើកំពស់រោង ០,៨ម៉ែត្រពីដី ដែលរោងត្រូវប្រើស្បៃសំណាញ់ការពារសត្វព័ទ្ឋជុំវិញ និងមានដំបូលជិតដែលការពារសត្វល្អិត(ការពារកើតវីរុស) ទឹកភ្លៀង និងពិនិត្យកំរិតកំដៅឲ្យត្រឹមត្រូវ។ ជាមធ្យមកូនម្រះ ត្រូវប្រើចំនួនចន្លោះពី ១១០០០ ទៅ១៦០០០កូនក្នុង១ហិចតា អាស្រ័យលើ ចន្លោះគុម្ព និងចន្លោះរង។",
+            "កសិករត្រូវតែគិតពីទំហំរោងបណ្តុះកូន ការលាយល្បាយដីគឺគិតទៅតាមចំនួនថាសបណ្តុះ ឬកន្ទោងបណ្តុះកូន។",
+            "ម្រះពូជក្បាលកាត់ នឹងចេញស្លឹក២ បន្ទាប់ពីបានដាក់ដាំគ្រាប់ដោយផ្ទាល់ក្នុងថាសបណ្តុះ ឬកន្ទោង ប្រសិនបើមានសំណើម និងកំដៅសមរម្យ(៣០ ទៅ៣៥អង្សារ)។ បន្ទាប់ពីបណ្តុះកូន បានរយៈ៤ ទៅ ៦ថ្ងៃ កសិករត្រូវពង្រឹងកូន (បន្ថយទឹក និងដាក់កូនឲ្យត្រូវកំដៅដោយផ្ទាល់រយៈពេល២ថ្ងៃ) មុនពេលយកទៅដាំលើរង។ ថ្ងៃទី៧ ឬថ្ងៃទី៨ អាចយកទៅដាំលើរងបានហើយ។"
+          ]
+        },
+        "nurseryImages": [
+          "image/bed/nursery_bitter_melon.png",
+          "image/bed/planting_bitter_melon.png"
+        ],
+        "nurserytitle": {
+          "en": "Figure 2: Building a bitter gourd seedling nursery.",
+          "km": "រូបភាពទី២៖ ការធ្វើរោងបណ្តុះកូនម្រះក្បាលកាត់។"
+        },
+        "transplanting": {
+          "en": [
+            "When bitter gourd seedlings in trays or pouches are 7 to 8 days old, they must be transplanted to the beds following these steps:",
+            "Trellis Installation: Set up the trellis system first, as the 'Kbalkat' variety grows extremely fast after transplanting.",
+            "Bed Preparation: Irrigate the beds thoroughly the evening before planting so they are ready for the morning.",
+            "Starter Solution: Before transplanting, pour 150ml of a nutrient mix into each hole (Mixture: 50g Urea + 50g Humic Acid dissolved in 20L of water).",
+            "Planting: After placing the seedling, firmly press the soil around the base to ensure proper contact."
+          ],
+          "km": [
+            "ករណីបណ្តុះកូនម្រះក្នុងថាសបណ្តុះ ឬកន្ទោង អាយុបាន ៧ ទៅ៨ថ្ងៃ ត្រូវស្ទូងលើរងកសិករត្រូវអនុវត្តន៍ដោយ៖",
+            "កសិករត្រូវតម្លើង ទ្រើងជាមុនសិន ព្រោះបន្ទាប់ពីស្ទូងកូនហើយ កូនម្រះក្បាលកាត់ លូតលាស់លឿនណាស់",
+            "បញ្ចូលទឹក តាមរងឲ្យជោកជាំពេលពីល្ងាច ដើម្បីដាំពេលព្រឹក",
+            "មុនពេលដាំត្រូវលាយល្បាយជីចាក់ចូលរន្តៅមុនពេលស្ទូងកូនចំនួន ១៥០មីលីត្រ/រណ្តៅ (ជីអ៊ុយរ៉េ ៥០ក្រាម និងហ៊ុយមិកអាស៊ីដ ៥០ក្រាមលាយទឹក ២០លីត្រ)",
+            "បន្ទាប់ពីដាក់ត្រូវសង្កត់ដីជុំវិញកូនឲ្យបានត្រឹមត្រូវ"
+          ]
+        },
+        "transplantingImages": [
+          "image/bed/Fertilizering1.png",
+          "image/bed/Fertilizering2.png",
+          "image/bed/PergolaBitter1.jpg",
+          "image/bed/PergolaBitter2.jpg"
+        ],
+        "trantitle": [
+          {
+            "tran1": {
+              "en": "Figure 3",
+              "km": "រូបភាពទី៣"
+            },
+            "tran1caption": {
+              "en": "Applying fertilizer into holes during 'Kbalkat' bitter gourd transplanting",
+              "km": "ការបញ្ចូលជីក្នុងរណ្តៅ កំឡុងពេលស្ទូងកូនម្រះក្បាលកាត់"
+            },
+            "tran3": {
+              "en": "Figure 5",
+              "km": "រូបភាពទី៥"
+            },
+            "tran3caption": {
+              "en": "The type of trellis system commonly used by farmers for 'Kbalkat' bitter gourd",
+              "km": "ប្រភេទទ្រើងដែលកសិករនិយមដាំម្រះក្បាលកាត់"
+            }
+          }
+        ],
+        "waterManagementTopImages": [
+          "image/bed/irrigationBitter1.jpg",
+          "image/bed/irrigationBitter2.jpg",
+          "image/bed/irrigationBitter3.jpg",
+          "image/bed/irrigationBitter4.jpg"
+        ],
+        "waterManagementLabels": [
+          {
+            "en": "Canal Irrigation System",
+            "km": "ការស្រោចស្រព ដោយប្រព័ន្ធប្រឡាយទឹក"
+          },
+          {
+            "en": "Drip Irrigation System",
+            "km": "ការស្រោចស្រពដោយប្រព័ន្ធដំណក់ទឹក"
+          },
+          {
+            "en": "Sprinkler Irrigation System",
+            "km": "ការស្រោចស្រពដោយប្រព័ន្ធSprinkler"
+          },
+          {
+            "en": "Micro-Sprinkler / Mist System",
+            "km": "ការស្រោចស្រពដោយប្រព័ន្ធសាច"
+          }
+        ],
+        "waterManagementDesc": {
+          "en": "Like any other crop, water is vital for bitter gourd. Over-watering wastes time and money and can kill the plants, while under-watering leads to yield loss and plant death.\n      \n      ❖ Irrigation Methods for Farmers:\n      ➤ <b>Drip Irrigation:</b> Highly efficient. It saves a significant amount of water by targeting the root zone directly. It also allows for fertigation (applying fertilizer through the system), saving time and labor.\n      ➤ <b>Hose/Sprinkler System:</b> Provides moderate water savings. It targets the roots effectively and offers flexibility based on the field's layout.\n      ➤ <b>Canal Irrigation:</b> For medium (over 5 acres) to large scales, this method makes it difficult to control soil moisture. It results in water waste, high costs, and risks to the crop, such as low yields or root rot.",
+          "km": "ដំណាំម្រះ ក៍ដូចដំណាំផ្សេងទៀតដែរ ទឹកគឺជាកត្តាសំខាន់ណាស់សម្រប់ជីវិត។ ប្រសិនបើ ការប្រើប្រាស់ទឹកច្រើនពេកនាំឲ្យខាត់បង់ពេលវេលា ចំណាយច្រើន និងធ្វើឲ្យដំណាំម្រះងាប់ តែបើខ្វះធ្វើបាត់បង់ទិន្នផល និងងាប់ដើមដែរ។ តើកសិករគួរតែគ្រប់គ្រងដោយវិធីណា? គួរតែប្រើពេលណា?\n            ❖ ចំពោះដំណាំម្រះកសិករ អាចគ្រប់គ្រងទឹកដោយប្រើ៖ \n            ➤ <b>ប្រព័ន្ឋដំណក់</b> គឺមានប្រសិទ្ឋភាពខ្ពស់ ក្នុងសន្សំសំចៃទឹកកំរិតបានច្រើន ចំគោលដៅតាមប្រព័ន្ឋឬស និងអាចដាក់ជីតាមប្រព័ន្ឋនេះធ្វើឲ្យកសិករសន្សំពេលវេលា និងកំលាំងពលកម្មបានច្រើន។\n            ➤ <b>ប្រើប្រព័ន្ឋទុយោសាចទឹក</b> គឺក្នុងសន្សំសំចៃទឹកកំរិតមធ្យម ចំគោលដៅតាមប្រព័ន្ឋឬស និងអាចដាក់តាមប្រព័ន្ឋនេះ ធ្វើឲ្យកសិករសន្សំពេលវេលា និងងាយបទបែនតាមសណ្ឋនដី។\n            ➤ <b>បង្ហូរតាមចង្អូរទឹក</b> ចំពោះរកសិករខ្នាតមធ្យម(៥អាឡើង) និងខ្នាតធំ គឺពិបាកក្នុងគ្រប់សំណើមដី ធ្វើខាតបង់បរិមាណទឹក ពេលវេលា ចំណាយច្រើន និងមានហានិភ័យលើដំណាំ(ទិន្នផលទាប ឬងាប់ដើម)។ "
+        },
+        "wateringSchedule": {
+          "en": "❖ Watering Schedule: Proper timing is crucial. Incorrect watering can stress the plants, delaying harvest and reducing yield. Farmers should follow the natural needs of the plant:\n\n      ➤ <b>Dry Season (or dry spells lasting 18+ days):</b> Irrigate starting 20 minutes after sunrise until 10:30 AM, and resume at 3:00 PM.\n      ❖ Timing and Water Volume Requirements:\n      ➤ <b>Volume & Requirements:</b> Water usage depends on soil type. For sandy or sandy-loam soil (requires 20-40 tons of compost/ha or cover crops), use 50-55 m³/ha. For recession water planting, use 15-20 m³/ha based on soil moisture.\n      <b>Note:</b> In this season, farmers should use a Mini-Sprinkler system installed 35–50 cm above the trellis. Operating it 1–2 times daily leads to higher yields and reduces pesticide use by 30–40%.\n      ➤ <b>Rainy Season or High Humidity:</b> Wait for the plant to warm up (check by touching the stem or field posts) and wait for dew to dry on the leaves. Irrigate between 10:55 AM and 5:55 PM only.",
+          "km": "❖ ពេលវេលាត្រូវដាក់ទឹក៖ ចំពោះការប្រើប្រាស់ទឹក គឺសំខាន់ណាស់សម្រាប់ដំណាំ តែការប្រើប្រាស់ទឹកក៍អាចនាំឲ្យនាំ ឲ្យដំណាំ ស្ត្រេសឈានដល់ការការពន្យាពេលប្រមូលផល និងបាត់បង់ទិន្នផល។ កសិករត្រូវគោរពគោលការណ៍ តាមបែបធម្មជាតិនៃដំណាំតាមកាលពេលវេលារដូចជា៖\n            ➤ <b>រដូវប្រាំង ឬ កូនរដូវប្រាំង(មិនមានទឹកភ្លៀងចាប់ពី១៨ថ្ងៃឡើង) ៖</b> អាចស្រោចទឹក ក្រោយពីថ្ងៃរៈ២០នាទី រហូតដល់ម៉ោង ១០:៣០នាទីព្រឹក និងចាប់ផ្តើមបន្តស្រោចនៅម៉ោង ០៣:០០នាទីរសៀល។\n            ❖ ពេលវេលា និងបរិមាណកំរិតទឹកដែលត្រូវប្រើ៖\n            ➤ <b>រដូវប្រាំង ឬ កូនរដូវប្រាំង(មិនមានទឹកភ្លៀងចាប់ពី១៨ថ្ងៃឡើង) ៖</b> កំរិតទឹកប្រើប្រាស់គឺពឹងផ្អែកទៅលើប្រភេទដី ចំពោះប្រភេទដីល្បាយខ្សាច់ និងខ្សាច់(ត្រូវប្រើជីកំប៉ុស ២០ ទៅ៤០តោន/១ហិតា ឬប្រើដំណាំគម្របដីបានចាប់ពីពីរដងឡើងទៅ) ៥០ទៅ ៥៥ម៉ែត្រគូប/ហិតា (តែបើដាំនាទឹកសម្រក ត្រូវប្រើតាមសំណើមដី អាច ១៥ទៅ២០ម៉ែត្រគូប/ហិតា)។\n            <b>ចំណាំ៖</b> នៅរដូវនេះ កសិករត្រូវប្រើប្រព័ន្ឋទឹកសាច(Mini-Sprinkler)ពីលើទ្រើងម្រះ ដោយបំពាក់កំពស់ពីលើទ្រើងចន្លោះ៣,៥-៥តឹក ហើយប្រើ១ ទៅ២ដង/១ថ្ងៃ ធ្វើឲ្យទិន្នផលខ្ពស់ និងកាត់បន្ថយការប្រើប្រាស់ថ្នាំសម្លាប់សត្វបានពី៣០ ទៅ៤០% ។\n            ➤ <b>រដូវភ្លៀងធ្លាក់ ឬសំណើមខ្ពស់ ៖</b> កសិកររងចាំឲ្យដើមមានកំដៅសិន(ត្រូវស្ទាបដើម ឬបង្គោលដែលនៅក្នុងចំការ) ឬត្រូវរងចាំស្លឹកស្ងួតសំណើម(រដូវរងារ) ពោលគឺត្រូវចាប់ផ្តើមស្រោចនៅចន្លោះម៉ោង១០:៥៥នាទីព្រឹក រហូតដល់ម៉ោង ៥:៥៥នាទីរសៀល ត្រូវបញ្ចប់ការស្រោច។"
+        },
+        "waterManagementCenterImages": [
+          "image/bed/offspringBitter1.jpg",
+          "image/bed/offspringBitter2.jpg"
+        ],
+        "centerImageLabels": [
+          {
+            "en": "Bitter gourd seedlings 10 days after nursery",
+            "km": "កូនម្រះបន្ទាប់ពីបណ្តុះបាន១០ថ្ងៃ"
+          }
+        ],
+        "fertilizerIntro": {
+          "en": "Bitter gourd farmers must understand soil quality or know the local history of neighboring crops. For instance, in some regions, basal organic fertilizer is not required (such as river delta areas, red soil, or newly cleared forest land). However, in most parts of Cambodia, organic fertilizer must be used—the amount varies depending on soil characteristics. For example, some sandy-loam soils require 20 to 40 tons per hectare or the planting of cover crops at least twice. (Farmers can apply fertilizer in two ways:)",
+          "km": "ដំណាំម្រះកសិករត្រូវយល់ដឹងអំពីគុណភាពដី ឬដឹងពីប្រវត្តនៃការធ្វើដំណាំក្បែរខាងដូចជា តំបន់ខ្លះមិនតម្រូវឲ្យប្រើជីធម្មជាតិទ្រប់បាត(ដីសណ្តរទន្លេ ឬដីក្រហមនិងដីរៀនព្រៃស្រោងថ្មី) តែតំបន់ភាគច្រើននៃស្រុកខ្មែរ ត្រូវតែប្រើជីធម្មជាតិដែលតិច ឬច្រើនទៅតាមលក្ខណៈនៃដី ដូចជាប្រភេទដីល្បាយខ្សាច់ខ្លះត្រូវប្រើចំនួន២០ ទៅ៤០តោន/១ហិតា  ឬដាំដំណាំគម្របដីយ៉ាងតិច ២ដង។ (សម្រាប់ជីកសិករអាចប្រើប្រាស់បានតាមរយៈ ២របៀប៖)"
+        },
+        "fertilizerStep1": {
+          "en": "<b>Method 1:</b> Farmers can apply fertilizer directly onto the raised beds by digging small holes and placing 5 grams per hole, depending on the growth stage and fertilizer type. Below is the table showing the plant age, quantity, and types of fertilizer required throughout the entire life cycle of the 'Kbalkat' bitter gourd variety per hectare:",
+          "km": "<b>របៀបទី ១៖</b> កសិករអាចដាក់ផ្ទាល់លើរង ដោយចោះរន្ឋដាក់៥ក្រាមក្នុង១រណ្តៅទៅតាមដំណាក់កាល និងប្រភេទជី។ នេះជាតារាង អាយុកាល ចំនួន និងប្រភេទជី ដែលត្រូវប្រើក្នុង១វដ្តជីវិតរបស់ដំណាំម្រះពូជក្បាលកាត់ សម្រាប់ផ្ទៃដី ៥ហិតា៖"
+        },
+        "fertilizerTable1": {
+          "col1": {
+            "en": "Days to apply fertilizer after transplanting",
+            "km": "ចំនួនថ្ងៃត្រូវដាក់\nជីបន្ទាប់ពីស្ទូងកូន"
+          },
+          "col2": {
+            "en": "Distance to apply from the plant base cm",
+            "km": "ចម្ងាយត្រូវ\nដាក់ពីគល់ cm"
+          },
+          "totalRowLabel": {
+            "en": "Total fertilizer requirement per hectare per crop cycle",
+            "km": "ចំនួនជីត្រូវប្រើសរុប១ហិចតាក្នុងមួយវដ្តដំណាំ Kg"
+          },
+          "noteHeader": {
+            "en": "Note",
+            "km": "កំណត់ចំណាំ"
+          },
+          "fertilizers": [
+            {
+              "name": {
+                "en": "Urea kg",
+                "km": "ជីសរ kg"
+              },
+              "spec": "46-0-0",
+              "total": "212",
+              "color": "#e8f5e9",
+              "headerColor": "#66bb6a"
+            },
+            {
+              "name": {
+                "en": "DAP kg",
+                "km": "ដេអាប៉េ kg"
+              },
+              "spec": "18-46-0",
+              "total": "190",
+              "color": "#e3f2fd",
+              "headerColor": "#42a5f5"
+            },
+            {
+              "name": {
+                "en": "NPK kg",
+                "km": "ចម្រុះ kg"
+              },
+              "spec": "20-20-15+TE",
+              "total": "275",
+              "color": "#fff3e0",
+              "headerColor": "#ffa726"
+            },
+            {
+              "name": {
+                "en": "Potash kg",
+                "km": "កាលី kg"
+              },
+              "spec": "0-0-60",
+              "total": "360",
+              "color": "#fce4ec",
+              "headerColor": "#ef9a9a"
+            }
+          ],
+          "rows": [
+            {
+              "day": "7",
+              "dist": "6-8cm",
+              "vals": [
+                "22",
+                "",
+                "",
+                ""
+              ],
+              "note": {
+                "en": "1hole 2plant & 5g/hole",
+                "km": "1ដើម 2រន្ធ & 1g/រន្ធ"
+              }
+            },
+            {
+              "day": "14",
+              "dist": "10-15cm",
+              "vals": [
+                "10",
+                "45",
+                "",
+                ""
+              ],
+              "note": {
+                "en": "1hole 1plant & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "21",
+              "dist": "20-25cm",
+              "vals": [
+                "",
+                "",
+                "55",
+                ""
+              ],
+              "note": {
+                "en": "1hole 1plant & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "31",
+              "dist": "20-25cm",
+              "vals": [
+                "",
+                "",
+                "55",
+                ""
+              ],
+              "note": {
+                "en": "1hole 1plant & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "41",
+              "dist": "20-25cm",
+              "vals": [
+                "",
+                "25",
+                "",
+                "30"
+              ],
+              "note": {
+                "en": "1hole 1plant & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "51",
+              "dist": "20-25cm",
+              "vals": [
+                "30",
+                "",
+                "",
+                "25"
+              ],
+              "note": {
+                "en": "1hole 1plant & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "61",
+              "dist": "20-25cm",
+              "vals": [
+                "20",
+                "",
+                "",
+                "35"
+              ],
+              "note": {
+                "en": "1hole 1plant & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "71",
+              "dist": "20-25cm",
+              "vals": [
+                "",
+                "",
+                "55",
+                ""
+              ],
+              "note": {
+                "en": "1hole 1plant & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "81",
+              "dist": "20-25cm",
+              "vals": [
+                "10",
+                "30",
+                "",
+                "15"
+              ],
+              "note": {
+                "en": "1hole 1plant & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "91",
+              "dist": "20-25cm",
+              "vals": [
+                "10",
+                "10",
+                "",
+                "25"
+              ],
+              "note": {
+                "en": "1hole 1plant & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "101",
+              "dist": "20-25cm",
+              "vals": [
+                "20",
+                "",
+                "",
+                "35"
+              ],
+              "note": {
+                "en": "1hole 1plant & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "111",
+              "dist": "20-25cm",
+              "vals": [
+                "",
+                "",
+                "55",
+                ""
+              ],
+              "note": {
+                "en": "1hole 1plant & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "121",
+              "dist": "20-25cm",
+              "vals": [
+                "10",
+                "",
+                "",
+                "45"
+              ],
+              "note": {
+                "en": "1hole 1plant & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "131",
+              "dist": "20-25cm",
+              "vals": [
+                "10",
+                "30",
+                "",
+                "15"
+              ],
+              "note": {
+                "en": "1hole 1plant & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "141",
+              "dist": "20-25cm",
+              "vals": [
+                "10",
+                "10",
+                "",
+                "25"
+              ],
+              "note": {
+                "en": "1hole 1plant & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "151",
+              "dist": "20-25cm",
+              "vals": [
+                "",
+                "",
+                "55",
+                ""
+              ],
+              "note": {
+                "en": "1hole 1plant & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "161",
+              "dist": "20-25cm",
+              "vals": [
+                "10",
+                "30",
+                "",
+                "15"
+              ],
+              "note": {
+                "en": "1hole 1plant & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "171",
+              "dist": "20-25cm",
+              "vals": [
+                "10",
+                "10",
+                "",
+                "25"
+              ],
+              "note": {
+                "en": "Apply 1 hole & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "181",
+              "dist": "20-25cm",
+              "vals": [
+                "20",
+                "",
+                "",
+                "35"
+              ],
+              "note": {
+                "en": "Apply 1 hole & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "191",
+              "dist": "20-25cm",
+              "vals": [
+                "20",
+                "",
+                "",
+                "35"
+              ],
+              "note": {
+                "en": "Apply 1 hole & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            }
+          ]
+        },
+        "fertilizerStep2": {
+          "en": "<b>Method 2:</b> Fertigation (Drip Irrigation System). Most farmers use water-soluble fertilizers with minimal residue to avoid clogging the drip emitters. Below is the schedule, quantity, and fertilizer types required for one full crop cycle of 'Kbalkat' Bitter Gourd per hectare:",
+          "km": "<b>របៀបទី២៖</b> ជាការដាក់ជីទៅតាមប្រព័ន្ឋដំណាក់ទឹក គឺភាគច្រើន កសិករត្រូវប្រើជី ប្រភេទដែលរលាយ ក្នុងទឹក និងមិនសូវមានកាកសំណល់ដែលរំខានដល់ រន្ឋដំណក់ទឹក។ នេះជាតារាង អាយុកាល ចំនួន និងប្រភេទជី ដែលត្រូវប្រើក្នុង១វដ្តជីវិតរបស់ដំណាំម្រះពូជក្បាលកាត់ សម្រាប់ផ្ទៃដី ១ហិតា៖"
+        },
+        "fertilizerTable2": {
+          "headers": [
+            {
+              "label": {
+                "en": "Days after transplanting for fertilizer application",
+                "km": "ចំនួនថ្ងៃត្រូវដាក់ជីបន្ទាប់ពីស្ទូងកូន"
+              },
+              "spec": null
+            },
+            {
+              "label": {
+                "en": "Growth Stage",
+                "km": "វគ្គនៃដំណាំ"
+              },
+              "spec": null
+            },
+            {
+              "label": {
+                "en": "Urea",
+                "km": "Urea"
+              },
+              "spec": "46-0-0"
+            },
+            {
+              "label": {
+                "en": "MAP",
+                "km": "MAP"
+              },
+              "spec": "12-61-0"
+            },
+            {
+              "label": {
+                "en": "KCl",
+                "km": "KCl"
+              },
+              "spec": "0-0-60"
+            },
+            {
+              "label": {
+                "en": "15-15-15+TE",
+                "km": "15-15-15+TE"
+              },
+              "spec": "15-15-15+TE"
+            },
+            {
+              "label": {
+                "en": "CaNO3",
+                "km": "CaNO3"
+              },
+              "spec": "15-0-0+\n24% CaO"
+            },
+            {
+              "label": {
+                "en": "MgSO4",
+                "km": "MgSO4"
+              },
+              "spec": "11-0-0+\n15.4%MgO"
+            },
+            {
+              "label": {
+                "en": "Humic Acid",
+                "km": "Humic Acide"
+              },
+              "spec": "0-0-15+ 40%\nHumic Acide"
+            }
+          ],
+          "sections": [
+            {
+              "stage": {
+                "en": "I. Seedling Stage\n(16 Days)",
+                "km": "I. វគ្គកូនសំណាប\n(១៦ថ្ងៃ)"
+              },
+              "bgColor": "#ffffff",
+              "rows": [
+                [
+                  "7",
+                  "",
+                  "4.03",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "1.00",
+                  "0.00",
+                  "1.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "4.03",
+                  "2.37",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "4.50",
+                  "4.03",
+                  "0.00",
+                  "5.00",
+                  "0.00",
+                  "1.01",
+                  "1.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "4.50",
+                  "4.27",
+                  "0.00",
+                  "6.52",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ]
+              ]
+            },
+            {
+              "stage": {
+                "en": "II. Vegetative Growth Stage\n(32 days)",
+                "km": "II. វគ្គលូតលាស់\n(៣២ថ្ងៃ)"
+              },
+              "bgColor": "#c6efce",
+              "rows": [
+                [
+                  "4",
+                  "",
+                  "4.50",
+                  "3.79",
+                  "2.49",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "4.27",
+                  "0.00",
+                  "6.73",
+                  "1.00",
+                  "1.01",
+                  "1.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "4.27",
+                  "3.56",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "5.69",
+                  "3.56",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ]
+              ]
+            },
+            {
+              "stage": {
+                "en": "III. Flowering, Fruiting,\n and Harvest Management Stage(76 days)",
+                "km": "III. វគ្គថែទាំផ្កាផ្លែ\nនិង ប្រមូលផល\n(៧៦ថ្ងៃ)"
+              },
+              "bgColor": "#ffffff",
+              "rows": [
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "6.54",
+                  "6.51",
+                  "8.00",
+                  "1.00",
+                  "1.50",
+                  "1.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "6.54",
+                  "5.33",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "0.00",
+                  "0.00",
+                  "5.33",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "0.00",
+                  "0.00",
+                  "8.00",
+                  "1.00",
+                  "1.50",
+                  "0.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "0.00",
+                  "5.33",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "0.00",
+                  "5.33",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "0.00",
+                  "0.00",
+                  "8.00",
+                  "1.00",
+                  "1.50",
+                  "1.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "7.59",
+                  "5.33",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "0.00",
+                  "5.33",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "0.00",
+                  "5.33",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "0.00",
+                  "0.00",
+                  "8.00",
+                  "1.00",
+                  "2.00",
+                  "1.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "0.00",
+                  "8.00",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "0.00",
+                  "5.33",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "0.00",
+                  "5.33",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "7.59",
+                  "5.33",
+                  "1.00",
+                  "0.00",
+                  "2.00",
+                  "1.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "0.00",
+                  "5.33",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "0.00",
+                  "8.00",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "0.00",
+                  "5.33",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "0.00",
+                  "5.33",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ]
+              ]
+            }
+          ],
+          "totals": {
+            "label": {
+              "en": "Total Amount (Kg)",
+              "km": "សរុបគិតជា គីឡូក្រាម(Kg)"
+            },
+            "values": [
+              "142.65",
+              "56.94",
+              "106.77",
+              "50.26",
+              "7.00",
+              "10.51",
+              "8.00"
+            ]
+          }
+        },
+        "pestIntro": {
+          "en": "For F1, the Kbalkat variety is a variety that is resistant to diseases, viruses, and the climate of our country. In the past, through climate change, it has been seen that insects have damaged crops a lot, especially in the dry season for the Kbalkat variety. There are types of insects: sucking insects such as whiteflies, blue spider mites, thrips, lice, worms: fruit borers, caterpillars, leafhoppers, caterpillars, caterpillars, and fruit flies. This species can cause the crop to lose its yield completely if no protective measures are taken. It spreads rapidly whenever the weather is hot and dry or when there is no rain for 5 to 15 consecutive days.",
+          "km": "ចំពោះម្រះF1 ពូជ ក្បាលកាត់ ជាប្រភេទពូជដែលធន់នឹង ជម្ងឺ វីរុស ធន់នឹងអាកាសធាតុស្រុកខ្មែរយើងណាស់។ កន្លងមកតាមរយៈការប្រែប្រួលអាកាសធាតុឃើញថា សត្វល្អិតបានបំផ្លាញដំណាំខ្លាំងណាស់ជាពិសេសរដូវប្រាំងសម្រាប់ពូជក្បាលកាត់ មានប្រភេទសត្វល្អិតដូចជា៖ ពពួកសត្វជញ្ជក់មានដូចជា រុយស, មមាចខៀវ,ទ្រីប, ចៃពពួកដង្កូវ៖ ដង្កូវចោះផ្លែ, ដង្កូវហ្វូង, ដង្កូវមូស្លឹក,កូនដង្កូវ អណ្តើកមានិងពពួកស្រាំង ឬរុយចោះផ្លែ។ ពពួកនេះ វាអាចធ្វើឲ្យដំណាំបាត់បង់ទិន្នផលទាំងស្រុងបាន ប្រសិនបើមិនមានវិធានការការពារ។ វារីករាលដាលខ្លាំង នៅពេលណា ដែលមានអាកាសធាតុក្តៅ ហើយស្ងួត ឬពេលមិនមានភ្លៀង រយៈពេលចាប់ពី៥ទៅ១៥ថ្ងៃជាប់គ្នា។"
+        },
+        "preventionMethods": {
+          "en": [
+            "Farmers must regularly inspect the farm; if these pests are found, they should be eliminated as quickly as possible through:",
+            "Proper pruning of branches and leaves.",
+            "Using mini-sprinklers over the entire trellis to wash away insect eggs during the dry season.",
+            "Using smoke machines (thermal foggers) mixed with pesticides."
+          ],
+          "km": [
+            "កសិករត្រូវតែត្រួតពិនិត្យចំការជាប្រចាំ ប្រសិនបើឃើញសត្វល្អិតទាំងនេះត្រូវកំចាត់ឲ្យទាន់ពេលវេលា តាមតែអាចធ្វើទៅបាន តាមរយៈ៖",
+            "ការតែងមែក និងស្លឹកឲ្យបានត្រឹមត្រូវ",
+            "ការប្រើប្រាស់ទឹកសាចលើស្លឹក (ប្រព័ន្ឋmini- Sprinkler ពីលើទ្រើងទាំងមូលដើម្បីកំចាត់ពងសត្វ នៅរដូវប្រាំង",
+            "ការប្រើម៉ាស៊ីនបាញ់ផ្សែងលាយថ្នាំសម្លាប់សត្វល្អិត"
+          ]
+        },
+        "eliminationMethods": {
+          "en": [
+            "Consult specialists as some pests have developed immunity."
+          ],
+          "km": [
+            "កសិករត្រូវតែមានការយល់ដឹង ឬប្រឹក្សារជាមួយមន្ត្រីជំនាញលើថ្នាំកំចាត់សត្វល្អិត ឲ្យបានត្រឹមត្រូវ មុនពេលសម្រេចចិត្តប្រើប្រាស់។ ដោយសារតែកន្លងមក ថ្នាំកំចាត់សត្វល្អិតមួយចំនួន បានស៊ាំទៅនឹងតំបន់នោះរួចទៅហើយ នៅពេលកសិករទិញថ្នាំកំចាត់សត្វល្អិតទាំងនោះទៅប្រើប្រាស់ បែជាមិនមានប្រសិទ្ឋភាព នាំឲ្យកសិករខាតបង់ដូចជា លុយ កំលាំងពលកម្ម ពេលវេលា និងបាត់បង់ទិន្នផលទៀតផង។ "
+          ]
+        },
+        "pestTable": {
+          "en": {
+            "title": "The following are highly effective pesticide active ingredients:",
+            "headers": [
+              "Active Ingredient",
+              "Sucking Pests",
+              "Caterpillars (Leaf eaters)",
+              "Caterpillars (Borers)",
+              "Leaf Cutters/Rollers",
+              "Fruit Flies"
+            ],
+            "rows": [
+              [
+                "Pymetrozine 600g/kg + Nitenpyram 200g/kg",
+                "***",
+                "*",
+                "**",
+                "**",
+                "***"
+              ],
+              [
+                "Carbaryl 85% WP",
+                "***",
+                "**",
+                "*",
+                "**",
+                "***"
+              ],
+              [
+                "Thiamethoxam",
+                "**",
+                "*",
+                "*",
+                "**",
+                "***"
+              ],
+              [
+                "Imidacloprid",
+                "***",
+                "*",
+                "*",
+                "**",
+                "***"
+              ],
+              [
+                "Permethrin 500g/L",
+                "*",
+                "*",
+                "***",
+                "*",
+                "*"
+              ],
+              [
+                "Indoxacarb",
+                "*",
+                "*",
+                "**",
+                "**",
+                "***"
+              ],
+              [
+                "Chlorantraniliprole 10% + Chlorfenapyr 20% SC",
+                "**",
+                "***",
+                "*",
+                "***",
+                "***"
+              ],
+              [
+                "Flubendiamide",
+                "**",
+                "*",
+                "*",
+                "**",
+                "***"
+              ]
+            ]
+          },
+          "km": {
+            "title": "ខាងក្រោមនេះជាធាតុសកម្មថ្នាំកំចាត់សត្វល្អិត ដែលមានប្រសិទ្ធភាពខ្ពស់៖",
+            "headers": [
+              "ឈ្មោះធាតុសកម្ម",
+              "ពួកសត្វល្អិត ជញ្ជក់",
+              "ពួកដង្កូវ ស៊ីស្លឹក",
+              "ពួកដង្កូវ ចោះផ្លែ",
+              "ពួកកាត់រម្កល់ ស្លឹក",
+              "រុយផ្លែ"
+            ],
+            "rows": [
+              [
+                "Pymetrozine 600g/kg + Nitenpyram 200g/kg",
+                "***",
+                "*",
+                "**",
+                "**",
+                "***"
+              ],
+              [
+                "Carbaryl 85% WP",
+                "***",
+                "**",
+                "*",
+                "**",
+                "***"
+              ],
+              [
+                "Thiamethoxam",
+                "**",
+                "*",
+                "*",
+                "**",
+                "***"
+              ],
+              [
+                "Imidacloprid",
+                "***",
+                "*",
+                "*",
+                "**",
+                "***"
+              ],
+              [
+                "Permethrin 500g/L",
+                "*",
+                "*",
+                "***",
+                "*",
+                "*"
+              ],
+              [
+                "Indoxacarb",
+                "*",
+                "*",
+                "**",
+                "**",
+                "***"
+              ],
+              [
+                "Chlorantraniliprole 10% + Chlorfenapyr 20% SC",
+                "**",
+                "***",
+                "*",
+                "***",
+                "***"
+              ],
+              [
+                "Flubendiamide",
+                "**",
+                "*",
+                "*",
+                "**",
+                "***"
+              ]
+            ]
+          }
+        },
+        "pestLegend": {
+          "en": "Note: * = Low effectiveness, ** = Medium effectiveness, *** = High effectiveness",
+          "km": "សំគាល់៖ * = ងាប់តិច, ** = ងាប់មធ្យម, *** = ងាប់ខ្លាំង"
+        },
+        "pestImages": [
+          "image/bed/pest1.png",
+          "image/bed/pest2.jpg",
+          "image/bed/pest3.png",
+          "image/bed/pest4.png",
+          "image/bed/pest5.png",
+          "image/bed/pest6.jpg",
+          "image/bed/pest7.jpg",
+          "image/bed/pest8.jpg"
+        ],
+        "pestNames": {
+          "en": [
+            "Thrips",
+            "Whitefly",
+            "Leafhopper",
+            "Aphids",
+            "Fruit Borer",
+            "Leaf Roller",
+            "Tortoise Beetle",
+            "Fruit Fly"
+          ],
+          "km": [
+            "ទ្រីប",
+            "រុយស",
+            "មមាចខៀវ",
+            "ពពួកចៃ",
+            "ដង្កូវចោះផ្លែ",
+            "ដង្កូវរមូស្លឹក",
+            "ដង្កូវអណ្តើកមាស",
+            "ស្រាងទិចផ្លែ"
+          ]
+        },
+        "diseaseIntro": {
+          "en": "For bitter gourd crops, farmers must frequently inspect their fields when the seedlings are small, specifically from 15 days old onwards, as this is the stage when diseases begin to infect the plants. Disease outbreaks can be caused by insect transmission, soil-borne fungi, or seed factors (such as selecting improper varieties or using seeds already infected with disease). Common diseases affecting bitter gourd include: Damping off, Powdery mildew, Downy mildew, Anthracnose, Virus, and Bacterial wilt.",
+          "km": "ចំពោះដំណាំម្រះ កសិករត្រូវឧស្សាហ៍ត្រួតពិនិត្យមើលចំការនៅអំឡុងពេលកូនម្រះនៅតូច ដែលមានអាយុចាប់ពី ១៥ថ្ងៃឡើង ព្រោះជាដំណាក់កាលជំងឺចាប់ផ្តើមឆ្លងចូលដំណាំ ហើយការកើតមានជំងឺអាចបណ្តាលមកពីការចម្លងរបស់សត្វល្អិត, ពពួកផ្សិតនៅក្នុងដី, កត្តាពូជ(ការជ្រើសរើសពូជមិនបានត្រឹមត្រូវ រឺក៏ការទុកពូជដែលមានជំងឺស្រាប់)។ ប្រភេទជំងឺដែលឧស្សាហ៍កើតលើដំណាំម្រះមានដូចជា៖ ជំងឺរលួយគល់កូន(Damping off)ជំងឺផ្សិតម្សៅ(powdery mildew), ជំងឺអ៊ុចលឿងស្លឹក(downy mildew), ជំងឺអ៊ុចភ្នែកកង្កែប(anthracnose), វីរុស(Virus), ជំងឺស្វិតស្រពោនស្រស់(bacterial wilt)។"
+        },
+        "diseaseImages": [
+          "image/bed/disease1.png",
+          "image/bed/disease2.jpg",
+          "image/bed/disease3.png",
+          "image/bed/disease4.jpg",
+          "image/bed/disease5.png"
+        ],
+        "diseaseNames": {
+          "en": [
+            "Damping off",
+            "Powdery Mildew",
+            "Anthracnose",
+            "Virus Mosaic",
+            "Downy Mildew"
+          ],
+          "km": [
+            "ជំងឺ រលួយគល់កូន",
+            "ជំងឺផ្សិតម្សៅ",
+            "ជំងឺអ៊ុចភ្នែកកង្កែប",
+            "វីរុស mosaic",
+            "ជំងឺអ៊ុចលឿងស្លឹក"
+          ]
+        },
+        "diseasePrevention": {
+          "en": [
+            "7.2.1. Plant Disease Prevention Methods:",
+            "Clean the soil and remove old roots/debris.",
+            "Practice crop rotation.",
+            "Add compost or organic fertilizers.",
+            "Remove and destroy infected plants/leaves.",
+            "Clean agricultural tools regularly."
+          ],
+          "km": [
+            "ការពារជំងឺរុក្ខជាតិគឺសំខាន់ណាស់ ដើម្បីរក្សាផលដំណាំឲ្យមានគុណភាពល្អ និងបង្កើនទិន្នផល។ ខាងក្រោមនេះជាវិធីសាស្រ្តសំខាន់ៗ៖",
+            "រៀបចំដីឲ្យល្អកាប់ឫស និងសំណល់រុក្ខជាតិចាស់ៗចេញ",
+            "បន្ថែមជីកំប៉ុស ឬជីសរីរាង្គ",
+            "ប្តូរដំណាំ (crop rotation) ដើម្បីកាត់បន្ថយមេរោគនៅក្នុងដី",
+            "សម្អាត និងកម្ចាត់រុក្ខជាតិឆ្លងជំងឺ",
+            "កាត់បំបាត់ស្លឹក ឬដើមដែលមានជំងឺ",
+            "កុំទុកសំណល់ជំងឺនៅលើវាល",
+            "សម្អាតឧបករណ៍កសិកម្មជាប្រចាំ",
+            "ប្រើថ្នាំការពាររុក្ខជាតិដោយប្រុងប្រយ័ត្ន",
+            "ប្រើថ្នាំតាមការណែនាំបច្ចេកទេស",
+            "ពាក់សម្ភារៈការពារ (ម៉ាស់ ស្រោមដៃ)"
+          ]
+        },
+        "diseasePreventionImage": "image/bed/triels1.png",
+        "diseasetable": {
+          "en": "Table: Active Ingredients for Crop Disease Prevention and Treatment",
+          "km": "ខាងក្រោមនេះជាតារាងធាតុសកម្មថ្នាំការពារ និងព្យាបាលជំងឺ៖"
+        },
+        "diseaseTreatmentTable": {
+          "en": {
+            "headers": [
+              "Active Ingredient",
+              "Type",
+              "Disease Targeted"
+            ],
+            "rows": [
+              [
+                "Metalaxyl",
+                "Treatment",
+                "Downy mildew"
+              ],
+              [
+                "Azoxystrobin",
+                "Treatment",
+                "Powdery mildew"
+              ],
+              [
+                "Azoxystrobin",
+                "Treatment",
+                "Anthracnose"
+              ],
+              [
+                "Chlorothalonil",
+                "Prevention",
+                "-"
+              ],
+              [
+                "Mancozeb",
+                "Prevention",
+                "-"
+              ]
+            ]
+          },
+          "km": {
+            "headers": [
+              "ឈ្មោះធាតុសកម្ម",
+              "របៀបកម្ចាត់",
+              "ប្រភេទជំងឺ"
+            ],
+            "rows": [
+              [
+                "Metalaxyl",
+                "ព្យាបាល",
+                "ជំងឺអ៊ុចលឿងស្លឹក(Downy mildew)"
+              ],
+              [
+                "Azoxystrobin",
+                "ព្យាបាល",
+                "ជំងឺផ្សិតម្សៅ(Powdery Mildew)"
+              ],
+              [
+                "Azoxystrobin",
+                "ព្យាបាល",
+                "ជំងឺអ៊ុចភ្នែកកង្កែប(anthracnose)"
+              ],
+              [
+                "Chlorothalonil",
+                "ការពារ",
+                "-"
+              ],
+              [
+                "Mancozeb",
+                "ការពារ",
+                "-"
+              ]
+            ]
+          }
+        },
+        "diseaseNote": {
+          "en": "Regarding the use of agricultural chemicals, farmers should consult with agricultural officers or technical experts for proper instructions before application.",
+          "km": "ចំពោះការប្រើប្រាស់ថ្នាំកសិកម្ម កសិករត្រូវសាក់សួរពត៍មាននៃការប្រើប្រាស់ពី មន្ត្រីកសិកម្ម និងបុគ្គលិកជំនាញ់ មុនធ្វើការប្រើប្រាស់។"
+        }
+      },
+      {
+        "src": "image/bitter/bitter3.png",
+        "title": {
+          "en": "Bitter Gourd F1 Morokat variety",
+          "km": "ម្រះ F1 ពូជ មរកត"
+        },
+        "info": {
+          "en": [
+            "The F1 Morokat bitter gourd is a top choice for growers who want to supply the market with perfectly shaped, visually striking fruit that stands out to customers.",
+            "Plant Characteristics: Strong and vigorous growth with prolific branching. Yield starts light and increases significantly over time. High weather resistance and strong immunity to diseases.",
+            "Harvest Maturity: 43 to 45 days after direct sowing.",
+            "Fruit Shape & Size: Long and tapered at both the head and tail. Length: 18–20 cm; Diameter: 4.9–5.2 cm.",
+            "Fruit Characteristics: Light green skin with dense, recessed ridges and broken/interrupted prominent ribs. Medium skin thickness. Suitable for year-round cultivation (highly tolerant of both cool and hot seasons).",
+            "Yield: 4.5 to 6 kg per plant."
+          ],
+          "km": [
+            "ពូជម្រះ F1 មរកត វាគឺជាជម្រើសដ៏ល្អសម្រាប់បងប្អូនកសិករដែលចង់ផ្គត់ផ្គង់ទីផ្សារ ជាមួយផ្លែដែលមានរូបរាងស្អាតប្លែក និងមានពណ៌ទាក់ទាញភ្នែកអតិថិជន។",
+            "ដើមដងរឹងមាំល្អ និងមានមែកច្រើន",
+            "អាយុប្រមូលផល ៖ ៤០ ទៅ ៤២ ថ្ងៃ បន្ទាប់ពីស្ទូងកូន",
+            "ទំហំផ្លែ ៖ ប្រវែង ១៨ ទៅ ២១ សង់ទីម៉ែត្រ និងមុខកាត់ផ្លែ ៖ ៥ ទៅ ៥.៣ សង់ទីម៉ែត្រ",
+            "ផ្លែពណ៌បៃតងរលាង សម្បកឡាអង្គាញ់ និងមានទ្រនង់អង្គាញ់ធំ",
+            "ទិន្នផល ៖ ៥ ទៅ ៦ គីឡូក្រាម/ដើម"
+          ]
+        },
+        "weight": "20 grams/pkt",
+        "views": 1156,
+        "pdfUrl": "data/pdf/ម្រះពូជមរកត_V002.pdf",
+        "gallery": [
+          {
+            "src": "image/bitter/bitter3.png",
+            "label": {
+              "en": "Ear",
+              "km": "ផ្លែ"
+            }
+          },
+          {
+            "src": "image/bitter/Picture19.png",
+            "label": {
+              "en": "Kernels",
+              "km": "គ្រាប់"
+            }
+          },
+          {
+            "src": "image/bitter/bitter4.jpg",
+            "label": {
+              "en": "Field",
+              "km": "វាល"
+            }
+          }
+        ],
+        "sectionTitles": {
+          "en": {
+            "section1": "1. Features (Crop Characteristics)",
+            "section2": "2. Land Preparation",
+            "section3": "3. Raising Beds for Planting",
+            "section4": "4. Nursery of Romyoul Seedlings",
+            "section5": "5. Transplanting Seedlings",
+            "section6": "6. Maintenance",
+            "section7": "7. Pest and Disease Management",
+            "section8": "8. Harvest",
+            "section9": "9. Summary"
+          },
+          "km": {
+            "section1": "១. លក្ខណៈពូជ",
+            "section2": "២. ការរៀបចំដី",
+            "section3": "៣. ការលើករងដាំ",
+            "section4": "៤. ការបណ្តុះកូនម្រះមរកត",
+            "section5": "៥. ការស្ទូងកូន",
+            "section6": "៦. ការថែទាំ",
+            "section7": "៧. ការគ្រប់គ្រងសត្វល្អិត និងជំងឺ",
+            "section8": "៨. ការប្រមូលផល",
+            "section9": "៩. សេចក្តីសង្ខេប"
+          }
+        },
+        "subtitleTitles": {
+          "en": {
+            "pestManagement": "7.1. Pest Management",
+            "preventionMethods": "7.1.1. Prevention Methods",
+            "eliminationMethods": "7.1.2. Elimination Methods",
+            "diseaseManagement": "7.2. Disease Management",
+            "diseasePrevention": "7.2.1. Plant Disease Prevention Methods",
+            "waterManagement": "6.1. Water Management",
+            "fertilizerManagement": "6.2. Fertilizer Management",
+            "directSeeding": "4.1. Direct Seeding",
+            "seedlingNursing": "4.2. Seedling Nursing"
+          },
+          "km": {
+            "pestManagement": "៧.១. ការគ្រប់គ្រងសត្វល្អិត",
+            "preventionMethods": "៧.១.១. វិធីសាស្រ្តការពារ",
+            "eliminationMethods": "៧.១.២. វិធីសាស្រ្តកំចាត់",
+            "diseaseManagement": "៧.២. ការគ្រប់គ្រងជំងឺ",
+            "diseasePrevention": "៧.២.១. វិធីសាស្រ្តការពារជំងឺ",
+            "waterManagement": "៦.១. ការគ្រប់គ្រងទឹក",
+            "fertilizerManagement": "៦.២. ការគ្រប់គ្រងជី",
+            "directSeeding": "៤.១. ការដាំដោយផ្ទាល់",
+            "seedlingNursing": "៤.២. ការបណ្តុះកូន"
+          }
+        },
+        "features": {
+          "en": [
+            "Plant Characteristics: Strong and vigorous growth with prolific branching. Yield starts light and increases significantly over time. High weather resistance and strong immunity to diseases.",
+            "Harvest Maturity: 43 to 45 days after direct sowing.",
+            "Fruit Shape & Size: Long and tapered at both the head and tail. Length: 18–20 cm; Diameter: 4.9–5.2 cm.",
+            "Fruit Characteristics: Light green skin with dense, recessed ridges and broken/interrupted prominent ribs. Medium skin thickness. Suitable for year-round cultivation (highly tolerant of both cool and hot seasons).",
+            "Yield: 4.5 to 6 kg per plant."
+          ],
+          "km": [
+            "ដើមដងរឹងមាំល្អ និងមានមែកច្រើន",
+            "អាយុប្រមូលផល ៖ ៤០ ទៅ ៤២ ថ្ងៃ បន្ទាប់ពីស្ទូងកូន",
+            "ទំហំផ្លែ ៖ ប្រវែង ១៨ ទៅ ២១ សង់ទីម៉ែត្រ និងមុខកាត់ផ្លែ ៖ ៥ ទៅ ៥.៣ សង់ទីម៉ែត្រ",
+            "ផ្លែពណ៌បៃតងរលាង សម្បកឡាអង្គាញ់ និងមានទ្រនង់អង្គាញ់ធំ",
+            "ទិន្នផល ៖ ៥ ទៅ ៦ គីឡូក្រាម/ដើម"
+          ]
+        },
+        "featuresImage": "image/packet/Bitter_melon_F1_morokat_variety_package.png",
+        "featuresTitle": {
+          "en": "Image of Morokat Bitter Gourd seed packet",
+          "km": "រូបភាពកញ្ចប់ម្រះពូជមរកត"
+        },
+        "landPreparation": {
+          "en": [
+            "Cleaning: Clean the farm land and remove all weeds completely.",
+            "Soil Treatment: Plow and rake the soil until fine, then sun-dry it for 10 to 15 days.",
+            "Plowing Depth: Plow (using buffalo or mechanical tillers) to a depth of 15 to 20 cm."
+          ],
+          "km": [
+            "សំអាតដីចំការ និង រើសស្មៅចេញឱ្យអស់។",
+            "ភ្ជួរ រាស់ដីឲ្យបានម៉ដ្ឋល្អ ហើយហាលឱ្យបានពី១០ទៅ១៥ថ្ងៃ។",
+            "ភ្ជួរដី (គោក្របី ឬ គោយន្ត) ជម្រៅពី ១៥ ទៅ ២០ សង់ទីម៉ែត្រ។"
+          ]
+        },
+        "bedPreparation": {
+          "en": [
+            "Bed Design: Double beds with a width of 1 meter.",
+            "Canals: A 0.6-meter drainage canal between the beds.",
+            "Bed Spacing: 3 meters between each set of double beds.",
+            "Bed Height: 20–30 cm in the dry season and 30–50 cm in the rainy season.",
+            "Plant Spacing: 0.4 to 0.5 meters between individual plants.",
+            "Basal Fertilizer: Apply 1 to 2 kg of dry animal manure or compost per square meter as a base.",
+            "Mulching: Essential for reducing weed growth and preventing water and fertilizer loss.",
+            "Support: Sturdy trellises are mandatory for this crop.",
+            "Irrigation: Using an irrigation system helps reduce labor and costs."
+          ],
+          "km": [
+            "ទទឹងរង៖ ជារងភ្លោះ ដែលមានទទឹងរង ១ ម៉ែត្រ ចន្លោះប្រឡាយបង្ហូរទឹក ០,៦ម៉ែត្រ និង បណ្តោយទៅតាមលទ្ធភាពដោយផ្អែកលើប្រព័ន្ឋស្រោចស្រព្វ។",
+            "គម្លាតពីរងភ្លោះនិមួយៗទៅមួយ៖ ៣ម៉ែត្រ",
+            "កំពស់រង៖ នៅរដូវប្រាំង ពី២០ ទៅ៣០សង់ទីម៉ែត្រ និង នៅរដូវវស្សា ពី៣០ ទៅ ៥០ សង់ទីម៉ែត្រ",
+            "ចន្លោះគុម្ព៖ ចន្លោះពីគុម្ព១ ទៅ ១ គឺ 0,៤ ទៅ ០,៥ម៉ែត្រ ",
+            "ដាក់លាមកសត្វស្ងួត ឬ ជីកំប៉ុស្តិ៍៖ បរិមាណពី ១ ទៅ ២គីឡូក្រាម ក្នុងផ្ទៃដីរង១ ម៉ែត្រការ៉េ ទ្រាប់បាត ដោយផ្អែកលើគុណភាពដី។",
+            "ប្រភេទរង៖ រងភ្លោះ ដោយមានចង្អូទឹកកណ្តាល គម្លាតពីរងមួយទៅមួយ ចំងាយ ៣ម៉ែត្រ "
+          ]
+        },
+        "bedImages": [
+          "image/bed/bed_bitter_melon_romyul.png",
+          "image/bed/bed_bitter_melon_romyul1.png"
+        ],
+        "bedtitle": {
+          "en": "Figure 1: Raising beds for Morokat Bitter Gourd",
+          "km": "រូបភាពទី១៖ ការលើករងម្រះ មរកត"
+        },
+        "bedPreparationNotes": {
+          "en": [
+            "✓ Mulching is key to reducing weeds, preventing water and fertilizer loss.",
+            "✓ This crop requires sturdy trellises.",
+            "✓ Using an irrigation system helps reduce labor and costs."
+          ],
+          "km": [
+            "✓ ការប្រើប្រាស់ស្មៅគ្របដីជួយកាត់បន្ថយស្មៅដុះ ទប់នឹងការខាតបង់ទឹក និងជី។",
+            "✓ ដំណាំនេះត្រូវប្រើប្រាស់ទ្រើងជាចាំបាច់។",
+            "✓ ការប្រើប្រាស់ប្រព័ន្ឋទឹកជួយកាត់បន្ថយកំលាំងពលកម្ម និងកាត់បន្ថយថ្លៃដើម។"
+          ]
+        },
+        "bedPreparationFooter": {
+          "en": "For bitter gourd, farmers must prepare beds before seedling placement.",
+          "km": "ចំពោះដំណាំម្រះ កសិករត្រូវតែលើករងឲ្យរួចរាល់មុនពេល ដាក់បណ្តុះកូន។"
+        },
+        "nursery": {
+          "en": "To achieve high efficiency and target yields, farmers can use two planting methods:",
+          "km": "ដើម្បីឲ្យកសិករដាំម្រះប្រមូលផលប្រកបដោយប្រសិទ្ឋភាពខ្ពស់ និងទទួលបានទិន្នផលតាមផែនការ នោះកសិករមានវិធីដាំ ជា២បែបគឺ៖"
+        },
+        "directSeeding": {
+          "en": [
+            "For the F1 Morokat bitter gourd seeds from KSSeed Co.,Ltd. farmers can practice direct sowing, provided the farm has a proper irrigation system and can maintain adequate moisture control. Seeds will begin to sprout 3 days after planting, and by day 7, they will develop their first two leaves. When sowing directly, farmers must monitor the field regularly; typically, 3–5% of seeds may fail to grow or be lost due to planting too deep, excessive water/waterlogging, or pest damage. Therefore, it is recommended that farmers prepare an additional 10% of seedlings in trays for replanting (gap filling)."
+          ],
+          "km": [
+            "ចំពោះគ្រាប់ម្រះ F1 ពូជ មរកត របស់ក្រុមហ៊ុន ខេ អេស ស៊ីដ ឯ.ក កសិករអាចយកគ្រាប់ដាំដោយផ្ទាល់បាន លុះត្រាតែចំការមានប្រព័ន្ឋទឹក និងអាចគ្រប់គ្រងសំណើមគ្រប់គ្រាន់។ បន្ទាប់ពីដាំបានរយៈពេល ៣ថ្ងៃបន្ទាប់មកគ្រាប់ពូជនឹងចេញពន្លក នឹងថ្ងៃទី៧ចេញស្លឹក២។ ការដាំដោយគ្រាប់ផ្ទាល់ គឺកសិករត្រូវពិនិត្យឲ្យបានទៀតទាត់ មានគ្រាប់ចំនួន ៣-៥% នឹងបាត់បង់ ឬមិនដុះ មកពីវីធីកប់គ្រាប់ជ្រៅពេក ឬទឹកជោគជាំពេក ឬមានកត្តាសត្វបំផ្លាញផ្សេងៗ ដូច្នេះកសិករត្រូវបណ្តុះត្រៀមជួសចំនួន ១០%។ "
+          ]
+        },
+        "seedlingNursing": {
+          "en": [
+            "Before nursing bitter gourd, farmers must construct a proper nursery based on the total seedling count. The structure should be 0.8 meters above the ground, enclosed with fine mesh to protect against insects (preventing viruses) and rain, while maintaining proper temperature. On average, 11,000 to 16,000 seedlings are required per hectare, depending on plant and row spacing.",
+            "Farmers must plan the nursery size and soil mixture requirements according to the number of seedling trays or nursery pouches being used.",
+            "The 'Morokat' variety will develop two leaves after direct sowing if moisture and temperature are optimal (30°C to 35°C). After 4 to 6 days, farmers must harden the seedlings (reduce water and provide direct sunlight for 2 days) before transplanting. By day 7 or 8, they are ready for the field."
+          ],
+          "km": [
+            "មុនពេលបណ្តុះកូនម្រះ កសិករត្រូវតែធ្វើរោងបណ្តុះឲ្យបានត្រឹមត្រូវ គឺគិតទៅទំហំចំនួនកូនដែលត្រូវដាំ ដោយផ្តោតលើកំពស់រោង ០,៨ម៉ែត្រពីដី ដែលរោងត្រូវប្រើស្បៃសំណាញ់ការពារសត្វព័ទ្ឋជុំវិញ និងមានដំបូលជិតដែលការពារសត្វល្អិត(ការពារកើតវីរុស) ទឹកភ្លៀង និងពិនិត្យកំរិតកំដៅឲ្យត្រឹមត្រូវ។ ជាមធ្យមកូនម្រះ ត្រូវប្រើចំនួនចន្លោះពី ១១០០០ ទៅ១៦០០០កូនក្នុង១ហិចតា អាស្រ័យលើ ចន្លោះគុម្ព និងចន្លោះរង។",
+            "កសិករត្រូវតែគិតពីទំហំរោងបណ្តុះកូន ការលាយល្បាយដីគឺគិតទៅតាមចំនួនថាសបណ្តុះ ឬកន្ទោងបណ្តុះកូន។",
+            "ម្រះពូជមរកត នឹងចេញស្លឹក២ បន្ទាប់ពីបានដាក់ដាំគ្រាប់ដោយផ្ទាល់ក្នុងថាសបណ្តុះ ឬកន្ទោង ប្រសិនបើមានសំណើម និងកំដៅសមរម្យ(៣០ ទៅ៣៥អង្សារ)។ បន្ទាប់ពីបណ្តុះកូន បានរយៈ៤ ទៅ ៦ថ្ងៃ កសិករត្រូវពង្រឹងកូន (បន្ថយទឹក និងដាក់កូនឲ្យត្រូវកំដៅដោយផ្ទាល់រយៈពេល២ថ្ងៃ) មុនពេលយកទៅដាំលើរង។ ថ្ងៃទី៧ ឬថ្ងៃទី៨ អាចយកទៅដាំលើរងបានហើយ។"
+          ]
+        },
+        "nurseryImages": [
+          "image/bed/nursery_bitter_melon.png",
+          "image/bed/planting_bitter_melon.png"
+        ],
+        "nurserytitle": {
+          "en": "Figure 2: Building a bitter gourd seedling nursery.",
+          "km": "រូបភាពទី២៖ ការធ្វើរោងបណ្តុះកូនម្រះមរកត។"
+        },
+        "transplanting": {
+          "en": [
+            "When bitter gourd seedlings in trays or pouches are 7 to 8 days old, they must be transplanted to the beds following these steps:",
+            "Trellis Installation: Set up the trellis system first, as the 'Morokat' variety grows extremely fast after transplanting.",
+            "Bed Preparation: Irrigate the beds thoroughly the evening before planting so they are ready for the morning.",
+            "Starter Solution: Before transplanting, pour 150ml of a nutrient mix into each hole (Mixture: 50g Urea + 50g Humic Acid dissolved in 20L of water).",
+            "Planting: After placing the seedling, firmly press the soil around the base to ensure proper contact."
+          ],
+          "km": [
+            "ករណីបណ្តុះកូនម្រះក្នុងថាសបណ្តុះ ឬកន្ទោង អាយុបាន ៧ ទៅ៨ថ្ងៃ ត្រូវស្ទូងលើរងកសិករត្រូវអនុវត្តន៍ដោយ៖",
+            "កសិករត្រូវតម្លើង ទ្រើងជាមុនសិន ព្រោះបន្ទាប់ពីស្ទូងកូនហើយ កូនម្រះមរកត លូតលាស់លឿនណាស់",
+            "បញ្ចូលទឹក តាមរងឲ្យជោកជាំពេលពីល្ងាច ដើម្បីដាំពេលព្រឹក",
+            "មុនពេលដាំត្រូវលាយល្បាយជីចាក់ចូលរន្តៅមុនពេលស្ទូងកូនចំនួន ១៥០មីលីត្រ/រណ្តៅ (ជីអ៊ុយរ៉េ ៥០ក្រាម និងហ៊ុយមិកអាស៊ីដ ៥០ក្រាមលាយទឹក ២០លីត្រ)",
+            "បន្ទាប់ពីដាក់ត្រូវសង្កត់ដីជុំវិញកូនឲ្យបានត្រឹមត្រូវ"
+          ]
+        },
+        "transplantingImages": [
+          "image/bed/Fertilizering1.png",
+          "image/bed/Fertilizering2.png",
+          "image/bed/PergolaBitter1.jpg",
+          "image/bed/PergolaBitter2.jpg"
+        ],
+        "trantitle": [
+          {
+            "tran1": {
+              "en": "Figure 3",
+              "km": "រូបភាពទី៣"
+            },
+            "tran1caption": {
+              "en": "Applying fertilizer into holes during 'Morokat' bitter gourd transplanting",
+              "km": "ការបញ្ចូលជីក្នុងរណ្តៅ កំឡុងពេលស្ទូងកូនម្រះមរកត"
+            },
+            "tran3": {
+              "en": "Figure 5",
+              "km": "រូបភាពទី៥"
+            },
+            "tran3caption": {
+              "en": "The type of trellis system commonly used by farmers for 'Morokat' bitter gourd",
+              "km": "ប្រភេទទ្រើងដែលកសិករនិយមដាំម្រះមរកត"
+            }
+          }
+        ],
+        "waterManagementTopImages": [
+          "image/bed/irrigationBitter1.jpg",
+          "image/bed/irrigationBitter2.jpg",
+          "image/bed/irrigationBitter3.jpg",
+          "image/bed/irrigationBitter4.jpg"
+        ],
+        "waterManagementLabels": [
+          {
+            "en": "Canal Irrigation System",
+            "km": "ការស្រោចស្រព ដោយប្រព័ន្ធប្រឡាយទឹក"
+          },
+          {
+            "en": "Drip Irrigation System",
+            "km": "ការស្រោចស្រពដោយប្រព័ន្ធដំណក់ទឹក"
+          },
+          {
+            "en": "Sprinkler Irrigation System",
+            "km": "ការស្រោចស្រពដោយប្រព័ន្ធSprinkler"
+          },
+          {
+            "en": "Micro-Sprinkler / Mist System",
+            "km": "ការស្រោចស្រពដោយប្រព័ន្ធសាច"
+          }
+        ],
+        "waterManagementDesc": {
+          "en": "Like any other crop, water is vital for bitter gourd. Over-watering wastes time and money and can kill the plants, while under-watering leads to yield loss and plant death.\n      \n      ❖ Irrigation Methods for Farmers:\n      ➤ <b>Drip Irrigation:</b> Highly efficient. It saves a significant amount of water by targeting the root zone directly. It also allows for fertigation (applying fertilizer through the system), saving time and labor.\n      ➤ <b>Hose/Sprinkler System:</b> Provides moderate water savings. It targets the roots effectively and offers flexibility based on the field's layout.\n      ➤ <b>Canal Irrigation:</b> For medium (over 5 acres) to large scales, this method makes it difficult to control soil moisture. It results in water waste, high costs, and risks to the crop, such as low yields or root rot.",
+          "km": "ដំណាំម្រះ ក៍ដូចដំណាំផ្សេងទៀតដែរ ទឹកគឺជាកត្តាសំខាន់ណាស់សម្រប់ជីវិត។ ប្រសិនបើ ការប្រើប្រាស់ទឹកច្រើនពេកនាំឲ្យខាត់បង់ពេលវេលា ចំណាយច្រើន និងធ្វើឲ្យដំណាំម្រះងាប់ តែបើខ្វះធ្វើបាត់បង់ទិន្នផល និងងាប់ដើមដែរ។ តើកសិករគួរតែគ្រប់គ្រងដោយវិធីណា? គួរតែប្រើពេលណា?\n            ❖ ចំពោះដំណាំម្រះកសិករ អាចគ្រប់គ្រងទឹកដោយប្រើ៖ \n            ➤ <b>ប្រព័ន្ឋដំណក់</b> គឺមានប្រសិទ្ឋភាពខ្ពស់ ក្នុងសន្សំសំចៃទឹកកំរិតបានច្រើន ចំគោលដៅតាមប្រព័ន្ឋឬស និងអាចដាក់ជីតាមប្រព័ន្ឋនេះធ្វើឲ្យកសិករសន្សំពេលវេលា និងកំលាំងពលកម្មបានច្រើន។\n            ➤ <b>ប្រើប្រព័ន្ឋទុយោសាចទឹក</b> គឺក្នុងសន្សំសំចៃទឹកកំរិតមធ្យម ចំគោលដៅតាមប្រព័ន្ឋឬស និងអាចដាក់តាមប្រព័ន្ឋនេះ ធ្វើឲ្យកសិករសន្សំពេលវេលា និងងាយបទបែនតាមសណ្ឋនដី។\n            ➤ <b>បង្ហូរតាមចង្អូរទឹក</b> ចំពោះរកសិករខ្នាតមធ្យម(៥អាឡើង) និងខ្នាតធំ គឺពិបាកក្នុងគ្រប់សំណើមដី ធ្វើខាតបង់បរិមាណទឹក ពេលវេលា ចំណាយច្រើន និងមានហានិភ័យលើដំណាំ(ទិន្នផលទាប ឬងាប់ដើម)។ "
+        },
+        "wateringSchedule": {
+          "en": "❖ Watering Schedule: Proper timing is crucial. Incorrect watering can stress the plants, delaying harvest and reducing yield. Farmers should follow the natural needs of the plant:\n\n      ➤ <b>Dry Season (or dry spells lasting 18+ days):</b> Irrigate starting 20 minutes after sunrise until 10:30 AM, and resume at 3:00 PM.\n      ❖ Timing and Water Volume Requirements:\n      ➤ <b>Volume & Requirements:</b> Water usage depends on soil type. For sandy or sandy-loam soil (requires 20-40 tons of compost/ha or cover crops), use 50-55 m³/ha. For recession water planting, use 15-20 m³/ha based on soil moisture.\n      <b>Note:</b> In this season, farmers should use a Mini-Sprinkler system installed 35–50 cm above the trellis. Operating it 1–2 times daily leads to higher yields and reduces pesticide use by 30–40%.\n      ➤ <b>Rainy Season or High Humidity:</b> Wait for the plant to warm up (check by touching the stem or field posts) and wait for dew to dry on the leaves. Irrigate between 10:55 AM and 5:55 PM only.",
+          "km": "❖ ពេលវេលាត្រូវដាក់ទឹក៖ ចំពោះការប្រើប្រាស់ទឹក គឺសំខាន់ណាស់សម្រាប់ដំណាំ តែការប្រើប្រាស់ទឹកក៍អាចនាំឲ្យនាំ ឲ្យដំណាំ ស្ត្រេសឈានដល់ការការពន្យាពេលប្រមូលផល និងបាត់បង់ទិន្នផល។ កសិករត្រូវគោរពគោលការណ៍ តាមបែបធម្មជាតិនៃដំណាំតាមកាលពេលវេលារដូចជា៖\n            ➤ <b>រដូវប្រាំង ឬ កូនរដូវប្រាំង(មិនមានទឹកភ្លៀងចាប់ពី១៨ថ្ងៃឡើង) ៖</b> អាចស្រោចទឹក ក្រោយពីថ្ងៃរៈ២០នាទី រហូតដល់ម៉ោង ១០:៣០នាទីព្រឹក និងចាប់ផ្តើមបន្តស្រោចនៅម៉ោង ០៣:០០នាទីរសៀល។\n            ❖ ពេលវេលា និងបរិមាណកំរិតទឹកដែលត្រូវប្រើ៖\n            ➤ <b>រដូវប្រាំង ឬ កូនរដូវប្រាំង(មិនមានទឹកភ្លៀងចាប់ពី១៨ថ្ងៃឡើង) ៖</b> កំរិតទឹកប្រើប្រាស់គឺពឹងផ្អែកទៅលើប្រភេទដី ចំពោះប្រភេទដីល្បាយខ្សាច់ និងខ្សាច់(ត្រូវប្រើជីកំប៉ុស ២០ ទៅ៤០តោន/១ហិតា ឬប្រើដំណាំគម្របដីបានចាប់ពីពីរដងឡើងទៅ) ៥០ទៅ ៥៥ម៉ែត្រគូប/ហិតា (តែបើដាំនាទឹកសម្រក ត្រូវប្រើតាមសំណើមដី អាច ១៥ទៅ២០ម៉ែត្រគូប/ហិតា)។\n            <b>ចំណាំ៖</b> នៅរដូវនេះ កសិករត្រូវប្រើប្រព័ន្ឋទឹកសាច(Mini-Sprinkler)ពីលើទ្រើងម្រះ ដោយបំពាក់កំពស់ពីលើទ្រើងចន្លោះ៣,៥-៥តឹក ហើយប្រើ១ ទៅ២ដង/១ថ្ងៃ ធ្វើឲ្យទិន្នផលខ្ពស់ និងកាត់បន្ថយការប្រើប្រាស់ថ្នាំសម្លាប់សត្វបានពី៣០ ទៅ៤០% ។\n            ➤ <b>រដូវភ្លៀងធ្លាក់ ឬសំណើមខ្ពស់ ៖</b> កសិកររងចាំឲ្យដើមមានកំដៅសិន(ត្រូវស្ទាបដើម ឬបង្គោលដែលនៅក្នុងចំការ) ឬត្រូវរងចាំស្លឹកស្ងួតសំណើម(រដូវរងារ) ពោលគឺត្រូវចាប់ផ្តើមស្រោចនៅចន្លោះម៉ោង១០:៥៥នាទីព្រឹក រហូតដល់ម៉ោង ៥:៥៥នាទីរសៀល ត្រូវបញ្ចប់ការស្រោច។"
+        },
+        "waterManagementCenterImages": [
+          "image/bed/offspringBitter1.jpg",
+          "image/bed/offspringBitter2.jpg"
+        ],
+        "centerImageLabels": [
+          {
+            "en": "Bitter gourd seedlings 10 days after nursery",
+            "km": "កូនម្រះបន្ទាប់ពីបណ្តុះបាន១០ថ្ងៃ"
+          }
+        ],
+        "fertilizerIntro": {
+          "en": "Bitter gourd farmers must understand soil quality or know the local history of neighboring crops. For instance, in some regions, basal organic fertilizer is not required (such as river delta areas, red soil, or newly cleared forest land). However, in most parts of Cambodia, organic fertilizer must be used—the amount varies depending on soil characteristics. For example, some sandy-loam soils require 20 to 40 tons per hectare or the planting of cover crops at least twice. (Farmers can apply fertilizer in two ways:)",
+          "km": "ដំណាំម្រះកសិករត្រូវយល់ដឹងអំពីគុណភាពដី ឬដឹងពីប្រវត្តនៃការធ្វើដំណាំក្បែរខាងដូចជា តំបន់ខ្លះមិនតម្រូវឲ្យប្រើជីធម្មជាតិទ្រប់បាត(ដីសណ្តរទន្លេ ឬដីក្រហមនិងដីរៀនព្រៃស្រោងថ្មី) តែតំបន់ភាគច្រើននៃស្រុកខ្មែរ ត្រូវតែប្រើជីធម្មជាតិដែលតិច ឬច្រើនទៅតាមលក្ខណៈនៃដី ដូចជាប្រភេទដីល្បាយខ្សាច់ខ្លះត្រូវប្រើចំនួន២០ ទៅ៤០តោន/១ហិតា  ឬដាំដំណាំគម្របដីយ៉ាងតិច ២ដង។ (សម្រាប់ជីកសិករអាចប្រើប្រាស់បានតាមរយៈ ២របៀប៖)"
+        },
+        "fertilizerStep1": {
+          "en": "<b>Method 1:</b> Farmers can apply fertilizer directly onto the raised beds by digging small holes and placing 5 grams per hole, depending on the growth stage and fertilizer type. Below is the table showing the plant age, quantity, and types of fertilizer required throughout the entire life cycle of the 'Morokat' bitter gourd variety per hectare:",
+          "km": "<b>របៀបទី ១៖</b> កសិករអាចដាក់ផ្ទាល់លើរង ដោយចោះរន្ឋដាក់៥ក្រាមក្នុង១រណ្តៅទៅតាមដំណាក់កាល និងប្រភេទជី។ នេះជាតារាង អាយុកាល ចំនួន និងប្រភេទជី ដែលត្រូវប្រើក្នុង១វដ្តជីវិតរបស់ដំណាំម្រះពូជមរកត សម្រាប់ផ្ទៃដី ១ហិតា៖"
+        },
+        "fertilizerTable1": {
+          "col1": {
+            "en": "Days to apply fertilizer after transplanting",
+            "km": "ចំនួនថ្ងៃត្រូវដាក់\nជីបន្ទាប់ពីស្ទូងកូន"
+          },
+          "col2": {
+            "en": "Distance to apply from the plant base cm",
+            "km": "ចម្ងាយត្រូវ\nដាក់ពីគល់ cm"
+          },
+          "totalRowLabel": {
+            "en": "Total fertilizer requirement per hectare per crop cycle",
+            "km": "ចំនួនជីត្រូវប្រើសរុប១ហិចតាក្នុងមួយវដ្តដំណាំ Kg"
+          },
+          "noteHeader": {
+            "en": "Note",
+            "km": "កំណត់ចំណាំ"
+          },
+          "fertilizers": [
+            {
+              "name": {
+                "en": "Urea kg",
+                "km": "ជីសរ kg"
+              },
+              "spec": "46-0-0",
+              "total": "212",
+              "color": "#e8f5e9",
+              "headerColor": "#66bb6a"
+            },
+            {
+              "name": {
+                "en": "DAP kg",
+                "km": "ដេអាប៉េ kg"
+              },
+              "spec": "18-46-0",
+              "total": "190",
+              "color": "#e3f2fd",
+              "headerColor": "#42a5f5"
+            },
+            {
+              "name": {
+                "en": "NPK kg",
+                "km": "ចម្រុះ kg"
+              },
+              "spec": "20-20-15+TE",
+              "total": "275",
+              "color": "#fff3e0",
+              "headerColor": "#ffa726"
+            },
+            {
+              "name": {
+                "en": "Potash kg",
+                "km": "កាលី kg"
+              },
+              "spec": "0-0-60",
+              "total": "360",
+              "color": "#fce4ec",
+              "headerColor": "#ef9a9a"
+            }
+          ],
+          "rows": [
+            {
+              "day": "7",
+              "dist": "6-8cm",
+              "vals": [
+                "22",
+                "",
+                "",
+                ""
+              ],
+              "note": {
+                "en": "1hole 2plant & 5g/hole",
+                "km": "1ដើម 2រន្ធ & 1g/រន្ធ"
+              }
+            },
+            {
+              "day": "14",
+              "dist": "10-15cm",
+              "vals": [
+                "10",
+                "45",
+                "",
+                ""
+              ],
+              "note": {
+                "en": "1hole 1plant & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "21",
+              "dist": "20-25cm",
+              "vals": [
+                "",
+                "",
+                "55",
+                ""
+              ],
+              "note": {
+                "en": "1hole 1plant & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "31",
+              "dist": "20-25cm",
+              "vals": [
+                "",
+                "",
+                "55",
+                ""
+              ],
+              "note": {
+                "en": "1hole 1plant & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "41",
+              "dist": "20-25cm",
+              "vals": [
+                "",
+                "25",
+                "",
+                "30"
+              ],
+              "note": {
+                "en": "1hole 1plant & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "51",
+              "dist": "20-25cm",
+              "vals": [
+                "30",
+                "",
+                "",
+                "25"
+              ],
+              "note": {
+                "en": "1hole 1plant & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "61",
+              "dist": "20-25cm",
+              "vals": [
+                "20",
+                "",
+                "",
+                "35"
+              ],
+              "note": {
+                "en": "1hole 1plant & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "71",
+              "dist": "20-25cm",
+              "vals": [
+                "",
+                "",
+                "55",
+                ""
+              ],
+              "note": {
+                "en": "1hole 1plant & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "81",
+              "dist": "20-25cm",
+              "vals": [
+                "10",
+                "30",
+                "",
+                "15"
+              ],
+              "note": {
+                "en": "1hole 1plant & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "91",
+              "dist": "20-25cm",
+              "vals": [
+                "10",
+                "10",
+                "",
+                "25"
+              ],
+              "note": {
+                "en": "1hole 1plant & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "101",
+              "dist": "20-25cm",
+              "vals": [
+                "20",
+                "",
+                "",
+                "35"
+              ],
+              "note": {
+                "en": "1hole 1plant & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "111",
+              "dist": "20-25cm",
+              "vals": [
+                "",
+                "",
+                "55",
+                ""
+              ],
+              "note": {
+                "en": "1hole 1plant & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "121",
+              "dist": "20-25cm",
+              "vals": [
+                "10",
+                "",
+                "",
+                "45"
+              ],
+              "note": {
+                "en": "1hole 1plant & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "131",
+              "dist": "20-25cm",
+              "vals": [
+                "10",
+                "30",
+                "",
+                "15"
+              ],
+              "note": {
+                "en": "1hole 1plant & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "141",
+              "dist": "20-25cm",
+              "vals": [
+                "10",
+                "10",
+                "",
+                "25"
+              ],
+              "note": {
+                "en": "1hole 1plant & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "151",
+              "dist": "20-25cm",
+              "vals": [
+                "",
+                "",
+                "55",
+                ""
+              ],
+              "note": {
+                "en": "1hole 1plant & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "161",
+              "dist": "20-25cm",
+              "vals": [
+                "10",
+                "30",
+                "",
+                "15"
+              ],
+              "note": {
+                "en": "1hole 1plant & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "171",
+              "dist": "20-25cm",
+              "vals": [
+                "10",
+                "10",
+                "",
+                "25"
+              ],
+              "note": {
+                "en": "Apply 1 hole & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "181",
+              "dist": "20-25cm",
+              "vals": [
+                "20",
+                "",
+                "",
+                "35"
+              ],
+              "note": {
+                "en": "Apply 1 hole & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            },
+            {
+              "day": "191",
+              "dist": "20-25cm",
+              "vals": [
+                "20",
+                "",
+                "",
+                "35"
+              ],
+              "note": {
+                "en": "Apply 1 hole & 5g/hole",
+                "km": "1ដើម 1រន្ធ & 5g/រន្ធ"
+              }
+            }
+          ]
+        },
+        "fertilizerStep2": {
+          "en": "<b>Method 2:</b> Fertigation (Drip Irrigation System). Most farmers use water-soluble fertilizers with minimal residue to avoid clogging the drip emitters. Below is the schedule, quantity, and fertilizer types required for one full crop cycle of 'Morokat' Bitter Gourd per hectare:",
+          "km": "<b>របៀបទី២៖</b> ជាការដាក់ជីទៅតាមប្រព័ន្ឋដំណាក់ទឹក គឺភាគច្រើន កសិករត្រូវប្រើជី ប្រភេទដែលរលាយ ក្នុងទឹក និងមិនសូវមានកាកសំណល់ដែលរំខានដល់ រន្ឋដំណក់ទឹក។ នេះជាតារាង អាយុកាល ចំនួន និងប្រភេទជី ដែលត្រូវប្រើក្នុង១វដ្តជីវិតរបស់ដំណាំម្រះពូជមរកត សម្រាប់ផ្ទៃដី ១ហិតា៖"
+        },
+        "fertilizerTable2": {
+          "headers": [
+            {
+              "label": {
+                "en": "Days after transplanting for fertilizer application",
+                "km": "ចំនួនថ្ងៃត្រូវដាក់ជីបន្ទាប់ពីស្ទូងកូន"
+              },
+              "spec": null
+            },
+            {
+              "label": {
+                "en": "Growth Stage",
+                "km": "វគ្គនៃដំណាំ"
+              },
+              "spec": null
+            },
+            {
+              "label": {
+                "en": "Urea",
+                "km": "Urea"
+              },
+              "spec": "46-0-0"
+            },
+            {
+              "label": {
+                "en": "MAP",
+                "km": "MAP"
+              },
+              "spec": "12-61-0"
+            },
+            {
+              "label": {
+                "en": "KCl",
+                "km": "KCl"
+              },
+              "spec": "0-0-60"
+            },
+            {
+              "label": {
+                "en": "15-15-15+TE",
+                "km": "15-15-15+TE"
+              },
+              "spec": "15-15-15+TE"
+            },
+            {
+              "label": {
+                "en": "CaNO3",
+                "km": "CaNO3"
+              },
+              "spec": "15-0-0+\n24% CaO"
+            },
+            {
+              "label": {
+                "en": "MgSO4",
+                "km": "MgSO4"
+              },
+              "spec": "11-0-0+\n15.4%MgO"
+            },
+            {
+              "label": {
+                "en": "Humic Acid",
+                "km": "Humic Acide"
+              },
+              "spec": "0-0-15+ 40%\nHumic Acide"
+            }
+          ],
+          "sections": [
+            {
+              "stage": {
+                "en": "I. Seedling Stage\n(16 Days)",
+                "km": "I. វគ្គកូនសំណាប\n(១៦ថ្ងៃ)"
+              },
+              "bgColor": "#ffffff",
+              "rows": [
+                [
+                  "7",
+                  "",
+                  "4.03",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "1.00",
+                  "0.00",
+                  "1.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "4.03",
+                  "2.37",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "4.50",
+                  "4.03",
+                  "0.00",
+                  "5.00",
+                  "0.00",
+                  "1.01",
+                  "1.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "4.50",
+                  "4.27",
+                  "0.00",
+                  "6.52",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ]
+              ]
+            },
+            {
+              "stage": {
+                "en": "II. Vegetative Growth Stage\n(32 days)",
+                "km": "II. វគ្គលូតលាស់\n(៣២ថ្ងៃ)"
+              },
+              "bgColor": "#c6efce",
+              "rows": [
+                [
+                  "4",
+                  "",
+                  "4.50",
+                  "3.79",
+                  "2.49",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "4.27",
+                  "0.00",
+                  "6.73",
+                  "1.00",
+                  "1.01",
+                  "1.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "4.27",
+                  "3.56",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "5.69",
+                  "3.56",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ]
+              ]
+            },
+            {
+              "stage": {
+                "en": "III. Flowering, Fruiting,\n and Harvest Management Stage(76 days)",
+                "km": "III. វគ្គថែទាំផ្កាផ្លែ\nនិង ប្រមូលផល\n(៧៦ថ្ងៃ)"
+              },
+              "bgColor": "#ffffff",
+              "rows": [
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "6.54",
+                  "6.51",
+                  "8.00",
+                  "1.00",
+                  "1.50",
+                  "1.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "6.54",
+                  "5.33",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "0.00",
+                  "0.00",
+                  "5.33",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "0.00",
+                  "0.00",
+                  "8.00",
+                  "1.00",
+                  "1.50",
+                  "0.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "0.00",
+                  "5.33",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "0.00",
+                  "5.33",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "0.00",
+                  "0.00",
+                  "8.00",
+                  "1.00",
+                  "1.50",
+                  "1.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "7.59",
+                  "5.33",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "0.00",
+                  "5.33",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "0.00",
+                  "5.33",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "0.00",
+                  "0.00",
+                  "8.00",
+                  "1.00",
+                  "2.00",
+                  "1.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "0.00",
+                  "8.00",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "0.00",
+                  "5.33",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "0.00",
+                  "5.33",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "7.59",
+                  "5.33",
+                  "1.00",
+                  "0.00",
+                  "2.00",
+                  "1.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "0.00",
+                  "5.33",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "0.00",
+                  "8.00",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "0.00",
+                  "5.33",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ],
+                [
+                  "4",
+                  "",
+                  "5.50",
+                  "0.00",
+                  "5.33",
+                  "0.00",
+                  "0.00",
+                  "0.00",
+                  "0.00"
+                ]
+              ]
+            }
+          ],
+          "totals": {
+            "label": {
+              "en": "Total Amount (Kg)",
+              "km": "សរុបគិតជា គីឡូក្រាម(Kg)"
+            },
+            "values": [
+              "142.65",
+              "56.94",
+              "106.77",
+              "50.26",
+              "7.00",
+              "10.51",
+              "8.00"
+            ]
+          }
+        },
+        "pestIntro": {
+          "en": "For F1, the Morokat variety is a variety that is resistant to diseases, viruses, and the climate of our country. In the past, through climate change, it has been seen that insects have damaged crops a lot, especially in the dry season for the Ramyol variety. There are types of insects: sucking insects such as whiteflies, blue spider mites, thrips, lice, worms: fruit borers, caterpillars, leafhoppers, caterpillars, caterpillars, and fruit flies. This species can cause the crop to lose its yield completely if no protective measures are taken. It spreads rapidly whenever the weather is hot and dry or when there is no rain for 5 to 15 consecutive days.",
+          "km": "ចំពោះម្រះF1 ពូជ មរកត ជាប្រភេទពូជដែលធន់នឹង ជម្ងឺ វីរុស ធន់នឹងអាកាសធាតុស្រុកខ្មែរយើងណាស់។ កន្លងមកតាមរយៈការប្រែប្រួលអាកាសធាតុឃើញថា សត្វល្អិតបានបំផ្លាញដំណាំខ្លាំងណាស់ជាពិសេសរដូវប្រាំងសម្រាប់ពូជមរកត មានប្រភេទសត្វល្អិតដូចជា៖ ពពួកសត្វជញ្ជក់មានដូចជា រុយស, មមាចខៀវ,ទ្រីប, ចៃពពួកដង្កូវ៖ ដង្កូវចោះផ្លែ, ដង្កូវហ្វូង, ដង្កូវមូស្លឹក,កូនដង្កូវ អណ្តើកមានិងពពួកស្រាំង ឬរុយចោះផ្លែ។ ពពួកនេះ វាអាចធ្វើឲ្យដំណាំបាត់បង់ទិន្នផលទាំងស្រុងបាន ប្រសិនបើមិនមានវិធានការការពារ។ វារីករាលដាលខ្លាំង នៅពេលណា ដែលមានអាកាសធាតុក្តៅ ហើយស្ងួត ឬពេលមិនមានភ្លៀង រយៈពេលចាប់ពី៥ទៅ១៥ថ្ងៃជាប់គ្នា។"
+        },
+        "preventionMethods": {
+          "en": [
+            "Farmers must regularly inspect the farm; if these pests are found, they should be eliminated as quickly as possible through:",
+            "Proper pruning of branches and leaves.",
+            "Using mini-sprinklers over the entire trellis to wash away insect eggs during the dry season.",
+            "Using smoke machines (thermal foggers) mixed with pesticides."
+          ],
+          "km": [
+            "កសិករត្រូវតែត្រួតពិនិត្យចំការជាប្រចាំ ប្រសិនបើឃើញសត្វល្អិតទាំងនេះត្រូវកំចាត់ឲ្យទាន់ពេលវេលា តាមតែអាចធ្វើទៅបាន តាមរយៈ៖",
+            "ការតែងមែក និងស្លឹកឲ្យបានត្រឹមត្រូវ",
+            "ការប្រើប្រាស់ទឹកសាចលើស្លឹក (ប្រព័ន្ឋmini- Sprinkler ពីលើទ្រើងទាំងមូលដើម្បីកំចាត់ពងសត្វ នៅរដូវប្រាំង",
+            "ការប្រើម៉ាស៊ីនបាញ់ផ្សែងលាយថ្នាំសម្លាប់សត្វល្អិត"
+          ]
+        },
+        "eliminationMethods": {
+          "en": [
+            "Consult specialists as some pests have developed immunity."
+          ],
+          "km": [
+            "កសិករត្រូវតែមានការយល់ដឹង ឬប្រឹក្សារជាមួយមន្ត្រីជំនាញលើថ្នាំកំចាត់សត្វល្អិត ឲ្យបានត្រឹមត្រូវ មុនពេលសម្រេចចិត្តប្រើប្រាស់។ ដោយសារតែកន្លងមក ថ្នាំកំចាត់សត្វល្អិតមួយចំនួន បានស៊ាំទៅនឹងតំបន់នោះរួចទៅហើយ នៅពេលកសិករទិញថ្នាំកំចាត់សត្វល្អិតទាំងនោះទៅប្រើប្រាស់ បែជាមិនមានប្រសិទ្ឋភាព នាំឲ្យកសិករខាតបង់ដូចជា លុយ កំលាំងពលកម្ម ពេលវេលា និងបាត់បង់ទិន្នផលទៀតផង។ "
+          ]
+        },
+        "pestTable": {
+          "en": {
+            "title": "The following are highly effective pesticide active ingredients:",
+            "headers": [
+              "Active Ingredient",
+              "Sucking Pests",
+              "Caterpillars (Leaf eaters)",
+              "Caterpillars (Borers)",
+              "Leaf Cutters/Rollers",
+              "Fruit Flies"
+            ],
+            "rows": [
+              [
+                "Pymetrozine 600g/kg + Nitenpyram 200g/kg",
+                "***",
+                "*",
+                "**",
+                "**",
+                "***"
+              ],
+              [
+                "Carbaryl 85% WP",
+                "***",
+                "**",
+                "*",
+                "**",
+                "***"
+              ],
+              [
+                "Thiamethoxam",
+                "**",
+                "*",
+                "*",
+                "**",
+                "***"
+              ],
+              [
+                "Imidacloprid",
+                "***",
+                "*",
+                "*",
+                "**",
+                "***"
+              ],
+              [
+                "Permethrin 500g/L",
+                "*",
+                "*",
+                "***",
+                "*",
+                "*"
+              ],
+              [
+                "Indoxacarb",
+                "*",
+                "*",
+                "**",
+                "**",
+                "***"
+              ],
+              [
+                "Chlorantraniliprole 10% + Chlorfenapyr 20% SC",
+                "**",
+                "***",
+                "*",
+                "***",
+                "***"
+              ],
+              [
+                "Flubendiamide",
+                "**",
+                "*",
+                "*",
+                "**",
+                "***"
+              ]
+            ]
+          },
+          "km": {
+            "title": "ខាងក្រោមនេះជាធាតុសកម្មថ្នាំកំចាត់សត្វល្អិត ដែលមានប្រសិទ្ធភាពខ្ពស់៖",
+            "headers": [
+              "ឈ្មោះធាតុសកម្ម",
+              "ពួកសត្វល្អិត ជញ្ជក់",
+              "ពួកដង្កូវ ស៊ីស្លឹក",
+              "ពួកដង្កូវ ចោះផ្លែ",
+              "ពួកកាត់រម្កល់ ស្លឹក",
+              "រុយផ្លែ"
+            ],
+            "rows": [
+              [
+                "Pymetrozine 600g/kg + Nitenpyram 200g/kg",
+                "***",
+                "*",
+                "**",
+                "**",
+                "***"
+              ],
+              [
+                "Carbaryl 85% WP",
+                "***",
+                "**",
+                "*",
+                "**",
+                "***"
+              ],
+              [
+                "Thiamethoxam",
+                "**",
+                "*",
+                "*",
+                "**",
+                "***"
+              ],
+              [
+                "Imidacloprid",
+                "***",
+                "*",
+                "*",
+                "**",
+                "***"
+              ],
+              [
+                "Permethrin 500g/L",
+                "*",
+                "*",
+                "***",
+                "*",
+                "*"
+              ],
+              [
+                "Indoxacarb",
+                "*",
+                "*",
+                "**",
+                "**",
+                "***"
+              ],
+              [
+                "Chlorantraniliprole 10% + Chlorfenapyr 20% SC",
+                "**",
+                "***",
+                "*",
+                "***",
+                "***"
+              ],
+              [
+                "Flubendiamide",
+                "**",
+                "*",
+                "*",
+                "**",
+                "***"
+              ]
+            ]
+          }
+        },
+        "pestLegend": {
+          "en": "Note: * = Low effectiveness, ** = Medium effectiveness, *** = High effectiveness",
+          "km": "សំគាល់៖ * = ងាប់តិច, ** = ងាប់មធ្យម, *** = ងាប់ខ្លាំង"
+        },
+        "pestImages": [
+          "image/bed/pest1.png",
+          "image/bed/pest2.jpg",
+          "image/bed/pest3.png",
+          "image/bed/pest4.png",
+          "image/bed/pest5.png",
+          "image/bed/pest6.jpg",
+          "image/bed/pest7.jpg",
+          "image/bed/pest8.jpg"
+        ],
+        "pestNames": {
+          "en": [
+            "Thrips",
+            "Whitefly",
+            "Leafhopper",
+            "Aphids",
+            "Fruit Borer",
+            "Leaf Roller",
+            "Tortoise Beetle",
+            "Fruit Fly"
+          ],
+          "km": [
+            "ទ្រីប",
+            "រុយស",
+            "មមាចខៀវ",
+            "ពពួកចៃ",
+            "ដង្កូវចោះផ្លែ",
+            "ដង្កូវរមូស្លឹក",
+            "ដង្កូវអណ្តើកមាស",
+            "ស្រាងទិចផ្លែ"
+          ]
+        },
+        "diseaseIntro": {
+          "en": "For bitter gourd crops, farmers must frequently inspect their fields when the seedlings are small, specifically from 15 days old onwards, as this is the stage when diseases begin to infect the plants. Disease outbreaks can be caused by insect transmission, soil-borne fungi, or seed factors (such as selecting improper varieties or using seeds already infected with disease). Common diseases affecting bitter gourd include: Damping off, Powdery mildew, Downy mildew, Anthracnose, Virus, and Bacterial wilt.",
+          "km": "ចំពោះដំណាំម្រះ កសិករត្រូវឧស្សាហ៍ត្រួតពិនិត្យមើលចំការនៅអំឡុងពេលកូនម្រះនៅតូច ដែលមានអាយុចាប់ពី ១៥ថ្ងៃឡើង ព្រោះជាដំណាក់កាលជំងឺចាប់ផ្តើមឆ្លងចូលដំណាំ ហើយការកើតមានជំងឺអាចបណ្តាលមកពីការចម្លងរបស់សត្វល្អិត, ពពួកផ្សិតនៅក្នុងដី, កត្តាពូជ(ការជ្រើសរើសពូជមិនបានត្រឹមត្រូវ រឺក៏ការទុកពូជដែលមានជំងឺស្រាប់)។ ប្រភេទជំងឺដែលឧស្សាហ៍កើតលើដំណាំម្រះមានដូចជា៖ ជំងឺរលួយគល់កូន(Damping off)ជំងឺផ្សិតម្សៅ(powdery mildew), ជំងឺអ៊ុចលឿងស្លឹក(downy mildew), ជំងឺអ៊ុចភ្នែកកង្កែប(anthracnose), វីរុស(Virus), ជំងឺស្វិតស្រពោនស្រស់(bacterial wilt)។"
+        },
+        "diseaseImages": [
+          "image/bed/disease1.png",
+          "image/bed/disease2.jpg",
+          "image/bed/disease3.png",
+          "image/bed/disease4.jpg",
+          "image/bed/disease5.png"
+        ],
+        "diseaseNames": {
+          "en": [
+            "Damping off",
+            "Powdery Mildew",
+            "Anthracnose",
+            "Virus Mosaic",
+            "Downy Mildew"
+          ],
+          "km": [
+            "ជំងឺ រលួយគល់កូន",
+            "ជំងឺផ្សិតម្សៅ",
+            "ជំងឺអ៊ុចភ្នែកកង្កែប",
+            "វីរុស mosaic",
+            "ជំងឺអ៊ុចលឿងស្លឹក"
+          ]
+        },
+        "diseasePrevention": {
+          "en": [
+            "7.2.1. Plant Disease Prevention Methods:",
+            "Clean the soil and remove old roots/debris.",
+            "Practice crop rotation.",
+            "Add compost or organic fertilizers.",
+            "Remove and destroy infected plants/leaves.",
+            "Clean agricultural tools regularly."
+          ],
+          "km": [
+            "ការពារជំងឺរុក្ខជាតិគឺសំខាន់ណាស់ ដើម្បីរក្សាផលដំណាំឲ្យមានគុណភាពល្អ និងបង្កើនទិន្នផល។ ខាងក្រោមនេះជាវិធីសាស្រ្តសំខាន់ៗ៖",
+            "រៀបចំដីឲ្យល្អកាប់ឫស និងសំណល់រុក្ខជាតិចាស់ៗចេញ",
+            "បន្ថែមជីកំប៉ុស ឬជីសរីរាង្គ",
+            "ប្តូរដំណាំ (crop rotation) ដើម្បីកាត់បន្ថយមេរោគនៅក្នុងដី",
+            "សម្អាត និងកម្ចាត់រុក្ខជាតិឆ្លងជំងឺ",
+            "កាត់បំបាត់ស្លឹក ឬដើមដែលមានជំងឺ",
+            "កុំទុកសំណល់ជំងឺនៅលើវាល",
+            "សម្អាតឧបករណ៍កសិកម្មជាប្រចាំ",
+            "ប្រើថ្នាំការពាររុក្ខជាតិដោយប្រុងប្រយ័ត្ន",
+            "ប្រើថ្នាំតាមការណែនាំបច្ចេកទេស",
+            "ពាក់សម្ភារៈការពារ (ម៉ាស់ ស្រោមដៃ)"
+          ]
+        },
+        "diseasePreventionImage": "image/bed/triels1.png",
+        "diseasetable": {
+          "en": "Table: Active Ingredients for Crop Disease Prevention and Treatment",
+          "km": "ខាងក្រោមនេះជាតារាងធាតុសកម្មថ្នាំការពារ និងព្យាបាលជំងឺ៖"
+        },
+        "diseaseTreatmentTable": {
+          "en": {
+            "headers": [
+              "Active Ingredient",
+              "Type",
+              "Disease Targeted"
+            ],
+            "rows": [
+              [
+                "Metalaxyl",
+                "Treatment",
+                "Downy mildew"
+              ],
+              [
+                "Azoxystrobin",
+                "Treatment",
+                "Powdery mildew"
+              ],
+              [
+                "Azoxystrobin",
+                "Treatment",
+                "Anthracnose"
+              ],
+              [
+                "Chlorothalonil",
+                "Prevention",
+                "-"
+              ],
+              [
+                "Mancozeb",
+                "Prevention",
+                "-"
+              ]
+            ]
+          },
+          "km": {
+            "headers": [
+              "ឈ្មោះធាតុសកម្ម",
+              "របៀបកម្ចាត់",
+              "ប្រភេទជំងឺ"
+            ],
+            "rows": [
+              [
+                "Metalaxyl",
+                "ព្យាបាល",
+                "ជំងឺអ៊ុចលឿងស្លឹក(Downy mildew)"
+              ],
+              [
+                "Azoxystrobin",
+                "ព្យាបាល",
+                "ជំងឺផ្សិតម្សៅ(Powdery Mildew)"
+              ],
+              [
+                "Azoxystrobin",
+                "ព្យាបាល",
+                "ជំងឺអ៊ុចភ្នែកកង្កែប(anthracnose)"
+              ],
+              [
+                "Chlorothalonil",
+                "ការពារ",
+                "-"
+              ],
+              [
+                "Mancozeb",
+                "ការពារ",
+                "-"
+              ]
+            ]
+          }
+        },
+        "diseaseNote": {
+          "en": "Regarding the use of agricultural chemicals, farmers should consult with agricultural officers or technical experts for proper instructions before application.",
+          "km": "ចំពោះការប្រើប្រាស់ថ្នាំកសិកម្ម កសិករត្រូវសាក់សួរពត៍មាននៃការប្រើប្រាស់ពី មន្ត្រីកសិកម្ម និងបុគ្គលិកជំនាញ់ មុនធ្វើការប្រើប្រាស់។"
+        }
+      }
+    ]
+  }
+}

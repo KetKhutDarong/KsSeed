@@ -412,7 +412,7 @@
 }
 
 /* ── MOBILE ≤ 420px ── */
-@media (max-width: 420px) {
+@media (max-width: 480px) {
     #guide-modal {
         padding: 4px;
     }

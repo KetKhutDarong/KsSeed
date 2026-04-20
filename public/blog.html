@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Blog Posts | KsSEED Cambodia</title>
+    <meta name="description"
+        content="Read all farming tips, seed guides, and vegetable growing advice for Cambodian farmers." />
+    <link rel="canonical" href="https://yourdomain.com/blog.html" />
+    <meta property="og:title" content="All Blog Posts | KsSEED" />
+    <meta property="og:description"
+        content="Farming tips, seed guides, and vegetable growing advice for farmers in Cambodia." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourdomain.com/blog.html" />
+    <meta property="og:image" content="https://yourdomain.com/image/General/Picture1.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="image/logo/ksseed.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hanuman:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <style>
+        /* Fix: Push content below fixed header */
+        body {
+            padding-top: 80px;
+        }
+
+        .blog-header {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e9edf2 100%);
+            padding: 3rem 0;
+            margin-bottom: 2rem;
+            border-radius: 0 0 20px 20px;
+            text-align: center;
+        }
+
+        .blog-header h1 {
+            font-size: 2.5rem;
+            color: #4caf50;
+            margin-bottom: 1rem;
+        }
+
+        .blog-header p {
+            font-size: 1.1rem;
+            color: #4a5568;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+
+        .load-more-wrapper {
+            text-align: center;
+            margin: 2rem 0 3rem;
+        }
+
+        .load-more-btn {
+            background: #4caf50;
+            color: white;
+            border: none;
+            padding: 12px 32px;
+            font-size: 1rem;
+            border-radius: 40px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: 600;
+        }
+
+        .load-more-btn:hover {
+            background: #439746;
+            transform: translateY(-2px);
+        }
+
+        .loading-spinner,
+        .no-more-msg {
+            text-align: center;
+            padding: 2rem;
+            color: #4caf50;
+        }
+
+        .no-more-msg {
+            color: #718096;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header (same as your site) -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html#home" class="logo-link">
+                        <img src="image/logo/ksseed.png" alt="KsSEED Logo" />
+                        <span class="logo-text">KSSEED</span>
+                    </a>
+                </div>
+                <nav class="nav" id="nav">
+                    <a href="index.html#home" class="nav-link" data-en="Home" data-km="ទំព័រដើម">Home</a>
+                    <a href="index.html#products" class="nav-link" data-en="Seeds" data-km="គ្រាប់ពូជ">Seeds</a>
+                    <a href="index.html#about" class="nav-link" data-en="About Us" data-km="អំពីយើង">About Us</a>
+                    <a href="index.html#research" class="nav-link" data-en="R&D" data-km="ស្រាវជ្រាវ">R&D</a>
+                    <a href="index.html#stories" class="nav-link" data-en="Farmers' Stories"
+                        data-km="កសិករជោគជ័យ">Farmers' Stories</a>
+                    <a href="index.html#blog" class="nav-link active" data-en="Others Info"
+                        data-km="ព័ត៌មានផ្សេងៗ">Others Info</a>
+                    <a href="index.html#contact" class="nav-link" data-en="Contact" data-km="ទំនាក់ទំនង">Contact</a>
+                </nav>
+                <div class="header-actions">
+                    <button class="lang-switch" id="langSwitch">
+                        <span class="lang-option active" data-lang="en">EN</span>
+                        <span class="lang-divider">|</span>
+                        <span class="lang-option" data-lang="km">ខ្មែរ</span>
+                    </button>
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Header Section (like Terms of Service) -->
+    <div class="blog-header">
+        <div class="container">
+            <h1 data-en="Agricultural Information" data-km="ព័ត៌មានកសិកម្ម">Agricultural Information</h1>
+            <p data-en="Explore essential farming tips, seed guides, crop yield strategies, and agricultural science updates from KsSEED experts. Access the technical knowledge you need to grow better."
+                data-km="ស្វែងយល់ពីគន្លឹះដាំដុះ ការណែនាំអំពីគ្រាប់ពូជ យុទ្ធសាស្ត្របង្កើនទិន្នផល និងបច្ចេកវិទ្យាកសិកម្មពីអ្នកជំនាញ KsSEED ដើម្បីជួយឱ្យការដាំដុះកាន់តែប្រសើរ។">
+                Explore essential farming tips, seed guides, crop yield strategies, and agricultural science updates
+                from
+                KsSEED experts. Access the technical knowledge you need to grow better.
+            </p>
+        </div>
+    </div>
+
+    <!-- Blog Grid -->
+    <section class="blog-listing-section">
+        <div class="container">
+            <div class="blog-grid" id="blogGridContainer">
+                <div class="loading-spinner">Loading blogs...</div>
+            </div>
+            <div class="load-more-wrapper" id="loadMoreWrapper">
+                <button class="load-more-btn" id="loadMoreBtn" data-en="Load More Articles"
+                    data-km="ផ្ទុកអត្ថបទបន្ថែម">Load More Articles</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (same as your site) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="image/logo/ksseed.png" alt="KsSEED Logo" />
+                        <span class="logo-text">KSSEED</span>
+                    </div>
+                    <p data-en="Quality, Confidence, and Growth are primary."
+                        data-km="គុណភាព ទំនុកចិត្ត និងភាពរីកចម្រើនជាចម្បង">Quality, Confidence, and Growth are primary.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-en="Quick Links" data-km="តំណភ្ជាប់រហ័ស">Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#home" data-en="Home" data-km="ទំព័រដើម">Home</a></li>
+                        <li><a href="index.html#about" data-en="About Us" data-km="អំពីយើង">About Us</a></li>
+                        <li><a href="index.html#products" data-en="Products" data-km="ផលិតផល">Products</a></li>
+                        <li><a href="index.html#research" data-en="Research" data-km="ស្រាវជ្រាវ">Research</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 data-en="Farming Knowledge" data-km="ចំណេះដឹងកសិកម្ម">Farming Knowledge</h4>
+                    <ul>
+                        <li><a href="index.html#stories" data-en="Farmers' Stories" data-km="កសិករជោគជ័យ">Farmers'
+                                Stories</a></li>
+                        <li><a href="blog.html" data-en="Others Info" data-km="ព័ត៌មានផ្សេងៗ">Others Info</a></li>
+                        <li><a href="faq.html" data-en="FAQs" data-km="សំណួរញឹកញាប់">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 data-en="Contact" data-km="ទំនាក់ទំនង">Contact</h4>
+                    <ul>
+                        <li data-en="📍 Phnom Penh, Cambodia" data-km="📍 ភ្នំពេញ, កម្ពុជា">📍 Phnom Penh, Cambodia</li>
+                        <li>📞 +855 93 755 638</li>
+                        <li>✉️ <a href="mailto:ksseed.info@gmail.com">ksseed.info@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 KsSeed. <span data-en="All rights reserved." data-km="រក្សាសិទ្ធិគ្រប់យ៉ាង។">All rights
+                        reserved.</span></p>
+                <div class="footer-links">
+                    <a href="privacy-policy.html" data-en="Privacy Policy" data-km="គោលការណ៍ភាពឯកជន">Privacy Policy</a>
+                    <a href="terms.html" data-en="Terms of Service" data-km="លក្ខខណ្ឌសេវាកម្ម">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chat Widget (optional) -->
+    <div class="chat-widget" id="chatWidget">
+        <button class="chat-button" id="chatButton">
+            <span class="chat-icon">&#128172;</span>
+            <span class="chat-close">✕</span>
+        </button>
+        <div class="chat-box" id="chatBox">
+            <div class="chat-header">
+                <h4 data-en="Chat with Us" data-km="ជជែកជាមួយយើង">Chat with Us</h4>
+                <p data-en="We're here to help!" data-km="យើងនៅទីនេះដើម្បីជួយ!">We're here to help!</p>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="chat-message bot">
+                    <p data-en="Hello! How can we help you today?" data-km="សួស្តី! តើយើងអាចជួយអ្នកយ៉ាងណាថ្ងៃនេះ?">
+                        Hello! How can we help you today?</p>
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" placeholder="Type your message..." id="chatInput" />
+                <button id="chatSend">➤</button>
+            </div>
+        </div>
+    </div>
+    <button class="scroll-top" id="scrollTop">&#10094;</button>
+
+    <script src="js/api.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/form-handler.js"></script>
+    <script>
+        // ---------- BLOG LISTING WITH LOAD MORE (3 cards initially, then +3 each click) ----------
+        let allBlogsArray = [];
+        let currentIndex = 0;
+        const PAGE_SIZE = 3;
+        let isLoading = false;
+        let allLoaded = false;
+
+        const blogGrid = document.getElementById('blogGridContainer');
+        const loadMoreBtn = document.getElementById('loadMoreBtn');
+        const loadMoreWrapper = document.getElementById('loadMoreWrapper');
+
+        function escapeHtml(str) {
+            if (!str) return '';
+            return str.replace(/[&<>]/g, function (m) {
+                if (m === '&') return '&amp;';
+                if (m === '<') return '&lt;';
+                if (m === '>') return '&gt;';
+                return m;
+            });
+        }
+
+        function createBlogCard(blog) {
+            const lang = localStorage.getItem('ksseed-language') || 'en';
+            const title = lang === 'km' ? blog.title.km : blog.title.en;
+            const preview = lang === 'km' ? blog.preview.km : blog.preview.en;
+            const category = lang === 'km' ? blog.category?.km : blog.category?.en;
+            const readMoreText = lang === 'km' ? 'អានបន្ថែម →' : 'Read More →';
+            const date = blog.date || 'No date';
+            const readTime = blog.readTime || 0;
+
+            return `
+        <div class="blog-card">
+          <div class="blog-image">
+            <img src="${blog.image || '/placeholder.svg'}" alt="${escapeHtml(title)}" loading="lazy" />
+            ${category ? `<span class="blog-category">${escapeHtml(category)}</span>` : ''}
+          </div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span class="blog-date">${escapeHtml(date)}</span>
+              <span class="blog-read">⏱️ ${readTime} min read</span>
+            </div>
+            <h3>${escapeHtml(title)}</h3>
+            <p>${escapeHtml(preview.substring(0, 120))}${preview.length > 120 ? '...' : ''}</p>
+            <a href="blog_detail.html?id=${blog._id}" class="blog-link">${readMoreText}</a>
+          </div>
+        </div>
+      `;
+        }
+
+        async function loadMoreArticles() {
+            if (isLoading || allLoaded) return;
+            isLoading = true;
+            loadMoreBtn.textContent = 'Loading...';
+            loadMoreBtn.disabled = true;
+
+            if (allBlogsArray.length === 0) {
+                try {
+                    const res = await fetch('/api/blogs?limit=100');
+                    const data = await res.json();
+                    if (!data.success || !data.blogs || data.blogs.length === 0) {
+                        blogGrid.innerHTML = '<div class="no-more-msg">No blog posts found.</div>';
+                        loadMoreWrapper.style.display = 'none';
+                        isLoading = false;
+                        return;
+                    }
+                    allBlogsArray = data.blogs.sort((a, b) => new Date(b.date) - new Date(a.date));
+                    currentIndex = 0;
+                } catch (err) {
+                    console.error(err);
+                    blogGrid.innerHTML = '<div class="no-more-msg">Failed to load blogs. Please try again later.</div>';
+                    loadMoreWrapper.style.display = 'none';
+                    isLoading = false;
+                    return;
+                }
+            }
+
+            const nextBatch = allBlogsArray.slice(currentIndex, currentIndex + PAGE_SIZE);
+            if (nextBatch.length === 0) {
+                allLoaded = true;
+                loadMoreWrapper.innerHTML = '<div class="no-more-msg" data-en="All articles loaded" data-km="អត្ថបទទាំងអស់ត្រូវបានផ្ទុករួចរាល់">All articles loaded</div>';
+                isLoading = false;
+                return;
+            }
+
+            const cardsHtml = nextBatch.map(blog => createBlogCard(blog)).join('');
+            if (currentIndex === 0) {
+                blogGrid.innerHTML = cardsHtml;
+            } else {
+                blogGrid.insertAdjacentHTML('beforeend', cardsHtml);
+            }
+
+            currentIndex += nextBatch.length;
+            if (currentIndex >= allBlogsArray.length) {
+                allLoaded = true;
+                loadMoreWrapper.innerHTML = '<div class="no-more-msg" data-en="All articles loaded" data-km="អត្ថបទទាំងអស់ត្រូវបានផ្ទុករួចរាល់">All articles loaded</div>';
+            } else {
+                const lang = localStorage.getItem('ksseed-language') || 'en';
+                loadMoreBtn.textContent = lang === 'km' ? 'ផ្ទុកអត្ថបទបន្ថែម' : 'Load More Articles';
+                loadMoreBtn.disabled = false;
+            }
+            isLoading = false;
+        }
+
+        function refreshLanguage() {
+            if (allBlogsArray.length === 0) return;
+            const loadedBlogs = allBlogsArray.slice(0, currentIndex);
+            const cardsHtml = loadedBlogs.map(blog => createBlogCard(blog)).join('');
+            blogGrid.innerHTML = cardsHtml;
+            if (allLoaded) {
+                const lang = localStorage.getItem('ksseed-language') || 'en';
+                loadMoreWrapper.innerHTML = `<div class="no-more-msg">${lang === 'km' ? 'អត្ថបទទាំងអស់ត្រូវបានផ្ទុករួចរាល់' : 'All articles loaded'}</div>`;
+            } else {
+                const lang = localStorage.getItem('ksseed-language') || 'en';
+                loadMoreBtn.textContent = lang === 'km' ? 'ផ្ទុកអត្ថបទបន្ថែម' : 'Load More Articles';
+            }
+            // Update header texts using data attributes
+            const headerH1 = document.querySelector('.blog-header h1');
+            const headerP = document.querySelector('.blog-header p');
+            const currentLang = localStorage.getItem('ksseed-language') || 'en';
+            if (headerH1) {
+                const khmerText = headerH1.getAttribute('data-km');
+                const englishText = headerH1.getAttribute('data-en');
+                headerH1.innerText = currentLang === 'km' ? khmerText : englishText;
+            }
+            if (headerP) {
+                const khmerText = headerP.getAttribute('data-km');
+                const englishText = headerP.getAttribute('data-en');
+                headerP.innerText = currentLang === 'km' ? khmerText : englishText;
+            }
+        }
+
+        // Manual language switch handler (ensures it works even if global event fails)
+        function setupLanguageSwitching() {
+            const langSwitch = document.getElementById('langSwitch');
+            if (!langSwitch) return;
+            const options = langSwitch.querySelectorAll('.lang-option');
+            options.forEach(opt => {
+                opt.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const newLang = opt.getAttribute('data-lang');
+                    if (!newLang) return;
+                    // Update localStorage
+                    localStorage.setItem('ksseed-language', newLang);
+                    // Update active class on buttons
+                    options.forEach(o => o.classList.remove('active'));
+                    opt.classList.add('active');
+                    // Dispatch custom event for other components
+                    document.dispatchEvent(new CustomEvent('languageChange', { detail: { lang: newLang } }));
+                    // Directly refresh this page's content
+                    refreshLanguage();
+                    // Also update any global language variable if exists
+                    if (window.currentLang) window.currentLang = newLang;
+                });
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadMoreArticles();
+            if (loadMoreBtn) {
+                loadMoreBtn.addEventListener('click', loadMoreArticles);
+            }
+            // Listen for languageChange event (from script.js)
+            document.addEventListener('languageChange', (e) => {
+                if (e.detail && e.detail.lang) {
+                    localStorage.setItem('ksseed-language', e.detail.lang);
+                    refreshLanguage();
+                }
+            });
+            // Also set up direct click handler on the language switch button
+            setupLanguageSwitching();
+        });
+    </script>
+</body>
+
+</html>

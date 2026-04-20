@@ -27,3 +27,8 @@ public/image/Cruciferous/
 public/image/EdibleAmaranth/
 public/image/eggplant/
 public/image/Corn/
+
+colorKsSeed.css
+convert.cjs
+seedFaqStories.js
+Seedmongodb.js

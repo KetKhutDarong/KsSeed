@@ -166,8 +166,10 @@
 
 .image-card img {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
+  height: 250px;
+  object-fit: contain;
+  background: #f5f5f5;
+  padding: 10px;
 }
 
 .image-card h3 {
@@ -182,6 +184,22 @@
   color: #666;
   margin: 0 15px 20px 15px;
   line-height: 1.5;
+}
+
+.image-card-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  /* match the img height */
+  background: #f5f5f5;
+}
+
+.image-card-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* ← contain, not cover */
+  padding: 10px;
 }
 
 /* ========== MODAL STYLES ========== */
@@ -877,4 +895,320 @@ hr {
   font-size: 0.85rem;
   color: #718096;
   font-style: italic;
+}
+
+
+/* seed compare */
+.kss-compare-wrap {
+  background: #f7fbf4;
+  padding: 60px 0 72px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.kss-compare-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.kss-compare-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1b5e20;
+  margin: 0 0 8px 0;
+}
+
+.kss-compare-desc {
+  font-size: 14px;
+  color: #777;
+  margin: 0 0 32px 0;
+}
+
+.kss-step {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.kss-step-num {
+  width: 26px;
+  height: 26px;
+  background: #43b048;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.kss-step-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #2e7d32;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.kss-crop-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.kss-pill {
+  padding: 7px 16px;
+  border-radius: 50px;
+  border: 1.5px solid #c8e6c9;
+  background: #fff;
+  font-size: 13px;
+  color: #388e3c;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.18s;
+  font-weight: 500;
+}
+
+.kss-pill:hover {
+  border-color: #43b048;
+  background: #f1f8e9;
+}
+
+.kss-pill.kss-active {
+  background: #43b048;
+  border-color: #43b048;
+  color: #fff;
+}
+
+.kss-selects {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 12px;
+  align-items: end;
+  margin-bottom: 28px;
+}
+
+.kss-sel-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.kss-sel-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #388e3c;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.kss-select {
+  width: 100%;
+  padding: 10px 36px 10px 14px;
+  border: 1.5px solid #c8e6c9;
+  border-radius: 10px;
+  font-size: 13px;
+  color: #1b5e20;
+  background: #fff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='%232e7d32' d='M5 6L0 0h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.kss-select:focus {
+  outline: none;
+  border-color: #43b048;
+  box-shadow: 0 0 0 3px rgba(67, 176, 72, 0.15);
+}
+
+.kss-vs-badge {
+  width: 36px;
+  height: 36px;
+  background: #43b048;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 11px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 1px;
+  flex-shrink: 0;
+  align-self: end;
+  margin-bottom: 4px;
+}
+
+.kss-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.kss-card {
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+  border: 1.5px solid #c8e6c9;
+  box-shadow: 0 2px 8px rgba(46, 125, 50, 0.06);
+}
+
+.kss-card-head {
+  background: linear-gradient(135deg, #1b5e20 0%, #43b048 100%);
+  padding: 14px 16px 12px;
+}
+
+.kss-card-head .kh-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.kss-card-head .kh-type {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.65);
+  margin: 3px 0 0;
+}
+
+.kss-card img.kc-img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  display: block;
+  background: #f1f8e9;
+}
+
+.kc-img-ph {
+  width: 100%;
+  height: 160px;
+  background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  color: #a5d6a7;
+}
+
+.kc-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 16px;
+  border-bottom: 1px solid #f1f8e9;
+  gap: 8px;
+}
+
+.kc-row:last-child {
+  border-bottom: none;
+}
+
+.kc-row.kc-win {
+  background: #f1f8e9;
+}
+
+.kc-lbl {
+  font-size: 11px;
+  color: #aaa;
+  flex-shrink: 0;
+}
+
+.kc-val {
+  font-size: 12px;
+  font-weight: 500;
+  color: #222;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.kc-tag {
+  font-size: 10px;
+  background: #e8f5e9;
+  color: #2e7d32;
+  padding: 2px 7px;
+  border-radius: 20px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.kc-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.kc-bar-bg {
+  width: 60px;
+  height: 5px;
+  background: #e8f5e9;
+  border-radius: 3px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.kc-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  background: #a5d6a7;
+}
+
+.kc-bar-fill.kc-best {
+  background: #2e7d32;
+}
+
+.kss-warn {
+  grid-column: 1/-1;
+  text-align: center;
+  padding: 32px;
+  border: 1.5px dashed #c8e6c9;
+  border-radius: 14px;
+  color: #aaa;
+  font-size: 13px;
+  background: #fafffe;
+}
+
+.kss-placeholder {
+  grid-column: 1/-1;
+  text-align: center;
+  padding: 40px 20px;
+  color: #bbb;
+  font-size: 14px;
+}
+
+.kss-placeholder .kss-ph-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 640px) {
+  .kss-selects {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .kss-vs-badge {
+    margin: 4px auto;
+    align-self: center;
+  }
+
+  .kss-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .kss-compare-title {
+    font-size: 22px;
+  }
 }

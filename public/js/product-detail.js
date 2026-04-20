@@ -1,5 +1,5 @@
 // IndexedDB Setup
-const DB_NAME = "ProductLanguageDB";
+const DB_NAME = "LanguageDB";
 const DB_VERSION = 1;
 const STORE_NAME = "settings";
 let db;
@@ -395,12 +395,10 @@ function showModal(productKey, variantIndex) {
   const lang = currentLang;
 
   currentVariantData = variant;
-  console.log("🔍 variant data:", JSON.stringify(variant, null, 2));
-  console.log("🔍 variant.info:", variant?.info);
-  console.log("🔍 currentLang:", lang);
+  // console.log("🔍 variant data:", JSON.stringify(variant, null, 2));
+  // console.log("🔍 variant.info:", variant?.info);
+  // console.log("🔍 currentLang:", lang);
 
-  const weightLabel = lang === "en" ? "Weight" : "ទម្ងន់";
-  const viewsLabel = lang === "en" ? "Views" : "ចំនួនមើល";
   const descLabel = lang === "en" ? "Description" : "ការពិពណ៌នា";
   const growingGuideLabel = lang === "en" ? "Technical" : "បច្ចេកទេស​ដាំដុះ";
   const seeVideoLabel = lang === "en" ? "Watch Video" : "មើលវីដេអូ";
@@ -451,10 +449,6 @@ function showModal(productKey, variantIndex) {
       </div>
       <div class="modal-details">
         <h2 class="modal-title">${variant.title[lang]}</h2>
-        <div class="modal-meta">
-          <span>⚖️ ${weightLabel}: <strong>${variant.weight}</strong></span>
-          <span>👁️ ${viewsLabel}: <strong>${variant.views}</strong></span>
-        </div>
         
         <div class="modal-section">
           <h3>${descLabel}</h3>
