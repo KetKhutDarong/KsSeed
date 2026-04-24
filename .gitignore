@@ -32,3 +32,4 @@ colorKsSeed.css
 convert.cjs
 seedFaqStories.js
 Seedmongodb.js
+seedBlogs.js

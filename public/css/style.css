@@ -391,6 +391,9 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  /* centers the whole grid block */
 }
 
 .testimonial-card {
@@ -524,12 +527,15 @@ body {
   background: var(--light-gray);
   border-radius: var(--border-radius);
   transition: var(--transition);
+  border: 2px solid var(--primary-green);
 }
 
 .timeline-item:hover {
   background: var(--primary-green);
   color: var(--white);
   transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(76, 175, 80, 0.5);
+  border: 2px solid var(--light-gray);
 }
 
 .timeline-year {
@@ -545,8 +551,17 @@ body {
 }
 
 .timeline-content p {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.6;
+}
+
+.timeline-content p {
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+.timeline-content p:last-child {
+  margin-bottom: 0;
 }
 
 /* Team */
@@ -893,7 +908,7 @@ body {
 
 .blog-link {
   color: var(--primary-green);
-  font-weight: 600;
+  /* font-weight: 600; */
   text-decoration: none;
   transition: var(--transition);
 }
@@ -1130,7 +1145,7 @@ body {
   font-size: 14px;
 }
 
-.footer-section li{
+.footer-section li {
   font-size: 14px;
 }
 
@@ -1996,6 +2011,10 @@ body {
   width: 100%;
 }
 
+.blog-link:hover .pc-readmore::after {
+  width: 100%;
+}
+
 /* ── Responsive ── */
 @media (max-width: 1023px) {
   .pc-card {
@@ -2038,7 +2057,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 110px 20px;
+  padding: 110px 0px;
   flex-direction: column;
 }
 
@@ -2115,6 +2134,142 @@ body {
   color: var(--text-color);
   line-height: 1.8;
   margin-top: 20px;
+}
+
+/* ============================================================
+   BLOG DETAIL — DYNAMIC CONTENT BLOCKS
+   Add these rules into your existing css/style.css
+   ============================================================ */
+
+/* ── Shared wrapper between blocks ── */
+.blog-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.blog-block {
+  line-height: 1.8;
+}
+
+/* ──────────────────────────────────────────────────────────
+   TYPE: "text"  →  full-width paragraph
+   ────────────────────────────────────────────────────────── */
+.blog-block--text p {
+  margin: 0;
+}
+
+/* ──────────────────────────────────────────────────────────
+   TYPE: "image-right"  →  text LEFT | image RIGHT
+   ────────────────────────────────────────────────────────── */
+.blog-block--image-right {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.blog-block--image-right .blog-block__text {
+  flex: 1 1 55%;
+}
+
+.blog-block--image-right .blog-block__image {
+  flex: 0 0 40%;
+}
+
+/* ──────────────────────────────────────────────────────────
+   TYPE: "image-left"  →  image LEFT | text RIGHT
+   ────────────────────────────────────────────────────────── */
+.blog-block--image-left {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.blog-block--image-left .blog-block__image {
+  flex: 0 0 40%;
+}
+
+.blog-block--image-left .blog-block__text {
+  flex: 1 1 55%;
+}
+
+/* ──────────────────────────────────────────────────────────
+   TYPE: "image-center"  →  full-width centered image
+   ────────────────────────────────────────────────────────── */
+.blog-block--image-center {
+  text-align: center;
+}
+
+.blog-block--image-center img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+/* ──────────────────────────────────────────────────────────
+   TYPE: "two-column"  →  two text columns side by side
+   ────────────────────────────────────────────────────────── */
+.blog-block--two-column {
+  display: flex;
+  gap: 2rem;
+}
+
+.blog-block--two-column .blog-block__col {
+  flex: 1;
+  padding: 1.2rem 1.4rem;
+  background: #f8faf5;
+  border-left: 3px solid var(--color-primary, #4caf50);
+  border-radius: 0 8px 8px 0;
+}
+
+/* ── Shared image styles ── */
+.blog-block__image img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+/* ── Caption ── */
+.blog-block__caption {
+  font-size: 0.82rem;
+  color: #888;
+  text-align: center;
+  margin-top: 0.4rem;
+  font-style: italic;
+}
+
+/* ── Paragraph resets inside blocks ── */
+.blog-block__text p,
+.blog-block__col p {
+  margin: 0;
+}
+
+/* ── Responsive: stack on mobile ── */
+@media (max-width: 768px) {
+
+  .blog-block--image-right,
+  .blog-block--image-left,
+  .blog-block--two-column {
+    flex-direction: column;
+  }
+
+  .blog-block--image-right .blog-block__image,
+  .blog-block--image-left .blog-block__image {
+    flex: none;
+    width: 100%;
+  }
+
+  .blog-block__image img {
+    height: 200px;
+  }
+
+  .blog-block--image-center img {
+    max-height: 240px;
+  }
 }
 
 /* ========== RESPONSIVE ========== */
@@ -2246,7 +2401,7 @@ body {
 
 .blog-link {
   color: var(--primary-green);
-  font-weight: 600;
+  /* font-weight: 600; */
   text-decoration: none;
   transition: var(--transition);
 }
@@ -2363,6 +2518,27 @@ body {
     flex: 0 0 calc(33.333% - 20px);
     min-width: 280px;
   }
+}
+
+.blog-content h3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.blog-content p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+/* fix blog that not equal height */
+.blog-grid .blog-card {
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1;
+  height: 100%;
 }
 
 /*  */
@@ -2499,7 +2675,7 @@ body {
 }
 
 @media screen and (max-width: 668px) {
-  .slideshow-dots{
+  .slideshow-dots {
     display: none;
   }
 }
@@ -2668,7 +2844,7 @@ body {
   transform: translate(-50%, -50%);
   width: 56px;
   height: 56px;
-  background: var(--white);
+  /* background: var(--white); */
   border: none;
   border-radius: 50%;
   font-size: 22px;
@@ -2679,6 +2855,7 @@ body {
   align-items: center;
   justify-content: center;
   box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25);
+  background: rgba(255, 255, 255, 0.7);
 }
 
 .play-button:hover {

@@ -66,9 +66,9 @@ class Carousel {
       this.wrapper.innerHTML = "";
       this.dotsContainer.innerHTML = "";
 
-      // Sort by date descending (newest first), then take 5
+      // Sort by order ascending, take 5
       const blogsToShow = data.blogs
-        .sort((a, b) => new Date(b.date) - new Date(a.date))
+        .sort((a, b) => (a.order || 0) - (b.order || 0))
         .slice(0, 5);
       blogsToShow.forEach((blog) => {
         const card = this.createBlogCard(blog);
@@ -110,25 +110,24 @@ class Carousel {
     const readMoreText = lang === "km" ? "អានបន្ថែម →" : "Read More →";
 
     card.innerHTML = `
-      <div class="blog-image">
-        <img
-          src="${blog.image || "/placeholder.svg?height=300&width=400"}"
-          alt="${title}"
-          loading="lazy"
-        />
-        ${category ? `<span class="blog-category">${category}</span>` : ""}
-      </div>
-      <div class="blog-content">
-        <div class="blog-meta">
-          <span class="blog-date"> ${blog.date || "No date"}</span>
-          <span class="blog-read">⏱️ ${blog.readTime || 0} min read</span>
+    <a href="blog_detail.html?id=${blog._id}" class="blog-link">
+        <div class="blog-image">
+          <img
+            src="${blog.image || "/placeholder.svg?height=300&width=400"}"
+            alt="${title}"
+            loading="lazy"
+          />
+          ${category ? `<span class="blog-category">${category}</span>` : ""}
         </div>
-        <h3>${title}</h3>
-        <p>${preview}</p>
-        <a href="blog_detail.html?id=${blog._id}" class="blog-link">
-          ${readMoreText}
-        </a>
-      </div>
+        <div class="blog-content">
+          <div class="blog-meta">
+            <span class="blog-date">${(typeof blog.date === "object" ? blog.date?.[lang] : blog.date) || ""}</span>
+          </div>
+          <h3>${title}</h3>
+          <p>${preview}</p>
+          <span class="pc-readmore">${readMoreText}</span>
+        </div>
+      </a>
     `;
 
     return card;
@@ -260,7 +259,7 @@ class Carousel {
 
   startAutoScroll() {
     if (this.totalOriginalCards === 0) return;
-
+    this.stopAutoScroll(); // ← guarantee only ONE interval ever runs
     this.autoScrollInterval = setInterval(
       () => this.next(),
       this.autoScrollDelay,
@@ -304,33 +303,35 @@ class Carousel {
   }
 
   async refreshCarousel() {
-    // Stop auto scroll during refresh
-    this.stopAutoScroll();
+    // Prevent overlapping refreshes from rapid/duplicate language events
+    if (this._refreshing) return;
+    this._refreshing = true;
 
-    // Store current blog id
-    const currentId = this.getCurrentBlogId();
+    try {
+      this.stopAutoScroll();
 
-    // Reload cards in the new language
-    await this.loadBlogData();
+      const currentId = this.getCurrentBlogId();
 
-    // Re-init dots after rebuild
-    this.initDots();
+      await this.loadBlogData();
 
-    // Update card width in case layout changed
-    this.cardWidth = this.originalCards[0]?.offsetWidth || 400;
+      this.initDots();
 
-    // Restore position, or go to start
-    if (currentId) {
-      const newIndex = this.findCardIndexById(currentId);
-      this.currentIndex = newIndex !== -1 ? newIndex + 3 : 3;
-    } else {
-      this.currentIndex = 3;
+      // Wait one frame so the new DOM is laid out before measuring width
+      await new Promise((r) => requestAnimationFrame(r));
+      this.cardWidth = this.originalCards[0]?.offsetWidth || 400;
+
+      if (currentId) {
+        const newIndex = this.findCardIndexById(currentId);
+        this.currentIndex = newIndex !== -1 ? newIndex + 3 : 3;
+      } else {
+        this.currentIndex = 3;
+      }
+
+      this.scrollToSlide(false);
+      this.startAutoScroll();
+    } finally {
+      this._refreshing = false;
     }
-
-    this.scrollToSlide(false);
-
-    // Restart auto scroll
-    this.startAutoScroll();
   }
 
   getCurrentBlogId() {

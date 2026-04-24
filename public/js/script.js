@@ -103,6 +103,13 @@ langOptions.forEach((option) => {
 
       try {
         await saveLanguage(lang);
+
+        // Always dispatch the event — works on ALL pages
+        // even if triggerLanguageChange (from blog.js) is not loaded
+        const langEvent = new CustomEvent("languageChange", { detail: { lang } });
+        document.dispatchEvent(langEvent);
+
+        // Also call triggerLanguageChange if available (blog.html carousel)
         if (typeof triggerLanguageChange === "function") {
           triggerLanguageChange(lang);
         }

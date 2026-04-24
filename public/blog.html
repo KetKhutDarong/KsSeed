@@ -256,26 +256,26 @@
             const preview = lang === 'km' ? blog.preview.km : blog.preview.en;
             const category = lang === 'km' ? blog.category?.km : blog.category?.en;
             const readMoreText = lang === 'km' ? 'អានបន្ថែម →' : 'Read More →';
-            const date = blog.date || 'No date';
-            const readTime = blog.readTime || 0;
+            const date = (lang === 'km' ? blog.date?.km : blog.date?.en) || 'No date';
+            // const readTime = blog.readTime || 0;
 
             return `
-        <div class="blog-card">
-          <div class="blog-image">
-            <img src="${blog.image || '/placeholder.svg'}" alt="${escapeHtml(title)}" loading="lazy" />
-            ${category ? `<span class="blog-category">${escapeHtml(category)}</span>` : ''}
-          </div>
-          <div class="blog-content">
-            <div class="blog-meta">
-              <span class="blog-date">${escapeHtml(date)}</span>
-              <span class="blog-read">⏱️ ${readTime} min read</span>
-            </div>
-            <h3>${escapeHtml(title)}</h3>
-            <p>${escapeHtml(preview.substring(0, 120))}${preview.length > 120 ? '...' : ''}</p>
-            <a href="blog_detail.html?id=${blog._id}" class="blog-link">${readMoreText}</a>
-          </div>
-        </div>
-      `;
+                <a href="blog_detail.html?id=${blog._id}" class="blog-link">
+                    <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="${blog.image || '/placeholder.svg'}" alt="${escapeHtml(title)}" loading="lazy" />
+                        ${category ? `<span class="blog-category">${escapeHtml(category)}</span>` : ''}
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                        <span class="blog-date">${escapeHtml(date)}</span>
+                        </div>
+                        <h3>${escapeHtml(title)}</h3>
+                        <p>${escapeHtml(preview.substring(0, 120))}${preview.length > 120 ? '...' : ''}</p>
+                        <span class="pc-readmore">${readMoreText}</span>
+                    </div>
+                    </div>
+                </a>`;
         }
 
         async function loadMoreArticles() {

@@ -82,7 +82,7 @@ const BlogSchema = new mongoose.Schema(
     content: { en: String, km: String },
     preview: { en: String, km: String },
     category: { en: String, km: String },
-    date: String,
+    date: { en: String, km: String },
     readTime: Number,
     image: String,
     views: { type: Number, default: 0 },
@@ -204,8 +204,9 @@ app.post("/contact", async (req, res) => {
 
       // 2. Send email notification to your client
       transporter.sendMail({
-        from: `"KS Seed Contact Form" <${process.env.EMAIL_USER}>`,
-        to: process.env.EMAIL_RECEIVER, // your client's email
+        from: `"${name}" <${process.env.EMAIL_USER}>`,
+        to: process.env.EMAIL_RECEIVER,
+        replyTo: `"${name}" <${email}>`, // ← ADD THIS LINE
         subject: subject ? `[Contact] ${subject}` : `New message from ${name}`,
         html: `
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden;">
